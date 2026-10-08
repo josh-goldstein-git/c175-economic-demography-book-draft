@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Economic Demography - 16&nbsp; Can Money Buy Longevity? Health, Mortality, and the Grossman Model</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./17-projection-peak.html" rel="next">
+<link href="./15-migration-gains-enforcement.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./16-longevity.html">Optional chapters</a></li><li class="breadcrumb-item"><a href="./16-longevity.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Can Money Buy Longevity? Health, Mortality, and the Grossman Model</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Economic Demography</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Population and the economy: big theories</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-history.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Ten Thousand Years of Population</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-optimum.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Optimum Population</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-malthus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The World According to Malthus</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-solow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Capital to the Rescue? The Solow Model and Inequality</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-boserup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Boserup: Population Pushes Technology</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Resources and the environment</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-resources-commons.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Are We Doomed? Resources, Prices, and the Commons</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-climate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Population and Climate Change</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Age structure</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-social-security.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Aging and Social Security: A Ponzi Scheme?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-age-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Are Too Few Children a Problem? Age Structure and Optimal Fertility</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Fertility and the family</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-fertility.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">How Do Economists Think We Decide How Many Children to Have?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-china.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Fertility Policy I: China’s One-Child Policy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12-abortion-pill.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Fertility Policy II: Abortion and the Pill in the United States</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13-marriage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Marriage: Love, and What Else?</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+ <span class="menu-text">Migration</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./14-immigration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Immigration: Who Gains, Who Loses?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./15-migration-gains-enforcement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Migrants’ Gains and Immigration Enforcement</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
+ <span class="menu-text">Optional chapters</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./16-longevity.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Can Money Buy Longevity? Health, Mortality, and the Grossman Model</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./17-projection-peak.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Population Projection, Age Pyramids, and “Our Shrinking Future?”</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./18-why-move.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Why People Move: Cities, Borders, and Development</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./19-recession-fertility.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Fertility and the Economy: The Great Recession and Beyond</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#big-questions" id="toc-big-questions" class="nav-link active" data-scroll-target="#big-questions"><span class="header-section-number">16.1</span> Big questions</a></li>
+  <li><a href="#measuring-longevity" id="toc-measuring-longevity" class="nav-link" data-scroll-target="#measuring-longevity"><span class="header-section-number">16.2</span> Measuring longevity</a></li>
+  <li><a href="#the-population-perspective-trends-over-time" id="toc-the-population-perspective-trends-over-time" class="nav-link" data-scroll-target="#the-population-perspective-trends-over-time"><span class="header-section-number">16.3</span> The population perspective: trends over time</a>
+  <ul class="collapse">
+  <li><a href="#three-centuries-of-swedish-life-expectancy" id="toc-three-centuries-of-swedish-life-expectancy" class="nav-link" data-scroll-target="#three-centuries-of-swedish-life-expectancy"><span class="header-section-number">16.3.1</span> Three centuries of Swedish life expectancy</a></li>
+  <li><a href="#why-did-mortality-fall" id="toc-why-did-mortality-fall" class="nav-link" data-scroll-target="#why-did-mortality-fall"><span class="header-section-number">16.3.2</span> Why did mortality fall?</a></li>
+  <li><a href="#an-army-of-ants" id="toc-an-army-of-ants" class="nav-link" data-scroll-target="#an-army-of-ants"><span class="header-section-number">16.3.3</span> An army of ants</a></li>
+  </ul></li>
+  <li><a href="#the-population-perspective-differences-across-countries" id="toc-the-population-perspective-differences-across-countries" class="nav-link" data-scroll-target="#the-population-perspective-differences-across-countries"><span class="header-section-number">16.4</span> The population perspective: differences across countries</a>
+  <ul class="collapse">
+  <li><a href="#is-income-the-secret-to-longer-life" id="toc-is-income-the-secret-to-longer-life" class="nav-link" data-scroll-target="#is-income-the-secret-to-longer-life"><span class="header-section-number">16.4.1</span> Is income the secret to longer life?</a></li>
+  <li><a href="#preston-curves" id="toc-preston-curves" class="nav-link" data-scroll-target="#preston-curves"><span class="header-section-number">16.4.2</span> Preston curves</a></li>
+  <li><a href="#how-much-of-the-gain-came-from-income" id="toc-how-much-of-the-gain-came-from-income" class="nav-link" data-scroll-target="#how-much-of-the-gain-came-from-income"><span class="header-section-number">16.4.3</span> How much of the gain came from income?</a></li>
+  <li><a href="#what-shifted-the-curve" id="toc-what-shifted-the-curve" class="nav-link" data-scroll-target="#what-shifted-the-curve"><span class="header-section-number">16.4.4</span> What shifted the curve?</a></li>
+  <li><a href="#a-look-at-more-recent-data" id="toc-a-look-at-more-recent-data" class="nav-link" data-scroll-target="#a-look-at-more-recent-data"><span class="header-section-number">16.4.5</span> A look at more recent data</a></li>
+  <li><a href="#how-badly-does-the-united-states-do" id="toc-how-badly-does-the-united-states-do" class="nav-link" data-scroll-target="#how-badly-does-the-united-states-do"><span class="header-section-number">16.4.6</span> How badly does the United States do?</a></li>
+  <li><a href="#is-the-united-states-lagging-because-of-inequality" id="toc-is-the-united-states-lagging-because-of-inequality" class="nav-link" data-scroll-target="#is-the-united-states-lagging-because-of-inequality"><span class="header-section-number">16.4.7</span> Is the United States lagging because of inequality?</a></li>
+  </ul></li>
+  <li><a href="#the-individual-perspective-gradients-in-health" id="toc-the-individual-perspective-gradients-in-health" class="nav-link" data-scroll-target="#the-individual-perspective-gradients-in-health"><span class="header-section-number">16.5</span> The individual perspective: gradients in health</a>
+  <ul class="collapse">
+  <li><a href="#who-lives-longer" id="toc-who-lives-longer" class="nav-link" data-scroll-target="#who-lives-longer"><span class="header-section-number">16.5.1</span> Who lives longer?</a></li>
+  <li><a href="#why-is-socioeconomic-status-linked-to-longevity" id="toc-why-is-socioeconomic-status-linked-to-longevity" class="nav-link" data-scroll-target="#why-is-socioeconomic-status-linked-to-longevity"><span class="header-section-number">16.5.2</span> Why is socioeconomic status linked to longevity?</a></li>
+  </ul></li>
+  <li><a href="#longevity-as-a-choice-the-grossman-model" id="toc-longevity-as-a-choice-the-grossman-model" class="nav-link" data-scroll-target="#longevity-as-a-choice-the-grossman-model"><span class="header-section-number">16.6</span> Longevity as a choice? The Grossman model</a>
+  <ul class="collapse">
+  <li><a href="#health-as-a-consumption-good-and-an-investment-good" id="toc-health-as-a-consumption-good-and-an-investment-good" class="nav-link" data-scroll-target="#health-as-a-consumption-good-and-an-investment-good"><span class="header-section-number">16.6.1</span> Health as a consumption good and an investment good</a></li>
+  <li><a href="#the-time-constraint" id="toc-the-time-constraint" class="nav-link" data-scroll-target="#the-time-constraint"><span class="header-section-number">16.6.2</span> The time constraint</a></li>
+  <li><a href="#diminishing-marginal-benefits" id="toc-diminishing-marginal-benefits" class="nav-link" data-scroll-target="#diminishing-marginal-benefits"><span class="header-section-number">16.6.3</span> Diminishing marginal benefits</a></li>
+  <li><a href="#one-period-at-a-time-why-not-maximal-health" id="toc-one-period-at-a-time-why-not-maximal-health" class="nav-link" data-scroll-target="#one-period-at-a-time-why-not-maximal-health"><span class="header-section-number">16.6.4</span> One period at a time: why not maximal health?</a></li>
+  <li><a href="#from-one-period-to-a-lifetime-the-marginal-benefit-of-health" id="toc-from-one-period-to-a-lifetime-the-marginal-benefit-of-health" class="nav-link" data-scroll-target="#from-one-period-to-a-lifetime-the-marginal-benefit-of-health"><span class="header-section-number">16.6.5</span> From one period to a lifetime: the marginal benefit of health</a></li>
+  <li><a href="#the-marginal-cost-of-health" id="toc-the-marginal-cost-of-health" class="nav-link" data-scroll-target="#the-marginal-cost-of-health"><span class="header-section-number">16.6.6</span> The marginal cost of health</a></li>
+  <li><a href="#optimal-health" id="toc-optimal-health" class="nav-link" data-scroll-target="#optimal-health"><span class="header-section-number">16.6.7</span> Optimal health</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">16.6.8</span> Applications</a></li>
+  <li><a href="#the-gradient-through-grossmans-eyes" id="toc-the-gradient-through-grossmans-eyes" class="nav-link" data-scroll-target="#the-gradient-through-grossmans-eyes"><span class="header-section-number">16.6.9</span> The gradient through Grossman’s eyes</a></li>
+  <li><a href="#what-the-grossman-model-does-and-doesnt-do" id="toc-what-the-grossman-model-does-and-doesnt-do" class="nav-link" data-scroll-target="#what-the-grossman-model-does-and-doesnt-do"><span class="header-section-number">16.6.10</span> What the Grossman model does, and doesn’t, do</a></li>
+  </ul></li>
+  <li><a href="#key-ideas" id="toc-key-ideas" class="nav-link" data-scroll-target="#key-ideas"><span class="header-section-number">16.7</span> Key ideas</a></li>
+  <li><a href="#check-your-understanding" id="toc-check-your-understanding" class="nav-link" data-scroll-target="#check-your-understanding"><span class="header-section-number">16.8</span> Check your understanding</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">16.9</span> Further reading</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./16-longevity.html">Optional chapters</a></li><li class="breadcrumb-item"><a href="./16-longevity.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Can Money Buy Longevity? Health, Mortality, and the Grossman Model</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-longevity" class="quarto-section-identifier"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Can Money Buy Longevity? Health, Mortality, and the Grossman Model</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Draft: provenance notes (for review)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Optional chapter, based on the 2019 version of “What makes life longer? A population perspective” and the 2023 version of “Longevity as a choice? The Grossman model.”</strong> The course has not taught this topic since 2023. Margin tags mark material that is <strong>not in the course slides or lab</strong>. <span class="tag-reading">Added · from readings</span> comes from readings or from studies cited on the slides. <span class="tag-new">Added · new</span> is from outside the course materials (my framing, general knowledge, or my own analysis) and needs the closest check. Untagged material follows the slides and the mortality lab (2019). <strong>Preston (1975) has now been read</strong> in its 2007 reprint in the <em>International Journal of Epidemiology</em> (36: 484–490), an abridged reprint of the 1975 <em>Population Studies</em> article. The Preston sections have been checked against it, and quotes and page numbers refer to the reprint’s pagination. <strong>Bhattacharya, Hyde and Tu (2013, chs.&nbsp;3–4) have now been read in full</strong> (the course’s Spring 2023 bCourses scans). The socioeconomic-gradient and Grossman sections draw on them, and their page numbers are the book’s printed pagination (ch.&nbsp;3, pp.&nbsp;28–50; ch.&nbsp;4, pp.&nbsp;51–75). Where the book’s notation differs from the slides, the chapter follows the slides and says so in the margin.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>In this chapter.</strong> Two ways of asking why some people live longer than others. The <em>population</em> view looks at life expectancy across time and countries and asks how much of humanity’s extraordinary gain in longevity comes from rising incomes. The answer, from Samuel Preston’s famous curve, is “less than you might think.” The <em>individual</em> view, Michael Grossman’s model of health as capital, treats health as something people invest in, and asks what that implies for the rich and poor, the educated and less educated, and the young and old.</p>
+<p><strong>Readings this chapter draws on.</strong> Preston (1975), “The Changing Relation between Mortality and Level of Economic Development” (assigned in 2019; read here in its abridged 2007 reprint); Bhattacharya, Hyde and Tu (2013), <em>Health Economics</em>, ch.&nbsp;3, “Demand for Health: The Grossman Model,” pp. 28–50, and ch.&nbsp;4, “Socioeconomic Disparities in Health,” pp.&nbsp;51–75 (assigned 2019–2023).</p>
+</div>
+</div>
+</div>
+<section id="big-questions" class="level2" data-number="16.1">
+<h2 data-number="16.1" class="anchored" data-anchor-id="big-questions"><span class="header-section-number">16.1</span> Big questions</h2>
+<p>The economic demography of mortality starts with some very large questions:</p>
+<ul>
+<li>Why do we die?</li>
+<li>Why do some people, or groups of people, live longer than others?</li>
+<li>Is it possible to be <em>too</em> healthy?</li>
+<li>Is there any room for individual choice, or is the only rational decision to live as long as possible?</li>
+</ul>
+<p>Health and longevity depend on many things at once: <strong>institutions</strong> (clean water, public health, health insurance), <strong>technology</strong> (vaccines, antibiotics, statins), and <strong>individual behavior</strong> (diet, smoking, exercise, following a doctor’s advice). The two halves of this chapter take these on from different directions. The first half looks at whole populations, where institutions and technology loom large. The second half looks at individuals, through an economic model that deliberately focuses only on behavior. As the lecture puts it, the aim of a simple model “is not to understand everything. Instead, we see what [the] simple model explains and what <em>else</em> is needed.”</p>
+</section>
+<section id="measuring-longevity" class="level2 page-columns page-full" data-number="16.2">
+<h2 data-number="16.2" class="anchored" data-anchor-id="measuring-longevity"><span class="header-section-number">16.2</span> Measuring longevity</h2>
+<p>The standard measure is <strong>life expectancy</strong>, the expected number of additional years of life:</p>
+<ul>
+<li><span class="math inline">\(e_0\)</span>, life expectancy at birth, is the average age at death in a population that experiences this year’s death rates at every age throughout life.</li>
+<li><span class="math inline">\(e_{65}\)</span> is the average number of years remaining for those who survive to age 65.</li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> The explanation of “period” life expectancy is mine.</p>
+</div></div><p>Both are usually <em>period</em> measures. They summarize the death rates of a single calendar year, as if a hypothetical group of people lived their whole lives under those rates. They are not forecasts of how long anyone born this year will actually live, since death rates will keep changing.</p>
+</section>
+<section id="the-population-perspective-trends-over-time" class="level2 page-columns page-full" data-number="16.3">
+<h2 data-number="16.3" class="anchored" data-anchor-id="the-population-perspective-trends-over-time"><span class="header-section-number">16.3</span> The population perspective: trends over time</h2>
+<section id="three-centuries-of-swedish-life-expectancy" class="level3" data-number="16.3.1">
+<h3 data-number="16.3.1" class="anchored" data-anchor-id="three-centuries-of-swedish-life-expectancy"><span class="header-section-number">16.3.1</span> Three centuries of Swedish life expectancy</h3>
+<p>Sweden, whose birth and death records we used in the Malthus chapter, has the longest national series of life expectancy. <a href="#fig-swe-e0" class="quarto-xref">Figure&nbsp;<span>16.1</span></a> shows it.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the R code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>op <span class="ot">&lt;-</span> <span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="fl">4.2</span>, <span class="dv">1</span>, <span class="dv">1</span>))</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(swe<span class="sc">$</span>Year, swe<span class="sc">$</span>Total, <span class="at">type =</span> <span class="st">"l"</span>, <span class="at">lwd =</span> <span class="fl">1.5</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">15</span>, <span class="dv">87</span>),</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Year"</span>, <span class="at">ylab =</span> <span class="st">"Life expectancy at birth (years)"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">1773</span>, swe<span class="sc">$</span>Total[swe<span class="sc">$</span>Year <span class="sc">==</span> <span class="dv">1773</span>], <span class="st">"1773"</span>, <span class="at">pos =</span> <span class="dv">4</span>, <span class="at">cex =</span> <span class="fl">0.8</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(op)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-swe-e0" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-swe-e0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="16-longevity_files/figure-html/fig-swe-e0-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-swe-e0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;16.1: Life expectancy at birth in Sweden, 1751–2024 (period, both sexes). Source: Human Mortality Database.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Look for stages. Before about 1800, life expectancy bounced around in the 30s, with terrible years such as the famine of 1773, when it fell to 18. Over the nineteenth century it began a slow, noisy rise, reaching 52 by 1900. In the first half of the twentieth century it rose fastest, to 71 in 1950. Since then it has climbed steadily, about 2 months per calendar year, to 83.8 in 2024.</p>
+</section>
+<section id="why-did-mortality-fall" class="level3" data-number="16.3.2">
+<h3 data-number="16.3.2" class="anchored" data-anchor-id="why-did-mortality-fall"><span class="header-section-number">16.3.2</span> Why did mortality fall?</h3>
+<p>The lecture’s summary:</p>
+<ul>
+<li>The earliest onset is still a mystery: perhaps the end of plagues, the end of the Little Ice Age, more food.</li>
+<li>The nineteenth century brought important improvements in the understanding of disease: clean water, hand-washing, contagion.</li>
+<li>The twentieth century brought more medical technologies.</li>
+<li>Throughout, a central question is the role of rising incomes.</li>
+</ul>
+<p>The progress came in three great advances, each concentrated at a different stage of life:</p>
+<ol type="1">
+<li><strong>Children</strong>: diarrhea and water-borne disease.</li>
+<li><strong>Young adults</strong>: tuberculosis.</li>
+<li><strong>Middle age and beyond</strong>: heart disease.</li>
+</ol>
+<p>The progression was a shift from contagious to chronic causes of death. One question to keep in mind: did that shift give money a larger role?</p>
+</section>
+<section id="an-army-of-ants" class="level3 page-columns page-full" data-number="16.3.3">
+<h3 data-number="16.3.3" class="anchored" data-anchor-id="an-army-of-ants"><span class="header-section-number">16.3.3</span> An army of ants</h3>
+<p>For a long time, mortality improvement was largely confined to childhood. As the remaining deaths became concentrated at older ages, progress followed them there. <a href="#fig-usa-age" class="quarto-xref">Figure&nbsp;<span>16.2</span></a> shows this for American men since 1933.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the R code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>op <span class="ot">&lt;-</span> <span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>), <span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="fl">4.5</span>, <span class="fl">1.5</span>, <span class="dv">1</span>))</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">subset</span>(usm, Age <span class="sc">==</span> <span class="dv">65</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x<span class="sc">$</span>Year, x<span class="sc">$</span>ex, <span class="at">type =</span> <span class="st">"l"</span>, <span class="at">lwd =</span> <span class="dv">2</span>, <span class="at">xlab =</span> <span class="st">"Year"</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Years remaining at age 65"</span>, <span class="at">main =</span> <span class="st">"Life expectancy at 65"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">font.main =</span> <span class="dv">1</span>, <span class="at">cex.main =</span> <span class="dv">1</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>ages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">50</span>, <span class="dv">80</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>cols <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"black"</span>, <span class="st">"grey50"</span>, col_blue, col_b, col_d)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="cn">NA</span>, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">1933</span>, <span class="dv">2058</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="fl">5e-5</span>, <span class="fl">0.3</span>), <span class="at">log =</span> <span class="st">"y"</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Year"</span>, <span class="at">ylab =</span> <span class="st">"Death rate (per person per year)"</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Death rates by age"</span>, <span class="at">font.main =</span> <span class="dv">1</span>, <span class="at">cex.main =</span> <span class="dv">1</span>, <span class="at">xaxt =</span> <span class="st">"n"</span>, <span class="at">yaxt =</span> <span class="st">"n"</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="dv">1</span>, <span class="at">at =</span> <span class="fu">seq</span>(<span class="dv">1940</span>, <span class="dv">2020</span>, <span class="dv">20</span>))</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="dv">2</span>, <span class="at">at =</span> <span class="fu">c</span>(<span class="fl">1e-4</span>, <span class="fl">1e-3</span>, <span class="fl">1e-2</span>, <span class="fl">1e-1</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"0.0001"</span>, <span class="st">"0.001"</span>, <span class="st">"0.01"</span>, <span class="st">"0.1"</span>))</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>nudge <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">1.35</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="fl">0.74</span>, <span class="dv">1</span>)            <span class="co"># separate the age-0 and age-50 labels</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(ages)) {</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">&lt;-</span> <span class="fu">subset</span>(usm, Age <span class="sc">==</span> ages[i])</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lines</span>(y<span class="sc">$</span>Year, y<span class="sc">$</span>mx, <span class="at">col =</span> cols[i], <span class="at">lwd =</span> <span class="fl">1.5</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">text</span>(<span class="dv">2025</span>, <span class="fu">tail</span>(y<span class="sc">$</span>mx, <span class="dv">1</span>) <span class="sc">*</span> nudge[i], <span class="fu">paste</span>(<span class="st">"age"</span>, ages[i]), <span class="at">pos =</span> <span class="dv">4</span>, <span class="at">cex =</span> <span class="fl">0.75</span>, <span class="at">col =</span> cols[i])</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(op)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-usa-age" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-usa-age-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="16-longevity_files/figure-html/fig-usa-age-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-usa-age-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;16.2: U.S. men, 1933–2024. Left: life expectancy at age 65. Right: death rates at selected ages, on a log scale. Source: Human Mortality Database.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Between 1933 and 2019, death rates fell by about 91 percent for baby boys and 90 percent at age 10, but by “only” 58 percent at age 65 and 57 percent at age 80. Life expectancy at 65 rose only about a year between 1933 and 1950, then stalled for two decades (12.11 years in 1933, 13.04 in 1970), and then rose quickly, to 18.47 by 2019. (The sharp dip in 2020–21 is COVID-19.)</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> The 1970 turning point, the cardiovascular explanation, and the COVID-19 note are from general knowledge; the numbers are computed from the HMD.</p>
+</div></div><p>That late surge at older ages is the third advance, the decline of heart disease. Progress moves through the age distribution like an army of ants, attacking wherever deaths are most common. The lecture asks a provocative question here: is this an “invisible hand” at work, with effort flowing to wherever the payoff is largest?</p>
+</section>
+</section>
+<section id="the-population-perspective-differences-across-countries" class="level2 page-columns page-full" data-number="16.4">
+<h2 data-number="16.4" class="anchored" data-anchor-id="the-population-perspective-differences-across-countries"><span class="header-section-number">16.4</span> The population perspective: differences across countries</h2>
+<section id="is-income-the-secret-to-longer-life" class="level3 page-columns page-full" data-number="16.4.1">
+<h3 data-number="16.4.1" class="anchored" data-anchor-id="is-income-the-secret-to-longer-life"><span class="header-section-number">16.4.1</span> Is income the secret to longer life?</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> Naming Hans Rosling is from general knowledge; the slides link to Gapminder.</p>
+</div></div><p>At any moment, people in richer countries live longer. A cross-section of countries (the lecture uses Hans Rosling’s Gapminder animation, “Wealth &amp; Health of Nations”) shows a strong relationship between income per head and life expectancy. So is rising income the secret to longer life?</p>
+<p>Watching the animation over time, the lecture asks students to notice three things:</p>
+<ul>
+<li>early on, there was little gradient between rich and poor countries;</li>
+<li>early on, there was little progress, despite income growth;</li>
+<li>later, there was more progress, faster than income growth.</li>
+</ul>
+</section>
+<section id="preston-curves" class="level3 page-columns page-full" data-number="16.4.2">
+<h3 data-number="16.4.2" class="anchored" data-anchor-id="preston-curves"><span class="header-section-number">16.4.2</span> Preston curves</h3>
+<p>In 1975 the demographer Samuel Preston put these observations together. He plotted life expectancy against national income per head for countries in the 1900s, 1930s, and 1960s, and fitted an S-shaped (logistic) curve to the 1930s and to the 1960s. These curves are now known as <strong>Preston curves</strong>.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Preston (1975), pp.&nbsp;485–486. All Preston page numbers in this chapter are those of the abridged 2007 reprint in the <em>International Journal of Epidemiology</em> 36: 484–490 (originally <em>Population Studies</em> 29: 231–248).</p>
+</div></div><p>His data were simple. A country was included whenever both numbers were available, except that in the 1960s he dropped countries with fewer than 2 million people. Life expectancy is the average of males and females, and income is converted to 1963 U.S. dollars. For the 1900s he had only ten countries, “too few observations … to make curve fitting worthwhile” (p.&nbsp;486), so his argument rests on comparing the 1930s with the 1960s.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>The fitted equations, from Preston’s paper as shown on the slides (with <span class="math inline">\(Y\)</span> national income per head): 1930s: <span class="math inline">\(e_0 = 80/\{1 + \exp[-1.6251 + 2.0768\,(0.9317)^Y]\}\)</span>; 1960s: <span class="math inline">\(e_0 = 80/\{1 + \exp[-2.1354 + 2.1697\,(0.7672)^Y]\}\)</span>. <span class="tag-reading">Added · from readings</span> The abridged reprint does not print these equations. But as income grows without limit they level off at 66.8 and 71.5 years, exactly the upper limits Preston reports (p.&nbsp;486).</p>
+</div></div><p>Two features of the curves carry the argument:</p>
+<ol type="1">
+<li><strong>Starkly diminishing returns to income.</strong> The curves rise steeply among poor countries and flatten among rich ones. An extra dollar buys a lot of life expectancy in a poor country and very little in a rich one.</li>
+<li><strong>Progress came between curves, not along them.</strong> The 1960s curve lies far above the 1930s curve. At <em>any</em> given income, life expectancy was much higher in the 1960s than in the 1930s. Most of the gain came from the curve shifting up, not from countries moving along it as they grew richer.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Preston (1975), pp.&nbsp;485–488.</p>
+</div></div><p>Preston measured the shift both ways. Read vertically, “it amounts to some 10–12 years of life expectancy at incomes between $100 and $500 and progressively less thereafter” (p.&nbsp;486). Read horizontally, a country needed about 2.6 times as much income in the 1930s as in the 1960s to reach any given life expectancy between 40 and 60.</p>
+<p>But the shift did not mean that income stopped mattering. Life expectancy was just as tightly linked to income in the 1960s as in the 1930s (a correlation with log income of 0.88 in both decades). And the 1960s curve was <em>steeper</em> among poor countries: “Far from becoming dissociated from income, mortality may have become more responsive to it in low-income countries” (p.&nbsp;488).</p>
+</section>
+<section id="how-much-of-the-gain-came-from-income" class="level3 page-columns page-full" data-number="16.4.3">
+<h3 data-number="16.4.3" class="anchored" data-anchor-id="how-much-of-the-gain-came-from-income"><span class="header-section-number">16.4.3</span> How much of the gain came from income?</h3>
+<p>Preston’s conclusion, as summarized in lecture: over time, economic growth was only a small part of longer life. The slide puts its share at about 16 percent of the gain between 1938 and 1963 (with a question mark). That is Preston’s own figure. Here is how he got it.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Preston (1975), pp.&nbsp;486–487, including his Table 1. The step-by-step explanation is mine.</p>
+</div></div><p>He did a thought experiment with two ingredients: the world’s incomes (by region, in 1938 or 1963) and the curve (the 1930s one or the 1960s one). Mixing and matching gives four estimates of world life expectancy:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Curve used</th>
+<th>With 1938 incomes</th>
+<th>With 1963 incomes</th>
+<th>Gain from income alone</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1930s curve</td>
+<td>44.2</td>
+<td>46.7</td>
+<td>2.5 years</td>
+</tr>
+<tr class="even">
+<td>1960s curve</td>
+<td>55.1</td>
+<td>56.4</td>
+<td>1.3 years</td>
+</tr>
+<tr class="odd">
+<td>Gain from the shift alone</td>
+<td>10.9 years</td>
+<td>9.7 years</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The total gain, from 44.2 to 56.4, is 12.2 years. Moving along the curve as incomes grew adds 2.5 years if we use the 1930s curve, or 1.3 years with the 1960s curve, about 1.9 years on average. The shift adds about 10.3 years on average. Since 1.9 is about 16 percent of 12.2:</p>
+<blockquote class="blockquote">
+<p>“This analysis implies that around 16% of the increase in life expectancy between 1938 and 1963 for the world as a whole is attributable to increases in average national income per se.” (Preston 1975, p.&nbsp;487)</p>
+</blockquote>
+<p>The other 84 percent he attributed to “factors exogenous to a country’s current level of income.” He was careful about precision. He attached “a large but unspecifiable margin of error” to the estimate and stated his finding as a range, 75–90 percent from the shift and 10–25 percent from income growth (pp.&nbsp;486–487). But he was confident about the big picture: “it is implausible that income changes could account for more than one-third of the growth in life expectancy during the period, in view of the massive shift that occurred in the relation between income and life expectancy” (p.&nbsp;487).</p>
+<p>Notice one more subtlety, which Preston raised himself. The shift is not necessarily “non-economic.” “If medical research in country A is facilitated by a large national income and leads to mortality reduction in country B, income has influenced mortality” (p.&nbsp;487). But that shows up as a shift of the curve, not as a movement along it. What the decomposition measures is the effect of a country’s <em>own</em> income.</p>
+</section>
+<section id="what-shifted-the-curve" class="level3 page-columns page-full" data-number="16.4.4">
+<h3 data-number="16.4.4" class="anchored" data-anchor-id="what-shifted-the-curve"><span class="header-section-number">16.4.4</span> What shifted the curve?</h3>
+<p>So what was responsible? According to the lecture, mainly:</p>
+<ul>
+<li>improvements in social and institutional organization (clean water, public health surveillance, …), and</li>
+<li>the spread of medical technology.</li>
+</ul>
+<p>Together, these move the national “health production function” up and to the left: a country can buy more health with the same income.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Preston (1975), pp.&nbsp;486–490.</p>
+</div></div><p>Preston’s own answer is close to the lecture’s. He names “a diffusion of technological advances and, to a lesser extent, of international transfer payments” (p.&nbsp;487), such as international health aid. And he argued against two other suspects. The curves already capture how a country’s own income works “through such factors as nutrition, medical and public health services and literacy” (p.&nbsp;487). When he drew the same kind of curves for literacy and for calories per person, they shifted up by as much, or more. So “we can essentially rule out nutrition and literacy as major contributors” (p.&nbsp;488).</p>
+<p>His examples are mostly public health measures that came before economic progress. Colonial health campaigns had brought plague, cholera, and smallpox under control in Taiwan by 1920, and eliminated deaths from smallpox and cholera in Indonesia during the 1920s, without substantial economic progress. After World War II, the technologies differed by region:</p>
+<blockquote class="blockquote">
+<p>“It seems to have been predominantly broad-gauged public health programmes of insect control, environmental sanitation, health education and maternal and child health services that transformed the mortality picture in less developed areas, while it was primarily specific vaccines, antibiotics and sulphonamides in more developed areas.” (p.&nbsp;489)</p>
+</blockquote>
+<p>Either way, most countries did not invent these technologies; they adopted them. In Preston’s words, “Universal values assured that health breakthroughs in any country would spread rapidly to all others where the means for implementation existed” (p.&nbsp;489). He pushed the argument back into history, too. The confirmation of the germ theory of disease in the late nineteenth century brought antiseptic practices, quarantines, and campaigns for cleaner food and water. Applying the 1960s curve to England and Wales, he estimated that even with <em>no</em> income growth after 1901–10, life expectancy could have risen from 50.4 to 69.6 years, 88 percent of the actual increase (p.&nbsp;490).</p>
+<p>None of this means income is unimportant. As Preston put it, “To claim on the one hand that income has been a trivial factor in recent mortality trends and, on the other, that it is still a critical determinant of mortality levels is not inconsistent” (p.&nbsp;488). At any moment, poor countries live shorter lives. Over time, though, most of the gain came from changes that lifted everyone’s curve.</p>
+</section>
+<section id="a-look-at-more-recent-data" class="level3 page-columns page-full" data-number="16.4.5">
+<h3 data-number="16.4.5" class="anchored" data-anchor-id="a-look-at-more-recent-data"><span class="header-section-number">16.4.5</span> A look at more recent data</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> This figure and the decomposition are my own analysis of World Bank data, in the spirit of your 2017 <code>preston_curves.R</code> script (log-linear fits rather than Preston’s logistic curves).</p>
+</div></div><p><a href="#fig-preston" class="quarto-xref">Figure&nbsp;<span>16.3</span></a> draws modern Preston curves, for the 49 countries with more than 5 million people and data in both 1960 and 2019.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the R code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>xs <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">100</span>, <span class="dv">90000</span>, <span class="at">length.out =</span> <span class="dv">400</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>op <span class="ot">&lt;-</span> <span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="fl">4.2</span>, <span class="dv">1</span>, <span class="dv">1</span>))</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(d19<span class="sc">$</span>gdp_pc_2015usd <span class="sc">/</span> <span class="dv">1000</span>, d19<span class="sc">$</span>e0, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">cex =</span> <span class="fl">0.7</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="fu">adjustcolor</span>(col_blue, <span class="fl">0.7</span>), <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">90</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">87</span>),</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"GDP per head (thousands of 2015 US$)"</span>, <span class="at">ylab =</span> <span class="st">"Life expectancy at birth"</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(d60<span class="sc">$</span>gdp_pc_2015usd <span class="sc">/</span> <span class="dv">1000</span>, d60<span class="sc">$</span>e0, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">cex =</span> <span class="fl">0.7</span>,</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">col =</span> <span class="fu">adjustcolor</span>(col_d, <span class="fl">0.7</span>))</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(xs <span class="sc">/</span> <span class="dv">1000</span>, <span class="fu">predict</span>(m19, <span class="fu">data.frame</span>(<span class="at">gdp_pc_2015usd =</span> xs)), <span class="at">col =</span> col_blue, <span class="at">lwd =</span> <span class="dv">2</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>x60 <span class="ot">&lt;-</span> xs[xs <span class="sc">&lt;=</span> <span class="fu">max</span>(d60<span class="sc">$</span>gdp_pc_2015usd)]</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x60 <span class="sc">/</span> <span class="dv">1000</span>, <span class="fu">predict</span>(m60, <span class="fu">data.frame</span>(<span class="at">gdp_pc_2015usd =</span> x60)), <span class="at">col =</span> col_d, <span class="at">lwd =</span> <span class="dv">2</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(us19<span class="sc">$</span>gdp_pc_2015usd <span class="sc">/</span> <span class="dv">1000</span>, us19<span class="sc">$</span>e0, <span class="st">"USA"</span>, <span class="at">pos =</span> <span class="dv">1</span>, <span class="at">cex =</span> <span class="fl">0.8</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"bottomright"</span>, <span class="fu">c</span>(<span class="st">"2019"</span>, <span class="st">"1960"</span>), <span class="at">col =</span> <span class="fu">c</span>(col_blue, col_d), <span class="at">pch =</span> <span class="dv">19</span>,</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>       <span class="at">lwd =</span> <span class="dv">2</span>, <span class="at">bty =</span> <span class="st">"n"</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(op)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-preston" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-preston-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="16-longevity_files/figure-html/fig-preston-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-preston-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;16.3: Life expectancy at birth against GDP per head (constant 2015 US dollars), countries with more than 5 million people, 1960 (red) and 2019 (blue). Curves are fits of life expectancy on log income. Source: World Bank, World Development Indicators.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The same two features appear. The curve is steep at low incomes and flat at high incomes, and the 2019 curve sits well above the 1960 curve. A rough decomposition: the population-weighted average life expectancy of these countries rose by 24.4 years between 1960 and 2019. Moving each country along the <em>1960</em> curve to its 2019 income accounts for 12.7 of those years, about 52 percent.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> The comparison with Preston is my own analysis. Preston’s numbers are from his Table 1 (p.&nbsp;487).</p>
+</div></div><p>Is that really so different from Preston’s 16 percent? Compare like with like. Moving along the <em>earlier</em> curve is only half of Preston’s calculation. On his 1930s curve alone, income growth gave 2.5 of 12.2 years, or 20 percent. On his 1960s curve it gave 1.3 years, or 11 percent, and his 16 percent is the average of the two. Doing the same with our data, moving along the 2019 curve accounts for 7.8 years (32 percent), and the average of the two curves is about 42 percent. So, measured the same way, income growth accounts for a share of the gain after 1960 about 2.7 times as large as in Preston’s 1938–1963. The shift of the curve is still the bigger part of the story, but no longer by a ratio of five to one.</p>
+<p>Several things could explain the difference. Some are real:</p>
+<ul>
+<li><strong>Much more income growth.</strong> Average income per head in these countries (weighted by population) rose about 3-fold between 1960 and 2019, over a much longer period than Preston’s quarter century. The fast growth of China (with 28 percent of these countries’ people in 1960) and other Asian countries carries a lot of weight.</li>
+<li><strong>A later starting point.</strong> Preston’s quarter century includes the postwar spread of antibiotics, sulfa drugs, and antimalarial campaigns, all of which he mentions. By 1960 much of that had already happened. (Preston himself did not think the shift was new: his few observations from the 1900s suggest the curve was already moving up before the 1930s, p.&nbsp;486.)</li>
+</ul>
+<p>And some come from method:</p>
+<ul>
+<li><strong>The shape of the curve.</strong> A straight line in log income never levels off, so extending the 1960 line to incomes no country had in 1960 may credit income with too much. Preston’s logistic curves flatten out at high incomes.</li>
+<li><strong>The data.</strong> We use individual countries with more than 5 million people and GDP in 2015 dollars. Preston used regional averages of national income in 1963 dollars, which he called “even less reliable than national figures” (p.&nbsp;487).</li>
+</ul>
+<p>Treat both numbers as rough. Preston’s own warning about “a large but unspecifiable margin of error” applies at least as much here.</p>
+</section>
+<section id="how-badly-does-the-united-states-do" class="level3 page-columns page-full" data-number="16.4.6">
+<h3 data-number="16.4.6" class="anchored" data-anchor-id="how-badly-does-the-united-states-do"><span class="header-section-number">16.4.6</span> How badly does the United States do?</h3>
+<p>In <a href="#fig-preston" class="quarto-xref">Figure&nbsp;<span>16.3</span></a>, the United States sits well below the 2019 curve. Given its income, the fitted curve predicts a life expectancy about 5.4 years higher than the American figure of 78.8. The lecture’s conclusion from Preston is that the U.S. problems are probably in the <em>social and economic organization</em> of health, not a lack of resources: “we won’t grow our way out.”</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> The fit-based estimate of the U.S. shortfall is mine.</p>
+</div></div></section>
+<section id="is-the-united-states-lagging-because-of-inequality" class="level3 page-columns page-full" data-number="16.4.7">
+<h3 data-number="16.4.7" class="anchored" data-anchor-id="is-the-united-states-lagging-because-of-inequality"><span class="header-section-number">16.4.7</span> Is the United States lagging because of inequality?</h3>
+<p>One reason may be inequality, through two channels. The first is mechanical, and follows directly from diminishing returns. The second, harder to establish, is that inequality itself might harm everyone’s health.</p>
+<p>The mechanical effect is easiest to see with a population of just two people (<a href="#fig-inequality" class="quarto-xref">Figure&nbsp;<span>16.4</span></a>). Both populations have the same average income, $30,000. In one, the two people earn $25,000 and $35,000; in the other, $5,000 and $55,000. Because the curve is concave, the poor person in the unequal population loses much more longevity than the rich person gains. Average longevity falls, even though average income is unchanged.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Preston (1975), pp.&nbsp;488–489.</p>
+</div></div><p>Preston made exactly this argument in 1975: “At a certain level of average national income, life expectancy is lower the higher is the variance in the distribution of income” (p.&nbsp;488). He offered it as one reason countries scatter around the curve, and pointed to Venezuela, Mexico, and Colombia, all with very unequal incomes, which fell 4.8, 6.7, and 2.1 years short of the life expectancy predicted from their average incomes. He was careful, though. Data on income distribution were too poor to test the idea properly, and the Soviet-bloc countries, with more equal incomes, did not live longer than their average incomes predicted.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Bhattacharya, Hyde and Tu (2013), ch.&nbsp;4, pp. 64–65.</p>
+</div></div><p>The second channel, that inequality itself is bad for health, has a name in the health economics reading: the <strong>income inequality hypothesis</strong>. The idea is that more unequal societies are more stressful ones, especially for those at the bottom. If it is true, then health “may decline even as average income rises if that increase is confined just to the richest groups” (Bhattacharya, Hyde and Tu 2013, p.&nbsp;65). But the evidence comes from comparing whole countries or states, which differ in many other ways, and “[t]here is much disagreement in the literature about whether the correlation between societal inequality and health is causal” (p.&nbsp;65). The mechanical effect needs no such evidence. It follows from the shape of the curve alone.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-inequality" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-inequality-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="16-longevity_files/figure-html/fig-inequality-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-inequality-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;16.4: Same average income, different inequality. Longevity rises with income at a diminishing rate (black curve). With low inequality (left), average longevity (dashed) is close to the longevity at the average income (grey line). With high inequality (right), it is much lower. Lecture example.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="the-individual-perspective-gradients-in-health" class="level2 page-columns page-full" data-number="16.5">
+<h2 data-number="16.5" class="anchored" data-anchor-id="the-individual-perspective-gradients-in-health"><span class="header-section-number">16.5</span> The individual perspective: gradients in health</h2>
+<section id="who-lives-longer" class="level3 page-columns page-full" data-number="16.5.1">
+<h3 data-number="16.5.1" class="anchored" data-anchor-id="who-lives-longer"><span class="header-section-number">16.5.1</span> Who lives longer?</h3>
+<p>Within countries, there are striking gaps:</p>
+<ul>
+<li><strong>Earnings.</strong> People who earn more live longer.</li>
+<li><strong>Education.</strong> People with more education live longer.</li>
+<li><strong>Race and ethnicity.</strong> In the United States, groups with higher “status” live longer.</li>
+</ul>
+<p>The 2021 lecture also noted exceptions worth thinking about: women in rich countries, who outlive men despite lower earnings, and the historical rural–urban divide, when cities were deadlier despite higher incomes.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Bhattacharya, Hyde and Tu (2013), ch.&nbsp;4, pp. 51–57. Their figures come from Bhattacharya and Lakdawalla (2006), Hollingsworth (1965), Currie and Stabile (2003), and Sapolsky and Mott (1987).</p>
+</div></div><p>The health economics reading opens its chapter on these gaps bluntly: “How long will you live? The answer to that question has a lot to do with your standing in society – financial, social, and otherwise” (Bhattacharya, Hyde and Tu 2013, p.&nbsp;51). Its point is that the gradient is everywhere. A few of its examples:</p>
+<ul>
+<li><strong>A high-school reunion.</strong> Picture 100 American young men who will graduate from college and 100 who will drop out of high school. Their survival curves suggest that about 85 of the college graduates would live to attend their fiftieth reunion, but only 60 of the dropouts (p.&nbsp;52).</li>
+<li><strong>Dukes and commoners.</strong> In 1750, British ducal families lived no longer than everyone else. “By 1900, the children of British dukes could expect to live nearly twenty years longer than their commoner counterparts” (p.&nbsp;52).</li>
+<li><strong>Universal health insurance doesn’t remove it.</strong> In Canada, “[i]nfants born to poor families … are nearly twice as likely to have poor self-reported health than those born to rich families,” and the gap widens after age ten (p.&nbsp;55).</li>
+<li><strong>Not even humans.</strong> Among baboons in East Africa, dominant animals have more of the “good” (HDL) cholesterol than subordinate ones (p.&nbsp;56).</li>
+</ul>
+<p>The authors draw a lesson for how to explain the gradient. A theory built for one setting, such as discrimination by doctors as an explanation of racial gaps, may hold some truth, “but even so it could not possibly explain the evidence for health disparities in industrial-age England or baboon troops in the Serengeti” (p.&nbsp;57). So they look for broader explanations, and the five on the lecture’s list below are of that kind.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Waldron (2007), <em>Social Security Bulletin</em> 67(3), Summary and p.&nbsp;13. The slides show her Chart 3.</p>
+</div></div><p><strong>Earnings.</strong> Hilary Waldron of the Social Security Administration followed male Social Security–covered workers born between 1912 and 1941, comparing those in the top and bottom halves of the earnings distribution at ages 45–55. The gap grew dramatically. Among men born in 1912 who survived to 60, those in the top half “would be expected to live only 1.2 years more than those in the bottom half.” For men born in 1941, the gap was 5.8 years. The bottom half gained 1.9 years of life expectancy at 60 over these cohorts; the top half gained 6.5.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Lleras-Muney (2002), NBER Working Paper 8986, pp.&nbsp;1–3 and 23–24; published in the <em>Review of Economic Studies</em> in 2005.</p>
+</div></div><p><strong>Education.</strong> It is hard to know whether education <em>causes</em> longer life, because the people who get more schooling differ in many ways from those who don’t. Adriana Lleras-Muney got around this using compulsory schooling laws passed by U.S. states between 1915 and 1939, which forced some cohorts in some states to stay in school longer. Her conclusion: “education has a causal impact on mortality, and … this effect is perhaps larger than has been previously estimated.” She calculated that “in 1960, one more year of education increased life expectancy at age 35 by as much as 1.7 years.” That is, for people born around 1925. (The 1.7 comes from her ordinary least squares estimate; her estimates using the schooling laws are, if anything, larger.)</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Bhattacharya, Hyde and Tu (2013), ch.&nbsp;4, p.&nbsp;58, and ch.&nbsp;3, p.&nbsp;42. Like the slide, the textbook presents the 1.7 years as the compulsory-schooling finding: “an additional year of schooling caused as much as a 1.7-year increase in life expectancy for those born in 1925.”</p>
+</div></div><p>The health economics textbook cites the same study and then asks the obvious next question. If education does lengthen life, <em>how</em>? “So Lleras-Muney (2005) finds that education improves health, but the mechanism is not clear” (p.&nbsp;58). That question is the subject of the next section.</p>
+<p><strong>Race.</strong> In the United States, the gap in life expectancy between Black and white Americans has been large and persistent. The lecture’s chart (U.S. life expectancy by race and sex, 1970–2009) shows Black men far below every other group, and the lecture describes the Black–white difference as equal to about “40 years of progress.” The gap shows up in how people rate their own health, too. In U.S. survey data, white Americans report better health than Hispanic Americans, who report better health than Black Americans, at ages from 20 to 80 (Bhattacharya, Hyde and Tu 2013, p.&nbsp;56).</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Bhattacharya, Hyde and Tu (2013), ch.&nbsp;4, p.&nbsp;56, their Figure 4.7 (from Cutler, Lleras-Muney and Vogl 2011, National Health Interview Survey data).</p>
+</div></div></section>
+<section id="why-is-socioeconomic-status-linked-to-longevity" class="level3 page-columns page-full" data-number="16.5.2">
+<h3 data-number="16.5.2" class="anchored" data-anchor-id="why-is-socioeconomic-status-linked-to-longevity"><span class="header-section-number">16.5.2</span> Why is socioeconomic status linked to longevity?</h3>
+<p>The lecture lists five possible causal connections:</p>
+<ol type="1">
+<li><strong>A resource effect.</strong> Money buys better food, housing, and medical care.</li>
+<li><strong>Education and the “efficient producer” hypothesis.</strong> Education helps people produce health more effectively from the same inputs.</li>
+<li><strong>Stress and hierarchies.</strong> Low status may itself be bad for health.</li>
+<li><strong>Reverse causality.</strong> Sick people can’t work, so poor health lowers income.</li>
+<li><strong>Third factors that influence both.</strong> Time preferences (“live fast, die young”?), and endowments such as genes and early-life environment.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Bhattacharya, Hyde and Tu (2013), ch.&nbsp;4, pp. 57–70. The matching of their hypotheses to the lecture’s five connections is mine.</p>
+</div></div><p>The health economics reading gives each of these a name, and evidence. Here they are in the lecture’s order.</p>
+<p><strong>1. The resource effect: the “direct income hypothesis.”</strong> Richer people “can afford better doctors, gym memberships, and live in healthier neighborhoods with more outdoor parks and less pollution. From this viewpoint, there is nothing mysterious to explain about health disparities” (p.&nbsp;62). The challenge is to show that money itself, and not something that comes with it, makes the difference. Lottery winners help, because their luck has nothing to do with their health or skills. In a sample of Swedish lottery players, “a lottery win that increased income by just 10% decreased the five-year mortality rate from 6% to 4%” (Lindahl 2005, as reported on pp.&nbsp;62–63). A close cousin is the <em>access to care</em> hypothesis: richer people have better insurance and an easier time seeing a doctor. That surely matters, but “access cannot explain the whole story” (p.&nbsp;66), because the gradient persists in countries where everyone is insured (more on this below).</p>
+<p><strong>2. The efficient producer hypothesis.</strong> Better-educated people get more health out of the same time and money. They may have learned things in school that help them look after themselves, or they may be better at following complicated instructions. The cleanest evidence comes from diseases that demand a lot of the patient. Goldman and Smith (2002) studied patients with HIV, whose drug regimens require taking several drugs every day without fail. Better-educated patients were better at sticking to the schedule, and “[t]his adherence differential explains entirely the health disparity between well-educated and poorly educated HIV patients” (p.&nbsp;59). Among diabetics, an experiment that gave patients intensive help with their insulin therapy helped the <em>less</em> educated most, just as you would expect if the more educated already managed on their own.</p>
+<p><strong>3. Stress and hierarchies: the “allostatic load” hypothesis.</strong> The body’s “fight or flight” response saves your life when you meet a saber-tooth tiger. But when it is triggered over and over, by “final exams, overbearing bosses, and mortgage payments” (pp.&nbsp;63–64), the stress hormones themselves cause damage. <em>Allostatic load</em> is the name for this cumulative wear and tear. The famous test is the Whitehall studies of British civil servants. They are an unusually similar group of people, in similar offices, all covered by the National Health Service. Yet “[t]he mortality rate for the lowest-level workers was over three times higher than for the highest-grade administrators” (p.&nbsp;64), and smoking, obesity, blood pressure, and cholesterol explain only part of the gap. Lower-grade workers reported less control over their jobs and more stressful events, and in both the civil servants and the baboons, low rank goes with less of the “good” cholesterol (pp.&nbsp;64–65).</p>
+<p><strong>4. Reverse causality: the “productive time” hypothesis.</strong> Here the arrow runs from health to money. People in the U.S. Health and Retirement Study who were newly diagnosed with a serious chronic disease such as cancer or heart disease in 1992 had lost, on average, $17,000 in wealth by 1994. Their out-of-pocket medical bills came to only about $2,300. Work suffered too: 21 percent left the labor force, and those who stayed worked about four fewer hours a week, cutting earnings by about $2,600 (Smith 1999, as reported on pp.&nbsp;66–67). Neither medical bills nor lost earnings account for the whole drop in wealth, but the move out of work is just what the hypothesis predicts. The effect should be largest where people are least healthy. In a randomized experiment in Indonesia, men given iron supplements for a year (to treat anemia, which saps energy) were more likely to work, and self-employed men earned more (pp.&nbsp;67–68).</p>
+<p><strong>5. Third factors: patience and early-life endowments.</strong> The economist Victor Fuchs suggested that <em>patience</em> drives both education and health. Both are investments: you give something up now for a payoff later. Patient people make more of both investments, so education and health would be correlated even if neither caused the other. In one test, students who would later go to college already smoked less at age 17, <em>before</em> they had any extra schooling (Farrell and Fuchs 1982, p.&nbsp;69). But not all the evidence agrees: when Cutler and Lleras-Muney (2010) controlled for measures of time preference, the link between education and risky behavior got <em>stronger</em>, not weaker (p.&nbsp;70). The other third factor on the lecture’s list is endowments. The <em>thrifty phenotype</em> (or Barker) hypothesis holds that deprivation in the womb or in infancy sets the body up for scarcity, leaving it prone to obesity and diabetes in a world of plenty. Since we can’t ethically starve pregnant women to test this, researchers use natural experiments. People who were in the womb during the Dutch famine at the end of World War II had more diabetes and worse health as adults than those conceived just after it, though not all the differences are statistically significant. Survivors of China’s Great Leap Forward famine who were in utero at the time grew up about three centimeters shorter (pp.&nbsp;59–61).</p>
+<p>Sorting these out is hard, and the authors don’t pretend otherwise: “These theories are not mutually exclusive, and it seems likely that no single theory will ever explain all of the many health disparities” (p.&nbsp;57). They do list a few things that, in their view, “have been well established” (p.&nbsp;70):</p>
+<blockquote class="blockquote">
+<ul>
+<li>better-educated people are more efficient producers of health, even with the same resources;</li>
+<li>health events early in life have important consequences throughout the lifespan;</li>
+<li>stress plays an important role in producing health disparities;</li>
+<li>equalizing access to care does not eliminate health disparities;</li>
+<li>there is a bi-directional relationship between health and socioeconomic status.</li>
+</ul>
+<p>(Bhattacharya, Hyde and Tu 2013, p.&nbsp;70)</p>
+</blockquote>
+<p>The economic model in the next section gives a framework for all five connections, and for thinking about choice.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+In the lab
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The mortality lab uses CenSoc, a data set linking the 1940 census to Social Security death records for men who died after age 65 between 1975 and 2005, to study education and old-age mortality. You look at whether each year of schooling adds the same amount of life, whether diplomas matter (“sheepskin effects”), and whether the education effect operates through income.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="longevity-as-a-choice-the-grossman-model" class="level2 page-columns page-full" data-number="16.6">
+<h2 data-number="16.6" class="anchored" data-anchor-id="longevity-as-a-choice-the-grossman-model"><span class="header-section-number">16.6</span> Longevity as a choice? The Grossman model</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Bhattacharya, Hyde and Tu (2013), ch.&nbsp;3, p.&nbsp;28.</p>
+</div></div><p>The health economics reading opens its chapter on Grossman with the question this section’s title asks: “Is health something that happens to you, or something that you choose? Clearly, it is a little of both.” A heart attack can strike anyone, but cutting back on Big Macs makes one less likely. The model, developed by the economist Michael Grossman in 1972, deliberately looks at the “choice” half of the answer.</p>
+<section id="health-as-a-consumption-good-and-an-investment-good" class="level3 page-columns page-full" data-number="16.6.1">
+<h3 data-number="16.6.1" class="anchored" data-anchor-id="health-as-a-consumption-good-and-an-investment-good"><span class="header-section-number">16.6.1</span> Health as a consumption good and an investment good</h3>
+<p>Suppose people get utility from two things, <span class="math inline">\(U(H, Z)\)</span>: their stock of health, <span class="math inline">\(H\)</span>, and everything else, <span class="math inline">\(Z\)</span> (consumption). Buying more health means less consumption, so this looks like a standard consumer choice problem, like the choice between goods and children in the cost-of-time model.</p>
+<p>Grossman’s insight was that health is two things at once:</p>
+<ul>
+<li>a <strong>consumption good</strong> that provides utility right now (it feels good to be healthy), and</li>
+<li>an <strong>investment good</strong> that raises future productivity.</li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Bhattacharya, Hyde and Tu (2013), ch.&nbsp;3, pp.&nbsp;28, 31, and 33 (their box “Three roles of health in the Grossman model”).</p>
+</div></div><p>The reading splits the investment side in two, and counts <strong>three roles</strong> of health:</p>
+<ol type="1">
+<li><strong>A consumption good.</strong> Being healthy is valuable in itself.</li>
+<li><strong>An input into production.</strong> Health produces <em>healthy time</em>, which can be used to work, to play, or to invest in still more health. (This is the “can we buy time?” idea below.)</li>
+<li><strong>A form of capital.</strong> Unlike consumption, which is used up today, health carries over from one period to the next. “Health is a form of capital – it is a valuable asset that pays dividends throughout your life but depreciates as you age” (p.&nbsp;28). In the reading’s words, “While Z is a flow that is created and consumed each period, H is a stock that accumulates or deteriorates from period to period” (p.&nbsp;31).</li>
+</ol>
+</section>
+<section id="the-time-constraint" class="level3 page-columns page-full" data-number="16.6.2">
+<h3 data-number="16.6.2" class="anchored" data-anchor-id="the-time-constraint"><span class="header-section-number">16.6.2</span> The time constraint</h3>
+<p>The investment side works through time. Grossman divides a person’s total time into four uses:</p>
+<p><span class="math display">\[
+T_{\text{total}} = T_{\text{working}} + T_Z + T_{\text{health}} + T_{\text{sick}} .
+\]</span></p>
+<p>Each produces something directly:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Time spent</th>
+<th>Direct product</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(T_Z\)</span></td>
+<td><span class="math inline">\(Z\)</span> (consumption)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(T_{\text{health}}\)</span></td>
+<td><span class="math inline">\(H\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(T_{\text{working}}\)</span> (earns $)</td>
+<td><span class="math inline">\(Z\)</span> and <span class="math inline">\(H\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(T_{\text{sick}}\)</span></td>
+<td>nothing</td>
+</tr>
+</tbody>
+</table>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><strong>Notation.</strong> The chapter follows the slides. The reading writes the same constraint as <span class="math inline">\(\Theta = T^W + T^Z + T^H + T^S\)</span>, with <span class="math inline">\(\Theta\)</span> for total time and superscripts for the four uses (ch.&nbsp;3, p.&nbsp;29). It calls <span class="math inline">\(Z\)</span> the “home good,” and names the market purchases that go into each: <span class="math inline">\(M\)</span> (medical care, a treadmill) for health and <span class="math inline">\(J\)</span> (jigsaw puzzles, video games) for <span class="math inline">\(Z\)</span> (pp.&nbsp;29–31).</p>
+</div><div class="">
+<p><span class="tag-reading">Added · from readings</span> Bhattacharya, Hyde and Tu (2013), ch.&nbsp;3, pp. 30–31.</p>
+</div></div>
+<p>Notice two things about this list. First, neither health nor <span class="math inline">\(Z\)</span> can simply be bought. Money buys <em>inputs</em>: a gym membership produces health only if you spend time at the gym, and a jigsaw puzzle produces fun only if you sit down and solve it. Second, sick time is not a choice. In the model, how much time you lose to illness is determined entirely by your health. The reading illustrates all of this with Homer Simpson. On Monday he works and buys donuts and a DVD; on Tuesday he skips work to enjoy them (<span class="math inline">\(Z\)</span>), with no exercise at all; on Wednesday he is so sick that he spends an hour at the doctor’s (<span class="math inline">\(T_{\text{health}}\)</span>) and the rest of the day in bed (<span class="math inline">\(T_{\text{sick}}\)</span>). “In just three days, Homer has illustrated most of the dynamics of the Grossman model” (p.&nbsp;30).</p>
+<p><strong>Can we buy time? Yes.</strong> More health reduces time spent sick, which increases the time available for work, consumption, and health. So a downstream, “indirect” product of health is <em>more time</em>. This creates a virtuous cycle: more time working and investing in health produces more health, which produces more time, which allows more work and more health investment.</p>
+<p>But is there an equilibrium? Do we spend our whole day jogging? All our money on “healthy” food? Are we willing to pay any price for health? Clearly not, and the model explains why.</p>
+</section>
+<section id="diminishing-marginal-benefits" class="level3 page-columns page-full" data-number="16.6.3">
+<h3 data-number="16.6.3" class="anchored" data-anchor-id="diminishing-marginal-benefits"><span class="header-section-number">16.6.3</span> Diminishing marginal benefits</h3>
+<p>What should we assume about health? That it provides utility, perhaps with decreasing marginal returns; that it helps avoid sickness, also with decreasing returns; and that it <strong>depreciates</strong>, like a capital stock. Health wears out and must be maintained.</p>
+<p>The key assumption is that the marginal benefits of health decline (<a href="#fig-grossman-mb" class="quarto-xref">Figure&nbsp;<span>16.5</span></a>). The first improvements in health buy a lot of healthy time; later improvements buy less. Below some minimum health stock, <span class="math inline">\(H_{\min}\)</span>, a person cannot survive. The same is true of utility: the first improvements in health matter more than later ones.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Bhattacharya, Hyde and Tu (2013), ch.&nbsp;3, pp. 32–33. They call the left panel’s curve, drawn as sick time falling with health, the “illness-avoidance function.”</p>
+</div></div><p>The reading takes <span class="math inline">\(H_{\min}\)</span> literally. At <span class="math inline">\(H_{\min}\)</span> a person is sick all the time, with no time left to work, play, or even see a doctor, and so can never rebuild health. “In this way, the model provides an economic definition of death” (p.&nbsp;33).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-grossman-mb" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grossman-mb-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="16-longevity_files/figure-html/fig-grossman-mb-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grossman-mb-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;16.5: Diminishing returns to health. Left: healthy (not-sick) time rises with the stock of health, but less and less. Right: the extra healthy time from each further improvement in health declines. Illustrative curves, after the lecture slides.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="one-period-at-a-time-why-not-maximal-health" class="level3 page-columns page-full" data-number="16.6.4">
+<h3 data-number="16.6.4" class="anchored" data-anchor-id="one-period-at-a-time-why-not-maximal-health"><span class="header-section-number">16.6.4</span> One period at a time: why not maximal health?</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Bhattacharya, Hyde and Tu (2013), ch.&nbsp;3, pp. 33–37, including their Figures 3.2–3.5. The figure is my simplified drawing of their production possibility frontier.</p>
+</div></div><p>Diminishing returns answer the lecture’s question, “Do we spend our whole day jogging?” The reading shows this with a production possibility frontier: all the combinations of health and <span class="math inline">\(Z\)</span> a person can reach in one period with her time and money (<a href="#fig-grossman-ppf" class="quarto-xref">Figure&nbsp;<span>16.6</span></a>). It is not the usual downward-sloping line, because a very sick person has almost no time to produce <em>anything</em>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-grossman-ppf" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grossman-ppf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="16-longevity_files/figure-html/fig-grossman-ppf-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grossman-ppf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;16.6: What one period’s time and money can produce. Starting from H<sub>min</sub> (A), better health first frees up so much time that health and Z can both rise: the free-lunch zone (grey), up to C. Beyond C, more health costs some Z. The best choice (F) is where the highest reachable indifference curve (dashed) touches the frontier, short of maximal health (E). Illustrative curves, after Bhattacharya, Hyde and Tu (2013), Figures 3.2–3.4.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Start at <span class="math inline">\(H_{\min}\)</span> (point A). A little more health frees up a lot of time. On this steep stretch, “an hour spent increasing health yields more than an hour reduction in sick time” (p.&nbsp;35). The reading calls it the <strong>free-lunch zone</strong>: the person can have more health <em>and</em> more of everything else. This is the lecture’s virtuous cycle. But it ends at point C, where an extra hour spent on health buys back exactly one hour of healthy time. Beyond C is the <strong>tradeoff zone</strong>: more health now costs some <span class="math inline">\(Z\)</span>. At the far end, point E, every hour and every dollar goes to health, and <span class="math inline">\(Z\)</span> is zero.</p>
+<p>Where will a person choose to be? Never in the free-lunch zone, since moving toward C gives more of both. “This may be counter-intuitive; why would it be non-optimal to have a free lunch? The answer is that allocations in the free-lunch zone do not take advantage of all opportunities and leave free H and Z on the table” (p.&nbsp;35). And with ordinary tastes, not at E either. The best point, F, is somewhere in between, where an indifference curve just touches the frontier. “This is a key prediction of the Grossman model – that in maximizing their utility, people make tradeoffs that lead to less than maximal health” (p.&nbsp;36). The reading quotes Plato in support: “There is nothing worse than fussiness about one’s health, in excess of normal physical training” (p.&nbsp;36).</p>
+<p>One more surprise. Someone who doesn’t care about health at all, only about <span class="math inline">\(Z\)</span>, still chooses point C, with a healthy stock of health. Health is worth having just for the time it buys: “even though H does not enter the individual’s utility function, his optimal level of H is still positive” (p.&nbsp;36).</p>
+</section>
+<section id="from-one-period-to-a-lifetime-the-marginal-benefit-of-health" class="level3 page-columns page-full" data-number="16.6.5">
+<h3 data-number="16.6.5" class="anchored" data-anchor-id="from-one-period-to-a-lifetime-the-marginal-benefit-of-health"><span class="header-section-number">16.6.5</span> From one period to a lifetime: the marginal benefit of health</h3>
+<p>The marginal benefit of health is the change in <em>lifetime</em> utility from a little more health, counting both the immediate utility and the healthy time it buys in every future period. (Solving for it fully requires dynamic optimization; we only need its shape.) Because both components decline, the marginal benefit curve slopes down. The reading calls it the “MEC,” for <strong>marginal efficiency of capital</strong>, “because it indicates how efficient each unit of health capital is in increasing lifetime utility” (p.&nbsp;40). It finds the curve by a thought experiment: magically give a person a little more health in one period, and add up the extra utility in every period that follows. Because of diminishing returns, the payoff is largest when health is lowest. “Ironically, the highest returns to health are available when the individual is dying” (p.&nbsp;40). But high returns don’t guarantee investment, because the cost can be higher still.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Bhattacharya, Hyde and Tu (2013), ch.&nbsp;3, pp. 39–42.</p>
+<p><strong>Notation.</strong> The slides write marginal benefit “MB” and lifetime utility as <span class="math inline">\(\sum_i e^{-d\,i}\,U(Z_i, H_i)\)</span>, with a discount <em>rate</em> <span class="math inline">\(d\)</span>. The reading calls the curve the MEC and writes <span class="math inline">\(\sum_t \delta^t U(H_t, Z_t)\)</span>, with a discount <em>factor</em> <span class="math inline">\(\delta\)</span> between 0 and 1 (ch.&nbsp;3, p.&nbsp;40; ch.&nbsp;4, p.&nbsp;68). The two are the same idea, with <span class="math inline">\(\delta = e^{-d}\)</span>. Both use <span class="math inline">\(r + \gamma\)</span> for the marginal cost. But beware: ch.&nbsp;4 switches to <span class="math inline">\(\delta\)</span> for <em>depreciation</em> in its Figures 4.8 and 4.10 and on p.&nbsp;63, even though on p.&nbsp;68 it uses <span class="math inline">\(\delta\)</span> for the discount factor, “not to be confused with <span class="math inline">\(\gamma\)</span>, her depreciation rate.” The chapter uses <span class="math inline">\(\gamma\)</span> for depreciation throughout.</p>
+</div></div></section>
+<section id="the-marginal-cost-of-health" class="level3 page-columns page-full" data-number="16.6.6">
+<h3 data-number="16.6.6" class="anchored" data-anchor-id="the-marginal-cost-of-health"><span class="header-section-number">16.6.6</span> The marginal cost of health</h3>
+<p>Holding a unit of health has two costs:</p>
+<ul>
+<li>the <strong>opportunity cost</strong> of not putting the resources into some alternative investment, which would have earned a rate of return <span class="math inline">\(r\)</span>; and</li>
+<li><strong>depreciation</strong> of the health stock, at rate <span class="math inline">\(\gamma\)</span>.</li>
+</ul>
+<p>The total marginal cost is <span class="math inline">\(r + \gamma\)</span>. The rate of return <span class="math inline">\(r\)</span> is the same for everyone, but depreciation <span class="math inline">\(\gamma\)</span> can differ, as we’ll see.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Bhattacharya, Hyde and Tu (2013), ch.&nbsp;3, pp. 41–42.</p>
+</div></div><p>Why is depreciation a <em>cost</em>? To earn as much as the alternative investment, health must pay a return of at least <span class="math inline">\(r + \gamma\)</span>, since <span class="math inline">\(\gamma\)</span> of it melts away each period. So “the market rate of return to the alternative investment plus depreciation (r + γ) is the effective price of health capital” (p.&nbsp;41). Put differently, to have the same health later you have to buy more now: “The depreciation rate acts like a kind of continual tax on any health the individual produces” (p.&nbsp;42).</p>
+</section>
+<section id="optimal-health" class="level3" data-number="16.6.7">
+<h3 data-number="16.6.7" class="anchored" data-anchor-id="optimal-health"><span class="header-section-number">16.6.7</span> Optimal health</h3>
+<p>The optimal stock of health, <span class="math inline">\(H^*\)</span>, is where <strong>marginal cost equals marginal benefit</strong> (<a href="#fig-grossman" class="quarto-xref">Figure&nbsp;<span>16.7</span></a>, left). If the marginal benefit of more health is higher than its marginal cost, it makes sense to invest more, and vice versa. The equilibrium is stable: a person starting below <span class="math inline">\(H^*\)</span> will invest to increase health, and one starting above it will let health depreciate. (This is like the Malthus and Solow models, except that it is a consumer, not an economic-demographic system, determining the dynamics.) The reading adds a useful way to see the marginal benefit curve: it works like a demand curve for health, and <span class="math inline">\(r + \gamma\)</span> is the price (ch.&nbsp;3, p.&nbsp;42).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-grossman" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grossman-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="16-longevity_files/figure-html/fig-grossman-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grossman-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;16.7: The Grossman model. Left: optimal health H* is where the marginal benefit of health (green) equals its marginal cost, r + γ (red). Middle: education raises the return to health investments (dashed), so H* rises. Right: older people’s health depreciates faster, so r + γ is higher and H* is lower. Illustrative curves, after the lecture slides.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="applications" class="level3 page-columns page-full" data-number="16.6.8">
+<h3 data-number="16.6.8" class="anchored" data-anchor-id="applications"><span class="header-section-number">16.6.8</span> Applications</h3>
+<p><strong>Education.</strong> If more education raises the return on investments in health, the marginal benefit curve shifts up (<a href="#fig-grossman" class="quarto-xref">Figure&nbsp;<span>16.7</span></a>, middle), and the optimal stock of health rises. The idea is that, per unit of time or money, more educated people get more health out of their investments. They are better health “consumers”: they follow doctors’ advice, adhere to treatments, and can choose more effective behavior. (But education also raises income, so there are other pathways too.) This is the “efficient producer” hypothesis from the list of causal connections.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Bhattacharya, Hyde and Tu (2013), ch.&nbsp;3, pp. 42–43.</p>
+</div></div><p>The reading makes the comparison concrete. Take a college graduate and a high-school dropout who are identical in every other way: same tastes, same <span class="math inline">\(r\)</span>, same <span class="math inline">\(\gamma\)</span>. Of the many explanations of the gradient, “The Grossman model posits one: the gradient arises because the well-educated are more efficient producers of health” (p.&nbsp;42), perhaps because they better understand a doctor’s instructions. Facing the same price, the graduate chooses more health, and the dropout, for whom health investments pay less, sensibly puts more into <span class="math inline">\(Z\)</span>. And because she stays healthier, the model predicts she will also live longer (p.&nbsp;43).</p>
+<p><strong>Age.</strong> Health deteriorates faster with age, so the depreciation rate <span class="math inline">\(\gamma\)</span> rises. Marginal cost is higher for the old, and their optimal stock of health is lower (<a href="#fig-grossman" class="quarto-xref">Figure&nbsp;<span>16.7</span></a>, right). Older people may <em>spend</em> more on health, but their optimal stock is lower. The model’s most startling implication: is death rational? Eventually the depreciation rate is so high that it is better to stop investing in health and just enjoy the last bit of life, spending everything on <span class="math inline">\(Z\)</span>.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Bhattacharya, Hyde and Tu (2013), ch.&nbsp;3, pp. 43–47.</p>
+</div></div><p>The reading puts it simply: “The Grossman model predicts that it is too costly to stay forever young” (p.&nbsp;43). To see why rising depreciation matters, imagine instead that <span class="math inline">\(\gamma\)</span> stayed at 5 percent forever. Then a person could top up the lost 5 percent each period, keep health at the same level, and live forever: “This is a pretty outlandish result, even for an economics model” (p.&nbsp;44). With rising depreciation, investing in health becomes less and less worthwhile. The reading’s analogy is a student who knows he “would forget 99% of whatever he studied before a big exam. How would that affect his willingness to hit the books?” (p.&nbsp;44). Its pop-culture example is the grandfather in the film <em>Little Miss Sunshine</em>, who warns his grandson off drugs: “When you’re young, you’re crazy to do that s***.” Asked about himself, he replies, “I’m old! You get to be my age - you’re crazy not to do it” (p.&nbsp;44). (“Neither the Grossman model nor the authors of this textbook endorse recreational drug use among the elderly,” p.&nbsp;45.) Lower health in old age also means more sick time, less time for work and play, and a smaller frontier of everything a person can produce (pp.&nbsp;45–47).</p>
+<p><strong>Income: income and substitution effects.</strong> As in the cost-of-time model of fertility, a wage increase pulls in two directions. The <strong>income effect</strong>: a higher wage provides more resources, so a person can afford more <span class="math inline">\(H\)</span> (and more <span class="math inline">\(Z\)</span>). The <strong>substitution effect</strong>: a higher wage raises the price of time spent on health, <span class="math inline">\(T_H\)</span>. The lecture’s example: stars who have “no time” to take care of themselves, because they are too busy consuming.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Bhattacharya, Hyde and Tu (2013), ch.&nbsp;4, pp. 62–63. The reading does not discuss the substitution effect; ch.&nbsp;3 leaves wage differences to an exercise (pp.&nbsp;43, 48).</p>
+</div></div><p>The reading tells only the first half of this story, as its “direct income hypothesis.” A higher-wage person can afford more of everything, so her frontier shifts out, and she chooses more health <em>and</em> more <span class="math inline">\(Z\)</span>. It adds a twist that pushes the same way: “Staying healthy is more important to the richer individual because her time is more valuable” (ch.&nbsp;4, p.&nbsp;62). Healthy time is worth more when each hour earns more, so the marginal benefit curve shifts up. The lecture’s stars are the reminder that the substitution effect can pull the other way.</p>
+</section>
+<section id="the-gradient-through-grossmans-eyes" class="level3 page-columns page-full" data-number="16.6.9">
+<h3 data-number="16.6.9" class="anchored" data-anchor-id="the-gradient-through-grossmans-eyes"><span class="header-section-number">16.6.9</span> The gradient through Grossman’s eyes</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Bhattacharya, Hyde and Tu (2013), ch.&nbsp;4, pp. 57–58, 62–63, 66–69, and their Figure 4.14. The table is my summary.</p>
+</div></div><p>The health economics reading uses the Grossman model to organize <em>all</em> the explanations of the socioeconomic gradient from earlier in the chapter. “Although not always framed this way by researchers, each of the theories we discuss below can be interpreted in terms of the Grossman model” (ch.&nbsp;4, p.&nbsp;58). Each one changes a different part of the model:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lecture’s causal connection</th>
+<th>Hypothesis in the reading</th>
+<th>What changes in the Grossman model</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1. Resources</td>
+<td>Direct income</td>
+<td>Bigger frontier; MEC shifts up (time is worth more)</td>
+</tr>
+<tr class="even">
+<td>2. Education</td>
+<td>Efficient producer</td>
+<td>MEC shifts up (more health per hour or dollar)</td>
+</tr>
+<tr class="odd">
+<td>3. Stress and hierarchies</td>
+<td>Allostatic load</td>
+<td>Depreciation <span class="math inline">\(\gamma\)</span> rises, so <span class="math inline">\(r + \gamma\)</span> rises</td>
+</tr>
+<tr class="even">
+<td>4. Reverse causality</td>
+<td>Productive time</td>
+<td>Low health means less healthy time, so less income</td>
+</tr>
+<tr class="odd">
+<td>5. Third factors</td>
+<td>Fuchs (patience); thrifty phenotype</td>
+<td>Patience raises the MEC; early deprivation lowers health productivity</td>
+</tr>
+</tbody>
+</table>
+<p>Two of these are worth a closer look. <strong>Stress</strong> works like aging: a person under constant stress wears out faster, as if older than her years, so health investment pays less and she chooses less health, even with the same skill at producing it (ch.&nbsp;4, p. 63). <strong>Patience</strong> works through the lifetime view of the marginal benefit. Most of the benefits of health come in the future, so a patient person, who values the future more, gets more from each unit of health. The reading compares two people, patient Lisa and impatient Bart: Lisa has a higher MEC curve, and chooses more health (ch.&nbsp;4, pp.&nbsp;68–69). The same patience makes Lisa invest more in education, so the theory predicts that impatient people “will be poorly educated, unhealthy, and the happier for it” (p.&nbsp;69). And the productive-time link should be strongest for the least healthy, who are on the steep part of the healthy-time curve in <a href="#fig-grossman-mb" class="quarto-xref">Figure&nbsp;<span>16.5</span></a>. That is why the Indonesian iron experiment found such large effects (ch.&nbsp;4, pp.&nbsp;67–68).</p>
+</section>
+<section id="what-the-grossman-model-does-and-doesnt-do" class="level3 page-columns page-full" data-number="16.6.10">
+<h3 data-number="16.6.10" class="anchored" data-anchor-id="what-the-grossman-model-does-and-doesnt-do"><span class="header-section-number">16.6.10</span> What the Grossman model does, and doesn’t, do</h3>
+<p>Even this brief introduction gives a formal model of individual health investment choices. It offers insights into</p>
+<ul>
+<li>why the rich are healthier than the poor,</li>
+<li>why education has such a large effect on health,</li>
+<li>why we age, and</li>
+<li>why we die.</li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> The slide says only “controversial when applied to groups”; the explanation of why is mine.</p>
+</div></div><p>It is also controversial when applied to groups. Explaining group differences in longevity by “choices” can sound like blaming people for their own shorter lives, and the model is silent on the institutions and technology that dominate the population-level story in the first half of this chapter. The model’s value is what it shows about the behavioral part, and what it shows we need to add.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Bhattacharya, Hyde and Tu (2013), ch.&nbsp;3, p.&nbsp;47.</p>
+</div></div><p>The reading’s own summary is careful about what kind of “choice” is meant: “The Grossman model begins with the premise that health is a choice, at least when considered over a long period of time.” People start with different endowments and have little control in any given period, “but over time small decisions add up to large changes in health” (p.&nbsp;47). Whether the evidence bears out the model’s predictions is, as the authors say, a separate task.</p>
+</section>
+</section>
+<section id="key-ideas" class="level2" data-number="16.7">
+<h2 data-number="16.7" class="anchored" data-anchor-id="key-ideas"><span class="header-section-number">16.7</span> Key ideas</h2>
+<ul>
+<li><strong>Life expectancy</strong> summarizes a year’s death rates: <span class="math inline">\(e_0\)</span> at birth, <span class="math inline">\(e_{65}\)</span> at 65.</li>
+<li>Mortality decline came in waves, first among children (water-borne disease), then young adults (tuberculosis), then older adults (heart disease), moving like “an army of ants” to wherever deaths were most common.</li>
+<li><strong>Preston curves:</strong> life expectancy rises with national income at a sharply diminishing rate, and over time most progress came from the curve <em>shifting up</em> (public health, the spread of medical technology), not from movement <em>along</em> it. Preston estimated that rising incomes explained only about 16 percent of the world’s gain in life expectancy between 1938 and 1963. Since 1960 the income share looks larger, though the shift is still the bigger part.</li>
+<li>Because of diminishing returns, <strong>inequality mechanically lowers average longevity</strong> even when average income is unchanged.</li>
+<li>Within countries, longevity rises with <strong>earnings, education, and status</strong>, and the gaps can widen over time.</li>
+<li>The gradient is pervasive: across education, income, and race, in history, in countries with universal health insurance, even among baboons. Candidate explanations include resources (direct income), efficient production (education), stress (allostatic load), reverse causality (productive time), and third factors (patience, early-life deprivation). They are not mutually exclusive.</li>
+<li>In the <strong>Grossman model</strong>, health is both a consumption good and an investment that buys healthy time. Optimal health is where its marginal benefit (the MEC) equals its marginal cost, <span class="math inline">\(r + \gamma\)</span>. Even within one period, people choose <em>less than maximal</em> health. Education raises <span class="math inline">\(H^*\)</span>; aging (higher <span class="math inline">\(\gamma\)</span>) lowers it, and so, in the reading’s interpretation, does stress.</li>
+</ul>
+</section>
+<section id="check-your-understanding" class="level2 page-columns page-full" data-number="16.8">
+<h2 data-number="16.8" class="anchored" data-anchor-id="check-your-understanding"><span class="header-section-number">16.8</span> Check your understanding</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> All questions are new. Question 7 uses the Whitehall finding from Bhattacharya, Hyde and Tu (2013), ch.&nbsp;4, p.&nbsp;64. They avoid the mortality lab’s graded questions (the Black–white comparison, the education threshold calculation, sheepskin effects for Black men, and the pathways question).</p>
+</div></div><ol type="1">
+<li><p><strong>Predict, then check.</strong> Before looking at <a href="#fig-usa-age" class="quarto-xref">Figure&nbsp;<span>16.2</span></a>, predict whether the death rate fell by a larger <em>percentage</em> at age 10 or at age 80 between 1933 and 2019. Then check. Why might the answer differ for the <em>number</em> of lives saved?</p></li>
+<li><p><strong>Between or along?</strong> Suppose a poor country’s income doubles, and at the same time the whole Preston curve shifts up. Sketch both changes. Which one would you expect to matter more for a very poor country? For a rich one?</p></li>
+<li><p><strong>The inequality effect.</strong> In <a href="#fig-inequality" class="quarto-xref">Figure&nbsp;<span>16.4</span></a>, the average income is the same in both panels. Would the effect of inequality on average longevity be larger or smaller if the curve were a straight line? Explain in one sentence.</p></li>
+<li><p><strong>Depreciation.</strong> In the Grossman model, a new medicine slows the rate at which health wears out (<span class="math inline">\(\gamma\)</span> falls) for everyone. Predict what happens to optimal health, and to spending on health. Could spending go down?</p></li>
+<li><p><strong>The stars example.</strong> Use income and substitution effects to explain why a large wage increase might <em>lower</em> someone’s health. What kind of person is this most likely to apply to?</p></li>
+<li><p><strong>Is death rational?</strong> Explain, using the marginal cost curve, why the Grossman model predicts that people eventually stop investing in their health. Name one thing the model leaves out that might make this prediction wrong.</p></li>
+<li><p><strong>Equal access, unequal health.</strong> In the Whitehall studies, all the civil servants were covered by the same National Health Service, yet the lowest grades died at over three times the rate of the highest. Which of the explanations for the gradient does this finding weaken? Which does it leave standing?</p></li>
+</ol>
+</section>
+<section id="further-reading" class="level2 page-columns page-full" data-number="16.9">
+<h2 data-number="16.9" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">16.9</span> Further reading</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> The “As you read” guides are mine. The Preston guide is based on the 2007 reprint. The Bhattacharya et al.&nbsp;guide is based on reading both chapters in full.</p>
+</div></div><ul>
+<li>Preston, Samuel H. 1975. “The Changing Relation between Mortality and Level of Economic Development.” <em>Population Studies</em> 29(2): 231–248. (Assigned in 2019; reprinted in the <em>International Journal of Epidemiology</em> 36(3): 484–490, 2007, abridged, with commentaries; the version read for this draft.) <em>A classic article arguing that economic development was not the main force behind improvements in longevity. As you read: find the two curves and Table 1, and work out how Preston gets from 2.5 and 1.3 years to “around 16%.” Then find his reasons for ruling out nutrition and literacy as the cause of the shift. Are you convinced?</em></li>
+<li>Bhattacharya, Jay, Timothy Hyde, and Peter Tu. 2013. <em>Health Economics.</em> Palgrave. Ch. 3, “Demand for Health: The Grossman Model,” pp.&nbsp;28–50, and ch.&nbsp;4, “Socioeconomic Disparities in Health,” pp.&nbsp;51–75. (Assigned 2019–2023.) <em>A clear, lightly mathematical textbook treatment, with Homer Simpson as the model’s star. As you read: in ch.&nbsp;3, find the “free-lunch zone” (pp.&nbsp;34–35) and the marginal efficiency of capital (MEC) curve, and list what shifts the curve and what shifts the cost line. Note that ch.&nbsp;4 writes depreciation as <span class="math inline">\(\delta\)</span> rather than <span class="math inline">\(\gamma\)</span>. In ch.&nbsp;4, match each of the six hypotheses to one of the lecture’s five causal connections, and find one piece of evidence that supports, and one that complicates, each.</em></li>
+<li>Waldron, Hilary. 2007. “Trends in Mortality Differentials and Life Expectancy for Male Social Security–Covered Workers, by Socioeconomic Status.” <em>Social Security Bulletin</em> 67(3): 1–28. <em>The source of the earnings figure in lecture.</em></li>
+<li>Lleras-Muney, Adriana. 2005. “The Relationship Between Education and Adult Mortality in the United States.” <em>Review of Economic Studies</em> 72(1): 189–221. (Working paper version, read for this draft: NBER WP 8986, 2002. Journal volume and pages are from general knowledge.) <em>The compulsory-schooling study cited in lecture.</em></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./15-migration-gains-enforcement.html" class="pagination-link" aria-label="Migrants' Gains and Immigration Enforcement">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Migrants’ Gains and Immigration Enforcement</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./17-projection-peak.html" class="pagination-link" aria-label="Population Projection, Age Pyramids, and &quot;Our Shrinking Future?&quot;">
+        <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Population Projection, Age Pyramids, and “Our Shrinking Future?”</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

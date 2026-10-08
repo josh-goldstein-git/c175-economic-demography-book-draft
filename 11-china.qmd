@@ -1,0 +1,523 @@
+# Fertility Policy I: China's One-Child Policy {#sec-china}
+
+```{r}
+#| label: setup-ch11
+#| include: false
+col_urban <- "#2b6cb0"; col_rural <- "#d62728"; col_all <- "grey30"
+col_grey <- "grey45"
+```
+
+::: {.callout-warning appearance="simple"}
+## Draft: provenance notes (for review)
+Margin tags mark material that is **not in the course slides or lab**.
+[Added · from readings]{.tag-reading} comes from the assigned readings (Hesketh et al., Zhang).
+[Added · new]{.tag-new} is from outside the course materials (my framing, general knowledge, or my own analysis) and needs the closest check.
+Untagged material follows the 2025 slides (17) and the China lab.
+:::
+
+::: {.callout-note appearance="minimal"}
+**In this chapter.** We turn from theories of fertility to real policy changes.
+This chapter looks at China's one-child policy, perhaps the most ambitious attempt
+by any government to control births, and asks the hard question it shares with the
+next chapter: how can we tell what a policy *caused*, when so much else was changing
+at the same time?
+
+**Readings this chapter draws on.** Hesketh, Lu, and Xing (2005), "The Effect
+of China's One-Child Family Policy after 25 Years"; Zhang (2017), "The Evolution
+of China's One-Child Policy and Its Effects on Family Outcomes."
+:::
+
+::: {.column-margin}
+[Added · new]{.tag-new} Bridge text written for the chapter split.
+:::
+
+This is the first of two chapters on fertility policy. Both ask what a policy
+change did to births, and both face the same problem of finding a counterfactual.
+This chapter takes up China's one-child policy; @sec-abortion turns to abortion and
+the pill in the United States.
+
+## Policy and fertility: did it matter, and how would we know?
+
+In earlier chapters we studied *theories* of fertility decline. Now we look at
+two cases (this chapter and @sec-abortion) where governments or courts deliberately changed the rules, and ask
+what happened to births. Both cases are controversial, and both are useful for the
+same reason: they force us to think carefully about **causation**.
+
+The problem is simple to state. Fertility was falling in China before the
+one-child policy, and it was falling in the United States before *Roe v. Wade*.
+If births fell after a policy, did the policy cause the fall, or would it have
+happened anyway? To answer, we need a **counterfactual**: what *would* have
+happened without the policy. We can never observe it directly. The art is in
+finding a comparison that stands in for it.
+
+Speed of decline is one place to start. Across the world, the time it took
+fertility to fall from more than 6 children per woman to fewer than 3 has shrunk
+dramatically. In the United Kingdom it took 95 years (1815–1910). In the United
+States it took 82 years. In China it took 11 years (1967–1978), and in Iran only
+10 (1986–1996). Notice China's dates: its fall from 6 to 3 children per woman was
+*finished* before the one-child policy began in 1979. And Iran achieved an even
+faster decline with no one-child policy at all.
+
+## The one-child policy: beginnings and end
+
+### Before the one-child policy: "Later, Longer, Fewer"
+
+::: {.column-margin}
+[Added · from readings]{.tag-reading} Mao's views, Ma Yinchu, the 1971 slogan,
+and the "menstrual monitors" quotation are from Zhang 2017, pp. 142–143.
+:::
+
+China's population policy did not begin in 1979. Mao Zedong, China's leader from
+1949 to 1976, "believed in the principle: 'More people, more power,'" as Junsen
+Zhang puts it. In the mid-1950s the economist Ma Yinchu, president of Peking
+University, recommended family planning. Mao was briefly supportive, but during
+the Great Leap Forward (1958) he reverted to the belief that a larger population
+was better, and Ma was denounced as a "rightist." After the famine of the Great
+Leap Forward, fertility rebounded to more than six births per woman in the early
+1960s.
+
+By the end of the 1960s, China's population passed 800 million and the economy
+was stagnating. A serious family planning campaign began in 1971 with the slogan
+"One child isn't too few, two are just fine, and three are too many." In 1973 it
+was formalized as the **Later–Longer–Fewer** campaign (*wan–xi–shao*):
+
+- **Later marriage.** People were encouraged to marry three years after the legal
+  minimum ages: at least 25 (rural) or 27–28 (urban) for men, and at least 23
+  (rural) or 25 (urban) for women. Couples who married late got 7 to 30 days of
+  "late marriage leave."
+- **Longer spacing.** At least four years between births.
+- **Fewer children.** No more than two per couple.
+
+The campaign worked. China's fertility fell by half during the 1970s. Hesketh and
+colleagues put the total fertility rate (TFR) at 5.9 in 1970 and 2.9 in 1979;
+Zhang gives 5.8 in 1970 and 2.7 in 1978. By 1978, Zhang reports, urban fertility
+was already down to 1.55 children per woman, and rural fertility to 2.97.
+
+The campaign was officially voluntary, but it had coercive elements. Zhang quotes
+the sociologists Martin Whyte, Wang Feng, and Yong Cai:
+
+> "These birth planning enforcers kept detailed records on each woman of
+> child-bearing age under their responsibility, including past births,
+> contraceptive usage and even menstrual cycles, in many reported instances
+> becoming 'menstrual monitors' who tried to detect out-of-quota pregnancies at an
+> early stage."
+
+Still, Zhang concludes, the 1970s campaign was "significantly less coercive than
+the one-child policy that followed."
+
+### From Later–Longer–Fewer to just one child
+
+When Deng Xiaoping came to power in 1978, the new leadership's priority was the
+economy. A group of control theorists argued that China would achieve the highest
+level of well-being around 2050 if its population could be reduced to 650–700
+million. Local governments began moving toward a one-child rule in late 1979. The
+policy was formally announced in September 1980, in "An open letter to all party
+members and all youth league members" published in the *People's Daily*. The
+letter said that the State Council "advocates that each couple should have only
+one child," and promised that after 30 years the policy might be changed.
+
+::: {.column-margin}
+[Added · from readings]{.tag-reading} Hesketh et al. 2005, p. 1171; Zhang 2017,
+p. 144.
+:::
+
+Hesketh and colleagues summarize the government's reasoning:
+
+::: {.callout-tip appearance="simple"}
+## In their own words
+"At the time, China was home to a quarter of the world's people, who were
+occupying just 7 percent of world's arable land. Two thirds of the population were
+under the age of 30 years, and the baby boomers of the 1950s and 1960s were
+entering their reproductive years. The government saw strict population
+containment as essential to economic reform and to an improvement in living
+standards." (Hesketh, Lu, and Xing 2005)
+:::
+
+Zhang adds that Deng had set a goal of quadrupling GDP per capita by the end of
+the century. Fewer people was one way to raise income *per person*. The policy was
+launched, Zhang writes, "in the context of both a neo-Malthusian concern over
+population and ambitious economic development goals."
+
+### How the policy actually worked
+
+::: {.column-margin}
+[Added · from readings]{.tag-reading} Details of enforcement are from Hesketh et
+al. 2005, pp. 1171–1172, and Zhang 2017, pp. 144–145, including footnote 2.
+:::
+
+The name "one-child policy" is misleading. "Despite its name," Hesketh and
+colleagues write, "the one-child rule applies to a minority of the population."
+In practice there was a two-tier system:
+
+- **Urban residents and government employees** were held strictly to one child.
+  Many worked for state-owned enterprises and could lose their jobs and benefits
+  if they had a second.
+- **Rural residents**, about 70 percent of the population, were generally allowed
+  a second child after five years, often only if the first was a girl, "a clear
+  acknowledgment of the traditional preference for boys." Ethnic minorities and
+  remote areas could have a third.
+
+Enforcement was in the hands of local officials, who used rewards and penalties:
+economic incentives for compliance, and fines, confiscation of belongings, and
+dismissal from work for violations. The policy relied on near-universal
+contraception and abortion. By the early 2000s, 87 percent of married women used
+contraception, and IUDs and sterilization made up more than 90 percent of methods.
+Eighty percent of women in one large study said they had no choice of method and
+simply accepted what the family-planning worker recommended. Zhang notes that the
+heavy-handedness peaked in 1983, with "a nationwide campaign of mandatory
+sterilization, abortion, and IUD insertion."
+
+The policy also changed over time:
+
+- **Flexibility and decentralization (1984–1989).** Because of "practical
+  difficulties," especially resistance from rural families whose only child was a
+  girl, the Party allowed more exceptions. The guiding phrase was "open a small hole
+  to close up a big one." Fertility rebounded somewhat in 1984–1986.
+- **Restrengthening (from 1989).** The policy was tightened again and tied to the
+  careers of local officials: "No achievements, no promotion." Family planning was
+  listed among the three basic state policies in the 8th Five-Year Plan in March
+  1991.
+
+The fines varied enormously from province to province and over time, as you can
+see in the data economists have collected on them. That variation will turn out to
+be useful for research.
+
+### The end of the one-child policy
+
+The policy was relaxed in steps:
+
+- **1984–2011:** local governments allowed two children for couples in which both
+  parents were themselves only children.
+- **2014:** two children allowed if *either* parent was an only child.
+- **2016:** a universal two-child policy. The abolition of the one-child policy was
+  announced on October 29, 2015.
+- **2021:** a three-child policy, which lifted limits on third births.
+
+Official motivations for the switch included a lower population growth rate, the
+recent decline in the size of the labor force, the challenges of an aging society,
+a lasting imbalance in the sex ratio, and the promise made in the 1979 open letter.
+Official propaganda has turned around completely. Banners that once read "Strictly
+limit second births, totally eradicate third births" and "One child is best, the
+government aids in elder care" now read "Three children are better than two" and
+"Three children are best, no need for state-supported elder care."
+
+## Did the one-child policy reduce fertility?
+
+### The mystery: where is the policy hiding?
+
+@fig-china-tfr plots the total fertility rates reported in our two readings. The
+shaded bands show the Later–Longer–Fewer campaign and the one-child policy.
+
+```{r}
+#| label: fig-china-tfr
+#| fig-cap: "China's total fertility rate at dates reported in the readings. Black: national; blue and red: urban and rural in 1978. The steepest decline came during the 'Later–Longer–Fewer' campaign of the 1970s, before the one-child policy. Sources: Zhang (2017) for 1970, 1978, 1979, 1995 and the 1978 urban/rural rates; Hesketh et al. (2005) for 2004; Wang, Cai, and Gu (2013), as quoted by Zhang, for 'around 1.5' in 2010."
+#| fig-height: 4.2
+op <- par(mar = c(4, 4.2, 1, 1))
+plot(NA, xlim = c(1965, 2015), ylim = c(0, 6.5), xlab = "Year",
+     ylab = "Total fertility rate (children per woman)")
+rect(1971, -1, 1979, 7, col = adjustcolor("#e08a00", 0.15), border = NA)
+rect(1979, -1, 2015.5, 7, col = adjustcolor(col_grey, 0.12), border = NA)
+text(1975, 6.3, "Later–Longer–\nFewer", cex = 0.8, col = "#a05a00")
+text(1997, 6.3, "One-child policy (1979–2015)", cex = 0.8, col = col_grey)
+abline(h = 2.1, lty = 3, col = col_grey)
+text(2013.5, 2.1, "replacement", pos = 3, cex = 0.75, col = col_grey)
+yr <- c(1970, 1978, 1979, 1995, 2004, 2010)
+tfr <- c(5.8, 2.7, 2.8, 1.8, 1.7, 1.5)
+lines(yr, tfr, lty = 2, col = col_all)
+points(yr, tfr, pch = 19, col = col_all)
+text(yr, tfr, c("5.8", "2.7", "2.8", "1.8", "1.7", "~1.5"),
+     pos = c(4, 1, 4, 3, 3, 1), cex = 0.8)
+points(c(1978, 1978), c(1.55, 2.97), pch = c(17, 15), col = c(col_urban, col_rural))
+text(1978, 1.55, "urban 1.55", pos = 2, cex = 0.8, col = col_urban)
+text(1978, 2.97, "rural 2.97", pos = 2, cex = 0.8, col = col_rural)
+par(op)
+```
+
+If you were shown only the curve and asked to find the year the one-child policy
+began, it would be hard to pick it out. The big drop came in the 1970s.
+Afterward, fertility fell much more gradually, to around 1.8 by the mid-1990s, and
+then roughly stabilized. Zhang puts the numbers side by side: the TFR fell from 5.8
+to 2.7 between 1970 and 1978, but from 2.8 to 1.8 between 1979 and 1995 under the
+one-child policy. Whyte, Wang, and Cai calculate that roughly three-quarters of the
+decline in fertility from 1970 to the present occurred *before* the one-child
+policy began.
+
+### Comparison countries
+
+Of course, fertility might have *risen* after 1979 without the policy. So we need
+a comparison. Zhang compares rural and urban China with four other developing
+countries that also had high fertility in the 1960s: South Korea, Thailand, Mexico,
+and India. None had a one-child policy. All saw rapid declines after 1970.
+
+::: {.column-margin}
+[Added · from readings]{.tag-reading} Zhang 2017, pp. 146–148.
+:::
+
+South Korea and Thailand, which had fast economic growth and voluntary family
+planning programs, fell more slowly than urban China in the 1960s and 1970s, but by
+2010 their fertility was as low as China's. Thailand, Zhang notes, "is especially
+worth noting because it had fertility and GDP per capita similar to China's by
+2010." Even India, with a weaker family planning program and much slower growth,
+saw a marked decline. Zhang's conclusion: "Given that the economic growth rate of
+China was higher than those of the four other countries from 1979, I believe that
+even without the one-child policy, China's fertility rate would have declined
+substantially after 1978."
+
+Another comparison, shown in lecture, is **Taiwan**, which never had a one-child
+policy. Taiwan's fertility followed a path quite similar to mainland China's and
+has since fallen even lower.
+
+A related observation: China was "ahead of the curve." When we plot fertility
+against GDP per capita, China's fertility fell to low levels at an exceptionally
+low income. Zhang points out that in China, India, South Korea, and Thailand
+fertility fell sharply before GDP per capita reached $3,000. China's economy was
+nearly stagnant in the 1970s, so economic development cannot explain the fertility
+decline of that decade. The family planning campaign was "widely believed to be the
+main contributor." Some demographers called it an "induced fertility transition."
+
+### How economists try to identify the effect
+
+::: {.column-margin}
+[Added · from readings]{.tag-reading} The four approaches and their assumptions
+are from Zhang 2017, pp. 148–150.
+:::
+
+Zhang describes four strategies that researchers have used, each with its own
+assumption:
+
+1. **Before and after 1979.** Compare births before and after the policy,
+   controlling for a time trend. This assumes that any break from the trend after
+   1979 is due to the policy, not to the economic reforms that began at the same
+   time.
+2. **Variation in fines.** Compare places with higher and lower penalties. The
+   problem is that local governments may set fines according to local conditions
+   and local demand for children. Fines are not randomly assigned.
+3. **Han versus minorities.** Han Chinese women were held strictly to the policy,
+   while minority women were often allowed two children. Comparing the change in
+   Han fertility to the change in minority fertility is a
+   **difference-in-differences** design. It assumes the two groups would otherwise
+   have followed the same trend, which economic reforms may have violated.
+4. **Variation in enforcement intensity.** Compare prefectures that enforced the
+   policy more and less strictly (measured by "excess" births above the one-child
+   rule), and cohorts with more and less exposure.
+
+The ideal, Zhang observes wryly, "would have been useful for research purposes if
+China had randomly selected a cross-section of prefectures to implement the
+one-child policy and then forbidden interprefecture migration." That never
+happened, so every estimate rests on assumptions.
+
+### What the evidence says
+
+The studies agree that the policy *did* reduce fertility, especially at first.
+Ahn (1994), for example, found that the probability of a second child in urban
+areas fell by 50 percent in Hebei and Shaanxi and by 86 percent in Shanghai after
+the policy. But most studies find the effect was "rather small, especially in the
+longer-term." Zhang offers a reconciliation:
+
+::: {.callout-tip appearance="simple"}
+## In their own words
+"A plausible reconciliation of these views is that the one-child policy
+accelerated the already-occurring drop in fertility for a few years, but in the
+longer term, economic development played a more fundamental role in leading to
+and maintaining China's low fertility level." (Zhang 2017)
+:::
+
+Hesketh and colleagues reach the same view. China's neighbors, without such
+policies, had some of the lowest fertility rates in the world: 1.04 in Singapore,
+1.38 in Japan, 0.91 in Hong Kong. "It is reasonable to speculate," they write,
+"that there would have been a further decline in China's total fertility rate had
+the voluntary policy of the 1970s continued." A Bayesian projection by Wang, Cai,
+and Gu, quoted by Zhang, concluded that without the policy, "By 2010, fertility
+would have fallen to its currently observed level of around 1.5 children per
+woman."
+
+That raises an awkward point about official claims. Chinese authorities claimed
+the policy prevented 250 to 300 million births. But that claim depends on assuming
+fertility would have stayed high without the policy. Wang and colleagues concluded,
+in Zhang's summary, that "China's government exaggerated the effect of the one-child
+policy."
+
+### Fewer children, better educated children?
+
+::: {.column-margin}
+[Added · from readings]{.tag-reading} Zhang 2017, pp. 152–153.
+:::
+
+If families can have only one child, they might invest more in that child. This is
+the *quantity–quality trade-off* from Gary Becker's theory of fertility. Did the
+one-child policy produce better-educated children?
+
+An ingenious test uses **twins**. In urban Kunming, where the policy was strictly
+enforced, about 95 percent of households without twins had one child, while
+households whose first birth was twins necessarily had two. Twins are a matter of
+chance, so comparing these families isolates the effect of an extra child. Mark
+Rosenzweig and Zhang found that the policy-induced fall in fertility had "a
+moderately positive effect on children's human capital at most": it raised
+schooling by at most 4 percent and the probability of attending college by less
+than 9 percent. Other studies, using variation in enforcement, find similarly small
+effects on education.
+
+### What lessons for other countries?
+
+Zhang's verdict on the policy as a whole is blunt. It "may have mildly accelerated
+the fertility transition," but "it also brought substantial costs, including
+political costs, human rights concerns, a more rapidly aging population, and an
+imbalanced sex ratio resulting from a preference for sons. In retrospect, one may
+question the need for introducing the one-child policy in China." For other
+countries:
+
+> "If the country is already experiencing a decline in fertility rates, then a
+> one-child policy doesn't seem useful. … Rather than focusing on a one-child
+> policy, a developing country may want to consider an aggressive but less-coercive
+> family planning program such as the policy implemented in China in the 1970s."
+> (Zhang 2017)
+
+## Fewer daughters: an unintended consequence?
+
+### The sex ratio at birth
+
+In every population, slightly more boys are born than girls. Hesketh and colleagues
+report that the sex ratio at birth ranges from 1.03 to 1.07 boys per girl in
+industrialized countries. In China, the reported ratio rose from 1.06 in 1979 to
+1.11 in 1988 and 1.17 in 2001, and reached 1.3 in some rural provinces.
+@fig-china-sexratio shows how the ratio varied by birth order.
+
+```{r}
+#| label: fig-china-sexratio
+#| fig-cap: "Sex ratio at birth (boys per girl) by birth order in China, 1980–2001, for urban and rural areas. The dotted line marks a typical biological ratio of 1.05. Source: Hesketh et al. (2005), Table 2 (data from Kang and Wang)."
+#| fig-height: 4
+sr <- rbind(Urban = c(1.13, 1.30, 1.19, 1.19), Rural = c(1.05, 1.23, 1.29, 1.32))
+colnames(sr) <- c("1st", "2nd", "3rd", "4th+")
+op <- par(mar = c(4, 4.2, 1, 1))
+bp <- barplot(sr, beside = TRUE, col = c(col_urban, col_rural), ylim = c(0.9, 1.4),
+              xpd = FALSE, xlab = "Birth order", ylab = "Boys per girl",
+              legend.text = TRUE, args.legend = list(x = "topleft", bty = "n"))
+abline(h = 1.05, lty = 3, col = col_grey)
+box()
+text(bp, sr + 0.012, format(sr, nsmall = 2), cex = 0.75)
+par(op)
+```
+
+The pattern fits the policy's rules closely. In rural areas, where a second child
+was usually allowed (especially after a girl), the first-birth ratio was normal,
+1.05, but it rose steeply for later births. In urban areas, where only one child
+was allowed, the ratio was already high, 1.13, for first births. Hesketh and
+colleagues explain:
+
+> "The picture that emerges is that some urban Chinese make the choice to perform
+> sex selection with the first pregnancy, since they are allowed only one child. In
+> rural areas, most couples are permitted to have a second child, especially if the
+> first is female. So if the second (or subsequent) child is female, the pregnancy
+> often 'disappears,' allowing the couple to have another child in an attempt to
+> have a son."
+
+### Stopping rules can't change the sex ratio. Behavior can.
+
+Could parents raise the share of boys simply by deciding *when to stop* having
+children? For example, "keep having children until you get a boy." In class we
+test this with coins. The lesson: **stopping rules alone can't change the sex
+ratio.** Each birth is still about as likely to be a boy as a girl, whatever the
+parents plan to do next. Stopping rules can, however, amplify gender inequality in
+other ways. (Think about how many brothers and sisters a typical boy or girl has
+under such a rule.)
+
+So if we see the sex ratio change, it must be due to **behavior** that affects
+which births are born or counted:
+
+- **sex-selective abortion**, made possible by ultrasound;
+- **differential reporting**, or "hiding girls" from census takers and officials;
+- **differential mortality**, if girls receive less care;
+- and possibly other channels.
+
+::: {.column-margin}
+[Added · from readings]{.tag-reading} Hesketh et al. 2005, pp. 1172–1173; Zhang
+2017, pp. 153–154.
+:::
+
+The readings suggest that all three behaviors played a role. Sex-selective abortion
+"undoubtedly accounts for a large proportion of the decline in female births,"
+Hesketh and colleagues write, although it is illegal and hard to measure.
+Underreporting was large too. A 1995 household survey in three provinces found a
+normal sex ratio among children under 14, with the actual number of girls exceeding
+the number *registered* by 22 percent. Daniel Goodkind estimated that 19 percent of
+all children aged 0–4 in 2000 were unreported to the authorities. Infanticide of
+girls is "probably very rare now," but "less aggressive treatment of sick female
+infants is known to occur."
+
+Was the policy itself to blame? Only partly, say Hesketh and colleagues. China had
+a high sex ratio in the 1930s and 1940s, and other Asian countries with son
+preference and falling fertility, but no one-child policy, also saw imbalances:
+Taiwan (1.19), Singapore (1.18), South Korea (1.12), and parts of northern India
+(1.20). Most tellingly, "the marked increase in the sex ratio between the 1980s and
+1990s coincided with much easier access to cheap ultrasonography and not with any
+substantial change in enforcement of the one-child policy." The policy amplified son
+preference, but technology made acting on it easy.
+
+### Other consequences
+
+Hesketh and colleagues list several more consequences:
+
+- **A marriage squeeze.** The shortage of women has left some men unable to marry.
+  The authors link it to the kidnapping and trafficking of women for marriage.
+- **The "4:2:1" problem.** With few children and longer lives, a growing number of
+  couples will be solely responsible for one child and four parents. About 70
+  percent of elderly people still depended financially on their children.
+- **Health risks.** Women with unapproved pregnancies often avoided prenatal care
+  and gave birth at home. One study found that maternal deaths doubled for
+  unapproved pregnancies.
+
+::: {.callout-important}
+## In the lab
+In Lab 8 you use a sample of the 1990 Chinese census, about 200,000
+households, to look for traces of the one-child policy in the sexes of children.
+You compare the proportion female by birth order and year of birth, and you ask
+whether parents' decisions to have another child depended on the sexes of the
+children they already had. Keep in mind that the 1990 census is known to undercount
+young children, and that we see only surviving children.
+:::
+
+## Key ideas
+
+- To know what a policy *caused*, we need a **counterfactual**. Comparison countries,
+  comparison groups, and natural experiments stand in for it.
+- China's fertility fell by half during the voluntary but coercive **Later–Longer–Fewer**
+  campaign of the 1970s, *before* the one-child policy. The policy itself seems to have
+  had a modest, mostly short-term effect.
+- China's **sex ratio at birth** rose sharply, especially for later births in rural
+  areas and first births in cities. Stopping rules cannot change the sex ratio;
+  sex-selective abortion, underreporting, and differential care can.
+
+## Check your understanding
+
+::: {.column-margin}
+[Added · new]{.tag-new} These questions are new. They avoid the China lab's graded
+questions on third births and the in-class coin exercise.
+:::
+
+1. **Urban versus rural.** In @fig-china-sexratio, the sex ratio for *first* births is
+   high in cities but normal in the countryside. Use the rules of the one-child policy
+   to explain why.
+
+2. **Twins.** Why does comparing families whose first birth was twins with
+   one-child families help identify the effect of family size on children's
+   education? Give one reason the comparison might still be imperfect.
+
+3. **Han and minorities.** In the Han-versus-minority difference-in-differences design,
+   what is the "common trend" assumption? Give an example of something that might
+   violate it.
+
+4. **China and Iran.** Iran's fertility fell from more than 6 to fewer than 3 children
+   per woman in about 10 years, with no one-child policy. What does this suggest about
+   how much a coercive policy is needed for a rapid fertility decline?
+
+## Further reading
+
+- Hesketh, Therese, Li Lu, and Zhu Wei Xing. 2005. "The Effect of China's One-Child
+  Family Policy after 25 Years." *New England Journal of Medicine* 353: 1171–1176.
+  *An overview of how the policy worked and its consequences. As you read: Why do the
+  authors think the policy is only partly responsible for the fall in fertility, and
+  for the rise in the sex ratio?*
+- Zhang, Junsen. 2017. "The Evolution of China's One-Child Policy and Its Effects on
+  Family Outcomes." *Journal of Economic Perspectives* 31(1): 141–160. *As you read:
+  Focus on the four empirical approaches and their assumptions. Which do you find most
+  convincing?*

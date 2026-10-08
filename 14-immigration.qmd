@@ -1,0 +1,578 @@
+# Immigration: Who Gains, Who Loses? {#sec-immigration}
+
+```{r}
+#| label: setup-ch14
+#| include: false
+col_nat <- "#e6a100"; col_imm <- "#7fbf3f"; col_gain <- "#1fa187"
+col_D <- "#3b4cc0"; col_S <- "#ff7f0e"; col_S2 <- "#d62728"; col_grey <- "grey45"
+
+mariel <- read.csv("data/mariel_cps_1979_85_age16_61.csv.gz")
+ue_rate <- function(esr)
+  sum(esr == "Unemployed-Looking") /
+    sum(esr %in% c("Unemployed-Looking", "Employed-At Work", "Employed-Absent"))
+```
+
+::: {.callout-warning appearance="simple"}
+## Draft: provenance notes (for review)
+Margin tags mark material that is **not in the course slides or lab**.
+[Added · from readings]{.tag-reading} comes from the assigned readings (NRC 1997 and 2016, Card, Peri and Wiltshire, *This American Life*).
+[Added · new]{.tag-new} is from outside the course materials (my framing, general knowledge, or my own analysis) and needs the closest check.
+Untagged material follows the 2025 slides ("Labor Market Consequences of Immigration," Week 13) and Lab 10 (Mariel).
+:::
+
+::: {.callout-note appearance="minimal"}
+**In this chapter.** Is immigration good or bad for the United States, and for
+whom? We build a simple supply-and-demand model of immigration, confront it with
+evidence from two natural experiments (Miami's Mariel boatlift and the poultry
+town of Albertville, Alabama), and look at the fiscal accounts.
+
+**Readings this chapter draws on.** National Research Council (1997), *The New
+Americans*, pp. 135–142, 228–239, 297–305, 309–318, 326–337, and 344–354; National
+Academies (2016), "Report Highlights: The Economic and Fiscal Consequences of
+Immigration"; *This American Life* (2017), "Our Town," Parts One and Two; Peri and
+Wiltshire (2017); Card (1990), linked in the lab.
+:::
+
+::: {.column-margin}
+[Added · new]{.tag-new} Bridge text written for the chapter split.
+:::
+
+This chapter looks at immigration from the point of view of the receiving country:
+its workers, its employers, and its taxpayers. @sec-migration-gains widens the lens to
+the biggest winners of all, the migrants themselves, and then looks at what happens
+when immigrants are removed rather than added.
+
+## Is immigration good or bad for the United States?
+
+The question sounds simple, but as in every chapter of this book, the first step
+is to ask *good for whom?* Immigration involves trade-offs between many groups:
+
+- immigrants versus natives;
+- skilled versus unskilled natives;
+- consumers of "non-tradeable" local goods (haircuts, retail) versus "tradeable"
+  goods (agriculture, manufacturing);
+- consumers of market goods versus users of congestible public goods;
+- increased tax revenue versus increased public expenses;
+- federal finances versus local finances;
+- the national labor market versus local labor markets.
+
+This chapter takes these in turn. We start with the labor market, the issue that
+dominates political debate: do immigrants lower the wages of the native-born?
+
+## A simple model of the labor market
+
+### One good, one kind of worker
+
+Start with the simplest possible model:
+
+- the economy produces one good;
+- there is one kind of worker;
+- the demand curve for labor slopes downward, because it reflects the marginal
+  product of labor;
+- the market is competitive, so all workers are paid the marginal product of the
+  last worker hired.
+
+::: {.column-margin}
+[Added · from readings]{.tag-reading} The quotes in this section are from NRC
+1997, pp. 136–141, the "first principles" chapter.
+:::
+
+The National Research Council's 1997 report *The New Americans*, written by a
+panel of economists and demographers for Congress, starts in exactly this way. It
+begins with a point that is easy to forget: "Whether native-born Americans gain or
+lose, immigration most directly affects the welfare of immigrants themselves.
+Immigrants come with the expectation that they will gain from immigration. If they
+had not felt that they would gain, they were free not to immigrate." We return to
+the migrants' own gains at the end of the chapter.
+
+@fig-labor-model shows the model. The demand curve $D_L$ gives the wage firms will
+pay for each number of workers. Native workers supply a fixed amount of labor (the
+vertical line $S_L$), so the wage is $w$. The total wage bill is the rectangle
+under $w$; everything above it and below the demand curve goes to the owners of
+capital (or, in the NRC's version, to skilled workers who complement the
+unskilled).
+
+Now immigrants arrive, shifting labor supply to $S'_L$. The wage falls to $w'$.
+
+```{r}
+#| label: fig-labor-model
+#| fig-cap: "The effect of immigration in a simple labor market. Immigration shifts supply from S_L to S'_L and lowers the wage from w to w'. Native workers lose the orange rectangle, which is redistributed to owners of capital. Immigrants earn the light green rectangle. The dark green triangle is the net gain to natives as a whole."
+#| fig-height: 5
+#| echo: false
+a <- 10; b <- 1                      # demand: w = a - b L
+S <- 4; M <- 2                       # natives and immigrants
+w0 <- a - b * S; w1 <- a - b * (S + M)
+op <- par(mar = c(4.2, 4.2, 1, 1))
+plot(NA, xlim = c(0, 10.5), ylim = c(0, 10.5), xaxt = "n", yaxt = "n",
+     xlab = "Number of workers", ylab = "Wage", bty = "l")
+rect(0, w1, S, w0, col = adjustcolor(col_nat, 0.6), border = NA)
+rect(S, 0, S + M, w1, col = adjustcolor(col_imm, 0.6), border = NA)
+polygon(c(S, S, S + M), c(w1, w0, w1), col = adjustcolor(col_gain, 0.8), border = NA)
+abline(a = a, b = -b, col = col_D, lwd = 2.5)
+segments(S, 0, S, 10.5, col = col_S, lwd = 2.5)
+segments(S + M, 0, S + M, 10.5, col = col_S2, lwd = 2.5)
+segments(0, w0, S, w0, lty = 3); segments(0, w1, S + M, w1, lty = 3)
+axis(2, at = c(w1, w0), labels = c("w'", "w"), las = 1)
+text(S, 10.2, expression(S[L]), pos = 2, col = col_S)
+text(S + M, 10.2, expression(S*"'"[L]), pos = 4, col = col_S2)
+text(1.2, a - b * 1.2, expression(D[L]), pos = 3, col = col_D)
+text(S / 2, (w0 + w1) / 2, "redistribution\nfrom native workers\nto capital owners", cex = 0.75)
+text(S + M / 2, w1 / 2, "immigrant\nincome", cex = 0.8)
+arrows(7.4, 6.3, S + 0.65, (w0 + w1) / 2 + 0.1, length = 0.07)
+text(7.4, 6.3, "net gain to natives", pos = 4, cex = 0.85)
+mtext("immigrant labor", side = 1, at = S + M / 2, line = 0.4, cex = 0.8)
+par(op)
+```
+
+Three things happen:
+
+1. **Immigrants earn the new wage** $w'$ on their labor, the light green rectangle.
+2. **Income is redistributed among natives.** Native workers now earn $w'$ instead of
+   $w$, a loss equal to the orange rectangle. That same rectangle is a gain to the
+   owners of capital, who now pay less for labor.
+3. **Natives as a whole come out ahead.** The new workers produce more than they are
+   paid. The extra output, the small dark green triangle, goes to natives.
+
+::: {.callout-tip appearance="simple"}
+## In their own words
+"There is a direct correspondence between the fact that some domestic workers
+suffer wage reductions and the fact that we gain as a nation. This wage reduction
+is, in fact, the reason that the nation as a whole gains from immigration. This
+simple point is often lost in the voluminous empirical literature, which searches
+long and hard to find those native-born Americans who experience wage reductions
+that are then labeled the 'cost' of immigration." (NRC 1997, pp. 140–141)
+:::
+
+The NRC draws out a striking implication: "It is only because immigrants and native
+workers differ from one another that immigration yields a net national gain." If
+immigrants were exactly like natives, with the same skills and bringing along the
+same capital per worker, everything would simply scale up and no one already here
+would gain or lose.
+
+### Substitutes and complements
+
+Workers who do the same jobs as immigrants are **substitutes** for them. The NRC's
+homely example: red apples and green apples are near-perfect substitutes, so more
+red apples lower the price of green apples too. Workers whose jobs are made more
+productive by immigrants are **complements**. Think of supervisors and production
+workers: "for every 50 production workers, we need one supervisor. If we increase the
+number of production workers, we will need more supervisors and their wages will
+rise." The rule: more immigrants lower the incomes of factors that compete with them
+and raise the incomes of factors that complement them.
+
+### How big is the net gain?
+
+Suppose there are 10 natives for every migrant and the wage falls by $\Delta w = w
+- w'$. Then the redistribution from native workers to capital is $10 \times \Delta w$
+per migrant, while the net gain is a triangle of base 1 and height $\Delta w$, or
+$\frac{1}{2}\Delta w$ per migrant. The ratio of net gain to redistribution is
+$\frac{1}{2}/10 = 5$ percent.
+
+::: {.column-margin}
+[Added · from readings]{.tag-reading} NRC 1997, p. 140.
+:::
+
+The NRC makes the same point in words: the redistribution rectangle is proportional
+to the number of domestic workers, while the gain triangle is proportional to the
+(much smaller) number of immigrants, and is a triangle to boot. "The potential size
+of this redistribution among the native-born compared with the size of the net
+national gain is one reason why our national political debate stirs such strong
+emotions."
+
+### What the simple model says
+
+If the simple model is right, immigration:
+
+- creates a net gain for the native-born;
+- but reduces the wages of workers who compete with immigrants;
+- and sends the gain to capitalists, to complementary (skilled) workers, and to
+  consumers, through lower prices produced by cheaper labor.
+
+It is good to be a complement and, at least from a wage perspective, not good to be a
+substitute. The size of the effect depends on how steep the demand curve for unskilled
+labor is and on how much immigration there is.
+
+A political-economy comment: if the simple model is right, the net gains are small
+compared with workers' losses, and also small compared with capitalists' gains. That
+may explain why the "net gains" story does not convince many people.
+
+::: {.column-margin}
+[Added · from readings]{.tag-reading} NRC 1997, pp. 231–235.
+:::
+
+The consumer gains are real but spread thin. The NRC traced the immigrant labor
+embedded in what American households buy. Immigrant labor accounted for about 4.9
+percent of household consumption spending, a share that was "remarkably constant over
+most of the household income distribution." It was highest in household services
+(18.2 percent of costs), services to dwellings (13.5 percent), and laundry and garment
+services (10.9 percent). Households that hire nannies, gardeners, and housecleaners
+benefit most.
+
+## The empirical evidence
+
+### How to study the question
+
+The model predicts that wages of competing workers fall. Do they? Studying this is
+harder than it looks:
+
+- **Cross-sectional studies of small areas** compare places with more and fewer
+  immigrants. This is not a good design, because immigrants choose where to go, and
+  they go to places with strong labor markets.
+- **Natural experiments** look for inflows of immigrants that happened for reasons
+  unrelated to local labor markets: the Mariel boatlift and Miami wages, the influx of
+  meat processors into Alabama, or enforcement actions and deportations.
+
+The broad finding is that the effects are **small**. The effect on natives is near zero
+for all kinds of labor. There is some evidence that the latest immigrants are hurt by
+the newest arrivals: Grossman finds that a 10 percent increase in immigrants reduces the
+wages of earlier immigrants by 2 percent, and Card finds the same increase reduces
+earlier immigrants' wages by 4 percent in Miami.
+
+```{r}
+#| label: tbl-elasticities
+#| tbl-cap: "Estimated elasticities of native wages with respect to immigration (from lecture). An elasticity of −0.06 means that a 10 percent increase in immigrants reduces wages by only 0.1 × 0.06 = 0.6 percent."
+#| echo: false
+knitr::kable(data.frame(
+  Study = c("Altonji and Card", "Bean et al.", "Borjas", "", "Grossman", "LaLonde and Topel"),
+  `Impact on` = c("Less-skilled natives", "Black men", "White native men",
+                  "Black native men", "All natives", "Young black natives"),
+  Elasticity = c("+0.01", "≈ 0", "−0.01", "+0.02", "−0.02", "−0.06"),
+  check.names = FALSE))
+```
+
+::: {.column-margin}
+[Added · from readings]{.tag-reading} NRC 1997, pp. 228–236, and NRC 2016,
+highlights.
+:::
+
+The NRC's 1997 panel reached the same conclusion: "immigration has only a small adverse
+impact on the wage and employment opportunities of competing native-born groups." Over
+the two decades before the report, it estimated, immigration lowered the wages of high
+school dropouts by about 5 percent. That group, the panel noted, was shrinking: by 1995,
+high school dropouts were less than 10 percent of the American workforce. And
+"ironically, the one group that appears to suffer substantially from new waves of
+immigrants are immigrants from earlier waves."
+
+The 2016 update by the National Academies came to similar conclusions: "When measured
+over a period of 10 years or more, the impact of immigration on the wages of native-born
+workers overall is very small. To the extent that negative impacts occur, they are most
+likely to be found for prior immigrants or native-born workers who have not completed
+high school." It also found "little evidence that immigration significantly affects the
+overall employment levels of native-born workers."
+
+Not every economist agrees on the magnitudes. As the readings note, George Borjas has
+argued that studies comparing cities miss effects that spread across the whole country,
+and that national-level analyses find larger wage losses for workers who compete
+directly with immigrants. Others, such as Ottaviano and Peri, find small or even positive
+effects using similar national data. The debate is mainly about how close substitutes
+immigrants and natives really are.
+
+### The Mariel boatlift
+
+::: {.column-margin}
+[Added · from readings]{.tag-reading} Card 1990, pp. 245–257. The numbers in this
+subsection are from the paper.
+:::
+
+The most famous natural experiment in the economics of migration was studied by
+Berkeley's own David Card. On April 20, 1980, Fidel Castro declared that Cubans who
+wished to leave for the United States were free to go from the port of Mariel. From May
+to September 1980, about 125,000 Cubans arrived in Miami on a flotilla of privately
+chartered boats. About half settled permanently in Miami, raising Miami's labor force by
+7 percent and its number of Cuban workers by 20 percent. Most of the new arrivals had
+little education: 56.5 percent had not attended high school.
+
+The timing of this influx had nothing to do with Miami's labor market. That is what made
+it a natural experiment. If immigration lowers the wages of competing workers, it should
+have shown up here, especially for less-skilled workers and for earlier Cuban immigrants.
+
+Card compared Miami with four cities chosen because their economies had grown much like
+Miami's but which received few Mariel immigrants: Atlanta, Houston, Los Angeles, and
+Tampa–St. Petersburg. A comparison group is essential. Miami's unemployment rate did rise,
+from 5.0 percent in April 1980 to 7.1 percent in July. But state and national
+unemployment rose at the same time, and a deep national recession followed in 1981–82.
+
+@fig-mariel replicates Card's comparison using the Current Population Survey data from
+the lab.
+
+```{r}
+#| label: fig-mariel
+#| fig-cap: "Unemployment rates in Miami (solid) and four comparison cities (dashed), ages 16–61, 1979–85. The vertical line marks 1980, the year of the boatlift. Data: CPS outgoing rotation groups, as used in the lab (unweighted). Sample sizes for Miami are small (roughly 130–600 per group and year), so year-to-year jumps are partly sampling noise."
+#| fig-height: 3.4
+groups <- c(whites = "Whites", blacks = "Blacks", hispanics = "Non-Cuban Hispanics")
+m <- mariel$smsa == "Miami"
+ue_m <- tapply(mariel$esr[m], list(mariel$ethrace[m], mariel$year[m]), ue_rate)
+ue_c <- tapply(mariel$esr[!m], list(mariel$ethrace[!m], mariel$year[!m]), ue_rate)
+yrs <- 1979:1985
+op <- par(mfrow = c(1, 3), mar = c(4, 4, 2, 0.6), mgp = c(2.3, 0.6, 0))
+for (g in names(groups)) {
+  plot(yrs, 100 * ue_m[g, ], type = "o", pch = 19, lwd = 2, ylim = c(0, 21),
+       xlab = "Year", ylab = "Unemployment rate (%)", main = groups[g],
+       font.main = 1)
+  lines(yrs, 100 * ue_c[g, ], type = "o", pch = 1, lwd = 2, lty = 2, col = col_grey)
+  abline(v = 1980, col = "grey70")
+  if (g == "whites") legend("topleft", c("Miami", "Comparison cities"),
+                            lty = c(1, 2), pch = c(19, 1), col = c("black", col_grey),
+                            bty = "n", cex = 0.85)
+}
+par(op)
+```
+
+There is no sign that the boatlift raised the unemployment of whites or non-Cuban
+Hispanics in Miami relative to the comparison cities. Black unemployment in Miami does
+spike in 1982–83, but the spike came two years after the boatlift, when the recession hit
+hardest, and Hispanics, who were presumably closer substitutes for the Cuban arrivals,
+show no such jump. Card concluded that the Mariel immigration "had essentially no effect
+on the wages or employment outcomes of non-Cuban workers in the Miami labor market," and
+"perhaps even more surprising, … no strong effect on the wages of other Cubans."
+
+How could a 7 percent increase in the labor force have so little effect? Card offered
+three explanations:
+
+- **Displaced migration.** Miami's population growth slowed after the boatlift. Fewer
+  people from elsewhere in the United States moved to Miami than would have otherwise,
+  so the Mariel arrivals may have taken the place of migrants who never came.
+- **Industry structure.** Miami had absorbed waves of Cuban immigrants for two decades.
+  Its economy had a large textile and apparel sector built on less-skilled immigrant
+  labor, so new arrivals could take unskilled jobs as earlier immigrants moved up.
+- **Language.** In a city where so many people spoke Spanish, the Mariel arrivals' lack
+  of English mattered less.
+
+Card was careful to add that Miami "is far from typical of other local labor markets in
+the United States."
+
+::: {.callout-important}
+## In the lab
+In Lab 10 you replicate Card's analysis yourself, then extend it by looking at workers
+with different levels of education. The lab closes with short questions on how
+immigrants might benefit native workers, how recent immigrants differ from earlier ones,
+and fiscal effects at different levels of government. Ask yourself as you work: Which group of natives
+should be most affected if the simple model is right? What would that look like in the
+data?
+:::
+
+### Albertville, Alabama
+
+::: {.column-margin}
+[Added · from readings]{.tag-reading} Details in this subsection are from *This
+American Life*, episode 632 ("Our Town, Part One"), and from Peri and Wiltshire's
+report. Note: your 2025 calendar lists Part Two as episode 632; it is episode 633
+(slide 17 has it right).
+:::
+
+A more recent natural experiment comes from a small poultry-processing town in northern
+Alabama. In 1990, Albertville, population about 15,000, was 98 percent white. Then a wave
+of thousands of migrants, mostly from Mexico, arrived to work in the chicken plants. They
+were pushed by recession in Mexico (the peso crashed in 1994) and pulled by booming U.S.
+demand for chicken. Within 20 years the town had about 6,000 newcomers and was more than a
+quarter Latino. The radio program *This American Life* spent eight months there in 2017.
+It went because Senator (later Attorney General) Jeff Sessions had pointed to towns like
+Albertville to argue that immigrants pull down American wages: "big greedy businesses who
+hire illegal workers … will pull down the wages of American citizens."
+
+The program commissioned the economist Giovanni Peri to find out. With Justin Wiltshire,
+Peri compared the commuting zone containing Albertville with a "synthetic control": an
+average of three other Alabama labor markets that, before 1990, looked like Albertville in
+immigrant share, wages, and employment of less-educated workers, but did not receive many
+immigrants afterward. The divergence after 1990 was dramatic. Among workers without a high
+school diploma, the immigrant share of employment rose from 0.4 percent to 28 percent in
+Albertville's labor market, but only from 1 to 12 percent in the control.
+
+What happened to native workers?
+
+- **Employment** of native high school dropouts showed no marked difference from the
+  control.
+- **Wages** of native dropouts grew about $23 a week less than in the control from 1990 to
+  2010, about 7 percent. But Albertville had already been on a slightly slower wage path
+  before 1990, and "no clear change was seen after 1990." Peri warned the radio program that
+  $23 a week was "the very most" the immigrants might have cost, with a big margin of
+  error.
+- **Wages in the animal-slaughtering industry itself**, where the poultry plants are, grew
+  slightly *faster* than in the control, about $12 a week.
+- **More-educated natives** may have been slightly helped.
+
+Peri and Wiltshire concluded that "there does not seem to be very much evidence of negative
+wage or employment effects of immigrants on natives. Immigrants not only bring labor but also
+local demand, and often they work in jobs differentiated from those of natives."
+
+::: {.column-margin}
+[Added · new]{.tag-new} Peri and Wiltshire's report is internally inconsistent: the
+immigrant share of the population rose "by a factor of six" in the text but "by a factor
+close to 10" in the conclusions.
+:::
+
+The radio program also showed why many longtime workers saw things differently. Pat, who
+had worked at her plant for 44 years, earned $11.95 an hour; had her starting wage kept up
+with inflation, she would have earned about twice as much. Workers watched the plants fill
+with Latino workers who lined up for job applications at 2 a.m., who were reluctant to join
+the union, and whom managers seemed to prefer. By the union's records, membership at one plant fell from about 95 percent in 1991 (a figure the company disputes) to the mid-40s today. The jobs immigrants created around town, renting apartments, buying
+groceries and gas, were invisible from inside the plant. And as the program noted, the main
+forces behind stagnating wages for workers like Pat (automation, trade, a low minimum wage,
+and the decline of unions) were national, affecting places with few immigrants as well.
+Pat's own verdict on the $23: "You cannot fault a person for wanting a job to feed their
+family."
+
+## Why is there so little effect?
+
+The simple model predicts falling wages. The evidence mostly finds small effects. Why?
+
+- **The demand curve may be almost flat**, perhaps because there are many complementary
+  sectors that expand as labor becomes available.
+- **Labor markets are not local.** People who are hurt may move away and not be observed.
+  This is a potential problem of study design.
+
+::: {.column-margin}
+[Added · from readings]{.tag-reading} NRC 1997, pp. 228–230.
+:::
+
+The NRC found suggestive evidence of the second mechanism. Before 1970, the share of
+native-born Americans living in California rose rapidly, from 6.9 to 9.6 percent between 1950
+and 1970. After immigration to California surged, the native share stopped rising; nearly all
+of California's growth in the 1970s and 1980s came from immigrants. One interpretation is that
+immigration "encouraged natives to stop moving there, and this process effectively dispersed
+the labor market effects of immigration from California to the national economy." The panel
+noted that estimated wage effects tend to get larger as the geographic area studied gets
+larger: smallest across cities, larger across states, larger still across regions.
+
+### Advantages and problems of the simple model
+
+The simple model has real strengths. It explains why, historically, workers have tended to
+oppose more immigration and capitalists to favor it. Its net gain, like the gains from
+comparative advantage in trade, explains why economists tend to favor open borders. And the
+size of the redistribution compared with the net gain helps explain the intensity of political
+conflict.
+
+But we don't see much decline in wages. Either all the studies are wrong, or the simple model is
+wrong. Perhaps immigrant and native workers are complements rather than substitutes; perhaps
+immigrants increase local demand.
+
+Other considerations:
+
+- Studies of rapid changes may not tell us much about the long-term steady state: a society with
+  high versus low immigration.
+- Immigrants bring innovation and entrepreneurship.
+- They bring capital (Solow effects).
+- There are global effects, on immigrants themselves and on the countries they leave.
+
+My conclusion, in lecture, is that the net effects of migration on native workers appear to be
+very small. Perhaps there is an asymmetry in perception between winners and losers: those who are
+worse off blame migration, while those who are better off have a more diffuse explanation. Or
+perhaps anti-immigration sentiment is driven largely by psychology and cultural issues, not
+economics.
+
+## Does immigration raise or lower taxes?
+
+::: {.column-margin}
+[Added · from readings]{.tag-reading} This section is drawn from the readings
+for the guest lecture on fiscal effects (Dr. Gretchen Donehower), for which no slides
+were available: NRC 1997, ch. 7; NRC 2016; *This American Life*, episode 633.
+:::
+
+The second big economic question about immigration is fiscal. Immigrants pay taxes and use
+government services. Do they pay their way?
+
+### Snapshots versus lifetimes
+
+The simplest approach is a **snapshot**: in a given year, add up the taxes paid and the benefits
+received by immigrants. The NRC's 1997 panel did this for 1994 and found that the average immigrant
+paid about $1,800 more in taxes than they received in benefits, because immigrants are concentrated at
+working ages. But this counts immigrants' U.S.-born young children as natives. Add those children,
+who are expensive to educate, and the immigrant household's balance was about −$370 a year.
+Meanwhile the *adult* children of immigrants, who no longer live in immigrant-headed households, had a
+positive balance. So snapshot estimates for immigrant-headed households "are biased toward negative
+numbers."
+
+The NRC panel argued that the right question is forward-looking: if one more immigrant arrives today,
+what is the **present value** of all the taxes they and their descendants will pay, minus all the costs
+they will impose, at every level of government, far into the future? That calculation rests on
+**age profiles** of taxes and benefits, and a striking pattern emerges: everyone is a net recipient in
+childhood (schools) and old age (Social Security and Medicare), and a net payer during the working years.
+The big difference between immigrants and natives, the panel found, "lies in taxes rather than in benefits":
+benefits by age look quite similar, but immigrants, with less education on average, earn less and pay less
+tax at each age.
+
+```{r}
+#| label: tbl-npv
+#| tbl-cap: "Net present value of the fiscal impact of one additional immigrant, including descendants, by education and level of government (thousands of 1996 dollars; NRC 1997 baseline, Tables 7.5–7.6)."
+#| echo: false
+knitr::kable(data.frame(
+  ` ` = c("Immigrant plus descendants", "Immigrant's own lifetime", "Descendants only"),
+  `Less than high school` = c("−13", "−89", "+76"),
+  `High school` = c("+51", "−31", "+82"),
+  `More than high school` = c("+198", "+105", "+93"),
+  `All immigrants` = c("+80", "−3", "+83"),
+  check.names = FALSE), align = "lrrrr")
+```
+
+The average new immigrant, with descendants, had a positive fiscal impact of about +$80,000, but this
+average hides three important patterns:
+
+- **Education matters enormously.** Immigrants with more than a high school education were worth about
+  +$198,000; those with less than high school, about −$13,000.
+- **Descendants matter.** Over their own lifetimes, immigrants with little education cost more than they paid.
+  But their children, who on average get much more education than their parents, paid in far more, for every
+  education group.
+- **Federal and local levels pull in opposite directions.** At the federal level the average immigrant was
+  worth about +$105,000; at the state and local level, about −$25,000. State and local governments pay for
+  schooling up front and recoup only part of the later tax payments, while the federal government collects taxes
+  first and pays pensions and health care decades later. And "although the positive impact at the federal level
+  is shared evenly by the U.S. population, the negative state and local impact is highly concentrated in a few
+  states."
+
+The panel was candid about uncertainty: "there are other sets of plausible assumptions … that are by no means
+implausible and would produce negative fiscal impacts of immigrants." And it put the stakes in perspective.
+Adding 100,000 immigrants a year would change the average resident's taxes by about $30 a year: a $40 gain at the
+federal level and a $10 cost at the state and local level.
+
+The 2016 National Academies report confirmed the broad picture: immigrants are more costly to state and local
+governments, "in large part due to the costs of educating their children," while "the children of immigrants (the
+second generation) are among the strongest economic and fiscal contributors in the U.S. population."
+
+### Albertville's accounts
+
+*This American Life* asked what all this meant for one town. Undocumented workers in the poultry plants, the
+program found, pay sales and property taxes and, through payroll deductions, income and Social Security taxes,
+but mostly cannot collect benefits. The Social Security Administration estimated that in 2010 undocumented workers
+paid about $13 billion into the Social Security trust fund and received about $1 billion. Their biggest cost to
+government is schools. Economists at the Urban Institute estimated that non-Latino taxpayers in Albertville pay
+about $272 a year in local taxes for the extra children immigrant families enrolled. Food-stamp use in the county
+doubled, from 8 to 16 percent, but rose even faster, from 11 to 26 percent, in the rest of Alabama, where there were
+few immigrants. Dr. Donehower calculated for the program that an undocumented poultry worker without a high school
+diploma, with children and grandchildren, would cost federal, state, and local governments about $21,000 over 75
+years. To put that number in context, a *native-born* American without a high school education costs
+"hundreds of thousands of dollars more."
+
+## Key ideas
+
+- In a simple one-sector model, immigration lowers the wages of competing workers, redistributes income to capital owners and complementary workers, and creates a small **net gain** for natives. The redistribution is large compared with the net gain.
+- Immigrants who are **substitutes** for natives lower their wages; immigrants who are **complements** raise them. Gains arise only because immigrants differ from natives.
+- **Natural experiments** like the Mariel boatlift and Albertville find small effects on native wages and employment. The workers most affected are earlier immigrants and natives without a high school diploma.
+- Possible reasons: flat demand curves, complementarity, immigrants' own demand, and native workers moving elsewhere.
+- **Fiscal effects** depend on education, age at arrival, descendants, and level of government: positive on average at the federal level, negative at the state and local level.
+
+## Check your understanding
+
+::: {.column-margin}
+[Added · new]{.tag-new} These questions are new. Q5 is the question your calendar poses for the radio episode. They avoid the lab's graded education analysis, and (since the 2025 lab added a graded question on federal versus state fiscal effects) the former question on that topic was replaced.
+:::
+
+1. **Redistribution versus gain.** In the simple model, suppose there are 20 natives for every immigrant. What is the ratio of the net gain to natives to the redistribution among natives? What does this suggest about the politics of immigration?
+
+2. **No wage effect, no gain?** The NRC argues that if immigration did not lower anyone's wage, natives as a whole would not gain. Explain why, using @fig-labor-model.
+
+3. **Comparison groups.** Miami's unemployment rate rose after the Mariel boatlift. Why doesn't this show that the boatlift raised unemployment? What makes a good comparison city?
+
+4. **Counting descendants.** In the NRC's estimates, immigrants with little education
+   cost more than they paid in taxes over their own lifetimes, but their children paid
+   in far more than they cost. Why? What does this imply about the time horizon you
+   choose when judging the fiscal effects of immigration?
+
+5. **Social Security and the undocumented.** Undocumented workers paid about $13 billion into Social Security in 2010 and received about $1 billion. What do you think of this as an argument about the fiscal effects of immigration? What is left out?
+
+## Further reading
+
+- National Research Council. 1997. *The New Americans: Economic, Demographic, and Fiscal Effects of Immigration.* J. P. Smith and B. Edmonston, eds. National Academy Press. Pages 135–142 ("First Principles"), 228–239 (empirical evidence), and 297–354 (selected pages on future fiscal impacts). *As you read: Why does the panel insist that the national gain and some workers' losses are two sides of the same coin?*
+- National Academies of Sciences, Engineering, and Medicine. 2016. "Report Highlights: The Economic and Fiscal Consequences of Immigration." *A four-page summary of the update to* The New Americans.
+- *This American Life.* 2017. "Our Town," Parts One (episode 632; labor market, 43:50–58:00) and Two (episode 633; fiscal costs). Transcripts online. *As you read: What do you think of the discussion of Social Security taxes and benefits for the undocumented?*
+- Peri, Giovanni, and Justin Wiltshire. 2017. "Analysis of Marshall-DeKalb Area, Relative to Similar Labor Markets in Alabama, 1980–2010." Report for *This American Life*.
+- Card, David. 1990. "The Impact of the Mariel Boatlift on the Miami Labor Market." *Industrial and Labor Relations Review* 43(2): 245–257. *Linked in the lab; read at least pp. 245–251 and 255–257.*

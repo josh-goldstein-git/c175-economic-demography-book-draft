@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Economic Demography - 3&nbsp; The World According to Malthus</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./04-solow.html" rel="next">
+<link href="./02-optimum.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-history.html">Population and the economy: big theories</a></li><li class="breadcrumb-item"><a href="./03-malthus.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The World According to Malthus</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Economic Demography</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Population and the economy: big theories</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-history.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Ten Thousand Years of Population</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-optimum.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Optimum Population</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-malthus.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The World According to Malthus</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-solow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Capital to the Rescue? The Solow Model and Inequality</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-boserup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Boserup: Population Pushes Technology</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Resources and the environment</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-resources-commons.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Are We Doomed? Resources, Prices, and the Commons</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-climate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Population and Climate Change</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Age structure</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-social-security.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Aging and Social Security: A Ponzi Scheme?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-age-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Are Too Few Children a Problem? Age Structure and Optimal Fertility</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Fertility and the family</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-fertility.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">How Do Economists Think We Decide How Many Children to Have?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-china.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Fertility Policy I: China’s One-Child Policy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12-abortion-pill.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Fertility Policy II: Abortion and the Pill in the United States</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13-marriage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Marriage: Love, and What Else?</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+ <span class="menu-text">Migration</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./14-immigration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Immigration: Who Gains, Who Loses?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./15-migration-gains-enforcement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Migrants’ Gains and Immigration Enforcement</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
+ <span class="menu-text">Optional chapters</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./16-longevity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Can Money Buy Longevity? Health, Mortality, and the Grossman Model</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./17-projection-peak.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Population Projection, Age Pyramids, and “Our Shrinking Future?”</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./18-why-move.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Why People Move: Cities, Borders, and Development</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./19-recession-fertility.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Fertility and the Economy: The Great Recession and Beyond</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-puzzle-of-stationarity" id="toc-the-puzzle-of-stationarity" class="nav-link active" data-scroll-target="#the-puzzle-of-stationarity"><span class="header-section-number">3.1</span> The puzzle of stationarity</a></li>
+  <li><a href="#a-pamphlet-against-optimism" id="toc-a-pamphlet-against-optimism" class="nav-link" data-scroll-target="#a-pamphlet-against-optimism"><span class="header-section-number">3.2</span> A pamphlet against optimism</a>
+  <ul class="collapse">
+  <li><a href="#context" id="toc-context" class="nav-link" data-scroll-target="#context"><span class="header-section-number">3.2.1</span> Context</a></li>
+  <li><a href="#the-argument-in-two-postulates" id="toc-the-argument-in-two-postulates" class="nav-link" data-scroll-target="#the-argument-in-two-postulates"><span class="header-section-number">3.2.2</span> The argument in two postulates</a></li>
+  <li><a href="#checks-preventive-and-positive" id="toc-checks-preventive-and-positive" class="nav-link" data-scroll-target="#checks-preventive-and-positive"><span class="header-section-number">3.2.3</span> Checks: preventive and positive</a></li>
+  <li><a href="#oscillation" id="toc-oscillation" class="nav-link" data-scroll-target="#oscillation"><span class="header-section-number">3.2.4</span> Oscillation</a></li>
+  </ul></li>
+  <li><a href="#turning-malthus-into-a-model" id="toc-turning-malthus-into-a-model" class="nav-link" data-scroll-target="#turning-malthus-into-a-model"><span class="header-section-number">3.3</span> Turning Malthus into a model</a>
+  <ul class="collapse">
+  <li><a href="#relationship-1-more-people-lower-wages" id="toc-relationship-1-more-people-lower-wages" class="nav-link" data-scroll-target="#relationship-1-more-people-lower-wages"><span class="header-section-number">3.3.1</span> Relationship 1: more people, lower wages</a></li>
+  <li><a href="#relationships-2-and-3-births-and-deaths-respond-to-wages" id="toc-relationships-2-and-3-births-and-deaths-respond-to-wages" class="nav-link" data-scroll-target="#relationships-2-and-3-births-and-deaths-respond-to-wages"><span class="header-section-number">3.3.2</span> Relationships 2 and 3: births and deaths respond to wages</a></li>
+  <li><a href="#putting-it-together" id="toc-putting-it-together" class="nav-link" data-scroll-target="#putting-it-together"><span class="header-section-number">3.3.3</span> Putting it together</a></li>
+  <li><a href="#why-the-equilibrium-is-stable" id="toc-why-the-equilibrium-is-stable" class="nav-link" data-scroll-target="#why-the-equilibrium-is-stable"><span class="header-section-number">3.3.4</span> Why the equilibrium is stable</a></li>
+  </ul></li>
+  <li><a href="#dismal-conclusions" id="toc-dismal-conclusions" class="nav-link" data-scroll-target="#dismal-conclusions"><span class="header-section-number">3.4</span> Dismal conclusions</a>
+  <ul class="collapse">
+  <li><a href="#case-1-a-new-technology" id="toc-case-1-a-new-technology" class="nav-link" data-scroll-target="#case-1-a-new-technology"><span class="header-section-number">3.4.1</span> Case 1: A new technology</a></li>
+  <li><a href="#case-2-lower-mortality" id="toc-case-2-lower-mortality" class="nav-link" data-scroll-target="#case-2-lower-mortality"><span class="header-section-number">3.4.2</span> Case 2: Lower mortality</a></li>
+  <li><a href="#case-3-the-preventive-check-malthuss-hope" id="toc-case-3-the-preventive-check-malthuss-hope" class="nav-link" data-scroll-target="#case-3-the-preventive-check-malthuss-hope"><span class="header-section-number">3.4.3</span> Case 3: The preventive check, Malthus’s hope</a></li>
+  <li><a href="#a-rulers-point-of-view" id="toc-a-rulers-point-of-view" class="nav-link" data-scroll-target="#a-rulers-point-of-view"><span class="header-section-number">3.4.4</span> A ruler’s point of view</a></li>
+  <li><a href="#subsistence-versus-equilibrium" id="toc-subsistence-versus-equilibrium" class="nav-link" data-scroll-target="#subsistence-versus-equilibrium"><span class="header-section-number">3.4.5</span> Subsistence versus equilibrium</a></li>
+  <li><a href="#try-it-the-malthus-app" id="toc-try-it-the-malthus-app" class="nav-link" data-scroll-target="#try-it-the-malthus-app"><span class="header-section-number">3.4.6</span> Try it: the Malthus app</a></li>
+  </ul></li>
+  <li><a href="#data-in-action-malthus-in-sweden" id="toc-data-in-action-malthus-in-sweden" class="nav-link" data-scroll-target="#data-in-action-malthus-in-sweden"><span class="header-section-number">3.5</span> Data in action: Malthus in Sweden</a>
+  <ul class="collapse">
+  <li><a href="#what-malthus-saw" id="toc-what-malthus-saw" class="nav-link" data-scroll-target="#what-malthus-saw"><span class="header-section-number">3.5.1</span> What Malthus saw</a></li>
+  <li><a href="#the-long-view" id="toc-the-long-view" class="nav-link" data-scroll-target="#the-long-view"><span class="header-section-number">3.5.2</span> The long view</a></li>
+  <li><a href="#births-against-deaths" id="toc-births-against-deaths" class="nav-link" data-scroll-target="#births-against-deaths"><span class="header-section-number">3.5.3</span> Births against deaths</a></li>
+  </ul></li>
+  <li><a href="#sec-was-malthus-right" id="toc-sec-was-malthus-right" class="nav-link" data-scroll-target="#sec-was-malthus-right"><span class="header-section-number">3.6</span> Was Malthus right?</a>
+  <ul class="collapse">
+  <li><a href="#about-the-past-largely-yes" id="toc-about-the-past-largely-yes" class="nav-link" data-scroll-target="#about-the-past-largely-yes"><span class="header-section-number">3.6.1</span> About the past: largely yes</a></li>
+  <li><a href="#about-the-future-spectacularly-wrong" id="toc-about-the-future-spectacularly-wrong" class="nav-link" data-scroll-target="#about-the-future-spectacularly-wrong"><span class="header-section-number">3.6.2</span> About the future: spectacularly wrong</a></li>
+  </ul></li>
+  <li><a href="#key-ideas" id="toc-key-ideas" class="nav-link" data-scroll-target="#key-ideas"><span class="header-section-number">3.7</span> Key ideas</a></li>
+  <li><a href="#check-your-understanding" id="toc-check-your-understanding" class="nav-link" data-scroll-target="#check-your-understanding"><span class="header-section-number">3.8</span> Check your understanding</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">3.9</span> Further reading</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-history.html">Population and the economy: big theories</a></li><li class="breadcrumb-item"><a href="./03-malthus.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The World According to Malthus</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-malthus" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The World According to Malthus</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Draft: provenance notes (for review)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Margin tags mark material that is <strong>not in the course slides or lab</strong>. <span class="tag-reading">Added · from readings</span> comes from the assigned or related readings (Malthus, Lee). <span class="tag-new">Added · new</span> is from outside the course materials (my framing, general knowledge, or my own analysis) and needs the closest check. Untagged material follows the 2025 slides (05, 06) and Lab 2.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>In this chapter.</strong> Why was human population nearly stationary for most of history? Thomas Malthus answered with a feedback loop linking population, wages, births, and deaths. We read Malthus in his own words, turn his argument into a simple two-panel diagram, draw out its “dismal” conclusions, and then look at the Swedish data that Malthus himself used.</p>
+<p><strong>Readings this chapter draws on.</strong> Malthus (1798), <em>An Essay on the Principle of Population</em>, Preface and Chapters 1–2 (assigned); Malthus’s later editions, Book II, Chapters 1–2, on Norway and Sweden (for the lab); Lee (1980), pp.&nbsp;517–520 and 541–546 (recommended).</p>
+</div>
+</div>
+</div>
+<section id="the-puzzle-of-stationarity" class="level2 page-columns page-full" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="the-puzzle-of-stationarity"><span class="header-section-number">3.1</span> The puzzle of stationarity</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> Your slide 05-03 poses the 1.10-daughters question. The 29-year generation and the worked numbers are mine.</p>
+</div></div><p>Here is a puzzle to start. For almost all of human history, the world’s population grew so slowly that it was very nearly stationary. Over long stretches, the average woman left behind about one surviving daughter, who replaced her. How did we manage that?</p>
+<p>It is harder than it sounds. Suppose instead that each woman had raised, on average, 1.10 surviving daughters instead of 1.00. That seems like a small difference. But with a generation length of about 29 years, it implies a growth rate of about 0.33 percent per year. Sustained for 10,000 years, the time since the beginning of agriculture, that growth would multiply a population by roughly 200,000,000,000,000. Start with a few million people and you end up with far more humans than there are grains of sand on Earth. Go the other way, to 0.90 daughters, and humanity goes extinct.</p>
+<p>So the near-stationarity of the past calls for an explanation. There are two kinds of answer:</p>
+<ol type="1">
+<li><strong>Accident.</strong> The population of, say, England in 1801 (about 9 million) was the cumulative result of a long string of chance events: plagues, good harvests, wars, invasions. Growth and decline happened to cancel out.</li>
+<li><strong>System.</strong> Something pushed population back toward a particular level whenever it drifted away. On this view, the population of 1801 was an <em>equilibrium</em>, the outcome of a self-correcting system.</li>
+</ol>
+<p>The accident story has a problem. Random ups and downs don’t cancel out on their own. Left alone, a population whose growth rate wanders randomly will eventually either explode or die out. The near-stationarity of human numbers over millennia suggests a system. Malthus’s great contribution was to describe what that system might be.</p>
+<p>A good theory of the pre-industrial world needs to explain three things:</p>
+<p>I. Why populations were roughly stationary, neither exploding nor going extinct. II. Why there were nonetheless <strong>oscillations</strong>, periods of growth followed by periods of decline. III. Why the standard of living of ordinary people didn’t improve much over the long run, even as technology slowly advanced.</p>
+<p>Keep these three in mind. We’ll come back to see how well Malthus does on each.</p>
+</section>
+<section id="a-pamphlet-against-optimism" class="level2 page-columns page-full" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="a-pamphlet-against-optimism"><span class="header-section-number">3.2</span> A pamphlet against optimism</h2>
+<section id="context" class="level3 page-columns page-full" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="context"><span class="header-section-number">3.2.1</span> Context</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> Dates, anonymous publication, and the 1803 edition are from general knowledge. Slide 05-12 has only the short biography.</p>
+</div></div><p>Thomas Robert Malthus (1766–1834) was a young English clergyman when, in 1798, he anonymously published <em>An Essay on the Principle of Population, as it Affects the Future Improvement of Society</em>. He later became one of the first professors of political economy, at the East India Company’s college, and spent the rest of his life revising and expanding the <em>Essay</em>. The second edition (1803) was nearly a new book, packed with data from around the world.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> The Godwin/Condorcet context comes from Malthus 1798 (Preface; Chs. 8–15). That the “friend” was his father is from general knowledge.</p>
+</div></div><p>The first edition was not written as a dispassionate study of demography. It was a reply to an argument. The 1790s were years of revolutionary optimism. The French Revolution, the spread of printing, and the discoveries of science had convinced writers like William Godwin in England and the Marquis de Condorcet in France that humanity was on the verge of limitless improvement. Godwin imagined a society of equality and reason, in which property would be shared, crime would vanish, and each person would need to work only half an hour a day. Malthus’s Preface says the <em>Essay</em> began in a conversation with “a friend” about one of Godwin’s essays (the friend was his own father, an admirer of Godwin).</p>
+<p>Malthus’s answer was that no reform of institutions, however wise, could overcome a more basic problem: the tendency of population to outrun food. He didn’t enjoy this conclusion, or at least he said he didn’t:</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+In his own words
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“The view which he has given of human life has a melancholy hue, but he feels conscious that he has drawn these dark tints from a conviction that they are really in the picture, and not from a jaundiced eye or an inherent spleen of disposition.” (Preface, 1798)</p>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Ostrich passage: Malthus 1798, Ch. 1 (assigned). The comment about the irony is mine.</p>
+</div></div><p>Malthus also insisted on a rule of evidence that is still a good one. He refused to argue with predictions that had no basis in past experience:</p>
+<blockquote class="blockquote">
+<p>“A writer may tell me that he thinks man will ultimately become an ostrich. I cannot properly contradict him. But before he can expect to bring any reasonable person over to his opinion, he ought to shew that the necks of mankind have been gradually elongating…” (Chapter 1)</p>
+</blockquote>
+<p>In other words: if you claim the future will be different, show me a trend. Keep this rule in mind. It is ironic, because the trend that would overturn Malthus’s own predictions, the industrial revolution, was getting under way in England as he wrote.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Postulates and the geometric vs.&nbsp;arithmetic ratios come from Malthus 1798, Chs. 1–2 (assigned). They are not in your slides or lab. The table and the commentary on it are mine.</p>
+</div></div></section>
+<section id="the-argument-in-two-postulates" class="level3 page-columns page-full" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="the-argument-in-two-postulates"><span class="header-section-number">3.2.2</span> The argument in two postulates</h3>
+<p>Malthus builds his case on two assumptions, which he calls <em>postulata</em>:</p>
+<blockquote class="blockquote">
+<p>“First, That food is necessary to the existence of man. Secondly, That the passion between the sexes is necessary and will remain nearly in its present state.” (Chapter 1)</p>
+</blockquote>
+<p>From these he draws his famous contrast:</p>
+<blockquote class="blockquote">
+<p>“Population, when unchecked, increases in a geometrical ratio. Subsistence increases only in an arithmetical ratio. A slight acquaintance with numbers will shew the immensity of the first power in comparison of the second.” (Chapter 1)</p>
+</blockquote>
+<p>“Geometrical” means growth by multiplication: 1, 2, 4, 8, 16. “Arithmetical” means growth by addition: 1, 2, 3, 4, 5. Malthus took the doubling time of population from the American colonies, where land was plentiful and the population doubled about every 25 years. For food, he made what he considered an extremely generous assumption: Britain’s food supply could be <em>increased</em> every 25 years by an amount equal to the entire current harvest. <a href="#tbl-ratios" class="quarto-xref">Table&nbsp;<span>3.1</span></a> reproduces his worked example for Britain.</p>
+<div class="cell">
+<div id="tbl-ratios" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ratios-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.1: Malthus’s illustration for Britain (Chapter 2). Figures are millions of people.
+</figcaption>
+<div aria-describedby="tbl-ratios-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 25%">
+<col style="width: 34%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Years from now</th>
+<th style="text-align: right;">Population, if unchecked</th>
+<th style="text-align: right;">Population the food could support</th>
+<th style="text-align: right;">“Totally unprovided for”</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">56</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">28</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">112</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">77</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>Two things about this table. First, the numbers aren’t a forecast. Malthus didn’t think Britain would ever have 77 million starving people. His point was that this gap <em>could never actually open up</em>. Something has to stop population growth long before it does. The interesting question is <em>what</em>.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Reservoir metaphor: Malthus 1798, Ch. 6 (not assigned). Calling the ratios rhetorical is my framing.</p>
+</div></div><p>Second, the specific “ratios” are rhetorical. Modern readers often fixate on whether food really grows arithmetically (it doesn’t, exactly). But nothing in Malthus’s argument depends on the exact form. What matters is that land is fixed, so each additional worker adds less food than the one before. Malthus put this more vividly in Chapter 6. A country with abundant empty land is like “a great reservoir of water, supplied by a moderate stream.” A growing population can draw on the reservoir for a while, “but the sooner, undoubtedly, will the reservoir be exhausted, and the streams only remain.”</p>
+</section>
+<section id="checks-preventive-and-positive" class="level3 page-columns page-full" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="checks-preventive-and-positive"><span class="header-section-number">3.2.3</span> Checks: preventive and positive</h3>
+<p>If population can’t actually grow geometrically for long, something must be checking it. Malthus identifies two kinds of check:</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+In his own words
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“…a foresight of the difficulties attending the rearing of a family acts as a <strong>preventive check</strong>, and the actual distresses of some of the lower classes, by which they are disabled from giving the proper food and attention to their children, act as a <strong>positive check</strong> to the natural increase of population.” (Chapter 4)</p>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> The point about late marriage (women in their mid-twenties) as the main fertility lever is from general knowledge. Slide 05-13 makes the marriage link.</p>
+</div></div><p>In modern terms:</p>
+<ul>
+<li>The <strong>preventive check</strong> works through <strong>fertility</strong>. People foresee the cost of supporting a family and delay marriage, or don’t marry at all. In pre-industrial Europe, where nearly all births happened within marriage and people married late (mid-twenties for women) or not at all, the age at marriage was the main lever controlling the birth rate.</li>
+<li>The <strong>positive check</strong> works through <strong>mortality</strong>. When food is scarce, more people die, especially infants and children of the poor.</li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Slide 05-11 poses the “vice” question. This answer is mine, drawn from Malthus 1798, Chs. 1 and 5.</p>
+</div></div><p>Malthus summed up all the checks with a phrase that shocks modern readers: “All these checks may be fairly resolved into misery and vice” (Chapter 5). <strong>Misery</strong> is the positive check: hunger, disease, early death. <strong>Vice</strong> is harder for us to interpret. For Malthus, a clergyman, it included prostitution, sex outside marriage, and what he called “vicious customs with respect to women.” That category takes in contraception and abortion, which he regarded as immoral. It also included war. (The list in Chapter 5 is “vicious customs with respect to women, great cities, unwholesome manufactures, luxury, pestilence, and war.”) So when Malthus writes about “even the most vicious societies,” he doesn’t mean societies where people are cruel. He means societies where the birth rate is held down by practices he disapproved of.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> Moral restraint (added in 1803) is from general knowledge, not the assigned texts.</p>
+</div></div><p>In the second edition, Malthus softened his position a little. He added a third category, <strong>moral restraint</strong>: delaying marriage <em>without</em> vice. This was the preventive check he approved of, and as we’ll see, it is the one hope he held out for improving the lot of the poor.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> My caveat. The claim that Chinese families controlled fertility is from general knowledge, not your materials.</p>
+</div></div><p>A note on reading Malthus. He wrote with the assumptions of an English gentleman of the 1790s. His descriptions of “savages,” of China, and of the English poor draw on travelers’ tales and the prejudices of his class. Historians have since overturned many of his specific claims. For example, later research has found that pre-industrial Chinese families controlled their fertility in ways Malthus didn’t recognize. Read him for the structure of the argument, which has proven remarkably durable, not for his ethnography.</p>
+</section>
+<section id="oscillation" class="level3 page-columns page-full" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="oscillation"><span class="header-section-number">3.2.4</span> Oscillation</h3>
+<p>Malthus didn’t think population sat quietly at its limit. He described a cycle, and this passage from Chapter 2 is the heart of the model:</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+In his own words
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“The constant effort towards population, which is found to act even in the most vicious societies, increases the number of people before the means of subsistence are increased. The food therefore which before supported seven millions must now be divided among seven millions and a half or eight millions. The poor consequently must live much worse, and many of them be reduced to severe distress. The number of labourers also being above the proportion of the work in the market, the price of labour must tend toward a decrease, while the price of provisions would at the same time tend to rise. … During this season of distress, the discouragements to marriage, and the difficulty of rearing a family are so great that population is at a stand. In the mean time the cheapness of labour, the plenty of labourers, and the necessity of an increased industry amongst them, encourage cultivators to employ more labour upon their land, to turn up fresh soil, and to manure and improve more completely what is already in tillage, till ultimately the means of subsistence become in the same proportion to the population as at the period from which we set out. The situation of the labourer being then again tolerably comfortable, the restraints to population are in some degree loosened, and the same retrograde and progressive movements with respect to happiness are repeated.” (Chapter 2)</p>
+</div>
+</div>
+<p>We can boil this down to a cycle:</p>
+<ol type="1">
+<li>Population increases.</li>
+<li>Laborers suffer: wages fall and food prices rise.</li>
+<li>People marry later and have fewer children; more die.</li>
+<li>Farmers, with cheap labor available, cultivate more intensively.</li>
+<li>“Tolerable comfort” is re-established.</li>
+<li>Restraints loosen. Go back to step 1.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> “Histories of the higher classes”: Malthus 1798, Ch. 2 (assigned). The link to historical demography is mine.</p>
+</div></div><p>Malthus admitted that this oscillation would be hard to see. One reason he gave is especially interesting for a course that works with data. “The histories of mankind that we possess are histories only of the higher classes.” To detect the cycle, he wrote, you would need to know the number of marriages relative to the number of adults, the comparative mortality among the children of the poor and the comfortable, and “the variations in the real price of labour.” He was describing, almost exactly, the research program of historical demography, which 150 years later reconstructed births, deaths, marriages, and real wages from parish registers. We’ll meet some of its results in <a href="#sec-was-malthus-right" class="quarto-xref"><span>Section 3.6</span></a>.</p>
+</section>
+</section>
+<section id="turning-malthus-into-a-model" class="level2 page-columns page-full" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="turning-malthus-into-a-model"><span class="header-section-number">3.3</span> Turning Malthus into a model</h2>
+<p>Malthus never drew a diagram, but his argument fits neatly into one. The version we use here was popularized by the economic demographer Ronald Lee (1980), and it is the diagram you’ll draw in lecture and in the lab. It combines three relationships, each a function of the <strong>real wage</strong>, <em>w</em>. Think of the wage as the standard of living of ordinary working people: how much food a day’s labor can buy.</p>
+<section id="relationship-1-more-people-lower-wages" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="relationship-1-more-people-lower-wages"><span class="header-section-number">3.3.1</span> Relationship 1: more people, lower wages</h3>
+<p>Malthus’s economy has one fixed resource (land) and one variable resource (labor). There is no capital accumulation. When more workers farm the same land, each additional worker adds less to output than the one before. This is the law of <strong>diminishing returns</strong>. In a competitive labor market, the wage equals what the last worker adds (the <strong>marginal product of labor</strong>). So more people means lower wages.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Why does the wage equal the marginal product?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Two forces push the wage toward the marginal product. An employer won’t hire an extra worker if that worker would cost more than they add to output, so wages can’t stay above the marginal product. And in a competitive market, a worker paid less than their marginal product could be hired away by another employer, so wages can’t stay below it either. Malthus’s world wasn’t perfectly competitive, as he himself complained about the “combination among the rich” that kept wages down. But the basic logic, that crowding more labor onto fixed land lowers its reward, doesn’t depend on perfect competition.</p>
+</div>
+</div>
+</div>
+<p>We draw this as a downward-sloping curve, <em>w(N)</em>. One unusual feature: we put <strong>population on the vertical axis and the wage on the horizontal axis</strong>. That is backwards from the usual labor-demand picture, but it lets us line this curve up with the next two, which also have the wage on the horizontal axis.</p>
+</section>
+<section id="relationships-2-and-3-births-and-deaths-respond-to-wages" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="relationships-2-and-3-births-and-deaths-respond-to-wages"><span class="header-section-number">3.3.2</span> Relationships 2 and 3: births and deaths respond to wages</h3>
+<p>The <strong>birth rate rises with wages</strong>, <em>b(w)</em>. When times are good, more people can afford to marry, and they marry younger. That is the preventive check loosening. The curve flattens at high wages, because there are biological and social limits to how high fertility can go.</p>
+<p>The <strong>death rate falls with wages</strong>, <em>d(w)</em>. When times are good, fewer people die of hunger and hunger-related disease. That is the positive check relaxing.</p>
+<p>We measure both as <strong>crude rates</strong>: births or deaths per year, divided by the population. (Demographers call them “crude” because the denominator is everyone, not just the people actually at risk, such as women of childbearing age.) The growth rate of the population is then simply</p>
+<p><span class="math display">\[
+\text{growth rate} = b(w) - d(w).
+\]</span></p>
+</section>
+<section id="putting-it-together" class="level3 page-columns page-full" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="putting-it-together"><span class="header-section-number">3.3.3</span> Putting it together</h3>
+<p><a href="#fig-model" class="quarto-xref">Figure&nbsp;<span>3.1</span></a> stacks the pieces. The top panel shows births and deaths as functions of the wage. Where the curves cross, at the wage <em>w*</em>, births equal deaths and the population neither grows nor shrinks. The bottom panel shows the population size that produces each wage. Reading down from <em>w*</em> to the <em>w(N)</em> curve gives the equilibrium population, <em>N*</em>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-model" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="03-malthus_files/figure-html/fig-model-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.1: The Malthusian model. Top: birth and death rates depend on the wage. Bottom: the wage depends on population size. The equilibrium wage w* is where births equal deaths; N* is the population that produces that wage.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> My framing (“division of labor” between the two panels). It isn’t stated this way in your slides.</p>
+</div></div><p>Notice what sets each equilibrium value. The equilibrium <strong>wage</strong> <em>w*</em> is determined entirely by the top panel: by demographic behavior, the birth and death schedules. Technology and land, the bottom panel, play no role in setting it. The equilibrium <strong>population</strong> <em>N*</em> is then whatever size of population drives the wage to <em>w*</em>. This division of labor between the two panels turns out to drive almost every “dismal” result in the next section.</p>
+</section>
+<section id="why-the-equilibrium-is-stable" class="level3 page-columns page-full" data-number="3.3.4">
+<h3 data-number="3.3.4" class="anchored" data-anchor-id="why-the-equilibrium-is-stable"><span class="header-section-number">3.3.4</span> Why the equilibrium is stable</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> The year-by-year simulation figure is new. Your slides make this point with the diagram and the app.</p>
+</div></div><p>Suppose the population starts <em>above</em> <em>N*</em>, at <em>N′</em>. Because there are too many people for the land, the wage is below <em>w*</em>. At that low wage, the top panel shows the death rate above the birth rate, so the population shrinks. As it shrinks, the wage rises, and the gap between deaths and births narrows. The process continues until the population is back at <em>N*</em> and the wage back at <em>w*</em>. <a href="#fig-malthus-stable" class="quarto-xref">Figure&nbsp;<span>3.2</span></a> simulates this year by year.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-malthus-stable" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-malthus-stable-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="03-malthus_files/figure-html/fig-malthus-stable-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-malthus-stable-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.2: Return to equilibrium from a population that starts 50 percent too large. Simulated with the model of the previous figure.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>This self-correction answers puzzle I from the start of the chapter. Population was roughly stationary not by accident but because any departure from <em>N*</em> set off forces that pushed it back. (What happens if population starts <em>below</em> <em>N*</em>? Work it out yourself. It’s the first “Check your understanding” question at the end of the chapter.)</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> The explanation of oscillations as shocks plus lags is my addition.</p>
+</div></div><p>What about puzzle II, the oscillations? In the simple model above, population glides smoothly back to equilibrium. Real populations are hit by constant shocks: good and bad harvests, epidemics, wars. Each shock knocks the population off its equilibrium, and the system then works to pull it back. The result is the kind of irregular “retrograde and progressive movements” that Malthus described. Some economists also think that delays in the system (it takes twenty years to raise a new worker) can produce genuine cycles that overshoot the equilibrium.</p>
+</section>
+</section>
+<section id="dismal-conclusions" class="level2 page-columns page-full" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="dismal-conclusions"><span class="header-section-number">3.4</span> Dismal conclusions</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> “Dismal science” aside is from general knowledge.</p>
+</div></div><p>Economics was nicknamed “the dismal science” in the nineteenth century, and Malthus is much of the reason. The diagram shows why. Let’s use it to ask what happens when something good happens.</p>
+<section id="case-1-a-new-technology" class="level3 page-columns page-full" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="case-1-a-new-technology"><span class="header-section-number">3.4.1</span> Case 1: A new technology</h3>
+<p>Suppose farmers discover a better plough, a new crop rotation, or a more productive crop. At every population size, the land now produces more food, so the wage is higher. In the diagram, the <em>w(N)</em> curve shifts outward (<a href="#fig-malthus-tech" class="quarto-xref">Figure&nbsp;<span>3.3</span></a>).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-malthus-tech" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-malthus-tech-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="03-malthus_files/figure-html/fig-malthus-tech-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-malthus-tech-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.3: A technological improvement shifts w(N) outward (dashed). The birth and death curves are unchanged, so the long-run wage is unchanged. Only population is larger.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>In the short run, life gets better. With the same number of people and more food, wages rise above <em>w*</em>. But at the higher wage, births exceed deaths and the population grows. It keeps growing until the wage has been pushed back down to <em>w*</em>, which hasn’t changed, because nothing in the top panel has changed. The long-run result: <strong>more people, living at exactly the old standard of living.</strong> Technology raises population, not living standards.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Quote from Malthus 1798, Ch. 7 (not assigned).</p>
+</div></div><p>This is the core of Malthus’s case against Godwin and Condorcet. Any improvement is eventually “eaten” by population growth. As Malthus put it, countries are “populous according to the quantity of human food which they produce, and happy according to the liberality with which that food is divided” (Chapter 7). More food makes a country more populous, not happier.</p>
+<p>This also answers puzzle III. Pre-industrial technology did improve, slowly, over the centuries. But the improvement showed up as larger populations, not as higher wages.</p>
+</section>
+<section id="case-2-lower-mortality" class="level3 page-columns page-full" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="case-2-lower-mortality"><span class="header-section-number">3.4.2</span> Case 2: Lower mortality</h3>
+<p>Malthus was writing just as Edward Jenner was introducing vaccination against smallpox (1796). Surely saving lives is good? Suppose a medical advance lowers the death rate at every wage, shifting <em>d(w)</em> down (<a href="#fig-mortality" class="quarto-xref">Figure&nbsp;<span>3.4</span></a>).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-mortality" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mortality-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="03-malthus_files/figure-html/fig-mortality-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mortality-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.4: A decline in mortality shifts d(w) down (dashed). The new equilibrium has a lower wage (w’) and a larger population (N’).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> The point that the death rate’s gain is mostly “clawed back” comes from the model simulation, not your slides.</p>
+</div></div><p>At the old wage, births now exceed deaths, so the population grows. Growth pushes the wage down until births and deaths are equal again, at a new, <em>lower</em> equilibrium wage <em>w′</em>. The new equilibrium has a larger population, a lower standard of living, and a lower birth rate. And the death rate? It ends up only modestly below where it started: much of the gain is clawed back as the lower wage raises hunger-related mortality.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Lee 1980, p.&nbsp;543 (in the assigned pages). Not in your slides.</p>
+</div></div><p>This is Lee’s (1980) key point about the model: the equilibrium wage isn’t a fixed biological “subsistence” level. It depends on mortality, and mortality could change for reasons that had nothing to do with the economy. Epidemic diseases came and went largely on their own schedule. So disease environments could change the long-run standard of living even if nothing else changed.</p>
+<p>Malthus pressed this logic to an extreme in a notorious passage in his later editions:</p>
+<blockquote class="blockquote">
+<p>“To act consistently therefore, we should facilitate, instead of foolishly and vainly endeavouring to impede, the operations of nature in producing this mortality… Instead of recommending cleanliness to the poor, we should encourage contrary habits. In our towns we should make the streets narrower, crowd more people into the houses, and court the return of the plague.” (Book IV, Chapter V)</p>
+</blockquote>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> Your slide 06-08 quotes the passage. Reading it as sarcasm is my interpretation, checked against its context in the 1817 edition, Bk. IV, Ch. V.</p>
+</div></div><p>Read this passage carefully: it is <strong>sarcasm</strong>, not a policy proposal. Malthus is attacking people who wanted to <em>encourage</em> early marriage. His point is that if society encourages more births without more food, it is implicitly choosing more deaths, so it might as well be honest about it. The passage is a <em>reductio ad absurdum</em>, meant to push readers toward the preventive check. The fact that it is so often quoted as Malthus’s sincere view tells you something about his reputation.</p>
+</section>
+<section id="case-3-the-preventive-check-malthuss-hope" class="level3 page-columns page-full" data-number="3.4.3">
+<h3 data-number="3.4.3" class="anchored" data-anchor-id="case-3-the-preventive-check-malthuss-hope"><span class="header-section-number">3.4.3</span> Case 3: The preventive check, Malthus’s hope</h3>
+<p>Is there <em>anything</em> that can raise the standard of living in the long run? The diagram says yes: anything that shifts the top panel in the right direction. In particular, suppose people marry later and have fewer children at every wage level, so the <em>b(w)</em> curve shifts down (<a href="#fig-preventive" class="quarto-xref">Figure&nbsp;<span>3.5</span></a>).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-preventive" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-preventive-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="03-malthus_files/figure-html/fig-preventive-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-preventive-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.5: A stronger preventive check shifts b(w) down (dashed). The equilibrium wage rises (w’), the equilibrium death rate falls, and the population is smaller (N’).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Now births fall short of deaths at the old wage, the population shrinks, the wage rises, and the new equilibrium has a <strong>higher wage, lower mortality, and a smaller population</strong>. This is why Malthus favored “moral restraint.” It was the one route to a permanently better life for ordinary people. Notice that it works by changing behavior, the top panel, not technology, the bottom panel.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Malthus’s Norway and Sweden chapters (lab reading): the 1799 visit and the mortality figures.</p>
+</div></div><p>Malthus saw the preventive check at its strongest in Norway, which he visited in 1799. Norway’s death rate was remarkably low, about 1 death per 48 people per year (21 per thousand). Sweden’s, next door, was about 1 in 35 (29 per thousand). Malthus credited the difference not to Norway’s climate but to its institutions, which made it hard for young people to marry before they could support a family. Read his account of <em>how</em> those institutions worked in the chapters assigned with the lab. Lab 2 asks you about it.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Slide 06-15 raises the poor laws. The argument and quote are from Malthus 1798, Ch. 5 (not assigned).</p>
+</div></div><p>The same logic is behind Malthus’s best-known policy position, his opposition to the English Poor Laws, the parish system of relief for the poor. He argued that by promising support to families who couldn’t support themselves, the Poor Laws encouraged early marriage without increasing the food supply, and so “may be said therefore in some measure to create the poor which they maintain” (Chapter 5).</p>
+</section>
+<section id="a-rulers-point-of-view" class="level3 page-columns page-full" data-number="3.4.4">
+<h3 data-number="3.4.4" class="anchored" data-anchor-id="a-rulers-point-of-view"><span class="header-section-number">3.4.4</span> A ruler’s point of view</h3>
+<p>Not everyone wants a high wage. In <a href="02-optimum.html" class="quarto-xref"><span>Chapter 2</span></a> we met Alfred Sauvy’s distinction between the <em>economic</em> optimum (the population that maximizes output per person) and the <em>power</em> optimum (the population that maximizes the surplus available to the state, for armies, monuments, or tribute). A ruler interested in power may prefer a large population at a low wage. Malthus saw this clearly:</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Malthus 1798, Ch. 7 (not assigned). Sauvy link is from your slide 06-15/16.</p>
+</div></div><blockquote class="blockquote">
+<p>“It may appear to be the interest of the rulers, and the rich of a state, to force population, and thereby lower the price of labour, and consequently the expense of fleets and armies, and the cost of manufactures for foreign sale…” (Chapter 7)</p>
+</blockquote>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> From Malthus’s Sweden chapter (lab reading, a paragraph after the assigned ones). The 2013 population aside is mine.</p>
+</div></div><p>He found a real example in Sweden, whose government was trying to raise its population through hospitals and other encouragements. “Strange to say!” he wrote, “the government and the political economists of Sweden are continually calling out for population! population!” If Sweden wanted nine or ten million people, Malthus said, it simply needed to produce enough food for them, “and they may rest perfectly assured that they will not want mouths to eat it.” (Sweden’s population passed 9.5 million in 2013, though not for Malthusian reasons.)</p>
+</section>
+<section id="subsistence-versus-equilibrium" class="level3" data-number="3.4.5">
+<h3 data-number="3.4.5" class="anchored" data-anchor-id="subsistence-versus-equilibrium"><span class="header-section-number">3.4.5</span> Subsistence versus equilibrium</h3>
+<p>People often summarize Malthus as saying that the poor are always kept at “subsistence,” the bare biological minimum needed to survive. The diagram shows why that is not quite right. The equilibrium wage <em>w*</em> is set by the birth and death schedules, and those reflect <em>behavior and institutions</em>, such as how late people marry and how a society shares food in bad years, as well as biology. Lee calls <em>w*</em> the “conventional standard of living.” Two societies with the same land and technology could settle at quite different living standards if one had a stronger preventive check than the other. Malthus believed that this was exactly the difference between northwestern Europe, with its late marriage, and the places he thought married early and universally.</p>
+</section>
+<section id="try-it-the-malthus-app" class="level3 page-columns page-full" data-number="3.4.6">
+<h3 data-number="3.4.6" class="anchored" data-anchor-id="try-it-the-malthus-app"><span class="header-section-number">3.4.6</span> Try it: the Malthus app</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> The app is the course’s own Malthus app (<code>ShinyApps/new-malthus</code> in the 2025 course repo), exported with Shinylive so it runs in the browser, in its own tab. The three questions are mine; they use only a change in starting population, the speed of adjustment, and a rise in the death level, to stay clear of the Lab 2 graded scenarios (a shift in the wage curve, a higher birth rate, an expulsion, and the ruler’s policy options).</p>
+</div></div><p>The app simulates the two-panel model from this chapter. The top-left panel is the demography (birth and death rates against the wage), the bottom-left is the economy (population against the wage), and the right-hand panels trace population and wages over time. The economy starts in equilibrium; new conditions take effect at time 0, and you press the small “play” triangle under the time slider to watch what happens. It opens in a new tab, so you can make it full screen and keep this page open alongside it. (The first load can take a few seconds while R starts up in your browser.)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="apps/new-malthus/index.html" target="_blank" rel="noopener"><img src="images/apps/new-malthus.png" class="img-fluid figure-img" style="width:85.0%" alt="Screenshot of the Malthus simulation Shiny app: sliders for starting population, wage level, birth level, death level, and time on the left; four panels on the right showing the demography and economy diagrams and population and wages over time."></a></p>
+<figcaption>The Malthus app at its starting values. Click to open it in a new tab.</figcaption>
+</figure>
+</div>
+<p><a href="apps/new-malthus/index.html" class="btn btn-primary" target="_blank" rel="noopener">Open the Malthus app in a new tab ↗</a></p>
+<p>Before you move each slider, write down what you expect to happen. Then check.</p>
+<ol type="1">
+<li><strong>Too many people.</strong> Set “Population N at time t=0” to 8 and press play. Before you do: will wages start above or below their equilibrium level? Which will be higher at first, the birth rate or the death rate?</li>
+<li><strong>How fast?</strong> Using the same run, step through time with the arrow keys. About how many periods does it take for population to close half the gap between 8 and its equilibrium of 5? Does it ever overshoot?</li>
+<li><strong>A harsher disease environment.</strong> Return N to 5 and raise “death level d’(w)” from 0.10 to 0.13, as if a new disease arrived. Predict the new long-run wage and population before you press play. Who ends up better off: the people living before or after the change?</li>
+</ol>
+<p>Lab 2 asks you to use the app to trace the short- and long-run effects of a change in the economy.</p>
+</section>
+</section>
+<section id="data-in-action-malthus-in-sweden" class="level2 page-columns page-full" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="data-in-action-malthus-in-sweden"><span class="header-section-number">3.5</span> Data in action: Malthus in Sweden</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> Tabellverket (1749) is from general knowledge. The HMD/Berkeley line is from your lab.</p>
+</div></div><p>Malthus wasn’t only a theorist. In later editions he became an avid collector of data, and some of the best data he found came from Sweden. Sweden began a national system of population statistics, the <em>Tabellverket</em>, in 1749, so it has the longest continuous national series of births, deaths, and population in the world. Those records are the source of the Swedish series in the <strong>Human Mortality Database</strong> (HMD), founded at Berkeley and the Max Planck Institute for Demographic Research, which we use in Lab 2.</p>
+<section id="what-malthus-saw" class="level3 page-columns page-full" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="what-malthus-saw"><span class="header-section-number">3.5.1</span> What Malthus saw</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Bark bread and Wargentin’s table come from Malthus’s Sweden chapter (lab reading). Putting them next to the HMD numbers is my addition.</p>
+</div></div><p>When Malthus traveled through Sweden in the summer of 1799, he found a country in crisis after a bad harvest. In the provinces near Norway, “a considerable portion of the people was living upon bread made of the inner bark of the fir, and of dried sorrel, absolutely without any mixture of meal.” He also found the Swedish statistician Pehr Wargentin’s analysis of the registers, which made a striking claim: “the births, marriages and deaths increase and decrease according to the state of the harvests.” Malthus reproduced Wargentin’s figures for two bad and two good harvest years. <a href="#tbl-wargentin" class="quarto-xref">Table&nbsp;<span>3.2</span></a> puts them next to the corresponding HMD numbers.</p>
+<div class="cell">
+<div id="tbl-wargentin" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-wargentin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.2: Swedish vital events in bad and good harvest years: Wargentin’s figures (as quoted by Malthus) and the Human Mortality Database.
+</figcaption>
+<div aria-describedby="tbl-wargentin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 11%">
+<col style="width: 24%">
+<col style="width: 24%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Year</th>
+<th style="text-align: left;">Harvest</th>
+<th style="text-align: right;">Births (Wargentin)</th>
+<th style="text-align: right;">Deaths (Wargentin)</th>
+<th style="text-align: right;">Births (HMD)</th>
+<th style="text-align: right;">Deaths (HMD)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1,757</td>
+<td style="text-align: left;">Barren</td>
+<td style="text-align: right;">81,878</td>
+<td style="text-align: right;">68,054</td>
+<td style="text-align: right;">61,675</td>
+<td style="text-align: right;">55,829</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1,758</td>
+<td style="text-align: left;">Barren</td>
+<td style="text-align: right;">83,299</td>
+<td style="text-align: right;">74,370</td>
+<td style="text-align: right;">63,262</td>
+<td style="text-align: right;">60,527</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1,759</td>
+<td style="text-align: left;">Abundant</td>
+<td style="text-align: right;">85,579</td>
+<td style="text-align: right;">62,662</td>
+<td style="text-align: right;">63,865</td>
+<td style="text-align: right;">49,162</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1,760</td>
+<td style="text-align: left;">Abundant</td>
+<td style="text-align: right;">90,635</td>
+<td style="text-align: right;">60,083</td>
+<td style="text-align: right;">68,384</td>
+<td style="text-align: right;">46,721</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> Attributing the gap to Finland is my inference. Neither source says so.</p>
+</div></div><p>The two sources disagree on the level. Wargentin’s counts are about a third higher, most likely because his tables covered the whole Swedish realm, which then included Finland, while the HMD uses Sweden’s present-day borders. But they tell the same story. In the barren years 1757–58, deaths were high and births low. In the abundant years 1759–60, deaths fell and births rose. That is the signature of a Malthusian economy: good times raise births <em>and</em> lower deaths; bad times do the reverse.</p>
+</section>
+<section id="the-long-view" class="level3" data-number="3.5.2">
+<h3 data-number="3.5.2" class="anchored" data-anchor-id="the-long-view"><span class="header-section-number">3.5.2</span> The long view</h3>
+<p><a href="#fig-swe-rates" class="quarto-xref">Figure&nbsp;<span>3.6</span></a> shows Swedish crude birth and death rates from 1751 to 2014.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the R code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>op <span class="ot">&lt;-</span> <span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="fl">4.2</span>, <span class="dv">1</span>, <span class="dv">1</span>))</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(swe<span class="sc">$</span>year, swe<span class="sc">$</span>cdr, <span class="at">type =</span> <span class="st">"l"</span>, <span class="at">col =</span> col_d, <span class="at">lwd =</span> <span class="fl">1.5</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fu">max</span>(swe<span class="sc">$</span>cdr)), <span class="at">xlab =</span> <span class="st">"Year"</span>, <span class="at">ylab =</span> <span class="st">"Per 1,000 population"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(swe<span class="sc">$</span>year, swe<span class="sc">$</span>cbr, <span class="at">col =</span> col_b, <span class="at">lwd =</span> <span class="fl">1.5</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topright"</span>, <span class="fu">c</span>(<span class="st">"Crude birth rate"</span>, <span class="st">"Crude death rate"</span>),</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">col =</span> <span class="fu">c</span>(col_b, col_d), <span class="at">lwd =</span> <span class="dv">2</span>, <span class="at">bty =</span> <span class="st">"n"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">1773</span>, swe<span class="sc">$</span>cdr[swe<span class="sc">$</span>year <span class="sc">==</span> <span class="dv">1773</span>], <span class="st">"1773"</span>, <span class="at">pos =</span> <span class="dv">4</span>, <span class="at">cex =</span> <span class="fl">0.8</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(op)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-swe-rates" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-swe-rates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="03-malthus_files/figure-html/fig-swe-rates-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-swe-rates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.6: Crude birth and death rates, Sweden, 1751–2014. Source: Human Mortality Database.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Two features stand out. The first is the very large year-to-year volatility in the eighteenth century, especially in deaths. The tallest spike, in 1773, came after harvest failures in 1771–72 brought famine and epidemic disease: the crude death rate reached 52 per thousand, nearly twice its usual level. Births that year fell to 25 per thousand. The second feature is the long-run decline of both rates, deaths first and then births. This is the <em>demographic transition</em>, which we met in <a href="01-history.html" class="quarto-xref"><span>Chapter 1</span></a>. It is precisely what Malthus’s model does not anticipate.</p>
+</section>
+<section id="births-against-deaths" class="level3 page-columns page-full" data-number="3.5.3">
+<h3 data-number="3.5.3" class="anchored" data-anchor-id="births-against-deaths"><span class="header-section-number">3.5.3</span> Births against deaths</h3>
+<p>If Malthusian forces were at work, years with high death rates (bad times) should also be years with low birth rates. <a href="#fig-swe-scatter" class="quarto-xref">Figure&nbsp;<span>3.7</span></a> plots each year’s birth rate against its death rate for 1751–1800, the half-century in which Malthus was writing.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the R code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>s <span class="ot">&lt;-</span> swe<span class="sc">$</span>year <span class="sc">%in%</span> <span class="dv">1751</span><span class="sc">:</span><span class="dv">1800</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>r <span class="ot">&lt;-</span> <span class="fu">cor</span>(swe<span class="sc">$</span>cbr[s], swe<span class="sc">$</span>cdr[s])</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>op <span class="ot">&lt;-</span> <span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="fl">4.2</span>, <span class="dv">1</span>, <span class="dv">1</span>))</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(swe<span class="sc">$</span>cdr[s], swe<span class="sc">$</span>cbr[s], <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">"grey30"</span>, <span class="at">cex =</span> <span class="fl">0.8</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Crude death rate (per 1,000)"</span>, <span class="at">ylab =</span> <span class="st">"Crude birth rate (per 1,000)"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="fu">lm</span>(cbr <span class="sc">~</span> cdr, <span class="at">data =</span> swe, <span class="at">subset =</span> s), <span class="at">lwd =</span> <span class="dv">2</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="do">## highlight Wargentin's four years (see the table above)</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>wy <span class="ot">&lt;-</span> swe<span class="sc">$</span>year <span class="sc">%in%</span> <span class="dv">1757</span><span class="sc">:</span><span class="dv">1760</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(swe<span class="sc">$</span>cdr[wy], swe<span class="sc">$</span>cbr[wy], <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">"#e66101"</span>, <span class="at">cex =</span> <span class="fl">1.1</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>lab <span class="ot">&lt;-</span> swe<span class="sc">$</span>year <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">1757</span>, <span class="dv">1758</span>, <span class="dv">1760</span>, <span class="dv">1772</span>, <span class="dv">1773</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(swe<span class="sc">$</span>cdr[lab], swe<span class="sc">$</span>cbr[lab], swe<span class="sc">$</span>year[lab], <span class="at">pos =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">2</span>), <span class="at">cex =</span> <span class="fl">0.8</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="do">## 1759 sits in the densest part of the cloud: label it with a leader line</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>x59 <span class="ot">&lt;-</span> swe<span class="sc">$</span>cdr[swe<span class="sc">$</span>year <span class="sc">==</span> <span class="dv">1759</span>]; y59 <span class="ot">&lt;-</span> swe<span class="sc">$</span>cbr[swe<span class="sc">$</span>year <span class="sc">==</span> <span class="dv">1759</span>]</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">segments</span>(x59, y59, <span class="fl">23.1</span>, <span class="fl">32.5</span>, <span class="at">col =</span> <span class="st">"grey50"</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fl">23.1</span>, <span class="fl">32.5</span>, <span class="st">"1759"</span>, <span class="at">pos =</span> <span class="dv">2</span>, <span class="at">cex =</span> <span class="fl">0.8</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topright"</span>, <span class="fu">c</span>(<span class="fu">paste</span>(<span class="st">"Correlation:"</span>, <span class="fu">round</span>(r, <span class="dv">2</span>)), <span class="st">"Wargentin's years, 1757–60"</span>),</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>       <span class="at">pch =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="dv">19</span>), <span class="at">col =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="st">"#e66101"</span>), <span class="at">bty =</span> <span class="st">"n"</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(op)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-swe-scatter" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-swe-scatter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="03-malthus_files/figure-html/fig-swe-scatter-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-swe-scatter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.7: Crude birth rate against crude death rate, Sweden, 1751–1800. Each point is one year; the line is a least-squares fit. Source: Human Mortality Database.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The relationship is clearly negative: the correlation is -0.58. Even setting aside the catastrophe of 1772–73, years of high mortality tend to be years of low fertility. This is what Malthus and Wargentin predicted.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> “Half the system” caution is from your lab (Part 3). Malthus’s short-period warning is from 1798, Ch. 7 (not assigned).</p>
+</div></div><p>Two cautions. First, a scatter plot of births against deaths tests only <em>half</em> of the Malthusian system. It shows that births and deaths move in opposite directions, as if both were responding to good and bad times. But we have no wage series here. We are <em>inferring</em> the good and bad times from the pattern itself. The other half of the system, that population size drives wages, needs other data. Second, Malthus himself warned that a few years of data can mislead. He wrote that the ratio of births to deaths “for a period of five to ten years, will hence appear to be a very inadequate criterion by which to judge of its real progress in population” (Chapter 7). A run of good years is typically followed by a correction.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+In the lab
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In Lab 2 you’ll make this scatter plot yourself and then extend it to later periods of Swedish history. The question to keep in mind as you do: <em>if</em> the Malthusian system broke down, what would that look like in the data, and what might be causing it?</p>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-was-malthus-right" class="level2 page-columns page-full" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="sec-was-malthus-right"><span class="header-section-number">3.6</span> Was Malthus right?</h2>
+<section id="about-the-past-largely-yes" class="level3 page-columns page-full" data-number="3.6.1">
+<h3 data-number="3.6.1" class="anchored" data-anchor-id="about-the-past-largely-yes"><span class="header-section-number">3.6.1</span> About the past: largely yes</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Table and the 60% wage fall: Lee 1980, pp.&nbsp;519–522 (p.&nbsp;522 is just past the assigned pages). The 15% figure is p.&nbsp;541 (assigned).</p>
+</div></div><p>For the world Malthus lived in and the centuries before it, the evidence has been surprisingly kind to him. Using the reconstruction of English population from parish registers by the Cambridge Group for the History of Population and Social Structure, Lee (1980) compared population growth with real wages in England. <a href="#tbl-lee-1980" class="quarto-xref">Table&nbsp;<span>3.3</span></a> shows his summary.</p>
+<div class="cell">
+<div id="tbl-lee-1980" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-lee-1980-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.3: Population growth and real wages in England, 1535–1795. Source: Lee (1980), p.&nbsp;522.
+</figcaption>
+<div aria-describedby="tbl-lee-1980-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 41%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Period</th>
+<th style="text-align: right;">Population growth (% per year)</th>
+<th style="text-align: right;">Change in real wages (% per year)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1535–1605</td>
+<td style="text-align: right;">0.65</td>
+<td style="text-align: right;">-0.72</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1605–1645</td>
+<td style="text-align: right;">0.49</td>
+<td style="text-align: right;">0.15</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1645–1695</td>
+<td style="text-align: right;">0.08</td>
+<td style="text-align: right;">0.54</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1695–1745</td>
+<td style="text-align: right;">0.23</td>
+<td style="text-align: right;">0.60</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1745–1795</td>
+<td style="text-align: right;">0.58</td>
+<td style="text-align: right;">-0.86</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>When population grew quickly, real wages fell. When population growth slowed, wages rose. Over the sixteenth century, Lee writes, wage earners went from being “comfortably off” to a situation that was “desperate,” with wages falling about 60 percent after a century of population growth. This is the bottom panel of our diagram, in the data. Like Wargentin, Lee also found that births and deaths responded to wages in the short run, in the direction Malthus predicted.</p>
+<p>But Lee also found that wages explained only about 15 percent of the year-to-year variation in population growth. Most of the variation in mortality was <em>exogenous</em>: plague and other epidemics came and went for reasons that had little to do with living standards. The Malthusian feedback was real, but it was weak and slow, operating over decades and centuries against a background of constant shocks.</p>
+</section>
+<section id="about-the-future-spectacularly-wrong" class="level3 page-columns page-full" data-number="3.6.2">
+<h3 data-number="3.6.2" class="anchored" data-anchor-id="about-the-future-spectacularly-wrong"><span class="header-section-number">3.6.2</span> About the future: spectacularly wrong</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> Rising real wages after ~1820 are from general knowledge. The list that follows is from your slides 06-22 to 06-28.</p>
+</div></div><p>Malthus predicted that no lasting improvement in the condition of ordinary people was possible. Within a few decades of the <em>Essay</em>, England’s real wages began a sustained rise that has continued, with interruptions, for two centuries. And population grew at the same time. Both populations and living standards rose together, which Malthus’s model says can’t happen in the long run.</p>
+<p>What did he miss? The diagram suggests where to look:</p>
+<ul>
+<li><strong>The bottom panel may keep shifting.</strong> If technology improves fast enough, and keeps improving, the wage curve can stay ahead of population. Malthus treated improvement as slow and bounded, the “moderate stream.” The industrial revolution turned the stream into a flood.</li>
+<li><strong>Capital.</strong> Malthus’s economy has one fixed factor (land) and one variable one (labor). Add a second variable factor, capital, that can grow alongside population, and diminishing returns to labor are much less binding. This is the subject of the next chapter, on the Solow growth model.</li>
+<li><strong>More people may mean more ideas.</strong> Perhaps productivity <em>rises</em> with population density. Ester Boserup argued that population pressure drives agricultural innovation. We’ll take up her argument in a later chapter.</li>
+<li><strong>The top panel may change shape.</strong> In modern societies, higher incomes are associated with <em>fewer</em> children, not more. Once the birth rate stops rising with the wage, the Malthusian feedback that pulls wages back down is broken.</li>
+</ul>
+<p>Or perhaps we should ask: who says Malthus was wrong? Maybe we’ve simply been lucky for two hundred years, and population and consumption are still pressing on resource limits that will eventually bind, as Malthus predicted. That is the debate between David Lam and his critics that we read later in the course.</p>
+</section>
+</section>
+<section id="key-ideas" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="key-ideas"><span class="header-section-number">3.7</span> Key ideas</h2>
+<ul>
+<li>Pre-industrial populations were roughly stationary because of a <strong>feedback system</strong>: more people → lower wages → fewer births and more deaths → fewer people.</li>
+<li>Malthus distinguished the <strong>preventive check</strong> (lower fertility, mainly through later marriage) from the <strong>positive check</strong> (higher mortality).</li>
+<li>In the two-panel model, the <strong>equilibrium wage</strong> is set by the birth and death schedules (behavior and biology), and the <strong>equilibrium population</strong> by technology and resources.</li>
+<li><strong>Dismal conclusions:</strong> better technology raises population but not wages in the long run, and lower mortality <em>lowers</em> the equilibrium wage. Only a stronger preventive check raises living standards permanently.</li>
+<li>Eighteenth-century Swedish data show the predicted <strong>negative correlation</strong> between birth and death rates. English data show wages falling when population grew.</li>
+<li>Malthus described the pre-industrial past well and the industrial future badly. Explaining his failure is the subject of much of the rest of this course.</li>
+</ul>
+</section>
+<section id="check-your-understanding" class="level2 page-columns page-full" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="check-your-understanding"><span class="header-section-number">3.8</span> Check your understanding</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> Q1 and Q4 come from your slides (05-28, 06-25). Q2, Q3, and Q5–Q8 are new. (The former Q6, a ruler’s policy choice from slide 06-16, was replaced because it nearly duplicates 2025 Lab 2 graded Q8.)</p>
+</div></div><ol type="1">
+<li><p><strong>Starting too small.</strong> Suppose a population starts <em>below</em> its equilibrium size <em>N*</em>. Using both panels of the diagram, explain what happens to the wage, the birth rate, the death rate, and population size. Does the population return to <em>N*</em>?</p></li>
+<li><p><strong>Doubling times.</strong> Malthus took a 25-year doubling time from the American colonies. What annual growth rate does that imply? (Hint: a population growing at rate <em>r</em> doubles in about 70/<em>r</em> years when <em>r</em> is in percent.) Compare it with the Swedish growth rate from 1751 to 1800, which you can compute from the HMD data as about 0.59 percent per year.</p></li>
+<li><p><strong>A flat death curve.</strong> Lee found that mortality was mostly unrelated to wages. Redraw the top panel with a horizontal <em>d(w)</em>. Is there still an equilibrium? Is it still stable? Which check is now doing all the work?</p></li>
+<li><p><strong>Multiple equilibria.</strong> Suppose that at very high wages, the birth rate starts to <em>fall</em> as wages rise. Sketch a <em>b(w)</em> curve like this. How many times can it cross <em>d(w)</em>? For each crossing, decide whether the equilibrium is stable. What might this have to do with how countries escaped the Malthusian trap?</p></li>
+<li><p><strong>Real versus nominal wages.</strong> Malthus argued that the oscillation was hidden partly because employers kept money wages unchanged while food prices rose. Why does the model use the <em>real</em> wage? What would go wrong if we used the money wage?</p></li>
+<li><p><strong>How easy is it to see Malthus in the data?</strong> Lee found that wages explained only about 15 percent of the year-to-year variation in population growth in pre-industrial England. If you had only 20 years of births, deaths, and wages for one village, how confident could you be about whether Malthusian feedback was at work? What would make the feedback easier to detect?</p></li>
+<li><p><strong>Reading the evidence.</strong> In <a href="#tbl-wargentin" class="quarto-xref">Table&nbsp;<span>3.2</span></a>, Wargentin’s counts are much higher than the HMD’s, yet both show the same pattern. Why can two sources disagree on levels but agree on a correlation? What kinds of measurement error would <em>not</em> leave the pattern intact?</p></li>
+<li><p><strong>Sarcasm.</strong> Reread the “court the return of the plague” passage. In one or two sentences, state the argument Malthus is actually making, and explain how it follows from the model.</p></li>
+</ol>
+</section>
+<section id="further-reading" class="level2 page-columns page-full" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">3.9</span> Further reading</h2>
+<p><strong>Assigned and recommended</strong></p>
+<ul>
+<li>Malthus, Thomas Robert. 1798. <em>An Essay on the Principle of Population.</em> London: J. Johnson. Preface and Chapters 1–2. Available free from the Electronic Scholarly Publishing Project. <em>As you read: What does Malthus mean by “vice”? By “oscillation”? According to him, how can a population improve its standard of living?</em></li>
+<li>Malthus, Thomas Robert. Later editions (1803 and after). <em>An Essay on the Principle of Population</em>, Book II, Chapter I, “Of the Checks to Population in Norway,” and Chapter II, “Of the Checks to Population in Sweden.” Needed for Lab 2. <em>As you read: Which checks does Malthus think dominate in each country, and what evidence does he give?</em></li>
+<li>Lee, Ronald D. 1980. “A Historical Perspective on Economic Aspects of the Population Explosion: The Case of Preindustrial England.” In R. A. Easterlin, ed., <em>Population and Economic Change in Developing Countries</em>. University of Chicago Press. Pages 517–520 and 541–546. <em>The source of the diagram used in this chapter, with extensions we didn’t cover: what if labor demand grows steadily?</em></li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> Both suggestions are mine.</p>
+</div></div><p><strong>Going further</strong></p>
+<ul>
+<li>Malthus’s later chapters (1798, Chapters 8–15) on Godwin and Condorcet are the most readable and entertaining part of the first edition, especially the thought experiment in Chapter 10 in which Godwin’s ideal society collapses within a generation.</li>
+<li>Wrigley, E. A., and R. S. Schofield. 1981. <em>The Population History of England, 1541–1871: A Reconstruction.</em> The parish-register reconstruction behind Lee’s numbers, and the realization of the “history of the lower classes” that Malthus said was missing.</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./02-optimum.html" class="pagination-link" aria-label="The Optimum Population">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Optimum Population</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./04-solow.html" class="pagination-link" aria-label="Capital to the Rescue? The Solow Model and Inequality">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Capital to the Rescue? The Solow Model and Inequality</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

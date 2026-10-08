@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Economic Demography - 18&nbsp; Why People Move: Cities, Borders, and Development</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./19-recession-fertility.html" rel="next">
+<link href="./17-projection-peak.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./16-longevity.html">Optional chapters</a></li><li class="breadcrumb-item"><a href="./18-why-move.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Why People Move: Cities, Borders, and Development</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Economic Demography</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Population and the economy: big theories</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-history.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Ten Thousand Years of Population</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-optimum.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Optimum Population</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-malthus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The World According to Malthus</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-solow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Capital to the Rescue? The Solow Model and Inequality</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-boserup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Boserup: Population Pushes Technology</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Resources and the environment</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-resources-commons.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Are We Doomed? Resources, Prices, and the Commons</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-climate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Population and Climate Change</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Age structure</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-social-security.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Aging and Social Security: A Ponzi Scheme?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-age-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Are Too Few Children a Problem? Age Structure and Optimal Fertility</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Fertility and the family</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-fertility.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">How Do Economists Think We Decide How Many Children to Have?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-china.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Fertility Policy I: China’s One-Child Policy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12-abortion-pill.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Fertility Policy II: Abortion and the Pill in the United States</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13-marriage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Marriage: Love, and What Else?</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+ <span class="menu-text">Migration</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./14-immigration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Immigration: Who Gains, Who Loses?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./15-migration-gains-enforcement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Migrants’ Gains and Immigration Enforcement</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
+ <span class="menu-text">Optional chapters</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./16-longevity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Can Money Buy Longevity? Health, Mortality, and the Grossman Model</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./17-projection-peak.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Population Projection, Age Pyramids, and “Our Shrinking Future?”</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./18-why-move.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Why People Move: Cities, Borders, and Development</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./19-recession-fertility.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Fertility and the Economy: The Great Recession and Beyond</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#why-migrate" id="toc-why-migrate" class="nav-link active" data-scroll-target="#why-migrate"><span class="header-section-number">18.1</span> Why migrate?</a></li>
+  <li><a href="#a-world-of-cities" id="toc-a-world-of-cities" class="nav-link" data-scroll-target="#a-world-of-cities"><span class="header-section-number">18.2</span> A world of cities</a>
+  <ul class="collapse">
+  <li><a href="#from-2-megacities-to-28" id="toc-from-2-megacities-to-28" class="nav-link" data-scroll-target="#from-2-megacities-to-28"><span class="header-section-number">18.2.1</span> From 2 megacities to 28</a></li>
+  <li><a href="#governments-push-back" id="toc-governments-push-back" class="nav-link" data-scroll-target="#governments-push-back"><span class="header-section-number">18.2.2</span> Governments push back</a></li>
+  <li><a href="#a-brief-history-of-theories" id="toc-a-brief-history-of-theories" class="nav-link" data-scroll-target="#a-brief-history-of-theories"><span class="header-section-number">18.2.3</span> A brief history of theories</a></li>
+  </ul></li>
+  <li><a href="#todaros-first-model-why-move-to-a-city-with-no-jobs" id="toc-todaros-first-model-why-move-to-a-city-with-no-jobs" class="nav-link" data-scroll-target="#todaros-first-model-why-move-to-a-city-with-no-jobs"><span class="header-section-number">18.3</span> Todaro’s first model: why move to a city with no jobs?</a>
+  <ul class="collapse">
+  <li><a href="#the-nairobi-paradox" id="toc-the-nairobi-paradox" class="nav-link" data-scroll-target="#the-nairobi-paradox"><span class="header-section-number">18.3.1</span> The Nairobi paradox</a></li>
+  <li><a href="#migrating-for-expected-earnings" id="toc-migrating-for-expected-earnings" class="nav-link" data-scroll-target="#migrating-for-expected-earnings"><span class="header-section-number">18.3.2</span> Migrating for <em>expected</em> earnings</a></li>
+  <li><a href="#dismal-dynamics" id="toc-dismal-dynamics" class="nav-link" data-scroll-target="#dismal-dynamics"><span class="header-section-number">18.3.3</span> Dismal dynamics</a></li>
+  <li><a href="#like-malthus" id="toc-like-malthus" class="nav-link" data-scroll-target="#like-malthus"><span class="header-section-number">18.3.4</span> Like Malthus</a></li>
+  </ul></li>
+  <li><a href="#from-todaro-to-todaroharris" id="toc-from-todaro-to-todaroharris" class="nav-link" data-scroll-target="#from-todaro-to-todaroharris"><span class="header-section-number">18.4</span> From Todaro to Todaro–Harris</a>
+  <ul class="collapse">
+  <li><a href="#creating-jobs-revisited" id="toc-creating-jobs-revisited" class="nav-link" data-scroll-target="#creating-jobs-revisited"><span class="header-section-number">18.4.1</span> Creating jobs, revisited</a></li>
+  <li><a href="#but" id="toc-but" class="nav-link" data-scroll-target="#but"><span class="header-section-number">18.4.2</span> But…</a></li>
+  </ul></li>
+  <li><a href="#gains-from-a-borderless-world" id="toc-gains-from-a-borderless-world" class="nav-link" data-scroll-target="#gains-from-a-borderless-world"><span class="header-section-number">18.5</span> Gains from a borderless world</a>
+  <ul class="collapse">
+  <li><a href="#unmet-demand" id="toc-unmet-demand" class="nav-link" data-scroll-target="#unmet-demand"><span class="header-section-number">18.5.1</span> Unmet demand</a></li>
+  <li><a href="#brain-drain-and-remittances" id="toc-brain-drain-and-remittances" class="nav-link" data-scroll-target="#brain-drain-and-remittances"><span class="header-section-number">18.5.2</span> “Brain drain” and remittances</a></li>
+  <li><a href="#who-loses-and-should-they-be-compensated" id="toc-who-loses-and-should-they-be-compensated" class="nav-link" data-scroll-target="#who-loses-and-should-they-be-compensated"><span class="header-section-number">18.5.3</span> Who loses, and should they be compensated?</a></li>
+  <li><a href="#politics" id="toc-politics" class="nav-link" data-scroll-target="#politics"><span class="header-section-number">18.5.4</span> Politics</a></li>
+  </ul></li>
+  <li><a href="#does-development-reduce-migration" id="toc-does-development-reduce-migration" class="nav-link" data-scroll-target="#does-development-reduce-migration"><span class="header-section-number">18.6</span> Does development reduce migration?</a>
+  <ul class="collapse">
+  <li><a href="#what-is-the-goal" id="toc-what-is-the-goal" class="nav-link" data-scroll-target="#what-is-the-goal"><span class="header-section-number">18.6.1</span> What is the goal?</a></li>
+  <li><a href="#up-then-down" id="toc-up-then-down" class="nav-link" data-scroll-target="#up-then-down"><span class="header-section-number">18.6.2</span> Up, then down</a></li>
+  <li><a href="#what-the-data-show" id="toc-what-the-data-show" class="nav-link" data-scroll-target="#what-the-data-show"><span class="header-section-number">18.6.3</span> What the data show</a></li>
+  <li><a href="#six-reasons-migration-can-rise-with-development" id="toc-six-reasons-migration-can-rise-with-development" class="nav-link" data-scroll-target="#six-reasons-migration-can-rise-with-development"><span class="header-section-number">18.6.4</span> Six reasons migration can rise with development</a></li>
+  <li><a href="#why-studies-over-time-disagree" id="toc-why-studies-over-time-disagree" class="nav-link" data-scroll-target="#why-studies-over-time-disagree"><span class="header-section-number">18.6.5</span> Why studies over time disagree</a></li>
+  <li><a href="#an-example-japanese-emigration-to-brazil" id="toc-an-example-japanese-emigration-to-brazil" class="nav-link" data-scroll-target="#an-example-japanese-emigration-to-brazil"><span class="header-section-number">18.6.6</span> An example: Japanese emigration to Brazil</a></li>
+  <li><a href="#implications" id="toc-implications" class="nav-link" data-scroll-target="#implications"><span class="header-section-number">18.6.7</span> Implications</a></li>
+  </ul></li>
+  <li><a href="#key-ideas" id="toc-key-ideas" class="nav-link" data-scroll-target="#key-ideas"><span class="header-section-number">18.7</span> Key ideas</a></li>
+  <li><a href="#check-your-understanding" id="toc-check-your-understanding" class="nav-link" data-scroll-target="#check-your-understanding"><span class="header-section-number">18.8</span> Check your understanding</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">18.9</span> Further reading</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./16-longevity.html">Optional chapters</a></li><li class="breadcrumb-item"><a href="./18-why-move.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Why People Move: Cities, Borders, and Development</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-why-move" class="quarto-section-identifier"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Why People Move: Cities, Borders, and Development</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Draft: provenance notes (for review)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Optional chapter.</strong> It is based on the <strong>2024</strong> versions of this topic: the lectures “Migration and Mega-cities” (Week 14A) and “Trillion-dollar bills: gains from a borderless world” (Week 14B). It also draws on the 2018 lecture “Migration and Mega-cities: A (Somewhat) More Optimistic View” and the <strong>2019</strong> lecture “Aid or Walls? Mobility Transition Theory and Migration” (Week 13B). None of these are in the 2025 course. Margin tags mark material that is <strong>not in those slides</strong>. <span class="tag-reading">Added · from readings</span> comes from the readings listed for these lectures (Clemens 2011, Clemens 2014). <span class="tag-new">Added · new</span> is from outside the course materials (my framing, general knowledge, or my own analysis) and needs the closest check. Untagged material follows those 2018, 2019, and 2024 slides.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>In this chapter.</strong> <a href="14-immigration.html" class="quarto-xref"><span>Chapter 14</span></a> asked how immigration affects the people who are already there. This chapter turns to the migrants’ side. Why do people move? Why do they keep moving to cities where many can’t find work? What would the world gain from more open borders? And would helping poor countries develop reduce the pressure to emigrate, as politicians often hope?</p>
+<p><strong>Readings this chapter draws on.</strong> Todaro (1969), “A Model of Labor Migration and Urban Unemployment in Less Developed Countries,” <em>American Economic Review</em> (introduction, pp.&nbsp;138–141, and conclusion, p.&nbsp;147); Clemens (2011), “Economics and Emigration: Trillion-Dollar Bills on the Sidewalk?” <em>Journal of Economic Perspectives</em>; Clemens (2014), “Does Development Reduce Migration?” in the <em>International Handbook on Migration and Economic Development</em>.</p>
+</div>
+</div>
+</div>
+<section id="why-migrate" class="level2" data-number="18.1">
+<h2 data-number="18.1" class="anchored" data-anchor-id="why-migrate"><span class="header-section-number">18.1</span> Why migrate?</h2>
+<p>The simple answer is that life is better <em>there</em> than <em>here</em>. Economists and demographers sort the reasons into:</p>
+<ul>
+<li><strong>Pull</strong> effects: higher wages, a better life.</li>
+<li><strong>Push</strong> effects: persecution, famine, war.</li>
+</ul>
+<p>But a wage gap alone explains surprisingly little about who actually moves. Several other factors matter a great deal:</p>
+<ul>
+<li><strong>Proximity</strong>, both physical and cultural.</li>
+<li><strong>Social networks</strong>: friends and family who have already moved.</li>
+<li><strong>Frictions and transaction costs</strong>: the money, information, and risk involved in moving.</li>
+<li><strong>Policy</strong>: who is allowed to move, and on what terms.</li>
+</ul>
+<p>The models in this chapter were built to explain migration from the countryside to the cities of poor countries. But they apply more widely. The same logic of incentives and decisions might help us think about today’s flows of asylum seekers, or about domestic migration and homelessness. The common feature is people making decisions in response to incentives.</p>
+</section>
+<section id="a-world-of-cities" class="level2" data-number="18.2">
+<h2 data-number="18.2" class="anchored" data-anchor-id="a-world-of-cities"><span class="header-section-number">18.2</span> A world of cities</h2>
+<section id="from-2-megacities-to-28" class="level3" data-number="18.2.1">
+<h3 data-number="18.2.1" class="anchored" data-anchor-id="from-2-megacities-to-28"><span class="header-section-number">18.2.1</span> From 2 megacities to 28</h3>
+<p>In 1950 the world had 2 cities of more than 10 million people. By 2014 it had 28. In your lifetimes, the world flipped: before the late 2000s, most people lived in rural areas, and today most live in cities.</p>
+<p>How fast do cities grow? Urban growth is the sum of the urban population’s natural increase (births minus deaths) and net migration into cities. Net migration typically adds about 1 percent per year. <a href="#tbl-urban-growth" class="quarto-xref">Table&nbsp;<span>18.1</span></a> shows how much faster urban populations have grown than populations as a whole.</p>
+<div class="cell">
+<div id="tbl-urban-growth" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-urban-growth-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;18.1: Annual growth rates (%) of total and urban populations. MDCs = more developed countries; LDCs = less developed countries. Source: lecture slides (2024), based on UN estimates and projections.
+</figcaption>
+<div aria-describedby="tbl-urban-growth-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Region</th>
+<th style="text-align: right;">Total, 1975–2000</th>
+<th style="text-align: right;">Total, 2000–2030</th>
+<th style="text-align: right;">Urban, 1975–2000</th>
+<th style="text-align: right;">Urban, 2000–2030</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">More developed (MDCs)</td>
+<td style="text-align: right;">0.8</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">1.5</td>
+<td style="text-align: right;">0.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Less developed (LDCs)</td>
+<td style="text-align: right;">2.1</td>
+<td style="text-align: right;">1.2</td>
+<td style="text-align: right;">3.7</td>
+<td style="text-align: right;">2.3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>At 3.7 percent per year, the urban population of the developing world was doubling about every 19 years.</p>
+</section>
+<section id="governments-push-back" class="level3" data-number="18.2.2">
+<h3 data-number="18.2.2" class="anchored" data-anchor-id="governments-push-back"><span class="header-section-number">18.2.2</span> Governments push back</h3>
+<p>Many governments are unhappy with where their people live. According to the UN’s <em>World Population Policies 2013</em>, 60 percent of all governments wanted a major change in the spatial distribution of their population. That included 80 percent of governments in the least developed countries and 29 percent in the more developed regions. A growing share have active policies to slow migration from rural to urban areas: 38 percent of all countries in 1996, 70 percent in 2005, and 80 percent in 2013. In the least developed countries the figure reached 88 percent.</p>
+<p>Megacities in poor countries raise real concerns: pollution, unemployment, and enormous demands for infrastructure. But keep in mind that governments may have interests of their own.</p>
+</section>
+<section id="a-brief-history-of-theories" class="level3" data-number="18.2.3">
+<h3 data-number="18.2.3" class="anchored" data-anchor-id="a-brief-history-of-theories"><span class="header-section-number">18.2.3</span> A brief history of theories</h3>
+<p>Economists’ views of urban migration have swung back and forth:</p>
+<ul>
+<li><strong>1950s and early 1960s.</strong> Cities are the manufacturing base and the engines of economic growth. Migration is a natural accompaniment of economic development, and a good thing.</li>
+<li><strong>Late 1960s to early 1980s (Todaro).</strong> Urban growth harms welfare. Rural areas deserve more policy attention, as an antidote to the “urban bias” in subsidies and programs.</li>
+<li><strong>Since the 1980s (Todaro–Harris).</strong> A “balanced perspective”: urban growth can be positive for both city and countryside.</li>
+</ul>
+</section>
+</section>
+<section id="todaros-first-model-why-move-to-a-city-with-no-jobs" class="level2" data-number="18.3">
+<h2 data-number="18.3" class="anchored" data-anchor-id="todaros-first-model-why-move-to-a-city-with-no-jobs"><span class="header-section-number">18.3</span> Todaro’s first model: why move to a city with no jobs?</h2>
+<section id="the-nairobi-paradox" class="level3" data-number="18.3.1">
+<h3 data-number="18.3.1" class="anchored" data-anchor-id="the-nairobi-paradox"><span class="header-section-number">18.3.1</span> The Nairobi paradox</h3>
+<p>Michael Todaro set out to explain a puzzle he saw in Kenya in the 1960s: lots of unemployment in the cities, <em>but</em> still strong migration from the countryside to the cities. If cities have no jobs, why keep coming?</p>
+<p>Kenya’s government tried a direct solution. It set up a “tripartite agreement” among itself, private employers, and trade unions, with the avowed intention of wiping out unemployment in the greater Nairobi area. Employers agreed to increase their employment immediately by 15 percent. In return, the unions agreed to forgo demands for general wage increases. What do you think happened?</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+In their own words
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“The effort was a colossal failure. The private employers did take on additional workers and <em>this acted like a magnet attracting new workers into the urban labor markets</em>; in a few months the working forces in most of the private establishments had dropped to their former levels through attrition not offset by new hires. In the end, the volume of unemployment, as a consequence of the expansion of the modern labor force <em>in response to the prospect of more jobs</em> was probably increased rather than decreased.” (Frederick Harbison, as quoted by Todaro 1969, who added the italics; shown in lecture)</p>
+</div>
+</div>
+</section>
+<section id="migrating-for-expected-earnings" class="level3" data-number="18.3.2">
+<h3 data-number="18.3.2" class="anchored" data-anchor-id="migrating-for-expected-earnings"><span class="header-section-number">18.3.2</span> Migrating for <em>expected</em> earnings</h3>
+<p>Todaro’s key idea is that migration responds to <strong>expected</strong> earnings, not to the wage alone. His assumptions:</p>
+<ul>
+<li>Urban wages are <strong>fixed</strong> at <span class="math inline">\(w_U\)</span>, above the market level. Why? Minimum-wage legislation, the political influence of trade unions, and government employment.</li>
+<li>Rural wages are fixed at <span class="math inline">\(w_R\)</span>. (Todaro–Harris will relax this.)</li>
+<li>The chance of getting a job in the city is <span class="math inline">\(e\)</span>: the number employed, <span class="math inline">\(E\)</span>, divided by the urban labor force, which is the employed plus the unemployed: <span class="math display">\[
+e = \frac{E}{E + UE}.
+\]</span></li>
+<li>People move to the city if the expected urban wage beats the rural wage: <span class="math display">\[
+e\, w_U &gt; w_R .
+\]</span></li>
+</ul>
+</section>
+<section id="dismal-dynamics" class="level3" data-number="18.3.3">
+<h3 data-number="18.3.3" class="anchored" data-anchor-id="dismal-dynamics"><span class="header-section-number">18.3.3</span> Dismal dynamics</h3>
+<p>Suppose rural wages are $10 and urban wages $100, and the city starts with no unemployment. Then <span class="math inline">\(e = 1\)</span> and the expected urban wage is $100, ten times the rural wage. People pour into the city. Because the urban wage is fixed, employers hire no more workers than before, so every newcomer joins the unemployed, and the chance of getting a job falls. Migration stops only when the expected urban wage has fallen to the rural wage:</p>
+<p><span class="math display">\[
+w_R = e\, w_U \quad\Longrightarrow\quad e = \frac{w_R}{w_U}.
+\]</span></p>
+<p><strong>The share of urban job-seekers who are employed ends up equal to the ratio of rural to urban wages.</strong> With a wage ratio of 1 to 10, 90 percent of the urban labor force is unemployed.</p>
+<p><a href="#fig-todaro" class="quarto-xref">Figure&nbsp;<span>18.1</span></a> shows the urban labor market. Employers hire <span class="math inline">\(E\)</span> workers at the fixed wage; the urban labor force <span class="math inline">\(S_U\)</span> is set by migration; the gap is urban unemployment.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-todaro" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-todaro-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="18-why-move_files/figure-html/fig-todaro-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-todaro-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;18.1: Todaro’s first model. At the fixed urban wage, employers hire E workers (where the fixed wage meets urban labor demand). The urban labor force S_U is set by migration, so that the chance of a job, E / S_U, equals w_R / w_U. Right: creating urban jobs shifts demand out (dashed). Employment rises, but with w_R / w_U = 1/10, each new job draws ten more people into the city, so unemployment rises too.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>What happens if the government creates jobs in the city, shifting urban labor demand to the right? Employment rises, but so does unemployment. If the ratio of urban to rural wages is 10 to 1, creating one urban job creates <em>nine</em> new urban unemployed. Every newly employed worker must be matched by enough additional job-seekers to keep the chance of a job at 1 in 10. And the costs of a bigger city follow: more congestion, more housing problems, more pollution.</p>
+</section>
+<section id="like-malthus" class="level3" data-number="18.3.4">
+<h3 data-number="18.3.4" class="anchored" data-anchor-id="like-malthus"><span class="header-section-number">18.3.4</span> Like Malthus</h3>
+<p>Todaro’s model has the same stubborn character as the Malthusian model of <a href="03-malthus.html" class="quarto-xref"><span>Chapter 3</span></a>:</p>
+<ul>
+<li>Any improvement in city life is erased by population growth, here through migration rather than births.</li>
+<li>The equilibrium is very stable. In Malthus, the wage is set by <span class="math inline">\(b(w^*) = d(w^*)\)</span>. In Todaro, the unemployment rate is set by <span class="math inline">\(w_{\text{rural}}/w_{\text{urban}}\)</span>.</li>
+</ul>
+<p>The policy implications of Todaro’s first theory:</p>
+<ol type="1">
+<li>It is worth trying to slow urban growth.</li>
+<li>It is worth trying to increase rural wages.</li>
+<li>It is worth trying to liberalize urban wages.</li>
+</ol>
+</section>
+</section>
+<section id="from-todaro-to-todaroharris" class="level2" data-number="18.4">
+<h2 data-number="18.4" class="anchored" data-anchor-id="from-todaro-to-todaroharris"><span class="header-section-number">18.4</span> From Todaro to Todaro–Harris</h2>
+<p>In 1970, John Harris and Michael Todaro published a two-sector version of the model in the <em>American Economic Review</em>. It was later voted one of the top 20 articles ever published in that journal. Migration still depends on expected urban wages, and wages are still fixed in the cities. But now <strong>rural wages can vary</strong>: as people leave the countryside, the workers who remain earn more. That one change turns a dismal model into a more hopeful one.</p>
+<p>We build it up in three steps, using a single labor market diagram (<a href="#fig-th-steps" class="quarto-xref">Figure&nbsp;<span>18.2</span></a>). The total labor force is the width of the box. Urban workers are counted from the left, and urban labor demand (<span class="math inline">\(D_U\)</span>, blue) slopes down from the left. Rural workers are counted from the right, so rural labor demand (<span class="math inline">\(D_R\)</span>, orange) is drawn “backwards,” rising to the left.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-th-steps" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-th-steps-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="18-why-move_files/figure-html/fig-th-steps-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-th-steps-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;18.2: Building the Todaro–Harris model. Urban workers are counted from the left, rural workers from the right; the width of each panel is the total labor force of 100. (1) Perfect competition: workers move until urban and rural wages are equal, with no unemployment. (2) A rigid urban wage with employment ‘enforced’: fewer urban jobs, and the extra workers crowd into the countryside, lowering the rural wage. (3) Todaro–Harris: migrants compare the rural wage with the expected urban wage (the grey curve); the gap between the employed and the urban labor force is urban unemployment. The red dashed line is the fixed urban wage of 20. Illustrative linear demand curves from lecture: urban demand N = 112 − 5w, rural demand N = 100 − 3w.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Step 1: perfect competition.</strong> If both wages are flexible, workers move until urban and rural wages are equal. In the example, 42 of the 100 workers end up in the city, both earn 14, and there is no unemployment. This allocation also maximizes total output: the last worker adds as much in the city as in the countryside. (Suppose instead we started with too few urban workers. Which way would people move, and what would happen to wages?)</p>
+<p><strong>Step 2: a rigid urban wage, with employment “enforced.”</strong> Now fix the urban wage at 20, above the market level. Employers hire only 12 workers. If everyone else had to stay in the countryside, the extra workers would crowd into farming and the rural wage would fall to 4. Urban and rural wages now differ, but there is still no unemployment.</p>
+<p><strong>Step 3: the full Todaro–Harris model.</strong> But workers don’t have to stay put. They compare the rural wage with the <em>expected</em> urban wage, <span class="math inline">\(w_U \times E/(E+UE)\)</span>, which falls as more job-seekers crowd into the city. Because <span class="math inline">\(E\)</span> is fixed, the expected urban wage traces out a curve shaped like <span class="math inline">\(Y = 1/X\)</span>, a hyperbola (grey in the figure). Equilibrium is where it meets rural labor demand: <span class="math inline">\(w_R^* = w_U\, e^*\)</span>. In the example, the city has 12 employed and 14.8 unemployed, an urban unemployment rate of 55 percent, and the rural wage rises to 8.94, equal to the expected urban wage.</p>
+<section id="creating-jobs-revisited" class="level3" data-number="18.4.1">
+<h3 data-number="18.4.1" class="anchored" data-anchor-id="creating-jobs-revisited"><span class="header-section-number">18.4.1</span> Creating jobs, revisited</h3>
+<p>Now repeat Kenya’s experiment in the Todaro–Harris world: create urban jobs, shifting urban demand to the right (panel 4). In the example, urban employment rises from 12 to 27. More people come to the city. But because they leave the countryside, the rural wage rises from 8.94 to 13.42, which makes the countryside more attractive and holds back the flood. The number unemployed in the city actually falls slightly, from 14.8 to 13.2, and the urban unemployment <em>rate</em> falls from 55 to 33 percent.</p>
+<p>This is the optimistic view. If we develop the urban economy, it:</p>
+<ul>
+<li>increases the number of urban workers,</li>
+<li>increases rural wages, and</li>
+<li>decreases the urban unemployment <em>rate</em>.</li>
+</ul>
+<p>The Todaro–Harris model is not so gloomy. Countries can partly escape the “Todaro trap” because rising rural wages counteract the appeal of more jobs in the city.</p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Try it
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The Todaro–Harris app is in <a href="15-migration-gains-enforcement.html" class="quarto-xref"><span>Chapter 15</span></a>. Open it in a new tab: <a href="apps/todaro-harris/index.html" target="_blank" rel="noopener">the Todaro–Harris app ↗</a>. Before moving any slider, predict: if you raise rural labor demand (for example, through better farming technology), what happens to the number of <em>urban</em> unemployed? Then check.</p>
+</div>
+</div>
+</section>
+<section id="but" class="level3" data-number="18.4.2">
+<h3 data-number="18.4.2" class="anchored" data-anchor-id="but"><span class="header-section-number">18.4.2</span> But…</h3>
+<p>Harris and Todaro still advocated keeping some barriers to rural-to-urban migration. Their idea is that total output can be higher with fewer unemployed in the cities. This is an example where a social planner would choose something different from what individuals choose. Does that mean markets are failing?</p>
+<p>Models matter: both Todaro’s model and the Todaro–Harris model are still influential. The empirical evidence is still unclear. Newer models add an informal sector, the matching of skills to jobs, and other benefits of cities.</p>
+</section>
+</section>
+<section id="gains-from-a-borderless-world" class="level2 page-columns page-full" data-number="18.5">
+<h2 data-number="18.5" class="anchored" data-anchor-id="gains-from-a-borderless-world"><span class="header-section-number">18.5</span> Gains from a borderless world</h2>
+<p>Todaro and Harris studied migration <em>within</em> countries. The same logic of expected earnings applies <em>across</em> borders, and there the gaps are far larger. <a href="15-migration-gains-enforcement.html" class="quarto-xref"><span>Chapter 15</span></a> presents Michael Clemens’s argument that removing barriers to international migration could raise world GDP by 50 to 150 percent, his back-of-the-envelope calculation, and the two-country diagram of who gains and who loses. Here we add some of the evidence and objections Clemens discusses.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> This section draws on Clemens 2011, pp.&nbsp;83–84, 89–95, and 98–101. None of it is in the slides or in <a href="15-migration-gains-enforcement.html" class="quarto-xref"><span>Chapter 15</span></a>.</p>
+</div></div><section id="unmet-demand" class="level3" data-number="18.5.1">
+<h3 data-number="18.5.1" class="anchored" data-anchor-id="unmet-demand"><span class="header-section-number">18.5.1</span> Unmet demand</h3>
+<p>How many people would move if they could? The Gallup World Poll found that “more than 40 percent of adults in the poorest quartile of countries ‘would like to move permanently to another country’ if they had the opportunity, including 60 percent or more of adults in Guyana and Sierra Leone.” The U.S. Diversity Visa Lottery received 272 applications for every available slot in 2010.</p>
+<p>The gains can be dramatic even from today’s limited migration. Among Haitians who live either in the United States or in Haiti and who live on more than $10 a day at U.S. prices, Clemens reports, “four out of five live in the United States.” Emigration from Haiti, he argues, “may be at least as important as any economic change that has occurred within Haiti” for reducing Haitians’ poverty.</p>
+</section>
+<section id="brain-drain-and-remittances" class="level3" data-number="18.5.2">
+<h3 data-number="18.5.2" class="anchored" data-anchor-id="brain-drain-and-remittances"><span class="header-section-number">18.5.2</span> “Brain drain” and remittances</h3>
+<p>Discussions of emigration and development usually turn quickly to two topics: the “brain drain” of skilled workers, and the money migrants send home. Clemens argues that both are second-order compared with the gains to the migrants themselves.</p>
+<p>On the brain drain, he objects even to the name:</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+In their own words
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“Externalities like these are often assumed to be so pervasive that the literature refers to skilled migration with a pejorative catchphrase—‘brain drain’—embodying the assumption. (To see why economists should avoid this term, picture reading a journal article on female labor force participation that calls it the ‘family abandonment rate.’)” (Clemens 2011, p.&nbsp;89)</p>
+</div>
+</div>
+<p>The most common worry concerns doctors and nurses. But if their departure were a major cause of poor health, the African countries losing the most health workers should have the worst health. “In fact,” Clemens writes, “those countries have systematically better health conditions.” On remittances, which were approaching $400 billion a year, he argues that they are mostly transfers within households that happen to cross a border. What matters for welfare is the migrant’s gain in income, whether it is spent abroad or sent home.</p>
+</section>
+<section id="who-loses-and-should-they-be-compensated" class="level3" data-number="18.5.3">
+<h3 data-number="18.5.3" class="anchored" data-anchor-id="who-loses-and-should-they-be-compensated"><span class="header-section-number">18.5.3</span> Who loses, and should they be compensated?</h3>
+<p>The two-country diagram in <a href="15-migration-gains-enforcement.html" class="quarto-xref"><span>Chapter 15</span></a> shows that workers in the rich country can lose. Clemens makes two points about this. First, the losses in practice have been small even after large openings. Wages of whites in South Africa did not fall much after apartheid ended, despite the removal of huge barriers for a population that outnumbered them six to one; and unlimited labor mobility from some Eastern European countries to Britain did not cause important declines in British wages. In the other direction, mass emigration may have raised wages in Mexico by about 8 percent between 1970 and 2000.</p>
+<p>Second, he distinguishes <strong>pecuniary</strong> externalities, which work through prices (such as lower wages from more competition), from <strong>technical</strong> externalities, such as pollution. Standard welfare economics doesn’t justify restricting a decision because of its pecuniary effects: “no economist would argue” for taxing people who move between cities, or women entering the labor force, because they modestly lower others’ wages. That doesn’t mean helping low-wage workers is undesirable, only that the case rests on equity rather than efficiency. Several economists have proposed ways to compensate those who lose, such as charging immigrants a fee ($50,000 is a figure that often comes up) or auctioning work permits.</p>
+</section>
+<section id="politics" class="level3" data-number="18.5.4">
+<h3 data-number="18.5.4" class="anchored" data-anchor-id="politics"><span class="header-section-number">18.5.4</span> Politics</h3>
+<p>Clemens wrote in 2011 that a large expansion of emigration “may thus seem politically impractical, and within a time frame of a few years, this objection holds some force.” In lecture we asked: was this writing before Trump? (His reminder about Poland and the German border, quoted in <a href="15-migration-gains-enforcement.html" class="quarto-xref"><span>Chapter 15</span></a>, is his answer to the skeptics.)</p>
+</section>
+</section>
+<section id="does-development-reduce-migration" class="level2 page-columns page-full" data-number="18.6">
+<h2 data-number="18.6" class="anchored" data-anchor-id="does-development-reduce-migration"><span class="header-section-number">18.6</span> Does development reduce migration?</h2>
+<section id="what-is-the-goal" class="level3 page-columns page-full" data-number="18.6.1">
+<h3 data-number="18.6.1" class="anchored" data-anchor-id="what-is-the-goal"><span class="header-section-number">18.6.1</span> What is the goal?</h3>
+<p>Suppose a rich country wants fewer immigrants. Notice first that this is a different goal from the one in the last section. If the goal is to maximize the average standard of living for everyone, the answer is open borders. Why might a country want fewer immigrants instead, and what are some good and bad reasons?</p>
+<p>If the goal is fewer immigrants, there are two broad approaches:</p>
+<ul>
+<li><strong>Walls:</strong> build a wall, or make life unpleasant for immigrants.</li>
+<li><strong>Aid:</strong> send development aid, or in other ways try to raise wages in the sending country.</li>
+</ul>
+<p>The second approach sounds humane and sensible. Raise incomes at home, and people won’t need to leave.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> The policy quotes are from Clemens 2014, pp.&nbsp;1–3, quoting the White House (1993), the U.S. State Department (1993), and the European Commission (2005).</p>
+</div></div><p>This idea has a long history in policy. As President Bill Clinton signed side agreements to the North American Free Trade Agreement in 1993, he predicted that “as the benefits of economic growth are spread in Mexico … there will be less illegal immigration because more Mexicans will be able to support their children by staying home.” Mexico’s president, Carlos Salinas, agreed that “higher wages in Mexico … will mean fewer migrants to the United States and Canada.” Announcing a large aid package for Africa in 2005, European Commission president José Manuel Barroso said that immigration “can only be addressed effectively in the long term through an ambitious and coordinated Development cooperation to fight its root causes.”</p>
+</section>
+<section id="up-then-down" class="level3" data-number="18.6.2">
+<h3 data-number="18.6.2" class="anchored" data-anchor-id="up-then-down"><span class="header-section-number">18.6.2</span> Up, then down</h3>
+<p>Throughout this course we have seen relationships that go up and then down: population size and well-being (optimum population theory), resource harvesting (the Malthusian harvest model), optimal fertility (Lee and government tax and benefit profiles), and the demographic transition itself. Migration may be another.</p>
+<p>In the demographic transition, population growth rises and then falls because growth is births minus deaths, and births respond with a lag. In a <strong>mobility transition</strong>, migration rises and then falls because migration depends on push, pull, <em>and</em> costs. As a country develops:</p>
+<ul>
+<li>the <strong>pull</strong> of better wages abroad goes down,</li>
+<li>but <strong>push</strong> may go up, and</li>
+<li>the <strong>costs</strong> of moving may go down.</li>
+</ul>
+<p>The geographer Wilbur Zelinsky proposed a “mobility transition” in 1971, with international migration rising and then falling over the phases of development. (For Zelinsky the phases are periods of time; for Clemens, they are levels of income.) Zelinsky’s theory was complicated: phases related to development, and not just international migration but frontier settlement, rural-urban migration, urban-urban migration, and “circulation” of all kinds.</p>
+</section>
+<section id="what-the-data-show" class="level3 page-columns page-full" data-number="18.6.3">
+<h3 data-number="18.6.3" class="anchored" data-anchor-id="what-the-data-show"><span class="header-section-number">18.6.3</span> What the data show</h3>
+<p>Clemens (2014) assembles the best available data: World Bank counts of people living outside their country of birth for 1960–2000, and UN counts for 1990–2010.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Clemens 2014, pp.&nbsp;3–9 and 26–30. Page numbers for Clemens 2014 refer to the IZA working-paper version (Discussion Paper 8592), a draft of the handbook chapter; the published chapter (pp.&nbsp;152–185) wasn’t available.</p>
+</div></div><div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+In their own words
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“In all years, there is no hint of a negative relationship between income and emigrant stock between PPP income per capita of roughly $600 (that of today’s Niger or Ethiopia) and about $7,500 (today’s Albania or Colombia). In this range of income, in fact, the relationship is positive.” (Clemens 2014, pp.&nbsp;4–5)</p>
+</div>
+</div>
+<p>Above about $7,000 to $8,000 per person (at purchasing power parity), the relationship turns negative. Early in the period, the middle-income countries had emigrant stocks about 3 percentage points larger than the poorest countries; by 2000 the gap had grown to 9 points. Flows show the same inverted U, turning down at about $5,000 to $6,000 per person. “In poor countries,” Clemens concludes, “more development means more migration, not less.”</p>
+<p>How long would the up-slope last? Clemens estimates the time for a country to reach PPP$7,000 per person. Growing at a healthy 2 percent per year, a country starting at $500 (like Niger or Burundi) would take 133 years, and one starting at $2,000 (like Cambodia or Zambia) 63 years. Even at 3 percent per year, it would take 89 and 42 years. For comparison, the average country grew 1.8 percent per year in 1960–2000. “The migration transition is a process of generations.”</p>
+<p>The 2019 lecture replicated Clemens’s cross-country pattern with World Bank data for 2000. The levels may not be exactly right, but the patterns look similar: a linear trend is nearly flat, but a quadratic or a local smoother shows the hump.</p>
+</section>
+<section id="six-reasons-migration-can-rise-with-development" class="level3 page-columns page-full" data-number="18.6.4">
+<h3 data-number="18.6.4" class="anchored" data-anchor-id="six-reasons-migration-can-rise-with-development"><span class="header-section-number">18.6.4</span> Six reasons migration can rise with development</h3>
+<p>Why would development <em>increase</em> emigration? Clemens lists six classes of theory:</p>
+<ol type="1">
+<li><strong>The demographic transition.</strong> At the onset of development, mortality falls before fertility. Faster population growth, and a bulge of young adults, increase migration. (The <em>number</em> of migrants, yes, because the population is bigger. But what about the <em>rate</em>?)</li>
+<li><strong>Credit constraints.</strong> Migrants face money costs besides transportation. With perfect credit markets, they could borrow against future earnings, and poverty at the origin wouldn’t matter. Without credit, you can’t move if you can’t afford to <em>now</em>. Development helps through more individual savings, better credit markets, and “chain-borrowing” from family and friends who have already moved.</li>
+<li><strong>More information.</strong> About jobs, earnings, the cost of living, how to migrate, even marriage markets. The more immigrants there are, the more relevant information flows back, lowering costs and reducing risk. (What’s the difference between Facebook and a letter home?)</li>
+<li><strong>Modernization.</strong> “The onset of modernization … brings with it a great shaking loose of migrants from the countryside” (Zelinsky 1971). Development “displaces many people from traditional livelihoods and past ways of life. … Most become internal migrants, … [b]ut some always migrate internationally, seeking wider opportunities in more dynamic economies abroad” (Massey 1988).</li>
+<li><strong>Increasing inequality.</strong> If development raises inequality, it can raise ambitions (the “reference level of satisfactory income”) more than it improves everyday life. The desire for economic mobility translates into geographic movement.</li>
+<li><strong>Overcoming immigration hurdles.</strong> Destination countries set hurdles: capital, skills, diplomas. If a country doesn’t have an accredited nursing school, it is hard for it to send nurses abroad. Compare the Philippines with Rwanda.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> The inferior-goods comparison is from Clemens 2014, p.&nbsp;10.</p>
+</div></div><p>None of this contradicts the basic economics of the wage gap. Holding everything else equal, higher wages at home do reduce the incentive to leave. But development never holds everything else equal. Clemens compares this to inferior goods: the existence of goods whose demand falls as income rises doesn’t refute the theory of consumer demand.</p>
+</section>
+<section id="why-studies-over-time-disagree" class="level3" data-number="18.6.5">
+<h3 data-number="18.6.5" class="anchored" data-anchor-id="why-studies-over-time-disagree"><span class="header-section-number">18.6.5</span> Why studies over time disagree</h3>
+<p>Studies that compare countries at a point in time consistently find the rising part of the hump. Studies that follow countries over time find no consistent pattern. Clemens’s explanation: if the transition takes a century or two, a study following countries for 15 to 25 years sees only a short, nearly straight piece of the curve, rising for some countries and falling for others (<a href="#fig-hump" class="quarto-xref">Figure&nbsp;<span>18.3</span></a>).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-hump" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-hump-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="18-why-move_files/figure-html/fig-hump-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hump-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;18.3: Why a long mobility transition is hard to see over short periods (after Clemens 2014, Figure 3). The grey curve is a hypothetical transition lasting two centuries. Each colored segment is one country observed for 20 years at a different point in its transition. Across countries, the hump is clear; within any one country over 20 years, the trend looks nearly straight, rising for some and falling for others.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="an-example-japanese-emigration-to-brazil" class="level3 page-columns page-full" data-number="18.6.6">
+<h3 data-number="18.6.6" class="anchored" data-anchor-id="an-example-japanese-emigration-to-brazil"><span class="header-section-number">18.6.6</span> An example: Japanese emigration to Brazil</h3>
+<p>Japan, once a major sending country, shows the down-slope as it grew rich. <a href="#fig-japan-brazil" class="quarto-xref">Figure&nbsp;<span>18.4</span></a> shows the number of Japanese immigrants to Brazil by period, from the table shown in lecture (taken from Wikipedia).</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the R code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>jb <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">period =</span> <span class="fu">c</span>(<span class="st">"1906–10"</span>, <span class="st">"1911–15"</span>, <span class="st">"1916–20"</span>, <span class="st">"1921–25"</span>, <span class="st">"1926–30"</span>, <span class="st">"1931–35"</span>, <span class="st">"1936–41"</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>             <span class="st">"1952–55"</span>, <span class="st">"1956–60"</span>, <span class="st">"1961–65"</span>, <span class="st">"1966–70"</span>, <span class="st">"1971–75"</span>, <span class="st">"1976–80"</span>, <span class="st">"1981–85"</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>             <span class="st">"1986–90"</span>, <span class="st">"1991–93"</span>),</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">n =</span> <span class="fu">c</span>(<span class="dv">1714</span>, <span class="dv">13371</span>, <span class="dv">13576</span>, <span class="dv">11350</span>, <span class="dv">59564</span>, <span class="dv">72661</span>, <span class="dv">16750</span>, <span class="dv">7715</span>, <span class="dv">29727</span>, <span class="dv">9488</span>, <span class="dv">2753</span>, <span class="dv">1992</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="dv">1352</span>, <span class="dv">411</span>, <span class="dv">171</span>, <span class="dv">48</span>))</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>op <span class="ot">&lt;-</span> <span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="fl">5.5</span>, <span class="fl">4.5</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>))</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>bp <span class="ot">&lt;-</span> <span class="fu">barplot</span>(jb<span class="sc">$</span>n <span class="sc">/</span> <span class="dv">1000</span>, <span class="at">names.arg =</span> jb<span class="sc">$</span>period, <span class="at">las =</span> <span class="dv">2</span>, <span class="at">cex.names =</span> <span class="fl">0.75</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">col =</span> <span class="st">"grey60"</span>, <span class="at">border =</span> <span class="cn">NA</span>, <span class="at">ylab =</span> <span class="st">"Immigrants (thousands)"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(op)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-japan-brazil" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-japan-brazil-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="18-why-move_files/figure-html/fig-japan-brazil-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-japan-brazil-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;18.4: Japanese immigration to Brazil by period, 1906–1993. Periods are mostly five years long (a few are four or six), and there is a gap during World War II. Source: lecture slide (2019), from Wikipedia.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> The interpretation of the Japan series is mine; the lecture slide shows only the table.</p>
+</div></div><p>Migration peaked in the late 1920s and early 1930s, revived briefly after the war, and dwindled to almost nothing as Japan became one of the world’s richest countries.</p>
+</section>
+<section id="implications" class="level3" data-number="18.6.7">
+<h3 data-number="18.6.7" class="anchored" data-anchor-id="implications"><span class="header-section-number">18.6.7</span> Implications</h3>
+<p>Will faster development in Sub-Saharan Africa reduce migration to Europe? Will sending aid to Central America reduce the “caravans”? The first answer is that it depends on <em>where</em> in the transition a country is. Fostering economic growth in the Czech Republic or Canada might reduce emigration. Fostering economic growth in a poor country might increase it.</p>
+<p>Do Clemens’s six reasons apply to Sub-Saharan Africa? To Central America? That is a good exercise to work through, reason by reason.</p>
+<p>The conclusions from lecture:</p>
+<ol type="1">
+<li><strong>The effect of economic growth on migration depends on the level of development.</strong> In rich countries, further growth tends to reduce migration. In poor countries, growth increases migration. In the middle there’s a shift (Mexico? Turkey?).</li>
+<li><strong>Unintended consequences.</strong> More aid may increase migration. That doesn’t mean a “wall” would work. Perhaps we need to rethink our goals, and focus on maximizing the benefits of migration in both origin and destination.</li>
+<li><strong>An unintended consequence of walls.</strong> Increased border enforcement under Presidents Bush and Obama increased the stock of undocumented immigrants in the United States. Why? It didn’t discourage the first border crossing, but it greatly discouraged circular, back-and-forth migration. Immigrants became permanent instead of temporary.</li>
+</ol>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+In their own words
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“To state a fact bluntly, much of the research interest in the mobility transition has been spurred by a broad policy interest in finding ways to deter poor people from turning up at airports and beaches in rich countries. … There is no empirical economic basis for this view, after decades of testing, at least on a timescale that is meaningful to most politicians. The weight of our current evidence is that this view is generally false.” (Clemens 2014, p.&nbsp;28)</p>
+</div>
+</div>
+</section>
+</section>
+<section id="key-ideas" class="level2" data-number="18.7">
+<h2 data-number="18.7" class="anchored" data-anchor-id="key-ideas"><span class="header-section-number">18.7</span> Key ideas</h2>
+<ul>
+<li>People migrate when life is better <em>there</em> than <em>here</em>, but networks, proximity, costs, and policy shape who actually moves.</li>
+<li>In <strong>Todaro’s</strong> first model, migrants respond to <em>expected</em> urban earnings. In equilibrium the employment rate in the city equals <span class="math inline">\(w_R/w_U\)</span>, and creating urban jobs can <em>raise</em> urban unemployment. Like Malthus, it is a stubborn equilibrium.</li>
+<li>In the <strong>Todaro–Harris</strong> model, rural wages rise as people leave. Creating urban jobs then raises rural wages and lowers the urban unemployment rate: a more optimistic picture.</li>
+<li>The gains from international migration go mostly to migrants. Clemens argues that “brain drain,” remittances, and wage effects at the destination are second-order by comparison.</li>
+<li>Across countries, emigration rises with income until about PPP$7,000–8,000 per person and falls only after that: a <strong>mobility transition</strong>. For poor countries, development is likely to increase emigration for generations.</li>
+</ul>
+</section>
+<section id="check-your-understanding" class="level2 page-columns page-full" data-number="18.8">
+<h2 data-number="18.8" class="anchored" data-anchor-id="check-your-understanding"><span class="header-section-number">18.8</span> Check your understanding</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> The questions are mine. Q1 and Q4 restate questions posed on the 2024 and 2019 slides.</p>
+</div></div><ol type="1">
+<li><strong>Todaro’s arithmetic.</strong> In Todaro’s first model, suppose urban wages are $60 and rural wages $20. What share of the urban labor force is unemployed in equilibrium? If the government creates 1,000 new urban jobs, about how many people move to the city?</li>
+<li><strong>Predict, then check.</strong> In the Todaro–Harris model, predict what happens to urban unemployment and to rural wages if the fixed urban wage is <em>lowered</em>. Then check your prediction with the app.</li>
+<li><strong>Two policies.</strong> A government can either subsidize urban employers to hire more workers, or invest in rural roads that raise farm productivity. Compare their effects on urban unemployment in Todaro’s first model and in the Todaro–Harris model.</li>
+<li><strong>Migration Malthus?</strong> Treat in-migration like births and out-migration like deaths. What plays the role of the wage on the horizontal axis? Would the relationship between a sending country’s income and its net emigration be up-then-down, just up, or just down?</li>
+<li><strong>Pecuniary or technical?</strong> Classify each as a pecuniary or a technical externality, and explain: (a) immigrants lower the wages of workers with similar skills; (b) a doctor’s emigration leaves a rural clinic without care; (c) newcomers add to traffic congestion.</li>
+<li><strong>Reading a hump.</strong> A study follows Mexico from 1990 to 2010 and finds that emigration fell as Mexican incomes rose. Does this contradict Clemens’s mobility transition? Why or why not?</li>
+</ol>
+</section>
+<section id="further-reading" class="level2" data-number="18.9">
+<h2 data-number="18.9" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">18.9</span> Further reading</h2>
+<ul>
+<li>Todaro, Michael P. 1969. “A Model of Labor Migration and Urban Unemployment in Less Developed Countries.” <em>American Economic Review</em> 59(1): 138–148. <em>Read the introduction (pp.&nbsp;138–141) and the conclusion (p.&nbsp;147). As you read: What does Todaro think policymakers have gotten wrong about urban unemployment?</em></li>
+<li>Harris, John R., and Michael P. Todaro. 1970. “Migration, Unemployment and Development: A Two-Sector Analysis.” <em>American Economic Review</em> 60(1): 126–142. <em>The two-sector model behind the second half of this chapter.</em></li>
+<li>Clemens, Michael A. 2011. “Economics and Emigration: Trillion-Dollar Bills on the Sidewalk?” <em>Journal of Economic Perspectives</em> 25(3): 83–106. <em>As you read: Which of his four questions (externalities, labor demand, productivity of place, political feasibility) do you find most persuasive, and which least?</em></li>
+<li>Clemens, Michael A. 2014. “Does Development Reduce Migration?” Chapter 6, pp.&nbsp;152–185, in R. E. B. Lucas, ed., <em>International Handbook on Migration and Economic Development</em>. Edward Elgar. <em>As you read: Look at his Figure 3. Why does he think studies over time and studies across countries reach different conclusions?</em></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./17-projection-peak.html" class="pagination-link" aria-label="Population Projection, Age Pyramids, and &quot;Our Shrinking Future?&quot;">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Population Projection, Age Pyramids, and “Our Shrinking Future?”</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./19-recession-fertility.html" class="pagination-link" aria-label="Fertility and the Economy: The Great Recession and Beyond">
+        <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Fertility and the Economy: The Great Recession and Beyond</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

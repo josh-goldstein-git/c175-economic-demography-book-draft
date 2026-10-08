@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Economic Demography - 4&nbsp; Capital to the Rescue? The Solow Model and Inequality</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./05-boserup.html" rel="next">
+<link href="./03-malthus.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-history.html">Population and the economy: big theories</a></li><li class="breadcrumb-item"><a href="./04-solow.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Capital to the Rescue? The Solow Model and Inequality</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Economic Demography</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Population and the economy: big theories</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-history.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Ten Thousand Years of Population</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-optimum.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Optimum Population</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-malthus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The World According to Malthus</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-solow.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Capital to the Rescue? The Solow Model and Inequality</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-boserup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Boserup: Population Pushes Technology</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Resources and the environment</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-resources-commons.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Are We Doomed? Resources, Prices, and the Commons</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-climate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Population and Climate Change</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Age structure</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-social-security.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Aging and Social Security: A Ponzi Scheme?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-age-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Are Too Few Children a Problem? Age Structure and Optimal Fertility</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Fertility and the family</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-fertility.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">How Do Economists Think We Decide How Many Children to Have?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-china.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Fertility Policy I: China’s One-Child Policy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12-abortion-pill.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Fertility Policy II: Abortion and the Pill in the United States</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13-marriage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Marriage: Love, and What Else?</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+ <span class="menu-text">Migration</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./14-immigration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Immigration: Who Gains, Who Loses?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./15-migration-gains-enforcement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Migrants’ Gains and Immigration Enforcement</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
+ <span class="menu-text">Optional chapters</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./16-longevity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Can Money Buy Longevity? Health, Mortality, and the Grossman Model</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./17-projection-peak.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Population Projection, Age Pyramids, and “Our Shrinking Future?”</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./18-why-move.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Why People Move: Cities, Borders, and Development</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./19-recession-fertility.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Fertility and the Economy: The Great Recession and Beyond</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#from-malthus-to-solow" id="toc-from-malthus-to-solow" class="nav-link active" data-scroll-target="#from-malthus-to-solow"><span class="header-section-number">4.1</span> From Malthus to Solow</a>
+  <ul class="collapse">
+  <li><a href="#technology-in-malthus-once-more" id="toc-technology-in-malthus-once-more" class="nav-link" data-scroll-target="#technology-in-malthus-once-more"><span class="header-section-number">4.1.1</span> Technology in Malthus, once more</a></li>
+  <li><a href="#what-growth-models-ask" id="toc-what-growth-models-ask" class="nav-link" data-scroll-target="#what-growth-models-ask"><span class="header-section-number">4.1.2</span> What growth models ask</a></li>
+  </ul></li>
+  <li><a href="#solows-neoclassical-growth-model" id="toc-solows-neoclassical-growth-model" class="nav-link" data-scroll-target="#solows-neoclassical-growth-model"><span class="header-section-number">4.2</span> Solow’s neoclassical growth model</a>
+  <ul class="collapse">
+  <li><a href="#assumptions" id="toc-assumptions" class="nav-link" data-scroll-target="#assumptions"><span class="header-section-number">4.2.1</span> Assumptions</a></li>
+  <li><a href="#notation" id="toc-notation" class="nav-link" data-scroll-target="#notation"><span class="header-section-number">4.2.2</span> Notation</a></li>
+  <li><a href="#the-production-function" id="toc-the-production-function" class="nav-link" data-scroll-target="#the-production-function"><span class="header-section-number">4.2.3</span> The production function</a></li>
+  <li><a href="#savings-depreciation-and-the-investment-needed-to-stay-even" id="toc-savings-depreciation-and-the-investment-needed-to-stay-even" class="nav-link" data-scroll-target="#savings-depreciation-and-the-investment-needed-to-stay-even"><span class="header-section-number">4.2.4</span> Savings, depreciation, and the investment needed to stay even</a></li>
+  <li><a href="#the-steady-state" id="toc-the-steady-state" class="nav-link" data-scroll-target="#the-steady-state"><span class="header-section-number">4.2.5</span> The steady state</a></li>
+  <li><a href="#what-happens-to-the-size-of-the-economy" id="toc-what-happens-to-the-size-of-the-economy" class="nav-link" data-scroll-target="#what-happens-to-the-size-of-the-economy"><span class="header-section-number">4.2.6</span> What happens to the size of the economy?</a></li>
+  </ul></li>
+  <li><a href="#saving-population-growth-and-the-price-of-growth" id="toc-saving-population-growth-and-the-price-of-growth" class="nav-link" data-scroll-target="#saving-population-growth-and-the-price-of-growth"><span class="header-section-number">4.3</span> Saving, population growth, and the price of growth</a>
+  <ul class="collapse">
+  <li><a href="#a-higher-saving-rate" id="toc-a-higher-saving-rate" class="nav-link" data-scroll-target="#a-higher-saving-rate"><span class="header-section-number">4.3.1</span> A higher saving rate</a></li>
+  <li><a href="#try-it-the-solow-app" id="toc-try-it-the-solow-app" class="nav-link" data-scroll-target="#try-it-the-solow-app"><span class="header-section-number">4.3.2</span> Try it: the Solow app</a></li>
+  <li><a href="#faster-population-growth" id="toc-faster-population-growth" class="nav-link" data-scroll-target="#faster-population-growth"><span class="header-section-number">4.3.3</span> Faster population growth</a></li>
+  </ul></li>
+  <li><a href="#technology-the-solow-ratchet" id="toc-technology-the-solow-ratchet" class="nav-link" data-scroll-target="#technology-the-solow-ratchet"><span class="header-section-number">4.4</span> Technology: the Solow ratchet</a>
+  <ul class="collapse">
+  <li><a href="#can-technology-save-us" id="toc-can-technology-save-us" class="nav-link" data-scroll-target="#can-technology-save-us"><span class="header-section-number">4.4.1</span> Can technology save us?</a></li>
+  <li><a href="#ratchet-not-hamster-wheel" id="toc-ratchet-not-hamster-wheel" class="nav-link" data-scroll-target="#ratchet-not-hamster-wheel"><span class="header-section-number">4.4.2</span> Ratchet, not hamster wheel</a></li>
+  <li><a href="#malthus-and-solow-compared" id="toc-malthus-and-solow-compared" class="nav-link" data-scroll-target="#malthus-and-solow-compared"><span class="header-section-number">4.4.3</span> Malthus and Solow compared</a></li>
+  </ul></li>
+  <li><a href="#growth-and-inequality-pikettys-argument" id="toc-growth-and-inequality-pikettys-argument" class="nav-link" data-scroll-target="#growth-and-inequality-pikettys-argument"><span class="header-section-number">4.5</span> Growth and inequality: Piketty’s argument</a>
+  <ul class="collapse">
+  <li><a href="#a-stylized-fact-inequalitys-fall-and-rise" id="toc-a-stylized-fact-inequalitys-fall-and-rise" class="nav-link" data-scroll-target="#a-stylized-fact-inequalitys-fall-and-rise"><span class="header-section-number">4.5.1</span> A stylized fact: inequality’s fall and rise</a></li>
+  <li><a href="#the-solow-model-as-a-tool-for-studying-inequality" id="toc-the-solow-model-as-a-tool-for-studying-inequality" class="nav-link" data-scroll-target="#the-solow-model-as-a-tool-for-studying-inequality"><span class="header-section-number">4.5.2</span> The Solow model as a tool for studying inequality</a></li>
+  <li><a href="#does-slower-population-growth-increase-inequality" id="toc-does-slower-population-growth-increase-inequality" class="nav-link" data-scroll-target="#does-slower-population-growth-increase-inequality"><span class="header-section-number">4.5.3</span> Does slower population growth increase inequality?</a></li>
+  <li><a href="#pikettys-argument-in-three-steps" id="toc-pikettys-argument-in-three-steps" class="nav-link" data-scroll-target="#pikettys-argument-in-three-steps"><span class="header-section-number">4.5.4</span> Piketty’s argument in three steps</a></li>
+  <li><a href="#capital-is-back-because-low-growth-is-back" id="toc-capital-is-back-because-low-growth-is-back" class="nav-link" data-scroll-target="#capital-is-back-because-low-growth-is-back"><span class="header-section-number">4.5.5</span> “Capital is back because low growth is back”</a></li>
+  <li><a href="#r-g" id="toc-r-g" class="nav-link" data-scroll-target="#r-g"><span class="header-section-number">4.5.6</span> r &gt; g</a></li>
+  <li><a href="#is-it-destiny" id="toc-is-it-destiny" class="nav-link" data-scroll-target="#is-it-destiny"><span class="header-section-number">4.5.7</span> Is it destiny?</a></li>
+  </ul></li>
+  <li><a href="#key-ideas" id="toc-key-ideas" class="nav-link" data-scroll-target="#key-ideas"><span class="header-section-number">4.6</span> Key ideas</a></li>
+  <li><a href="#check-your-understanding" id="toc-check-your-understanding" class="nav-link" data-scroll-target="#check-your-understanding"><span class="header-section-number">4.7</span> Check your understanding</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">4.8</span> Further reading</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-history.html">Population and the economy: big theories</a></li><li class="breadcrumb-item"><a href="./04-solow.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Capital to the Rescue? The Solow Model and Inequality</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-solow" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Capital to the Rescue? The Solow Model and Inequality</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Draft: provenance notes (for review)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Margin tags mark material that is <strong>not in the course slides or lab</strong>. <span class="tag-reading">Added · from readings</span> comes from the assigned readings (Dornbusch and Fischer; Piketty and Saez). <span class="tag-new">Added · new</span> is from outside the course materials (my framing, general knowledge, or my own analysis) and needs the closest check. Untagged material follows the 2025 slides (07–08) and Lab 3.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>In this chapter.</strong> Malthus had land and people, but no capital. What happens if people can save, and their savings become machines? We build Robert Solow’s neoclassical growth model, use it to ask what faster population growth does to income per person, and see why technology, not saving, is the key to long-run growth. Then we use the same model to think about inequality, following Thomas Piketty’s argument that slower growth can mean a larger share of income going to the owners of capital.</p>
+<p><strong>Readings this chapter draws on.</strong> Dornbusch and Fischer, <em>Macroeconomics</em>, “Growth Theory,” pp.&nbsp;726–737; Piketty and Saez (2014), “Inequality in the long run,” <em>Science</em> 344:838–843.</p>
+</div>
+</div>
+</div>
+<section id="from-malthus-to-solow" class="level2 page-columns page-full" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="from-malthus-to-solow"><span class="header-section-number">4.1</span> From Malthus to Solow</h2>
+<section id="technology-in-malthus-once-more" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="technology-in-malthus-once-more"><span class="header-section-number">4.1.1</span> Technology in Malthus, once more</h3>
+<p>Start with a review. In the Malthusian model of the last chapter, an exogenous improvement in technology shifts the <span class="math inline">\(w(N)\)</span> curve outward. Wages rise at first. But higher wages raise population growth, and the larger population drives wages back down. The end result is a bigger population living at the same standard of living as before. Can wages stay higher? Not in Malthus’s world, where the gains from technology disappear.</p>
+<p>Two features of that world drive the result. Land is a <strong>fixed</strong> factor and labor a <strong>variable</strong> one. And there is no capital accumulation, just land and people. So: what happens if we add savings and productive capital? That is the question of this chapter.</p>
+</section>
+<section id="what-growth-models-ask" class="level3 page-columns page-full" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="what-growth-models-ask"><span class="header-section-number">4.1.2</span> What growth models ask</h3>
+<p>Growth models are usually framed very generally: “What determines the long-run rate of economic growth?” Our interest is more specific: “What effect does population change have on economic growth and on individual welfare?”</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the R code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>weil <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/weil_2011_growth_subset.csv"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>weil <span class="ot">&lt;-</span> weil[<span class="fu">complete.cases</span>(weil<span class="sc">$</span>gpop, weil<span class="sc">$</span>rgdpch2009), ]</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>op <span class="ot">&lt;-</span> <span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">1</span>, <span class="dv">1</span>))</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(weil<span class="sc">$</span>gpop, weil<span class="sc">$</span>rgdpch2009, <span class="at">log =</span> <span class="st">"y"</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">cex =</span> <span class="fl">0.6</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="fu">adjustcolor</span>(<span class="st">"black"</span>, <span class="fl">0.55</span>),</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Average annual population growth, 1975–2009 (%)"</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">""</span>, <span class="at">yaxt =</span> <span class="st">"n"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="dv">2</span>, <span class="at">at =</span> <span class="fu">c</span>(<span class="dv">200</span>, <span class="dv">1000</span>, <span class="dv">5000</span>, <span class="dv">25000</span>, <span class="dv">100000</span>),</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>     <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"200"</span>, <span class="st">"1,000"</span>, <span class="st">"5,000"</span>, <span class="st">"25,000"</span>, <span class="st">"100,000"</span>), <span class="at">las =</span> <span class="dv">1</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="fu">lm</span>(<span class="fu">log10</span>(rgdpch2009) <span class="sc">~</span> gpop, <span class="at">data =</span> weil), <span class="at">lwd =</span> <span class="dv">2</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>lab_c <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Japan"</span>, <span class="st">"United States"</span>, <span class="st">"Nigeria"</span>, <span class="st">"Pakistan"</span>, <span class="st">"Germany"</span>, <span class="st">"Qatar"</span>,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>           <span class="st">"United Arab Emirates"</span>, <span class="st">"India"</span>, <span class="st">"China"</span>, <span class="st">"Niger"</span>, <span class="st">"Ukraine"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>lab_pos <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">4</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>i <span class="ot">&lt;-</span> <span class="fu">match</span>(lab_c, weil<span class="sc">$</span>Country)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(weil<span class="sc">$</span>gpop[i], weil<span class="sc">$</span>rgdpch2009[i], <span class="fu">sub</span>(<span class="st">"United Arab Emirates"</span>, <span class="st">"UAE"</span>, lab_c),</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>     <span class="at">cex =</span> <span class="fl">0.7</span>, <span class="at">pos =</span> lab_pos, <span class="at">col =</span> <span class="st">"grey20"</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">mtext</span>(<span class="st">"Real GDP per person, 2009 (log scale)"</span>, <span class="at">side =</span> <span class="dv">2</span>, <span class="at">line =</span> <span class="fl">4.5</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>r_weil <span class="ot">&lt;-</span> <span class="fu">cor</span>(weil<span class="sc">$</span>gpop, <span class="fu">log</span>(weil<span class="sc">$</span>rgdpch2009))</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(op)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-weil" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-weil-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="04-solow_files/figure-html/fig-weil-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-weil-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.1: Real GDP per person in 2009 (log scale) against average annual population growth, 1975–2009, for 187 countries, with a least-squares line. Data: Weil’s Economic Growth dataset (Penn World Table), which lecture code uses.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> The slide uses World Bank data. I’ve redrawn it with the Weil dataset found in your eco175 folder (used by <code>solow.R</code>). The remarks on the Gulf states are mine.</p>
+</div></div><p>Do high population growth rates hurt the economy? <a href="#fig-weil" class="quarto-xref">Figure&nbsp;<span>4.1</span></a> suggests a pattern: countries whose populations grew fastest tend to be poorer. The correlation between population growth and log income is about -0.42. But <strong>causality could go either way</strong>. Rapid population growth might make countries poor. Or being poor might keep fertility high. And notice the exceptions in the upper right: rich Gulf states such as Qatar and the United Arab Emirates, where population grew fast because of immigration drawn by oil wealth. This chapter develops one causal theory of how population growth could hurt income per person.</p>
+<p>Other theories come in later lectures. Ester Boserup argued that population growth induces technological change, and so <em>raises</em> income per person. Environmentalists such as Paul Ehrlich argued that population growth depletes natural resources and reduces income per person, perhaps catastrophically.</p>
+</section>
+</section>
+<section id="solows-neoclassical-growth-model" class="level2 page-columns page-full" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="solows-neoclassical-growth-model"><span class="header-section-number">4.2</span> Solow’s neoclassical growth model</h2>
+<section id="assumptions" class="level3 page-columns page-full" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="assumptions"><span class="header-section-number">4.2.1</span> Assumptions</h3>
+<p>Robert Solow’s growth model (developed in the 1950s, at about the same time as Trevor Swan’s) makes four main assumptions:</p>
+<ul>
+<li>Labor and capital are fully employed.</li>
+<li>All savings get invested.</li>
+<li>Labor is a constant proportion of the population.</li>
+<li>Output depends only on the ratio of capital to labor. There are no natural resources, and the absolute amounts of capital or population don’t matter.</li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Dornbusch and Fischer, p.&nbsp;726.</p>
+</div></div><p>Dornbusch and Fischer state the model’s goal: to explain “the determinants of growth rates within a country and the reasons for differences in per capita incomes across countries.” And they put its central population result up front: “between two countries with the same technology and saving rates the one that has the higher rate of population growth will eventually have lower per capita income.”</p>
+<p>Other assumptions could be made instead, and some come up later in the course:</p>
+<ul>
+<li>The savings rate rises with population growth, because there are fewer old people dissaving (Modigliani).</li>
+<li>Technological progress is constant (easy to add).</li>
+<li>Technological progress depends on population size (harder; Boserup).</li>
+<li>Natural resources constrain growth (harder; environmentalists, Samuelson).</li>
+<li>Demography depends on the economy (harder).</li>
+</ul>
+</section>
+<section id="notation" class="level3 page-columns page-full" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="notation"><span class="header-section-number">4.2.2</span> Notation</h3>
+<ul>
+<li>Capital per person: <span class="math inline">\(k = K/L\)</span></li>
+<li>Output per person: <span class="math inline">\(y = Y/L = f(k)\)</span></li>
+<li><span class="math inline">\(s\)</span> = the savings rate, so savings per person are <span class="math inline">\(s \times y\)</span></li>
+<li><span class="math inline">\(d\)</span> = the depreciation rate (the fraction of capital that wears out each year)</li>
+<li><span class="math inline">\(n\)</span> = the population growth rate (what we called <span class="math inline">\(R\)</span> in the first chapter)</li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> From the calendar note on the reading: Dornbusch and Fischer write output per head as <span class="math inline">\(x\)</span>. We use <span class="math inline">\(y\)</span>.</p>
+</div></div><p>(Dornbusch and Fischer write output per head as <span class="math inline">\(x\)</span> rather than <span class="math inline">\(y\)</span>. Otherwise the notation is the same.)</p>
+</section>
+<section id="the-production-function" class="level3 page-columns page-full" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="the-production-function"><span class="header-section-number">4.2.3</span> The production function</h3>
+<p>Total output depends on capital and labor, <span class="math inline">\(Y = F(K, L)\)</span>, with two properties:</p>
+<ol type="1">
+<li><strong>Diminishing returns</strong> in <span class="math inline">\(K\)</span> or <span class="math inline">\(L\)</span> if the other is held constant.</li>
+<li><strong>Constant returns to scale</strong>: if we double both <span class="math inline">\(K\)</span> and <span class="math inline">\(L\)</span>, we double <span class="math inline">\(Y\)</span>.</li>
+</ol>
+<p>Size doesn’t matter, because there are no fixed resources. That is the big difference from Malthus.</p>
+<p>A common example is the <strong>Cobb-Douglas</strong> production function,</p>
+<p><span class="math display">\[
+Y = K^a L^{1-a}, \qquad 0 &lt; a &lt; 1.
+\]</span></p>
+<p>Dividing both sides by <span class="math inline">\(L\)</span> gives output per person as a function of capital per person alone: <span class="math inline">\(y = (K/L)^a = k^a\)</span>. More generally, constant returns let us write <span class="math inline">\(y = f(k)\)</span>.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Dornbusch and Fischer, p.&nbsp;727.</p>
+</div></div><p>As Dornbusch and Fischer put it: “As capital per head increases, so that workers use increasing amounts of machinery, output per head increases, but at a diminishing rate.”</p>
+</section>
+<section id="savings-depreciation-and-the-investment-needed-to-stay-even" class="level3 page-columns page-full" data-number="4.2.4">
+<h3 data-number="4.2.4" class="anchored" data-anchor-id="savings-depreciation-and-the-investment-needed-to-stay-even"><span class="header-section-number">4.2.4</span> Savings, depreciation, and the investment needed to stay even</h3>
+<p>What happens to capital per person over time? Without new investment, two things erode it:</p>
+<ul>
+<li><strong>Population growth dilutes</strong> capital per person at rate <span class="math inline">\(n\)</span> per year. New workers arrive with no machines.</li>
+<li><strong>Depreciation reduces</strong> the capital stock at rate <span class="math inline">\(d\)</span> per year.</li>
+</ul>
+<p>To keep <span class="math inline">\(k\)</span> constant, then, we need to invest <span class="math inline">\((n + d) \times K\)</span> in total, or <span class="math inline">\((n + d) \times k\)</span> per person. This is the <strong>investment requirement</strong>.</p>
+<p>An example from lecture: suppose an economy has $1 million of capital and 1,000 workers, so <span class="math inline">\(k\)</span> = $1,000 per worker. Population grows 3 percent a year, and capital depreciates 7 percent a year. Without new investment, next year capital per worker will be about <span class="math inline">\(\$1{,}000 \times e^{-0.10} \approx\)</span> $905. So the economy must buy about $100 of capital per worker just to stay even. If a worker with $1,000 of capital produces $400 of output, a savings rate of 0.25 provides exactly that $100.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> The machines example is from Dornbusch and Fischer, pp.&nbsp;734–735.</p>
+</div></div><p>Dornbusch and Fischer give a similar example. With 10 machines per head, 1 percent population growth, and 10 percent depreciation, “we require per year 11 percent times 10 machines, or 1.1 machines, just to offset population growth and depreciation.” If population growth rises to 2 percent, the requirement rises to 12 percent, or 1.2 machines per head.</p>
+</section>
+<section id="the-steady-state" class="level3 page-columns page-full" data-number="4.2.5">
+<h3 data-number="4.2.5" class="anchored" data-anchor-id="the-steady-state"><span class="header-section-number">4.2.5</span> The steady state</h3>
+<p><a href="#fig-steady" class="quarto-xref">Figure&nbsp;<span>4.2</span></a> puts the pieces together, following the lecture picture. The production function <span class="math inline">\(y = f(k)\)</span> is the top curve. Savings per person, <span class="math inline">\(s\,y(k)\)</span>, are a fixed fraction of it. The gap between the two is consumption per person. The straight line <span class="math inline">\((n + d)\,k\)</span> is the investment requirement.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-steady" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-steady-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="04-solow_files/figure-html/fig-steady-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-steady-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.2: The Solow model. Output per worker y = f(k) rises with capital per worker at a diminishing rate. Saving per worker s·y(k) is a fixed fraction of output. The investment requirement (n + d)k is what must be invested just to keep k constant. The steady state k* is where saving exactly meets the requirement.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The <strong>steady state</strong> is where the saving curve crosses the investment requirement, at capital per worker <span class="math inline">\(k^*\)</span> and output per worker <span class="math inline">\(y^*\)</span>. There, saving is exactly enough to replace worn-out machines and to equip the new workers. Dornbusch and Fischer describe it as a state in which “current saving and additions to the capital stock would be just enough to equip new entrants into the labor force with the same amount of capital as the average worker uses.”</p>
+<p><strong>Is this equilibrium stable?</strong> Suppose <span class="math inline">\(k\)</span> starts below <span class="math inline">\(k^*\)</span>. Then saving exceeds the investment requirement, so <span class="math inline">\(k\)</span> grows. As it grows, the gap shrinks, and <span class="math inline">\(k\)</span> approaches <span class="math inline">\(k^*\)</span> more and more slowly. If <span class="math inline">\(k\)</span> starts above <span class="math inline">\(k^*\)</span>, the requirement exceeds saving, and <span class="math inline">\(k\)</span> falls back. Either way, the economy converges to the steady state. <a href="#fig-converge" class="quarto-xref">Figure&nbsp;<span>4.3</span></a> simulates the path from a low starting point.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-converge" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-converge-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="04-solow_files/figure-html/fig-converge-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-converge-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.3: Convergence to the steady state from a low initial capital per worker, simulated with the parameters of the previous figure. Output per worker rises quickly at first and then levels off at y*.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The lecture calls this “Malthus-like dynamics in a single picture.” Think of <span class="math inline">\(s\,y(k)\)</span> as the “birth rate of capital” and <span class="math inline">\((n + d)\,k\)</span> as its “death rate.” Where births and deaths of capital balance, capital per worker is stationary, just as population was stationary where births and deaths balanced in Malthus.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Dornbusch and Fischer, p.&nbsp;732.</p>
+</div></div><p>Dornbusch and Fischer draw out one striking implication: “if two countries have the same capital stock and the same rate of population growth and have access to the same production function, they will eventually reach the same level of income.” On this view, poor countries are poor because they start further from <span class="math inline">\(k^*\)</span>, “but if the former save at the same rate, and can get the same technology, they will eventually catch up.”</p>
+</section>
+<section id="what-happens-to-the-size-of-the-economy" class="level3" data-number="4.2.6">
+<h3 data-number="4.2.6" class="anchored" data-anchor-id="what-happens-to-the-size-of-the-economy"><span class="header-section-number">4.2.6</span> What happens to the size of the economy?</h3>
+<p>In the steady state, output <em>per worker</em> doesn’t change. But the population keeps growing at rate <span class="math inline">\(n\)</span>, so capital and total output must also grow at rate <span class="math inline">\(n\)</span>. The economy as a whole grows, just fast enough to keep everyone’s share constant.</p>
+<p>This is the first big difference from Malthus. A Malthusian economy can’t accommodate steady population growth without driving wages down. A Solow economy can: capital grows alongside population.</p>
+</section>
+</section>
+<section id="saving-population-growth-and-the-price-of-growth" class="level2 page-columns page-full" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="saving-population-growth-and-the-price-of-growth"><span class="header-section-number">4.3</span> Saving, population growth, and the price of growth</h2>
+<section id="a-higher-saving-rate" class="level3 page-columns page-full" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="a-higher-saving-rate"><span class="header-section-number">4.3.1</span> A higher saving rate</h3>
+<p>What happens if people save more? The saving curve shifts up. At the old <span class="math inline">\(k^*\)</span>, saving now exceeds the investment requirement, so capital per worker grows until it reaches a new, higher steady state. Capital per worker and output per worker are both higher. What about consumption, and the long-run growth rate?</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Dornbusch and Fischer, pp.&nbsp;732–733 and their Figure 19-5.</p>
+</div></div><p>Dornbusch and Fischer pose the puzzle directly: “If people save 10 percent of their income, as opposed to 5 percent, should we not expect this to make a difference in the growth rate of output?” Their answer: “In the short run, it raises the growth rate of output. It does not affect the long-run growth rate of output, but it raises the long-run level of capital and output per head.” <a href="#fig-saving" class="quarto-xref">Figure&nbsp;<span>4.4</span></a> shows the two effects over time, following their Figure 19-5.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-saving" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-saving-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="04-solow_files/figure-html/fig-saving-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-saving-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.4: A permanent rise in the saving rate at year 20 (after Dornbusch and Fischer, Figure 19-5). Left: output per worker rises to a new, higher steady-state level. Right: the growth rate of total output rises temporarily, then falls back to the population growth rate n.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The growth rate rises only during the transition, while capital per worker is being built up. Once the new steady state is reached, total output again grows at the rate of population growth.</p>
+<p>Consumption is a subtler question. Saving more means consuming a larger share of a bigger pie. Whether the pie grows enough to raise consumption depends on how much more is saved. In lecture we’ll look at what happens to the <em>level</em> of consumption.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Dornbusch and Fischer, p.&nbsp;726.</p>
+</div></div><p>How much <em>should</em> a society save? Saving more now means more for future generations and less for the present one. Dornbusch and Fischer note that the people who will consume in the future “are not here to vote because they have not yet been born,” and they quote the economist Joan Robinson’s question: “What did posterity ever do for us?” Ultimately, they conclude, “the policy decisions that affect growth are settled politically.”</p>
+</section>
+<section id="try-it-the-solow-app" class="level3 page-columns page-full" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="try-it-the-solow-app"><span class="header-section-number">4.3.2</span> Try it: the Solow app</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> The app is the course’s own Solow app (<code>ShinyApps/solow</code> in the 2025 course repo), exported with Shinylive so it runs in the browser, in its own tab. The three questions are mine; they use only the saving rate and the capital share, to stay clear of the Lab 3 graded questions (a technology shift in the app, slower or negative population growth, and immigrants who change capital per worker).</p>
+</div></div><p>The app simulates the Solow model. The top-left panel shows saving, sy, and the investment needed to stay even, (d + n)k; the bottom-left shows the production function; and the right-hand panels trace capital and output per person over time. New conditions take effect at time 0; press the “play” triangle under the time slider to run the simulation. It opens in a new tab, so you can make it full screen and keep this page open alongside it. (The first load can take a few seconds while R starts up in your browser.)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="apps/solow/index.html" target="_blank" rel="noopener"><img src="images/apps/solow.png" class="img-fluid figure-img" style="width:85.0%" alt="Screenshot of the Solow simulation Shiny app: four panels showing the saving and break-even investment curves, the production function, and capital and output per person over time, with parameter sliders on the right."></a></p>
+<figcaption>The Solow app at its starting values. Click to open it in a new tab.</figcaption>
+</figure>
+</div>
+<p><a href="apps/solow/index.html" class="btn btn-primary" target="_blank" rel="noopener">Open the Solow app in a new tab ↗</a></p>
+<p>Before you move each slider, write down what you expect to happen. Then check.</p>
+<ol type="1">
+<li><strong>Save more.</strong> Raise “savings level s’” from 0.20 to 0.25 and press play. Before you do: will output per person grow faster forever, or rise to a new, higher level and stop?</li>
+<li><strong>Watch the gap close.</strong> In the same run, how does the speed of growth change as capital per person approaches its new steady state? Why does growth slow down even though people keep saving 25 percent of their income?</li>
+<li><strong>A bigger capital share.</strong> Return s to 0.20 and raise “alpha” from 0.4 to 0.5. Predict whether the steady-state capital and output per person will be higher or lower. Why does a larger capital share make capital accumulation matter more?</li>
+</ol>
+<p>Lab 3 asks you to use the app to follow an economy through a technological change.</p>
+</section>
+<section id="faster-population-growth" class="level3" data-number="4.3.3">
+<h3 data-number="4.3.3" class="anchored" data-anchor-id="faster-population-growth"><span class="header-section-number">4.3.3</span> Faster population growth</h3>
+<p>Now the central question for economic demography. What happens if population growth rises from <span class="math inline">\(n\)</span> to <span class="math inline">\(n'\)</span>? Faster growth means more new workers to equip, so the investment requirement line rotates upward, from <span class="math inline">\((n + d)k\)</span> to <span class="math inline">\((n' + d)k\)</span> (<a href="#fig-popgrowth" class="quarto-xref">Figure&nbsp;<span>4.5</span></a>, left).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-popgrowth" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-popgrowth-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="04-solow_files/figure-html/fig-popgrowth-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-popgrowth-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.5: Faster population growth (left) rotates the investment requirement upward, lowering steady-state capital per worker (k<em>′) and output per worker (y</em>′). Right: saving more (dotted s′y(k)) could restore the old capital per worker, but at the cost of consumption.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>If saving stays the same, capital doesn’t grow fast enough to keep up with the new workers. Capital per worker falls until it reaches a new, lower steady state <span class="math inline">\(k^{*\prime}\)</span>, and output per worker falls to <span class="math inline">\(y^{*\prime}\)</span>. Dornbusch and Fischer:</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+In their own words
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“The decline in output per head as a consequence of increased population growth points up the problem faced by many developing countries. Fast growth in population, given the saving rate, means low levels of income per head. … With high population growth, saving will typically be too small to allow capital to rise relative to labor and thus to build up the capital-labor ratio to achieve a satisfactory level of income per head.” (Dornbusch and Fischer, pp.&nbsp;735–736)</p>
+</div>
+</div>
+<p>Is there anything we could do to keep the old level of output per person? Yes: save more and consume less (<a href="#fig-popgrowth" class="quarto-xref">Figure&nbsp;<span>4.5</span></a>, right). A higher saving rate <span class="math inline">\(s'\)</span> can restore the old capital per worker. So population growth has a <strong>price</strong>:</p>
+<ul>
+<li>If we compensate for faster growth by saving more, consumption falls.</li>
+<li>If we don’t save more, the new steady state has lower capital and output per worker, and consumption is still hurt.</li>
+</ul>
+</section>
+</section>
+<section id="technology-the-solow-ratchet" class="level2 page-columns page-full" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="technology-the-solow-ratchet"><span class="header-section-number">4.4</span> Technology: the Solow ratchet</h2>
+<section id="can-technology-save-us" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="can-technology-save-us"><span class="header-section-number">4.4.1</span> Can technology save us?</h3>
+<p>Let’s include a factor <span class="math inline">\(A\)</span> for technology: <span class="math inline">\(Y = A\,F(K, L)\)</span>. With constant returns to scale, output per worker is <span class="math inline">\(y = A\,f(k)\)</span>, so <span class="math inline">\(y\)</span> rises with <span class="math inline">\(A\)</span>. A new technology lets us produce more output at every capital-labor ratio (<a href="#fig-tech" class="quarto-xref">Figure&nbsp;<span>4.6</span></a>).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-tech" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tech-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="04-solow_files/figure-html/fig-tech-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tech-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.6: A technological improvement raises output at every capital-labor ratio, from A f(k) to A′f(k). Saving rises with output, so the steady state moves from k* to k*′: technology raises output directly and then through capital deepening.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Technology works in two steps:</p>
+<ol type="1">
+<li><strong>Higher productivity with the original capital.</strong> At the old <span class="math inline">\(k^*\)</span>, output jumps from <span class="math inline">\(y(k^*)\)</span> to <span class="math inline">\(y'(k^*)\)</span>.</li>
+<li><strong>Capital deepening.</strong> Because output is higher, so is saving. Capital per worker grows from <span class="math inline">\(k^*\)</span> to a new steady state <span class="math inline">\(k^{*\prime}\)</span>, raising output further.</li>
+</ol>
+<p>You can watch both steps with the “Solow” app in the lab.</p>
+</section>
+<section id="ratchet-not-hamster-wheel" class="level3 page-columns page-full" data-number="4.4.2">
+<h3 data-number="4.4.2" class="anchored" data-anchor-id="ratchet-not-hamster-wheel"><span class="header-section-number">4.4.2</span> Ratchet, not hamster wheel</h3>
+<p>Do we stay at the new, higher steady state? Or do we slip back, as in Malthus? In Solow’s model, we stay. Each improvement in technology gives a new equilibrium, not just a temporary gain. If technology keeps improving, <span class="math inline">\(A(t) = A_0 e^{gt}\)</span>, then:</p>
+<ul>
+<li>population <span class="math inline">\(N\)</span> grows at rate <span class="math inline">\(n\)</span>;</li>
+<li>the economy <span class="math inline">\(Y\)</span> grows at rate <span class="math inline">\(n + g\)</span>;</li>
+<li>output per person <span class="math inline">\(y\)</span> grows at rate <span class="math inline">\(g\)</span>.</li>
+</ul>
+<p>The lecture calls this the difference between a <strong>Solow ratchet</strong> and a <strong>Malthusian hamster in a wheel</strong>. In Malthus, population growth eats away any technological improvement. In Solow, the economy needs more capital to keep up, but it can support that capital with its higher output.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Dornbusch and Fischer, p.&nbsp;736.</p>
+</div></div><p>Dornbusch and Fischer list three reasons growth per person could continue in the steady state. The “most important is technical progress, which empirical work has identified as the prime source of growth.” The others are increasing returns to scale and investment in human capital as well as physical capital. They add a hopeful caveat: “There can be little doubt that human ingenuity will produce technical progress that will allow growth to continue if that same human ingenuity can maintain peace and political stability.”</p>
+</section>
+<section id="malthus-and-solow-compared" class="level3 page-columns page-full" data-number="4.4.3">
+<h3 data-number="4.4.3" class="anchored" data-anchor-id="malthus-and-solow-compared"><span class="header-section-number">4.4.3</span> Malthus and Solow compared</h3>
+<div class="cell">
+<div id="tbl-malthus-solow" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-malthus-solow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.1: Malthus and Solow compared (from lecture).
+</figcaption>
+<div aria-describedby="tbl-malthus-solow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 37%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Malthus</th>
+<th style="text-align: left;">Solow</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Fixed factors</td>
+<td style="text-align: left;">Resources (land)</td>
+<td style="text-align: left;">None</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Variable factors</td>
+<td style="text-align: left;">Labor supply</td>
+<td style="text-align: left;">Labor supply, capital</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Exogenous</td>
+<td style="text-align: left;">Technology</td>
+<td style="text-align: left;">Technology, labor supply</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Endogenous</td>
+<td style="text-align: left;">Labor supply</td>
+<td style="text-align: left;">Capital</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Steady population growth?</td>
+<td style="text-align: left;">No: explains why population stayed constant</td>
+<td style="text-align: left;">Yes: can support steady population growth</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Growth in standard of living?</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Not without technological change</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Effect of better technology</td>
+<td style="text-align: left;">Gains disappear</td>
+<td style="text-align: left;">Gains are preserved (a ratchet)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">What determines the outcome</td>
+<td style="text-align: left;">Demographic behavior: b(w) and d(w)</td>
+<td style="text-align: left;">The production function: y(k)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>To sum up: the Solow model retells the Malthusian story with a different steady state.</p>
+<ul>
+<li><strong>Good news.</strong> It can accommodate constant population growth without lowering wages, which is impossible in Malthus. And technological change brings permanent improvement, not the temporary gain of Malthus.</li>
+<li><strong>Bad news.</strong> Faster population growth means lower income, unless people give up consumption and keep saving up. More capital alone, such as a one-time foreign investment or aid, won’t change steady-state output. The key to long-term growth in income per person is <strong>technology, not savings</strong>.</li>
+</ul>
+<p>What does Solow leave unexplained? The model takes technology, population growth, and the saving rate as given from outside (exogenous). The great take-off of population and income per person since about 1800 (shown in lecture with Maddison’s data for the United Kingdom) is driven by exactly the things the model doesn’t explain.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Dornbusch and Fischer, p.&nbsp;737 and their Box 19-2. “Limits to growth” is the reading’s own box. Slide 07-10 mentions the environmentalists as a coming topic.</p>
+</div></div><p>Writing in the late 1980s, Dornbusch and Fischer added two further notes. Newer growth theories, which let investment in research and human capital affect the long-run growth rate, “do not predict a convergence of income levels among countries that start from different initial capital stocks.” And they flagged, in a box titled “Limits to Growth,” the worry that “growing populations put pressure on resources and cause environmental degradation,” mentioning tropical forests and “some evidence that the global climate may be warming.”</p>
+</section>
+</section>
+<section id="growth-and-inequality-pikettys-argument" class="level2 page-columns page-full" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="growth-and-inequality-pikettys-argument"><span class="header-section-number">4.5</span> Growth and inequality: Piketty’s argument</h2>
+<section id="a-stylized-fact-inequalitys-fall-and-rise" class="level3 page-columns page-full" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="a-stylized-fact-inequalitys-fall-and-rise"><span class="header-section-number">4.5.1</span> A stylized fact: inequality’s fall and rise</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Figures and quotes in this section are from Piketty and Saez (2014), pp.&nbsp;838–842. The slide shows their Figure 1.</p>
+</div></div><p>Thomas Piketty and Emmanuel Saez (an economist at Berkeley) assembled a century of tax records to measure the share of income going to the richest tenth of the population. Their first fact is a “great inequality reversal” between Europe and the United States. On the eve of World War I, the top tenth received 45 to 50 percent of total income in most European countries, and slightly above 40 percent in the United States. In Europe, the share then fell sharply, to about 30 percent by the 1950s and 1960s, and it is now close to 35 percent. In the United States, it fell to 30 to 35 percent in the 1950s and 1960s, then “rose at an unprecedented pace since the 1970s–1980s, and is now close to 50%.”</p>
+<p>Wealth is far more unequal than income. The richest tenth typically owns 60 to 90 percent of all wealth, but receives 30 to 50 percent of income. The bottom half of the population owns less than 5 percent of wealth, but earns 20 to 30 percent of income. “The bottom half of the population hardly owns any wealth, but it does earn appreciable income.” In pre-WWI Europe, the top tenth owned close to 90 percent of all wealth, so that “there was basically no wealth middle class.”</p>
+</section>
+<section id="the-solow-model-as-a-tool-for-studying-inequality" class="level3" data-number="4.5.2">
+<h3 data-number="4.5.2" class="anchored" data-anchor-id="the-solow-model-as-a-tool-for-studying-inequality"><span class="header-section-number">4.5.2</span> The Solow model as a tool for studying inequality</h3>
+<p>The Solow model can help us think about inequality in two ways:</p>
+<ol type="1">
+<li>We can decompose income into the share that goes to <strong>capital</strong> and the share that goes to <strong>labor</strong>.</li>
+<li>We can see how this division changes with capital intensity, <span class="math inline">\(k\)</span>.</li>
+</ol>
+<p>Some accounting. Total income is labor income plus capital income: <span class="math inline">\(Y = Y_\ell + Y_k\)</span>. In perfectly competitive markets, each factor is paid its marginal product. So capital income per worker is <span class="math inline">\(y_k = MP(k) \times k\)</span>, and labor gets the rest: <span class="math inline">\(y_\ell = y - y_k\)</span>. In our model, the marginal product of capital is just the slope of the production function (<a href="#fig-shares" class="quarto-xref">Figure&nbsp;<span>4.7</span></a>).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-shares" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-shares-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="04-solow_files/figure-html/fig-shares-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-shares-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.7: Splitting output between capital and labor at capital per worker k. The tangent to the production function has slope MP(k), the return on capital. Capital’s income per worker is k × MP(k) (orange); labor’s is the rest, y − k × MP(k) (green), which is where the tangent meets the vertical axis.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="does-slower-population-growth-increase-inequality" class="level3 page-columns page-full" data-number="4.5.3">
+<h3 data-number="4.5.3" class="anchored" data-anchor-id="does-slower-population-growth-increase-inequality"><span class="header-section-number">4.5.3</span> Does slower population growth increase inequality?</h3>
+<p>We know from the Solow model that a smaller <span class="math inline">\(n\)</span> raises <span class="math inline">\(k^*\)</span> and <span class="math inline">\(y^*\)</span>. Who gets the increase in income: the owners of capital, or the workers? The proportion going to capital is</p>
+<p><span class="math display">\[
+\text{capital share} = \frac{k \times MP(k)}{y(k)}.
+\]</span></p>
+<p>But the answer isn’t obvious. If we increase <span class="math inline">\(k\)</span>, there are offsetting effects. Does more capital per person increase capital’s share of income? <strong>Yes</strong>, because there is more capital. <strong>No</strong>, because the rate of return on capital falls as capital becomes more plentiful. Which effect is stronger depends on how quickly the marginal product declines.</p>
+<ol type="1">
+<li><strong>Cobb-Douglas: the two effects cancel.</strong> With <span class="math inline">\(y = k^a\)</span>, the marginal product is <span class="math inline">\(MP(k) = a\,k^{a-1}\)</span>, and the capital share is <span class="math inline">\((a\,k^{a-1}) \times k / k^a = a\)</span>, a constant. Capital intensification is exactly balanced by diminishing returns.</li>
+<li><strong>If <span class="math inline">\(MP(k)\)</span> declines more slowly</strong>, we still have diminishing returns, but an increase in capital is no longer fully offset by the fall in its return. The result is an <em>increasing</em> share of national income going to capital owners. This is what Piketty highlights as possible. He thinks it might get worse, because new technologies like robots and automation may have slowly declining marginal products.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Piketty and Saez, p.&nbsp;842.</p>
+</div></div><p>Piketty and Saez put the technical point in terms of the “elasticity of substitution” between capital and labor. If it equals 1 (the Cobb-Douglas case), “the capital share … is a technological constant.” But in rich countries in recent decades, both the amount of capital relative to income <em>and</em> capital’s share of income have risen, “which suggests that [the elasticity] is somewhat larger than 1.” Intuitively, they write, there are more and more ways to substitute capital for labor, “e.g., replacing delivery workers by drones or self-driving trucks.”</p>
+<p>And capital income is much more unequally distributed than labor income. <a href="#tbl-gl" class="quarto-xref">Table&nbsp;<span>4.2</span></a> shows estimates of the share of labor income and of asset income received by the top tenth under different inequality regimes.</p>
+<div class="cell">
+<div id="tbl-gl" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gl-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.2: Share of labor and asset income received by the top decile in different inequality regimes, and the effect of a unit increase in the capital/income ratio β on the top decile’s share of total income. Source: Goldstein and Lee (2014), using Piketty’s estimates (as shown in lecture).
+</figcaption>
+<div aria-describedby="tbl-gl-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 21%">
+<col style="width: 19%">
+<col style="width: 22%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Low inequality (Scandinavia, 1970s)</th>
+<th style="text-align: left;">Medium inequality (Europe, 2010)</th>
+<th style="text-align: left;">High inequality (US 2010, Europe 1910)</th>
+<th style="text-align: left;">Very high inequality (US 2030?)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Labor income</td>
+<td style="text-align: left;">20%</td>
+<td style="text-align: left;">25%</td>
+<td style="text-align: left;">35%</td>
+<td style="text-align: left;">45%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Asset income</td>
+<td style="text-align: left;">50%</td>
+<td style="text-align: left;">60%</td>
+<td style="text-align: left;">70%</td>
+<td style="text-align: left;">90%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Total income</td>
+<td style="text-align: left;">25%</td>
+<td style="text-align: left;">35%</td>
+<td style="text-align: left;">50%</td>
+<td style="text-align: left;">60%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Effect of a unit increase in β</td>
+<td style="text-align: left;">1.50%</td>
+<td style="text-align: left;">1.75%</td>
+<td style="text-align: left;">1.75%</td>
+<td style="text-align: left;">2.25%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section id="pikettys-argument-in-three-steps" class="level3" data-number="4.5.4">
+<h3 data-number="4.5.4" class="anchored" data-anchor-id="pikettys-argument-in-three-steps"><span class="header-section-number">4.5.4</span> Piketty’s argument in three steps</h3>
+<p>Put together, Piketty’s argument goes like this:</p>
+<ol type="1">
+<li><strong>Slower growth → more capital per person.</strong> This is the neoclassical Solow result.</li>
+<li><strong>More capital per person increases capital’s share of the economy.</strong> This is an empirical claim.</li>
+<li><strong>Capital income is more unequally distributed than labor income.</strong> Also an empirical claim.</li>
+</ol>
+<p>Therefore: <strong>slower growth increases income inequality.</strong></p>
+</section>
+<section id="capital-is-back-because-low-growth-is-back" class="level3 page-columns page-full" data-number="4.5.5">
+<h3 data-number="4.5.5" class="anchored" data-anchor-id="capital-is-back-because-low-growth-is-back"><span class="header-section-number">4.5.5</span> “Capital is back because low growth is back”</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Piketty and Saez, pp.&nbsp;840–841. The calendar note asks students to look for “the Solow equilibrium on page 840 and the role of population growth.”</p>
+</div></div><p>Piketty and Saez make step 1 concrete with what they call the Harrod-Domar-Solow formula. In the long run, the ratio of wealth to income, <span class="math inline">\(\beta = K/Y\)</span>, converges to</p>
+<p><span class="math display">\[
+\beta = \frac{s}{g},
+\]</span></p>
+<p>where <span class="math inline">\(s\)</span> is the saving rate and <span class="math inline">\(g\)</span> is the growth rate of total income. And “the growth rate <span class="math inline">\(g\)</span> is the sum of the population growth rate (including immigration) and the productivity growth rate.” With a saving rate of 10 percent and growth of 3 percent, <span class="math inline">\(\beta \approx 300\%\)</span>: wealth equals about three years of income. “But if the growth rate drops to <span class="math inline">\(g\)</span> = 1.5%, then <span class="math inline">\(\beta \approx 600\%\)</span>. In short: Capital is back because low growth is back.”</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> Connecting <span class="math inline">\(\beta = s/g\)</span> to the Solow steady state (<span class="math inline">\(s\,y = (n+d)k\)</span>) is my explanation. It follows from the model, but neither the slides nor the reading spell it out this way.</p>
+</div></div><p>Where does this come from? It’s the Solow steady state seen from another angle. In steady state, capital must grow as fast as income, so each year’s saving, <span class="math inline">\(s\,Y\)</span>, must add <span class="math inline">\(g \times K\)</span> to the stock. Setting <span class="math inline">\(s\,Y = g\,K\)</span> gives <span class="math inline">\(K/Y = s/g\)</span>. Slow growth means each year’s saving piles up relative to income. “In the extreme case of a society with zero population and productivity growth,” Piketty and Saez write, “the wealth-income ratio … would rise indefinitely.” And capital accumulation is slow: “With a saving rate of 10% per year, it takes 50 years to accumulate the equivalent of 5 years of income.”</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-beta" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-beta-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="04-solow_files/figure-html/fig-beta-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-beta-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.8: The long-run wealth-to-income ratio β = s/g for a saving rate of 10%, as total growth g varies. Shaded bands show Piketty and Saez’s ranges for total growth in Europe and Japan (about 1–1.5% a year, with population growth near zero) and in the United States (at least 2–2.5%, with population growth above 1% thanks to immigration).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>This logic, they argue, explains why the United States holds less capital relative to its income than Europe and Japan. “U.S. population growth rates exceed 1% per year, thanks to large immigration flows,” so total U.S. growth is at least 2 to 2.5 percent a year. In Europe and Japan, population growth is now close to zero, so total growth is about 1 to 1.5 percent. Historically, European wealth was worth about 6 to 7 years of national income before World War I, fell to 2 to 3 years in the 1950s, and is back to 5 to 6 years today. U.S. wealth has generally equalled about 4 to 5 years of income.</p>
+</section>
+<section id="r-g" class="level3" data-number="4.5.6">
+<h3 data-number="4.5.6" class="anchored" data-anchor-id="r-g"><span class="header-section-number">4.5.6</span> r &gt; g</h3>
+<p>The final piece concerns how wealth is distributed. Piketty and Saez model individual fortunes as growing at the rate of return on wealth, <span class="math inline">\(r\)</span>, while the economy grows at <span class="math inline">\(g\)</span>. The larger the gap <span class="math inline">\(r - g\)</span>, the more unequal wealth becomes. This is the “dramatic reading” from lecture:</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+In their own words
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“Intuitively, a higher r – g tends to amplify initial wealth inequalities: It implies that past wealth is capitalized at a faster pace, and that it is less likely to be overtaken by the general growth of the economy.” (Piketty and Saez, p.&nbsp;841)</p>
+</div>
+</div>
+<p>History, they argue, mostly had a large gap. Before the industrial revolution, growth was “much less than 1% per year,” while land typically earned rents of about 4 to 5 percent of its value. “This large gap between r and g explains why wealth concentration was so large until World War I and why wealth concentration was smaller in the United States, where population growth was faster.” In the twentieth century, growth was exceptionally high, “in particular due to very high population growth, which even today represents about half of global gross domestic product growth.” Meanwhile, wars, depression, and taxation cut the return on capital. If population growth slows in the twenty-first century, <span class="math inline">\(r - g\)</span> is likely to widen again.</p>
+<p>Notice how central population is to the whole argument. Population growth is half of <span class="math inline">\(g\)</span>, so a demographic slowdown pushes up both the wealth-income ratio and the gap <span class="math inline">\(r - g\)</span>.</p>
+</section>
+<section id="is-it-destiny" class="level3" data-number="4.5.7">
+<h3 data-number="4.5.7" class="anchored" data-anchor-id="is-it-destiny"><span class="header-section-number">4.5.7</span> Is it destiny?</h3>
+<p>Piketty and Saez end on a note of caution, not determinism. High capital intensity is “not bad in itself. After all, it would be good to have an infinite quantity of robots producing most of the output, so that we can devote more time to leisure activities. The problem is twofold: Can we all find jobs as a robot designer (or in leisure-related activities), and who owns the robots?” And their final judgment: “Inequality does not follow a deterministic process. In a sense, both Marx and Kuznets were wrong. There are powerful forces pushing alternately in the direction of rising or shrinking inequality. Which one dominates depends on the institutions and policies that societies choose to adopt.”</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+In the lab
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In Lab 3 you calculate the investment an economy needs to stay even, derive the steady state for a Cobb-Douglas economy (including one with a shrinking population), use the “Solow” app to watch an economy respond to a technological change, and calculate capital’s share of income under different production functions to see when capital intensification does, and doesn’t, raise capital’s share. The lab ends by asking you to think through what one-time waves of immigrants would do to income per person.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="key-ideas" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="key-ideas"><span class="header-section-number">4.6</span> Key ideas</h2>
+<ul>
+<li>In the Solow model, capital per worker is in <strong>steady state</strong> when saving exactly covers the <strong>investment requirement</strong>: <span class="math inline">\(s\,y(k) = (n + d)\,k\)</span>.</li>
+<li>In steady state, output per worker is constant, and capital and total output grow at the rate of population growth. Unlike Malthus, the economy can <strong>support steady population growth</strong> without lowering incomes.</li>
+<li>A higher <strong>saving rate</strong> raises the <em>level</em> of output per worker but only temporarily raises its <em>growth rate</em>.</li>
+<li><strong>Faster population growth</strong> lowers steady-state capital and output per worker, unless people give up consumption to save more.</li>
+<li><strong>Technology</strong> is the key to long-run growth in income per person. Its gains are preserved (a <strong>ratchet</strong>), not eaten away as in Malthus.</li>
+<li>Piketty’s argument: slower growth raises capital per person (Solow), which may raise capital’s share of income, and capital income is very unequally distributed. So slower growth can increase inequality. The wealth-income ratio tends toward <span class="math inline">\(\beta = s/g\)</span>, and population growth is a large part of <span class="math inline">\(g\)</span>.</li>
+</ul>
+</section>
+<section id="check-your-understanding" class="level2 page-columns page-full" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="check-your-understanding"><span class="header-section-number">4.7</span> Check your understanding</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> Questions 1 and 4 adapt the slides (07-23, 08-23). The rest are new and avoid the Lab 3 graded questions.</p>
+</div></div><ol type="1">
+<li><p><strong>More saving.</strong> Explain, using the steady-state diagram, what a higher saving rate does to (a) capital per worker, (b) output per worker, and (c) the long-run growth rate of total output.</p></li>
+<li><p><strong>Machines to stay even.</strong> An economy has 20 machines per worker. Depreciation is 5 percent a year. How many machines per worker must it buy each year just to stay even if population grows at 1 percent? At 3 percent?</p></li>
+<li><p><strong>Hamster or ratchet?</strong> In Malthus, the gains from a better technology disappear; in Solow, they are preserved. Which assumption about factors of production makes the difference? Explain in two or three sentences.</p></li>
+<li><p><strong>Which effect wins?</strong> As capital per worker rises, capital earns a lower return but there is more of it. Explain why, with a Cobb-Douglas production function, capital’s share of income stays the same.</p></li>
+<li><p><strong>β = s/g.</strong> A country saves 12 percent of its income. Its population grows at 1 percent a year and productivity at 1 percent. What is its long-run wealth-to-income ratio? What happens if population growth falls to zero?</p></li>
+<li><p><strong>Immigration and capital.</strong> Piketty and Saez argue that the United States has a lower wealth-to-income ratio than Europe partly because of immigration. Explain the logic in one or two sentences.</p></li>
+<li><p><strong>Reading the scatter plot.</strong> <a href="#fig-weil" class="quarto-xref">Figure&nbsp;<span>4.1</span></a> shows a negative relationship between population growth and income per person. Give one reason the relationship might run from income to population growth rather than the reverse.</p></li>
+<li><p><strong>Wealth versus income.</strong> According to Piketty and Saez, why does wealth inequality always exceed income inequality? What share of wealth does the bottom half of the population own?</p></li>
+</ol>
+</section>
+<section id="further-reading" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">4.8</span> Further reading</h2>
+<ul>
+<li>Dornbusch, Rudiger, and Stanley Fischer. <em>Macroeconomics.</em> “Growth Theory,” pp. 726–737. <em>A textbook presentation of the Solow model, using population growth rates as part of the motivation. As you read: compare their Figures 19-3, 19-4, and 19-6 with the diagrams in this chapter. Note that they write output per head as <span class="math inline">\(x\)</span>.</em></li>
+<li>Piketty, Thomas, and Emmanuel Saez. 2014. “Inequality in the long run.” <em>Science</em> 344(6186): 838–843. <em>An overview of the history of inequality and Piketty’s model of r &gt; g. As you read: find the Solow equilibrium on page 840 and the role of population growth. Ask yourself what role population growth might have played in their Figures 1 through 4.</em></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./03-malthus.html" class="pagination-link" aria-label="The World According to Malthus">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The World According to Malthus</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./05-boserup.html" class="pagination-link" aria-label="Boserup: Population Pushes Technology">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Boserup: Population Pushes Technology</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

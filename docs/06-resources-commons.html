@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Economic Demography - 6&nbsp; Are We Doomed? Resources, Prices, and the Commons</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./07-climate.html" rel="next">
+<link href="./05-boserup.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./06-resources-commons.html">Resources and the environment</a></li><li class="breadcrumb-item"><a href="./06-resources-commons.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Are We Doomed? Resources, Prices, and the Commons</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Economic Demography</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Population and the economy: big theories</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-history.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Ten Thousand Years of Population</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-optimum.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Optimum Population</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-malthus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The World According to Malthus</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-solow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Capital to the Rescue? The Solow Model and Inequality</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-boserup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Boserup: Population Pushes Technology</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Resources and the environment</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-resources-commons.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Are We Doomed? Resources, Prices, and the Commons</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-climate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Population and Climate Change</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Age structure</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-social-security.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Aging and Social Security: A Ponzi Scheme?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-age-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Are Too Few Children a Problem? Age Structure and Optimal Fertility</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Fertility and the family</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-fertility.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">How Do Economists Think We Decide How Many Children to Have?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-china.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Fertility Policy I: China’s One-Child Policy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12-abortion-pill.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Fertility Policy II: Abortion and the Pill in the United States</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13-marriage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Marriage: Love, and What Else?</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+ <span class="menu-text">Migration</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./14-immigration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Immigration: Who Gains, Who Loses?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./15-migration-gains-enforcement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Migrants’ Gains and Immigration Enforcement</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
+ <span class="menu-text">Optional chapters</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./16-longevity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Can Money Buy Longevity? Health, Mortality, and the Grossman Model</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./17-projection-peak.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Population Projection, Age Pyramids, and “Our Shrinking Future?”</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./18-why-move.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Why People Move: Cities, Borders, and Development</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./19-recession-fertility.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Fertility and the Economy: The Great Recession and Beyond</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#are-we-doomed" id="toc-are-we-doomed" class="nav-link active" data-scroll-target="#are-we-doomed"><span class="header-section-number">6.1</span> Are we doomed?</a>
+  <ul class="collapse">
+  <li><a href="#doubling-times" id="toc-doubling-times" class="nav-link" data-scroll-target="#doubling-times"><span class="header-section-number">6.1.1</span> Doubling times</a></li>
+  <li><a href="#what-would-it-mean-to-be-doomed" id="toc-what-would-it-mean-to-be-doomed" class="nav-link" data-scroll-target="#what-would-it-mean-to-be-doomed"><span class="header-section-number">6.1.2</span> What would it mean to be “doomed”?</a></li>
+  <li><a href="#can-prices-save-us" id="toc-can-prices-save-us" class="nav-link" data-scroll-target="#can-prices-save-us"><span class="header-section-number">6.1.3</span> Can prices save us?</a></li>
+  <li><a href="#kinds-of-resources-and-substitution" id="toc-kinds-of-resources-and-substitution" class="nav-link" data-scroll-target="#kinds-of-resources-and-substitution"><span class="header-section-number">6.1.4</span> Kinds of resources, and substitution</a></li>
+  </ul></li>
+  <li><a href="#lams-argument-how-the-world-survived" id="toc-lams-argument-how-the-world-survived" class="nav-link" data-scroll-target="#lams-argument-how-the-world-survived"><span class="header-section-number">6.2</span> Lam’s argument: how the world survived</a>
+  <ul class="collapse">
+  <li><a href="#an-argument-from-the-extreme-case" id="toc-an-argument-from-the-extreme-case" class="nav-link" data-scroll-target="#an-argument-from-the-extreme-case"><span class="header-section-number">6.2.1</span> An argument from the extreme case</a></li>
+  <li><a href="#how-did-we-survive" id="toc-how-did-we-survive" class="nav-link" data-scroll-target="#how-did-we-survive"><span class="header-section-number">6.2.2</span> How did we survive?</a></li>
+  <li><a href="#have-we-really-survived" id="toc-have-we-really-survived" class="nav-link" data-scroll-target="#have-we-really-survived"><span class="header-section-number">6.2.3</span> Have we really survived?</a></li>
+  <li><a href="#the-reasonable-economist" id="toc-the-reasonable-economist" class="nav-link" data-scroll-target="#the-reasonable-economist"><span class="header-section-number">6.2.4</span> The “reasonable” economist</a></li>
+  </ul></li>
+  <li><a href="#beckers-critique-and-lams-reply" id="toc-beckers-critique-and-lams-reply" class="nav-link" data-scroll-target="#beckers-critique-and-lams-reply"><span class="header-section-number">6.3</span> Becker’s critique, and Lam’s reply</a>
+  <ul class="collapse">
+  <li><a href="#becker-what-about-the-rest-of-the-world" id="toc-becker-what-about-the-rest-of-the-world" class="nav-link" data-scroll-target="#becker-what-about-the-rest-of-the-world"><span class="header-section-number">6.3.1</span> Becker: what about the rest of the world?</a></li>
+  <li><a href="#lam-externalities-not-numbers" id="toc-lam-externalities-not-numbers" class="nav-link" data-scroll-target="#lam-externalities-not-numbers"><span class="header-section-number">6.3.2</span> Lam: externalities, not numbers</a></li>
+  </ul></li>
+  <li><a href="#lams-conclusion-and-ours" id="toc-lams-conclusion-and-ours" class="nav-link" data-scroll-target="#lams-conclusion-and-ours"><span class="header-section-number">6.4</span> Lam’s conclusion, and ours?</a></li>
+  <li><a href="#when-prices-fail" id="toc-when-prices-fail" class="nav-link" data-scroll-target="#when-prices-fail"><span class="header-section-number">6.5</span> When prices fail</a></li>
+  <li><a href="#optimal-harvesting" id="toc-optimal-harvesting" class="nav-link" data-scroll-target="#optimal-harvesting"><span class="header-section-number">6.6</span> Optimal harvesting</a>
+  <ul class="collapse">
+  <li><a href="#a-malthusian-fish-population" id="toc-a-malthusian-fish-population" class="nav-link" data-scroll-target="#a-malthusian-fish-population"><span class="header-section-number">6.6.1</span> A Malthusian fish population</a></li>
+  <li><a href="#the-maximum-sustainable-harvest" id="toc-the-maximum-sustainable-harvest" class="nav-link" data-scroll-target="#the-maximum-sustainable-harvest"><span class="header-section-number">6.6.2</span> The maximum sustainable harvest</a></li>
+  <li><a href="#try-it-the-harvest-app" id="toc-try-it-the-harvest-app" class="nav-link" data-scroll-target="#try-it-the-harvest-app"><span class="header-section-number">6.6.3</span> Try it: the harvest app</a></li>
+  </ul></li>
+  <li><a href="#hardins-tragedy" id="toc-hardins-tragedy" class="nav-link" data-scroll-target="#hardins-tragedy"><span class="header-section-number">6.7</span> Hardin’s tragedy</a>
+  <ul class="collapse">
+  <li><a href="#problems-with-no-technical-solution" id="toc-problems-with-no-technical-solution" class="nav-link" data-scroll-target="#problems-with-no-technical-solution"><span class="header-section-number">6.7.1</span> Problems with no technical solution</a></li>
+  <li><a href="#the-herdsmans-calculation" id="toc-the-herdsmans-calculation" class="nav-link" data-scroll-target="#the-herdsmans-calculation"><span class="header-section-number">6.7.2</span> The herdsman’s calculation</a></li>
+  <li><a href="#pollution-the-commons-in-reverse" id="toc-pollution-the-commons-in-reverse" class="nav-link" data-scroll-target="#pollution-the-commons-in-reverse"><span class="header-section-number">6.7.3</span> Pollution: the commons in reverse</a></li>
+  <li><a href="#mutual-coercion-mutually-agreed-upon" id="toc-mutual-coercion-mutually-agreed-upon" class="nav-link" data-scroll-target="#mutual-coercion-mutually-agreed-upon"><span class="header-section-number">6.7.4</span> Mutual coercion, mutually agreed upon</a></li>
+  <li><a href="#a-classroom-fishing-game" id="toc-a-classroom-fishing-game" class="nav-link" data-scroll-target="#a-classroom-fishing-game"><span class="header-section-number">6.7.5</span> A classroom fishing game</a></li>
+  </ul></li>
+  <li><a href="#key-ideas" id="toc-key-ideas" class="nav-link" data-scroll-target="#key-ideas"><span class="header-section-number">6.8</span> Key ideas</a></li>
+  <li><a href="#check-your-understanding" id="toc-check-your-understanding" class="nav-link" data-scroll-target="#check-your-understanding"><span class="header-section-number">6.9</span> Check your understanding</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">6.10</span> Further reading</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./06-resources-commons.html">Resources and the environment</a></li><li class="breadcrumb-item"><a href="./06-resources-commons.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Are We Doomed? Resources, Prices, and the Commons</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-resources" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Are We Doomed? Resources, Prices, and the Commons</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Draft: provenance notes (for review)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Margin tags mark material that is <strong>not in the course slides or lab</strong>. <span class="tag-reading">Added · from readings</span> comes from the assigned readings (Lam, Becker, Hardin, Nordhaus). <span class="tag-new">Added · new</span> is from outside the course materials (my framing, general knowledge, or my own analysis) and needs the closest check. Untagged material follows the 2025 slides (10 Doomed, 11 and 12) and Labs 4 and 5.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>In this chapter.</strong> With a world population that doubled in forty years, are we doomed? We weigh David Lam’s optimistic answer against Stan Becker’s critique, and replay Julian Simon’s famous bet on resource prices. Then we turn to the goods that prices fail to protect: using the Malthusian model from <a href="03-malthus.html" class="quarto-xref"><span>Chapter 3</span></a>, we find the harvest of a fish population that can be sustained forever, and Garrett Hardin’s “tragedy of the commons” explains why individuals left to themselves will harvest too much.</p>
+<p><strong>Readings this chapter draws on.</strong> Lam (2011), “How the World Survived the Population Bomb”; Becker (2013), “Has the ‘World’ Really Survived the Population Bomb?”; Lam (2013), “Reply to Stan Becker”; Hardin (1968), “The Tragedy of the Commons”; Nordhaus (2018), “Climate Change: The Ultimate Challenge for Economics” (pp.&nbsp;440–442, on public goods).</p>
+</div>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> Bridge text written for the chapter split.</p>
+</div></div><p><a href="05-boserup.html" class="quarto-xref"><span>Chapter 5</span></a> showed how, over the long run of history, population growth could call forth new technology. This chapter asks whether the same optimism holds for the last half century, when population grew faster than ever before. Lam’s answer rests on markets and prices, so the second half of the chapter looks at what happens when prices fail, as they do for shared resources like fisheries. <a href="07-climate.html" class="quarto-xref"><span>Chapter 7</span></a> applies the same logic to the largest commons of all, the atmosphere.</p>
+<section id="are-we-doomed" class="level2 page-columns page-full" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="are-we-doomed"><span class="header-section-number">6.1</span> Are we doomed?</h2>
+<section id="doubling-times" class="level3 page-columns page-full" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="doubling-times"><span class="header-section-number">6.1.1</span> Doubling times</h3>
+<p>This chapter turns from the distant past (<a href="05-boserup.html" class="quarto-xref"><span>Chapter 5</span></a>) to the last half century. <a href="#tbl-doubling" class="quarto-xref">Table&nbsp;<span>6.1</span></a> shows how long it took the world’s population to double.</p>
+<div class="cell">
+<div id="tbl-doubling" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-doubling-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;6.1: Doubling times of world population (lecture).
+</figcaption>
+<div aria-describedby="tbl-doubling-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Population</th>
+<th style="text-align: left;">Year</th>
+<th style="text-align: left;">Years to double from previous row</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">200 million</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">400 million</td>
+<td style="text-align: left;">1000</td>
+<td style="text-align: left;">999</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">791 million</td>
+<td style="text-align: left;">1750</td>
+<td style="text-align: left;">750</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1.6 billion</td>
+<td style="text-align: left;">1900</td>
+<td style="text-align: left;">150</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3.0 billion</td>
+<td style="text-align: left;">1960</td>
+<td style="text-align: left;">60</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6.1 billion</td>
+<td style="text-align: left;">2000</td>
+<td style="text-align: left;">40</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> The slide gives 250 years for the 1750–1900 doubling. The dates imply 150, which is also Lam’s figure.</p>
+</div></div><p>What comes next in the sequence 999, 750, 150, 60, 40? Take a guess before reading on.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Lam (2011), pp.&nbsp;1232–1235.</p>
+</div></div><p>David Lam, in his 2011 presidential address to the Population Association of America, reports that when he asks his students this question, most choose 20 or 30 years. “The correct answer is almost surely more than 100 years.” It is even plausible that the world will never reach 12 billion. World population growth peaked at just over 2 percent per year in the 1960s (about 2.2 percent by the Census Bureau’s estimates), shortly before Paul Ehrlich published <em>The Population Bomb</em> in 1968. Growth then fell rapidly. The UN’s 2010 medium projection, which Lam used, put the world at 9.3 billion in 2050 and 10.1 billion in 2100, with a 2050 growth rate of 0.38 percent, a doubling time of about 175 years. “It is virtually certain that world population will never again double in 40 years, making the 1960–2000 experience absolutely unique in human history.”</p>
+</section>
+<section id="what-would-it-mean-to-be-doomed" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="what-would-it-mean-to-be-doomed"><span class="header-section-number">6.1.2</span> What would it mean to be “doomed”?</h3>
+<p>Before asking whether we are doomed, we should be clear about the question. Pair a condition with an outcome:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Condition</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>If population grows quickly</td>
+<td>humans go extinct</td>
+</tr>
+<tr class="even">
+<td>If forecasts are true</td>
+<td>we will be worse off in the future</td>
+</tr>
+<tr class="odd">
+<td>Even if growth stops</td>
+<td>progress will slow</td>
+</tr>
+<tr class="even">
+<td>If population shrinks</td>
+<td>progress will continue</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>progress will accelerate</td>
+</tr>
+</tbody>
+</table>
+<p>Different combinations are very different claims. “If population keeps growing quickly, humans will go extinct” is a long way from “even if growth stops, progress will slow.”</p>
+</section>
+<section id="can-prices-save-us" class="level3 page-columns page-full" data-number="6.1.3">
+<h3 data-number="6.1.3" class="anchored" data-anchor-id="can-prices-save-us"><span class="header-section-number">6.1.3</span> Can prices save us?</h3>
+<p>The economist Julian Simon argued that “the only meaningful measure of scarcity in peacetime is the cost of the good in question.” If a resource is really running out, its price should rise.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Lam (2011), pp.&nbsp;1241–1243.</p>
+</div></div><p>Lam explains the economist’s reasoning: “it’s hard to develop a model in which a resource that is about to be depleted has a price that is declining, especially a resource owned by private individuals or governments.” Simon, whose 1981 book was titled <em>The Ultimate Resource</em> (meaning human ingenuity), was “the poster child for optimism.”</p>
+<p>In 1980, Simon offered to bet that the price of any mineral would fall. The ecologist Paul Ehrlich and colleagues took him up on it. They chose five metals and bought $200 worth of each (on paper). If the inflation-adjusted cost of the bundle was lower in 1990, Simon won.</p>
+<div class="cell">
+<div id="tbl-bet" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-bet-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;6.2: The Simon–Ehrlich bet: value of $200 of each metal bought in 1980, in 1990 (inflation-adjusted, 1980 dollars). Source: lecture; Lam (2011).
+</figcaption>
+<div aria-describedby="tbl-bet-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Metal</th>
+<th style="text-align: right;">1980</th>
+<th style="text-align: right;">1990</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Chromium</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">120</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Copper</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">163</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Nickel</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">193</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Tin</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">56</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Tungsten</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">86</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: right;">1000</td>
+<td style="text-align: right;">618</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>Every metal fell in real price. The bundle’s cost fell 38 percent, and Ehrlich wrote Simon a check. Meanwhile, world population grew by 28 percent, or 830 million people, over the decade of the bet. Lam adds an important caveat: the longer record is more complicated. These metals’ prices rose in the 1960s and 1970s, fell in the 1980s and 1990s, and rose sharply again in the 2000s. Simon would have lost if the bet had ended in 2007, and won if it had ended in 2009. “The big picture,” Lam concludes, “is that these important nonrenewable resources cost about the same today as they did 50 years ago, despite the addition of 4 billion people.”</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+In the lab
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In Lab 4 you replay the bet using a century of commodity prices compiled by the economic historian David Jacks. You ask how much the timing mattered, and whether different kinds of commodities behave differently.</p>
+</div>
+</div>
+</section>
+<section id="kinds-of-resources-and-substitution" class="level3" data-number="6.1.4">
+<h3 data-number="6.1.4" class="anchored" data-anchor-id="kinds-of-resources-and-substitution"><span class="header-section-number">6.1.4</span> Kinds of resources, and substitution</h3>
+<p>Resources come in two kinds. Some are <strong>exhaustible</strong>: copper, coal, “virgin forest.” Others are <strong>renewable</strong>: topsoil, fisheries, forests, water. For both, <strong>substitutability</strong> is an important issue.</p>
+<p>Consider whale oil, which was burned in lamps. What people want is the <em>service</em>, lighting. As overfishing made whale oil more expensive, people switched to petroleum and, later, light bulbs. The outcome was not so good for whales, but fine for the service of lighting for humans. The very long-run price of lighting in the UK fell steeply from the 1800s onward, as new sources replaced old ones (a chart from Fouquet and Pearson, in lecture).</p>
+<p>Food is a renewable resource. <a href="#fig-grains" class="quarto-xref">Figure&nbsp;<span>6.1</span></a> shows real prices of three grains since 1900, from the same data used in Lab 4.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the R code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>op <span class="ot">&lt;-</span> <span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="fl">4.5</span>, <span class="dv">1</span>, <span class="dv">1</span>))</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>grains <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Wheat"</span>, <span class="st">"Corn"</span>, <span class="st">"Rice"</span>); gcols <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"#b35806"</span>, <span class="st">"#e08a00"</span>, col_ag)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(commod<span class="sc">$</span>year, commod<span class="sc">$</span>Wheat, <span class="at">type =</span> <span class="st">"n"</span>, <span class="at">log =</span> <span class="st">"y"</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">300</span>),</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Year"</span>, <span class="at">ylab =</span> <span class="st">"Real price (1900 = 100, log scale)"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">100</span>, <span class="at">lty =</span> <span class="dv">3</span>, <span class="at">col =</span> col_grey)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>) <span class="fu">lines</span>(commod<span class="sc">$</span>year, commod[[grains[i]]], <span class="at">col =</span> gcols[i], <span class="at">lwd =</span> <span class="fl">1.8</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"bottomleft"</span>, grains, <span class="at">col =</span> gcols, <span class="at">lwd =</span> <span class="dv">2</span>, <span class="at">bty =</span> <span class="st">"n"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(op)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-grains" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grains-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="06-resources-commons_files/figure-html/fig-grains-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grains-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.1: Real (inflation-adjusted) prices of wheat, corn, and rice, 1900–2015, indexed to 1900 = 100, on a log scale. Source: David Jacks’s commodity price data, as used in Lab 4.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Real grain prices were volatile, with large spikes, including in the 1970s and around 2008. But the long-run trend is down, by roughly two-thirds or more since 1900, during a century in which world population roughly quadrupled. In the 1970s, as lecture notes, fears of scarcity were not soothed by the data, because grain prices had just spiked. Since then, prices have mostly fallen.</p>
+<p>What, then, has gotten more expensive over the last century? Any consumer goods? Any commodities? Anything at all? It’s a good question to think about.</p>
+</section>
+</section>
+<section id="lams-argument-how-the-world-survived" class="level2 page-columns page-full" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="lams-argument-how-the-world-survived"><span class="header-section-number">6.2</span> Lam’s argument: how the world survived</h2>
+<section id="an-argument-from-the-extreme-case" class="level3 page-columns page-full" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="an-argument-from-the-extreme-case"><span class="header-section-number">6.2.1</span> An argument from the extreme case</h3>
+<p>Lam’s argument works by looking at an extreme case. The last fifty years saw the fastest population growth in human history. If things got better for people even then, that tells us something. He looks at three kinds of indicators: human well-being (poverty), a renewable resource (food), and exhaustible resources (metals and other commodities, discussed above).</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Figures in this table and the next subsections are from Lam (2011), pp.&nbsp;1238–1245.</p>
+</div></div><div class="cell">
+<div id="tbl-lam" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-lam-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;6.3: Lam’s scorecard for 1961–2009 (poverty: 1981–2005, at $1.25 a day). Source: Lam (2011).
+</figcaption>
+<div aria-describedby="tbl-lam-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Indicator</th>
+<th style="text-align: left;">Change</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">World food production</td>
+<td style="text-align: left;">× 3.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">World population</td>
+<td style="text-align: left;">× 2.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">World food production per person</td>
+<td style="text-align: left;">+41%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">India: food per person</td>
+<td style="text-align: left;">+37%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sub-Saharan Africa: food production</td>
+<td style="text-align: left;">× 3.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sub-Saharan Africa: population</td>
+<td style="text-align: left;">× 3.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sub-Saharan Africa: food per person</td>
+<td style="text-align: left;">about −7%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Poverty rate, low- and middle-income countries</td>
+<td style="text-align: left;">52% → 25%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Poverty rate, China</td>
+<td style="text-align: left;">84% → 16%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Poverty rate, sub-Saharan Africa</td>
+<td style="text-align: left;">53% → 51%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p><strong>Food.</strong> “The battle to feed humanity is already lost,” Ehrlich wrote in 1968, predicting large-scale famines within a decade. Instead, world food production grew faster than population in every decade. India, the focus of Ehrlich’s direst predictions, saw per capita food production rise 37 percent between 1961 and 2009. Sub-Saharan Africa is the exception that proves the point: its food production grew <em>faster</em> than the world’s, but its population grew faster still.</p>
+<p><strong>Poverty.</strong> The World Bank’s estimates show the share of people in poverty in low- and middle-income countries falling by half between 1981 and 2005, and the absolute number falling from 1.9 billion to 1.4 billion. China drives much of the decline. In sub-Saharan Africa the poverty rate barely moved, and the number of poor people nearly doubled.</p>
+</section>
+<section id="how-did-we-survive" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="how-did-we-survive"><span class="header-section-number">6.2.2</span> How did we survive?</h3>
+<p>“Arguably the biggest mistake made by the pessimists of the 1960s,” Lam writes, “was in underestimating the impact of these adaptations.” He names six, three economic and three demographic.</p>
+<ol type="1">
+<li><strong>Market responses.</strong> When food prices rise, farmers grow more. After Vietnam gave farmers more incentives from 1981 on, its food production soared. By 2009 it was 5.5 times its 1960 level, and Vietnam went from a major rice importer to the world’s second-largest exporter.</li>
+<li><strong>Innovation.</strong> “What made it possible for the world to escape from … the Malthusian trap? The answer is simple: the creation of knowledge” (D. Gale Johnson). Norman Borlaug’s high-yield wheat raised Indian wheat yields 60 percent between 1967 and 1972. Lam explicitly connects such innovations to Boserup: many were “arguably examples of population-induced technological progress.”</li>
+<li><strong>Globalization.</strong> Trade grew dramatically, and some of the biggest winners were the very countries people worried about in the 1960s, such as India.</li>
+<li><strong>Urbanization.</strong> About 65 percent of the 4 billion people added since 1960 live in towns and cities.</li>
+<li><strong>Fertility decline.</strong> The world’s TFR fell from 5.0 in the early 1950s to 2.5 in 2010, which is 85 percent of the way to replacement. The falling infant mortality that caused the explosion also helped end it.</li>
+<li><strong>Investment in children.</strong> Schooling soared even as school-age populations grew 3 to 4 percent a year. In Thailand, the share of boys completing primary school rose from 18 percent (1950) to 95 percent (1990). Families traded “quantity” of children for “quality.”</li>
+</ol>
+</section>
+<section id="have-we-really-survived" class="level3" data-number="6.2.3">
+<h3 data-number="6.2.3" class="anchored" data-anchor-id="have-we-really-survived"><span class="header-section-number">6.2.3</span> Have we really survived?</h3>
+<p>Lam did not claim everything had gone well. He singled out environmental problems where markets fail: “In domains with ownership of resources and well-functioning markets, as with food and most other commodities, market pressures and price signals induce increased supply, behavioral change, and innovation extremely well. In domains without markets and resource ownership, problems are much more likely.” He also pointed to successes when policy tackled such problems: U.S. sulfur dioxide emissions fell by more than half after 1970, and the 1987 Montreal Protocol cut ozone-destroying CFCs.</p>
+<p>His closing image is worth remembering:</p>
+<blockquote class="blockquote">
+<p>“Imagine someone writing in 1961 that in 50 years we would be worrying about how fast per capita consumption is growing in India and China, rather than worrying about mass starvation in those countries.” (Lam 2011)</p>
+</blockquote>
+</section>
+<section id="the-reasonable-economist" class="level3" data-number="6.2.4">
+<h3 data-number="6.2.4" class="anchored" data-anchor-id="the-reasonable-economist"><span class="header-section-number">6.2.4</span> The “reasonable” economist</h3>
+<p>Lam’s position is what lecture calls the “reasonable” economist’s view: with functioning markets, increasing population will not cause environmental disaster, but rather adaptation and substitution. <strong>But</strong>, as MacKellar and Horlacher put it, “When markets are structurally flawed, or when poverty inhibits the operation of market forces, population size and rate of growth usually magnify the adverse impact on natural resources and the environment.”</p>
+<p>Sam Preston, reviewing Simon’s <em>The Ultimate Resource</em>, drew a careful conclusion from the historical record: “All we can conclude from a concurrence of accelerated economic growth and population growth is that population growth is not so overwhelmingly negative a factor for economic advance as to swamp the impact of all other influences.”</p>
+</section>
+</section>
+<section id="beckers-critique-and-lams-reply" class="level2 page-columns page-full" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="beckers-critique-and-lams-reply"><span class="header-section-number">6.3</span> Becker’s critique, and Lam’s reply</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> This section summarizes Becker (2013) and Lam (2013). Neither is on the slides beyond the reading list.</p>
+</div></div><section id="becker-what-about-the-rest-of-the-world" class="level3" data-number="6.3.1">
+<h3 data-number="6.3.1" class="anchored" data-anchor-id="becker-what-about-the-rest-of-the-world"><span class="header-section-number">6.3.1</span> Becker: what about the rest of the world?</h3>
+<p>Stan Becker, a demographer at Johns Hopkins, did not dispute Lam’s data. His complaint was about the word “world.” “95 % of the article focuses on Homo sapiens,” he wrote. “Although Homo sapiens has done well, as Lam described, the rest of ‘the world’ has suffered from the success of our species.” He pointed to two problems.</p>
+<p><strong>Unsustainable use of resources.</strong> The growth in food production required fertilizer made from natural gas and phosphorus, and massive irrigation. Global groundwater overdraft is about 160 billion cubic meters a year, about twice the annual flow of the Nile. Water tables in parts of India have been falling a meter or more a year. Rivers such as the Colorado barely reach the sea.</p>
+<p><strong>Damage to the planetary ecosystem.</strong> Forests are being cleared at about 13 million hectares a year, an area the size of New York State. Extinction rates are estimated at 100 to 1,000 times their natural background level. Among the large primates, every species except our own is endangered. “Unfortunately, when a species is gone, it is gone forever.”</p>
+<p>Becker proposed the framework of ecological economics: the economy is embedded in nature, development should meet “the needs of the present without compromising the ability of future generations to meet their own needs,” and ecosystems can respond to stress in sudden, nonlinear ways. He ended with a question: “Will birth cohorts of 2040–2050 look back and wish our generation had done more to preserve the world that was bequeathed to us? I do believe so.”</p>
+</section>
+<section id="lam-externalities-not-numbers" class="level3" data-number="6.3.2">
+<h3 data-number="6.3.2" class="anchored" data-anchor-id="lam-externalities-not-numbers"><span class="header-section-number">6.3.2</span> Lam: externalities, not numbers</h3>
+<p>Lam’s reply opens with a nickname an online commenter had given him: “Professor Happy Talk.” He concedes that his “world” was the human world, though he notes that a 1960 forecaster who predicted the main worry of 2013 would be the effect of human success on <em>other</em> species would have been considered wildly optimistic. He agrees with Becker about aquifers, which suffer from the same lack of property rights as air pollution and overfishing. He is much less worried about running out of oil or other resources with clear property rights and active markets. The urgent problem, he argues, is not running out but cutting carbon emissions, which markets alone will not do.</p>
+<p>Lam’s central point is about cause and cure:</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+In his own words
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“Stopping population growth is unlikely to end aquifer depletion or deforestation, as long as the fundamental externality issues have not been solved.” (Lam 2013)</p>
+</div>
+</div>
+<p>On deforestation, for example, he cites evidence that illegal logging in Indonesia depends on how political jurisdictions are organized. “The point is that it will take institutional change, not simply the end of population growth, to solve the problem.” Lam also pushes back on Becker’s definition of sustainable development, asking what practical guidance it really provides. Read his reply to see how he makes the case.</p>
+</section>
+</section>
+<section id="lams-conclusion-and-ours" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="lams-conclusion-and-ours"><span class="header-section-number">6.4</span> Lam’s conclusion, and ours?</h2>
+<p>Lam’s conclusion: things got better for people even during the era of peak population growth, so they should continue to get better as population growth slows.</p>
+<p>But following Preston, we might add two cautions. The last fifty years were also a time of enormous economic growth. Perhaps economic growth will slow down faster than population growth. And even Lam’s own timing illustrates how volatile the evidence can be. As he was writing in 2011, food prices were spiking, and he asked himself what he would bet. In lecture we look at the FAO food price index: had Lam bet on falling food prices in 2011, he would have “won.”</p>
+<p>Finally, there is <strong>risk aversion</strong>. There is a lot of uncertainty about major issues such as global warming and species extinction. If change is basically for the better, we don’t need to be afraid. If we’re not so certain, then perhaps we should be careful, even if we are not strict conservationists. Or, as lecture puts it: “How fast should we drive in the dark?”</p>
+</section>
+<section id="when-prices-fail" class="level2 page-columns page-full" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="when-prices-fail"><span class="header-section-number">6.5</span> When prices fail</h2>
+<p>Markets coordinate an enormous amount of behavior through prices. When something becomes scarce, its price rises, people use less of it, and producers make more. Earlier in this chapter, the resources that “survived the population bomb” were mostly ones bought and sold in markets. But some goods are badly priced, or not priced at all. Lecture lists four kinds of pricing problem:</p>
+<ul>
+<li><strong>The tragedy of the commons.</strong> Someone exploiting a shared resource gets all of the benefit but pays only a tiny fraction of the cost. Examples: ocean fisheries, tropical forests, and the library book returned to the easiest shelf rather than its proper place.</li>
+<li><strong>Public goods.</strong> Someone can use the good without taking it away from anyone else, as with clean air or knowledge. The problem is that individuals have little incentive to improve it or invest in it.</li>
+<li><strong>Externalities.</strong> Costs, such as pollution, that are not reflected in prices.</li>
+<li><strong>Poverty.</strong> People with no alternatives cannot respond to the price signals that tell them a resource is getting scarce.</li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Nordhaus 2018, pp.&nbsp;440–442.</p>
+</div></div><p>William Nordhaus, who shared the 2018 Nobel Prize in economics for his work on climate change, puts the problem in the language of public goods. A public good has two key features. The cost of extending it to one more person is zero (“nonrivalry”), and it is impossible to keep anyone from enjoying it (“nonexcludability”). Climate change is the mirror image, a “public bad.” Greenhouse gas emissions spread their harm around the whole planet, and no one can be shielded from it. What makes climate change “particularly thorny,” Nordhaus writes, is that the externality is <em>global</em>: “none of us acting individually can do anything to slow the changes.”</p>
+</section>
+<section id="optimal-harvesting" class="level2 page-columns page-full" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="optimal-harvesting"><span class="header-section-number">6.6</span> Optimal harvesting</h2>
+<p>Start with something simpler than the climate: a population of fish. Fish, timber, and fresh water are all <em>renewable</em> resources. A simple sustainability rule is that a renewable resource lasts forever as long as its “renewal rate” is at least as large as its “losses.”</p>
+<p>More formally, let</p>
+<ul>
+<li><span class="math inline">\(b\)</span> = the birth rate, the fraction of the resource newly available each year;</li>
+<li><span class="math inline">\(d\)</span> = the death rate, the fraction lost each year without harvesting;</li>
+<li><span class="math inline">\(h\)</span> = the harvest rate, the fraction harvested each year.</li>
+</ul>
+<p>The resource is sustainable if</p>
+<p><span class="math display">\[
+b \ge d + h.
+\]</span></p>
+<section id="a-malthusian-fish-population" class="level3 page-columns page-full" data-number="6.6.1">
+<h3 data-number="6.6.1" class="anchored" data-anchor-id="a-malthusian-fish-population"><span class="header-section-number">6.6.1</span> A Malthusian fish population</h3>
+<p>Fish face the same constraints as Malthus’s farmers. Suppose fish have birth and death rates that depend on how much food each fish gets, and food per fish falls as the number of fish rises. This is exactly the Malthusian diagram from <a href="03-malthus.html" class="quarto-xref"><span>Chapter 3</span></a>, with “food per fish” in place of wages. Without any fishing, the population settles at the equilibrium <span class="math inline">\(N^*\)</span>, where births equal deaths.</p>
+<p>Now we harvest a fraction <span class="math inline">\(h\)</span> of the fish every year, for a total harvest of <span class="math inline">\(H = h \times N\)</span>. To the fish, harvesting is just another source of death. The death curve shifts up by <span class="math inline">\(h\)</span>, from <span class="math inline">\(d(w)\)</span> to <span class="math inline">\(d(w) + h\)</span> (<a href="#fig-fish" class="quarto-xref">Figure&nbsp;<span>6.2</span></a>).</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> The figures in this section are drawn from an illustrative model I constructed (functional forms in the setup code). They reproduce the shapes in your slides, not your app’s numbers.</p>
+</div></div><div class="cell">
+<div class="cell-output-display">
+<div id="fig-fish" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fish-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="06-resources-commons_files/figure-html/fig-fish-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fish-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.2: A Malthusian fish population with and without harvesting. Harvesting at rate h raises the effective death rate from d(w) to d(w) + h (dashed). The new equilibrium has more food per fish and fewer fish: N*_h instead of N*.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The harvested population settles at a new, smaller equilibrium, <span class="math inline">\(N^*_h\)</span>. The surviving fish are better fed, so their birth rate rises and their natural death rate falls, just enough to make up for the fish we take. A population can be harvested forever this way.</p>
+<p>Can we fish a population to extinction? Yes: if the harvest is so large that <span class="math inline">\(d + h &gt; b\)</span> at every level of food per fish, deaths always exceed births, however few fish are left and however well fed they are.</p>
+</section>
+<section id="the-maximum-sustainable-harvest" class="level3" data-number="6.6.2">
+<h3 data-number="6.6.2" class="anchored" data-anchor-id="the-maximum-sustainable-harvest"><span class="header-section-number">6.6.2</span> The maximum sustainable harvest</h3>
+<p>How much should we harvest? Think about the total sustainable harvest, <span class="math inline">\(H = h \times N^*(h)\)</span>:</p>
+<ul>
+<li>If <span class="math inline">\(h = 0\)</span>, we catch nothing.</li>
+<li>If we fish too hard, the population goes extinct, and again we catch nothing.</li>
+<li>In between, the harvest is positive.</li>
+</ul>
+<p>So there must be a harvest rate that gives the largest sustainable catch, <span class="math inline">\(H_{\max}\)</span> (<a href="#fig-yield" class="quarto-xref">Figure&nbsp;<span>6.3</span></a>).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-yield" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-yield-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="06-resources-commons_files/figure-html/fig-yield-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-yield-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.3: Sustainable harvest yield, H = h × N*(h), against the harvest rate h, in the illustrative model. The yield is zero with no fishing and zero at the extinction rate; it peaks at h_optimal.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Harvesting faster than <span class="math inline">\(h_{\text{optimal}}\)</span> is <strong>overexploitation</strong>. It leads to a smaller sustainable harvest. But a higher harvest rate can <em>temporarily</em> raise the catch, because it takes time for the fish population to shrink to its new, lower equilibrium. That temporary gain is the trap. Each individual fisher has an incentive to fish harder, but if everyone does, the result is a smaller, more expensive harvest for all. This is the tragedy of the commons.</p>
+</section>
+<section id="try-it-the-harvest-app" class="level3 page-columns page-full" data-number="6.6.3">
+<h3 data-number="6.6.3" class="anchored" data-anchor-id="try-it-the-harvest-app"><span class="header-section-number">6.6.3</span> Try it: the harvest app</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> The app is the course’s own harvest app (<code>ShinyApps/harvest</code> in the 2025 course repo), exported with Shinylive so it runs in the browser, in its own tab. The three questions are mine; they leave the harvest rate at zero, because all of the Lab 5 graded questions on this app are about the harvest rate and the yield it produces.</p>
+</div></div><p>The app simulates a Malthusian fish population, like the one in <a href="#fig-fish" class="quarto-xref">Figure&nbsp;<span>6.2</span></a>. The top-left panel shows birth and death rates against food per fish (the “wage”), the bottom-left shows the number of fish against food per fish, and the right-hand panels trace the fish population and the harvest over time. The “harvest h rate” slider sets the share of fish caught each period. It opens in a new tab, so you can make it full screen and keep this page open alongside it. (The first load can take a few seconds while R starts up in your browser.)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="apps/harvest/index.html" target="_blank" rel="noopener"><img src="images/apps/harvest.png" class="img-fluid figure-img" style="width:85.0%" alt="Screenshot of the harvesting Shiny app: sliders for starting population, wage level, birth level, death level, harvest rate, and time on the left; four panels showing the demography and economy diagrams, population over time, and harvest over time."></a></p>
+<figcaption>The harvest app at its starting values. Click to open it in a new tab.</figcaption>
+</figure>
+</div>
+<p><a href="apps/harvest/index.html" class="btn btn-primary" target="_blank" rel="noopener">Open the harvest app in a new tab ↗</a></p>
+<p>Before you move each slider, write down what you expect to happen. Then check.</p>
+<ol type="1">
+<li><strong>Find the resting point.</strong> With no harvest, press play. Before you do: the population starts at 7.7. Will it grow, shrink, or stay where it is? Where does it settle?</li>
+<li><strong>A predator arrives.</strong> Raise “d’(w) level” from 0.10 to 0.12, leaving the harvest at zero, and press play. Predict the long-run fish population and food per fish. Why are the surviving fish better fed?</li>
+<li><strong>Harvest versus predator.</strong> Look at how the app treats the harvest rate: it adds to the death rate, just as a predator does. What is different about a harvest from the point of view of the people doing the fishing?</li>
+</ol>
+<p>Lab 5 asks you to use the app to find the harvest rate that gives the largest sustainable yield.</p>
+</section>
+</section>
+<section id="hardins-tragedy" class="level2 page-columns page-full" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="hardins-tragedy"><span class="header-section-number">6.7</span> Hardin’s tragedy</h2>
+<p>The phrase “the tragedy of the commons” comes from a 1968 article in <em>Science</em> by the biologist Garrett Hardin. Hardin’s real target was population growth, but his argument applies to any shared resource.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> The rest of this section draws on Hardin 1968, throughout. Your slides quote only “Mutual coercion, mutually agreed upon.”</p>
+</div></div><section id="problems-with-no-technical-solution" class="level3" data-number="6.7.1">
+<h3 data-number="6.7.1" class="anchored" data-anchor-id="problems-with-no-technical-solution"><span class="header-section-number">6.7.1</span> Problems with no technical solution</h3>
+<p>Hardin begins with a category: problems that have “no technical solution.” A technical solution, he says, is “one that requires a change only in the techniques of the natural sciences, demanding little or nothing in the way of change in human values or ideas of morality.” His example is the game of tick-tack-toe. You cannot guarantee a win against an opponent who understands the game. You can “win” only by changing the meaning of winning: “I can hit my opponent over the head; or I can drug him; or I can falsify the records.” Hardin argued that the population problem was of this kind. People hoped that “farming the seas or developing new strains of wheat will solve the problem,” and in his view they were wrong.</p>
+</section>
+<section id="the-herdsmans-calculation" class="level3" data-number="6.7.2">
+<h3 data-number="6.7.2" class="anchored" data-anchor-id="the-herdsmans-calculation"><span class="header-section-number">6.7.2</span> The herdsman’s calculation</h3>
+<p>Hardin borrowed the core idea from an 1833 pamphlet by William Forster Lloyd.</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+In his own words
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“Picture a pasture open to all. It is to be expected that each herdsman will try to keep as many cattle as possible on the commons. … As a rational being, each herdsman seeks to maximize his gain. Explicitly or implicitly, more or less consciously, he asks, ‘What is the utility to me of adding one more animal to my herd?’” (Hardin 1968)</p>
+</div>
+</div>
+<p>The answer has two parts. The herdsman gets all the proceeds from selling the extra animal, so the gain to him is nearly +1. The cost is the extra overgrazing, but “since, however, the effects of overgrazing are shared by all the herdsmen, the negative utility for any particular decision-making herdsman is only a fraction of −1.” So he adds another animal, “and another; and another…. But this is the conclusion reached by each and every rational herdsman sharing a commons. Therein is the tragedy.” Hardin’s summary: “Freedom in a commons brings ruin to all.”</p>
+<p>Why “tragedy”? Hardin uses the word in the philosopher Alfred North Whitehead’s sense: “The essence of dramatic tragedy is not unhappiness. It resides in the solemnity of the remorseless working of things.” No one in the story is wicked or stupid. Each herdsman does what is sensible for him, and that is exactly what makes the outcome inevitable.</p>
+<p>Hardin’s examples range widely:</p>
+<ul>
+<li><strong>Fisheries.</strong> Maritime nations, “professing to believe in ‘the inexhaustible resources of the oceans,’ … bring species after species of fish and whales closer to extinction.”</li>
+<li><strong>National parks.</strong> The parks are open to all, “there is only one Yosemite Valley,” and crowding erodes the very thing visitors come for. Hardin lists the options: sell the parks off as private property, or keep them public and ration entry by auction, by merit, by lottery, or by first-come, first-served queues. “They are all objectionable. But we must choose.”</li>
+<li><strong>Parking.</strong> One Christmas season in Leominster, Massachusetts, the city covered its parking meters with bags reading “Free parking courtesy of the mayor and city council.” Facing more demand for already scarce space, Hardin noted dryly, “the city fathers reinstituted the system of the commons.”</li>
+</ul>
+</section>
+<section id="pollution-the-commons-in-reverse" class="level3" data-number="6.7.3">
+<h3 data-number="6.7.3" class="anchored" data-anchor-id="pollution-the-commons-in-reverse"><span class="header-section-number">6.7.3</span> Pollution: the commons in reverse</h3>
+<p>Pollution is the same tragedy run backwards. Instead of taking something out of the commons, we put something in: sewage into rivers, fumes into the air. “The rational man finds that his share of the cost of the wastes he discharges into the commons is less than the cost of purifying his wastes before releasing them.” A pasture can be fenced and turned into private property. “But the air and waters surrounding us cannot readily be fenced.” So, Hardin argued, pollution must be controlled “by coercive laws or taxing devices that make it cheaper for the polluter to treat his pollutants than to discharge them untreated.”</p>
+<p>Hardin makes the link to population explicit. “It did not much matter how a lonely American frontiersman disposed of his waste,” because there were few people around. This leads to what he calls a principle of morality: “the morality of an act is a function of the state of the system at the time it is performed.” A plainsman of 150 years earlier could kill a bison, eat only the tongue, and leave the rest without being “in any important sense … wasteful.” With only a few thousand bison left, the same act would appall us.</p>
+</section>
+<section id="mutual-coercion-mutually-agreed-upon" class="level3 page-columns page-full" data-number="6.7.4">
+<h3 data-number="6.7.4" class="anchored" data-anchor-id="mutual-coercion-mutually-agreed-upon"><span class="header-section-number">6.7.4</span> Mutual coercion, mutually agreed upon</h3>
+<p>What can be done? Hardin rejects appeals to conscience, for two reasons. First, he argues, conscience is self-eliminating. If restraint is voluntary, those who ignore the appeal gain at the expense of those who heed it. Second, a voluntary appeal sends a contradictory message, which Hardin calls a “double bind.” Officially it says you are irresponsible if you don’t restrain yourself, while unofficially it says you are “a simpleton who can be shamed into standing aside while the rest of us exploit the commons.”</p>
+<p>His alternative is the phrase on the lecture slide: <strong>“mutual coercion, mutually agreed upon.”</strong> Taxes are his main example. “Who enjoys taxes? We all grumble about them. But we accept compulsory taxes because we recognize that voluntary taxes would favor the conscienceless.” So are parking meters. “We need not actually forbid a citizen to park as long as he wants to; we need merely make it increasingly expensive for him to do so.” Hardin insists on calling this coercion, not persuasion: “The only kind of coercion I recommend is mutual coercion, mutually agreed upon by the majority of the people affected.”</p>
+<p>Two more of his points are worth keeping. First, the alternative to a commons does not have to be perfect. Hardin admits that private property with inheritance is unjust, but “the alternative of the commons is too horrifying to contemplate. Injustice is preferable to total ruin.” Second, doing nothing is not neutral: “we can never do nothing. That which we have done for thousands of years is also action. It also produces evils.”</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> This paragraph’s assessment of Hardin is mine.</p>
+</div></div><p>Hardin’s own conclusion was that “freedom to breed is intolerable,” and he called for abandoning “the commons in breeding.” That conclusion, along with passages in which he speculates that the “biologically more fit” should inherit more property, has made the article controversial. You can accept his analysis of the commons without accepting his prescriptions for population. Indeed, his logic applies most clearly where the costs of an action really are shared by everyone, such as emissions into the atmosphere.</p>
+</section>
+<section id="a-classroom-fishing-game" class="level3" data-number="6.7.5">
+<h3 data-number="6.7.5" class="anchored" data-anchor-id="a-classroom-fishing-game"><span class="header-section-number">6.7.5</span> A classroom fishing game</h3>
+<p>In lecture we play a “massively multiplayer offline game” based on the fish model. Each of you chooses a harvest rate <span class="math inline">\(h_i\)</span>: abstemious (0 percent), moderate (5 percent), or rapacious (10 percent). The class’s average harvest rate, <span class="math inline">\(h_{\text{ave}}\)</span>, determines the sustainable number of fish, <span class="math inline">\(N^*(h_{\text{ave}})\)</span>, from a table like <a href="#tbl-fish" class="quarto-xref">Table&nbsp;<span>6.4</span></a>. Your own catch is your own harvest rate times that number:</p>
+<p><span class="math display">\[
+H_i = h_i \times N^*(h_{\text{ave}}).
+\]</span></p>
+<div class="cell">
+<div id="tbl-fish" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-fish-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;6.4: Sustainable fish population at each average harvest rate (from the lecture slides).
+</figcaption>
+<div aria-describedby="tbl-fish-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Average harvest rate (%)</th>
+<th style="text-align: right;">Sustainable fish population</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2000</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1700</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1400</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1100</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">900</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">600</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">400</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">300</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>Notice the structure. The fish population depends on <em>everyone’s</em> choices, but your harvest depends <em>mostly</em> on your own choice. (Why “mostly”?) We play several rounds and then compare with a round in which an “enlightened ruler” regulates fishing so that the average is about 4 percent. The lesson, which the second lecture spells out, is that the “invisible hand,” everyone acting in their own interest, fails in a commons. In our example, even the greediest fisher is better off when no one is allowed to be selfish.</p>
+<p>Why not solve the problem the way we solved the problem of the pasture, by privatization? Ask yourself why that is not practical for fish in the ocean.</p>
+</section>
+</section>
+<section id="key-ideas" class="level2" data-number="6.8">
+<h2 data-number="6.8" class="anchored" data-anchor-id="key-ideas"><span class="header-section-number">6.8</span> Key ideas</h2>
+<ul>
+<li>World population doubled from 3 to 6 billion in just 39 years, but growth peaked in the 1960s and will almost surely never double that fast again.</li>
+<li>Lam argues the world <strong>survived the population bomb</strong>, with more food per person, falling poverty, and stable resource prices, thanks to market responses, innovation, globalization, urbanization, fertility decline, and investment in children.</li>
+<li>Becker counters that the environment and other species paid a heavy price. Lam replies that the root problem is <strong>externalities and missing property rights</strong>, not population numbers as such.</li>
+<li>Some goods are badly priced: <strong>commons</strong>, <strong>public goods</strong>, <strong>externalities</strong>, and resources used by people too poor to respond to prices.</li>
+<li>A renewable resource is sustainable if renewal is at least as large as losses, <span class="math inline">\(b \ge d + h\)</span>. In a Malthusian fish population, the sustainable harvest is zero with no fishing and zero at extinction, so there is an <strong>optimal harvest rate</strong> in between.</li>
+<li>In Hardin’s <strong>tragedy of the commons</strong>, each user gets nearly all of the benefit of using more but pays only a fraction of the cost, so everyone overuses. Hardin’s remedy is “mutual coercion, mutually agreed upon,” such as taxes and meters.</li>
+</ul>
+</section>
+<section id="check-your-understanding" class="level2 page-columns page-full" data-number="6.9">
+<h2 data-number="6.9" class="anchored" data-anchor-id="check-your-understanding"><span class="header-section-number">6.9</span> Check your understanding</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> Questions 1–3 are new and avoid the Lab 4 graded questions. Question 4 comes from your slide 11-16; questions 4–6 avoid the Lab 5 graded questions.</p>
+</div></div><ol type="1">
+<li><p><strong>Doubling times.</strong> Lam reports a 2011 world growth rate of 1.1 percent and a projected 2050 rate of 0.38 percent. Use the rule of 70 to compute the doubling time implied by each.</p></li>
+<li><p><strong>Arguing from the extreme case.</strong> Explain the logic of Lam’s argument that the period of fastest population growth is the right test of whether population growth dooms us. What does Preston’s conclusion add?</p></li>
+<li><p><strong>Who owns it?</strong> For each problem Becker raises (aquifer depletion, oil depletion, deforestation, species extinction), say whether you think clear property rights and markets exist, and what that implies, in Lam’s view, for whether slower population growth would solve it.</p></li>
+<li><p><strong>The optimal harvest rate.</strong> Using <a href="#tbl-fish" class="quarto-xref">Table&nbsp;<span>6.4</span></a>, compute the total sustainable harvest, <span class="math inline">\(H = h \times N^*(h)\)</span>, for each harvest rate. Which rate gives the largest sustainable harvest? Compare it with the rate the “enlightened ruler” chose in class.</p></li>
+<li><p><strong>Why not privatize?</strong> Hardin says the tragedy of the commons “as a food basket” is averted by private property. Explain why this solution works for a pasture but is hard to apply to an ocean fishery, and why it is harder still for the atmosphere.</p></li>
+<li><p><strong>Rationing a commons.</strong> Hardin lists five ways to ration entry to a national park: private sale, auction, merit, lottery, and first come, first served. Pick two, and explain who gains and who loses under each.</p></li>
+</ol>
+</section>
+<section id="further-reading" class="level2" data-number="6.10">
+<h2 data-number="6.10" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">6.10</span> Further reading</h2>
+<ul>
+<li>Lam, David. 2011. “How the World Survived the Population Bomb: Lessons from 50 Years of Extraordinary Demographic History.” <em>Demography</em> 48(4): 1231–1262. <em>The “reasonable” economic discussion of population growth and resources. As you read: Which of Lam’s six factors are responses to population growth, and which would have happened anyway?</em></li>
+<li>Becker, Stan. 2013. “Has the ‘World’ Really Survived the Population Bomb?” <em>Demography</em> 50(6): 2173–2181. <em>A brief criticism.</em></li>
+<li>Lam, David. 2013. “Reply to Stan Becker.” <em>Demography</em> 50(6): 2183–2186. <em>A briefer reply. As you read: Where do Lam and Becker actually agree?</em></li>
+<li>Hardin, Garrett. 1968. “The Tragedy of the Commons.” <em>Science</em> 162(3859): 1243–1248. <em>A classic article arguing that coercion is justified when markets fail. As you read: What does Hardin mean by a problem with “no technical solution”? Why does he think appeals to conscience will fail? Which of his examples is closest to climate change?</em></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./05-boserup.html" class="pagination-link" aria-label="Boserup: Population Pushes Technology">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Boserup: Population Pushes Technology</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./07-climate.html" class="pagination-link" aria-label="Population and Climate Change">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Population and Climate Change</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

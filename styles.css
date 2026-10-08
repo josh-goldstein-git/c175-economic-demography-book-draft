@@ -1,0 +1,12 @@
+/* Provenance tags: material added beyond the course slides and lab */
+.tag-reading, .tag-new {
+  display: inline-block; font-size: 0.72em; font-weight: 600;
+  padding: 1px 6px; border-radius: 3px; margin-bottom: 2px;
+}
+.tag-reading { background: #dbe9f7; color: #1f4e79; }
+.tag-new     { background: #fde0c5; color: #8a3b00; }
+.column-margin { font-size: 0.82em; line-height: 1.35; }
+
+/* Claims flagged for fact-checking: [text]{.tocheck note="..."} */
+.tocheck { background: #fff3b0; border-bottom: 1px dashed #c9a400; }
+.tocheck[data-note]::after { content: " [check: " attr(data-note) "]"; font-size: 0.75em; color: #8a6d00; }

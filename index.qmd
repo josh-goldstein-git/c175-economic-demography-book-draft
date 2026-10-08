@@ -1,0 +1,23 @@
+# Preface {.unnumbered}
+
+*Draft placeholder.*
+
+This book accompanies Econ/Demog C175. Each chapter takes up one topic from
+the course's lectures; the parts group related topics, and the optional chapters
+at the end cover topics taught in earlier years. It explains the economic model behind that week's lectures in plain
+language, reads the classic texts alongside you, and shows how the model can be
+confronted with data. The labs are where you do that confrontation yourself. The
+book is meant to prepare you for them, not to do them for you.
+
+How to use each chapter:
+
+- **Before lecture**, read the opening sections and the "In their own words"
+  boxes, which quote the assigned classic reading.
+- **After lecture**, work through the model sections and the "Check your
+  understanding" questions.
+- **Before the lab**, read the "Data in action" section. It uses the same data
+  you will use, but leaves the lab's questions for you.
+
+The R code that makes each figure is folded away under "Show the R code." You
+don't need it to follow the text, but it is there if you're curious how a figure
+was made.

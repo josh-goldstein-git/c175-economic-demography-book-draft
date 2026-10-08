@@ -1,0 +1,61 @@
+project:
+  type: book
+  resources:
+    - apps/
+
+book:
+  title: "Economic Demography"
+  subtitle: "Population, Economy, and Data — a companion to Econ/Demog C175"
+  author: "Joshua R. Goldstein"
+  chapters:
+    - index.qmd
+    - part: "Population and the economy: big theories"
+      chapters:
+        - 01-history.qmd
+        - 02-optimum.qmd
+        - 03-malthus.qmd
+        - 04-solow.qmd
+        - 05-boserup.qmd
+    - part: "Resources and the environment"
+      chapters:
+        - 06-resources-commons.qmd
+        - 07-climate.qmd
+    - part: "Age structure"
+      chapters:
+        - 08-social-security.qmd
+        - 09-age-structure.qmd
+    - part: "Fertility and the family"
+      chapters:
+        - 10-fertility.qmd
+        - 11-china.qmd
+        - 12-abortion-pill.qmd
+        - 13-marriage.qmd
+    - part: "Migration"
+      chapters:
+        - 14-immigration.qmd
+        - 15-migration-gains-enforcement.qmd
+    - part: "Optional chapters"
+      chapters:
+        - 16-longevity.qmd
+        - 17-projection-peak.qmd
+        - 18-why-move.qmd
+        - 19-recession-fertility.qmd
+
+filters:
+  - tools/tocheck.lua
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    reference-location: margin
+    toc: true
+    number-sections: true
+    fig-width: 7
+    fig-height: 4.5
+    code-fold: true
+    code-summary: "Show the R code"
+
+execute:
+  warning: false
+  message: false

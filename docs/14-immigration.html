@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Economic Demography - 14&nbsp; Immigration: Who Gains, Who Loses?</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./15-migration-gains-enforcement.html" rel="next">
+<link href="./13-marriage.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./14-immigration.html">Migration</a></li><li class="breadcrumb-item"><a href="./14-immigration.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Immigration: Who Gains, Who Loses?</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Economic Demography</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Population and the economy: big theories</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-history.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Ten Thousand Years of Population</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-optimum.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Optimum Population</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-malthus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The World According to Malthus</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-solow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Capital to the Rescue? The Solow Model and Inequality</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-boserup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Boserup: Population Pushes Technology</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Resources and the environment</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-resources-commons.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Are We Doomed? Resources, Prices, and the Commons</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-climate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Population and Climate Change</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Age structure</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-social-security.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Aging and Social Security: A Ponzi Scheme?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-age-structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Are Too Few Children a Problem? Age Structure and Optimal Fertility</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Fertility and the family</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-fertility.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">How Do Economists Think We Decide How Many Children to Have?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-china.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Fertility Policy I: China’s One-Child Policy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12-abortion-pill.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Fertility Policy II: Abortion and the Pill in the United States</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13-marriage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Marriage: Love, and What Else?</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+ <span class="menu-text">Migration</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./14-immigration.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Immigration: Who Gains, Who Loses?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./15-migration-gains-enforcement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Migrants’ Gains and Immigration Enforcement</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
+ <span class="menu-text">Optional chapters</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./16-longevity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Can Money Buy Longevity? Health, Mortality, and the Grossman Model</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./17-projection-peak.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Population Projection, Age Pyramids, and “Our Shrinking Future?”</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./18-why-move.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Why People Move: Cities, Borders, and Development</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./19-recession-fertility.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Fertility and the Economy: The Great Recession and Beyond</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#is-immigration-good-or-bad-for-the-united-states" id="toc-is-immigration-good-or-bad-for-the-united-states" class="nav-link active" data-scroll-target="#is-immigration-good-or-bad-for-the-united-states"><span class="header-section-number">14.1</span> Is immigration good or bad for the United States?</a></li>
+  <li><a href="#a-simple-model-of-the-labor-market" id="toc-a-simple-model-of-the-labor-market" class="nav-link" data-scroll-target="#a-simple-model-of-the-labor-market"><span class="header-section-number">14.2</span> A simple model of the labor market</a>
+  <ul class="collapse">
+  <li><a href="#one-good-one-kind-of-worker" id="toc-one-good-one-kind-of-worker" class="nav-link" data-scroll-target="#one-good-one-kind-of-worker"><span class="header-section-number">14.2.1</span> One good, one kind of worker</a></li>
+  <li><a href="#substitutes-and-complements" id="toc-substitutes-and-complements" class="nav-link" data-scroll-target="#substitutes-and-complements"><span class="header-section-number">14.2.2</span> Substitutes and complements</a></li>
+  <li><a href="#how-big-is-the-net-gain" id="toc-how-big-is-the-net-gain" class="nav-link" data-scroll-target="#how-big-is-the-net-gain"><span class="header-section-number">14.2.3</span> How big is the net gain?</a></li>
+  <li><a href="#what-the-simple-model-says" id="toc-what-the-simple-model-says" class="nav-link" data-scroll-target="#what-the-simple-model-says"><span class="header-section-number">14.2.4</span> What the simple model says</a></li>
+  </ul></li>
+  <li><a href="#the-empirical-evidence" id="toc-the-empirical-evidence" class="nav-link" data-scroll-target="#the-empirical-evidence"><span class="header-section-number">14.3</span> The empirical evidence</a>
+  <ul class="collapse">
+  <li><a href="#how-to-study-the-question" id="toc-how-to-study-the-question" class="nav-link" data-scroll-target="#how-to-study-the-question"><span class="header-section-number">14.3.1</span> How to study the question</a></li>
+  <li><a href="#the-mariel-boatlift" id="toc-the-mariel-boatlift" class="nav-link" data-scroll-target="#the-mariel-boatlift"><span class="header-section-number">14.3.2</span> The Mariel boatlift</a></li>
+  <li><a href="#albertville-alabama" id="toc-albertville-alabama" class="nav-link" data-scroll-target="#albertville-alabama"><span class="header-section-number">14.3.3</span> Albertville, Alabama</a></li>
+  </ul></li>
+  <li><a href="#why-is-there-so-little-effect" id="toc-why-is-there-so-little-effect" class="nav-link" data-scroll-target="#why-is-there-so-little-effect"><span class="header-section-number">14.4</span> Why is there so little effect?</a>
+  <ul class="collapse">
+  <li><a href="#advantages-and-problems-of-the-simple-model" id="toc-advantages-and-problems-of-the-simple-model" class="nav-link" data-scroll-target="#advantages-and-problems-of-the-simple-model"><span class="header-section-number">14.4.1</span> Advantages and problems of the simple model</a></li>
+  </ul></li>
+  <li><a href="#does-immigration-raise-or-lower-taxes" id="toc-does-immigration-raise-or-lower-taxes" class="nav-link" data-scroll-target="#does-immigration-raise-or-lower-taxes"><span class="header-section-number">14.5</span> Does immigration raise or lower taxes?</a>
+  <ul class="collapse">
+  <li><a href="#snapshots-versus-lifetimes" id="toc-snapshots-versus-lifetimes" class="nav-link" data-scroll-target="#snapshots-versus-lifetimes"><span class="header-section-number">14.5.1</span> Snapshots versus lifetimes</a></li>
+  <li><a href="#albertvilles-accounts" id="toc-albertvilles-accounts" class="nav-link" data-scroll-target="#albertvilles-accounts"><span class="header-section-number">14.5.2</span> Albertville’s accounts</a></li>
+  </ul></li>
+  <li><a href="#key-ideas" id="toc-key-ideas" class="nav-link" data-scroll-target="#key-ideas"><span class="header-section-number">14.6</span> Key ideas</a></li>
+  <li><a href="#check-your-understanding" id="toc-check-your-understanding" class="nav-link" data-scroll-target="#check-your-understanding"><span class="header-section-number">14.7</span> Check your understanding</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">14.8</span> Further reading</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./14-immigration.html">Migration</a></li><li class="breadcrumb-item"><a href="./14-immigration.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Immigration: Who Gains, Who Loses?</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-immigration" class="quarto-section-identifier"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Immigration: Who Gains, Who Loses?</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Draft: provenance notes (for review)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Margin tags mark material that is <strong>not in the course slides or lab</strong>. <span class="tag-reading">Added · from readings</span> comes from the assigned readings (NRC 1997 and 2016, Card, Peri and Wiltshire, <em>This American Life</em>). <span class="tag-new">Added · new</span> is from outside the course materials (my framing, general knowledge, or my own analysis) and needs the closest check. Untagged material follows the 2025 slides (“Labor Market Consequences of Immigration,” Week 13) and Lab 10 (Mariel).</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>In this chapter.</strong> Is immigration good or bad for the United States, and for whom? We build a simple supply-and-demand model of immigration, confront it with evidence from two natural experiments (Miami’s Mariel boatlift and the poultry town of Albertville, Alabama), and look at the fiscal accounts.</p>
+<p><strong>Readings this chapter draws on.</strong> National Research Council (1997), <em>The New Americans</em>, pp.&nbsp;135–142, 228–239, 297–305, 309–318, 326–337, and 344–354; National Academies (2016), “Report Highlights: The Economic and Fiscal Consequences of Immigration”; <em>This American Life</em> (2017), “Our Town,” Parts One and Two; Peri and Wiltshire (2017); Card (1990), linked in the lab.</p>
+</div>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> Bridge text written for the chapter split.</p>
+</div></div><p>This chapter looks at immigration from the point of view of the receiving country: its workers, its employers, and its taxpayers. <a href="15-migration-gains-enforcement.html" class="quarto-xref"><span>Chapter 15</span></a> widens the lens to the biggest winners of all, the migrants themselves, and then looks at what happens when immigrants are removed rather than added.</p>
+<section id="is-immigration-good-or-bad-for-the-united-states" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="is-immigration-good-or-bad-for-the-united-states"><span class="header-section-number">14.1</span> Is immigration good or bad for the United States?</h2>
+<p>The question sounds simple, but as in every chapter of this book, the first step is to ask <em>good for whom?</em> Immigration involves trade-offs between many groups:</p>
+<ul>
+<li>immigrants versus natives;</li>
+<li>skilled versus unskilled natives;</li>
+<li>consumers of “non-tradeable” local goods (haircuts, retail) versus “tradeable” goods (agriculture, manufacturing);</li>
+<li>consumers of market goods versus users of congestible public goods;</li>
+<li>increased tax revenue versus increased public expenses;</li>
+<li>federal finances versus local finances;</li>
+<li>the national labor market versus local labor markets.</li>
+</ul>
+<p>This chapter takes these in turn. We start with the labor market, the issue that dominates political debate: do immigrants lower the wages of the native-born?</p>
+</section>
+<section id="a-simple-model-of-the-labor-market" class="level2 page-columns page-full" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="a-simple-model-of-the-labor-market"><span class="header-section-number">14.2</span> A simple model of the labor market</h2>
+<section id="one-good-one-kind-of-worker" class="level3 page-columns page-full" data-number="14.2.1">
+<h3 data-number="14.2.1" class="anchored" data-anchor-id="one-good-one-kind-of-worker"><span class="header-section-number">14.2.1</span> One good, one kind of worker</h3>
+<p>Start with the simplest possible model:</p>
+<ul>
+<li>the economy produces one good;</li>
+<li>there is one kind of worker;</li>
+<li>the demand curve for labor slopes downward, because it reflects the marginal product of labor;</li>
+<li>the market is competitive, so all workers are paid the marginal product of the last worker hired.</li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> The quotes in this section are from NRC 1997, pp.&nbsp;136–141, the “first principles” chapter.</p>
+</div></div><p>The National Research Council’s 1997 report <em>The New Americans</em>, written by a panel of economists and demographers for Congress, starts in exactly this way. It begins with a point that is easy to forget: “Whether native-born Americans gain or lose, immigration most directly affects the welfare of immigrants themselves. Immigrants come with the expectation that they will gain from immigration. If they had not felt that they would gain, they were free not to immigrate.” We return to the migrants’ own gains at the end of the chapter.</p>
+<p><a href="#fig-labor-model" class="quarto-xref">Figure&nbsp;<span>14.1</span></a> shows the model. The demand curve <span class="math inline">\(D_L\)</span> gives the wage firms will pay for each number of workers. Native workers supply a fixed amount of labor (the vertical line <span class="math inline">\(S_L\)</span>), so the wage is <span class="math inline">\(w\)</span>. The total wage bill is the rectangle under <span class="math inline">\(w\)</span>; everything above it and below the demand curve goes to the owners of capital (or, in the NRC’s version, to skilled workers who complement the unskilled).</p>
+<p>Now immigrants arrive, shifting labor supply to <span class="math inline">\(S'_L\)</span>. The wage falls to <span class="math inline">\(w'\)</span>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-labor-model" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-labor-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="14-immigration_files/figure-html/fig-labor-model-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-labor-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14.1: The effect of immigration in a simple labor market. Immigration shifts supply from S_L to S’_L and lowers the wage from w to w’. Native workers lose the orange rectangle, which is redistributed to owners of capital. Immigrants earn the light green rectangle. The dark green triangle is the net gain to natives as a whole.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Three things happen:</p>
+<ol type="1">
+<li><strong>Immigrants earn the new wage</strong> <span class="math inline">\(w'\)</span> on their labor, the light green rectangle.</li>
+<li><strong>Income is redistributed among natives.</strong> Native workers now earn <span class="math inline">\(w'\)</span> instead of <span class="math inline">\(w\)</span>, a loss equal to the orange rectangle. That same rectangle is a gain to the owners of capital, who now pay less for labor.</li>
+<li><strong>Natives as a whole come out ahead.</strong> The new workers produce more than they are paid. The extra output, the small dark green triangle, goes to natives.</li>
+</ol>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+In their own words
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“There is a direct correspondence between the fact that some domestic workers suffer wage reductions and the fact that we gain as a nation. This wage reduction is, in fact, the reason that the nation as a whole gains from immigration. This simple point is often lost in the voluminous empirical literature, which searches long and hard to find those native-born Americans who experience wage reductions that are then labeled the ‘cost’ of immigration.” (NRC 1997, pp.&nbsp;140–141)</p>
+</div>
+</div>
+<p>The NRC draws out a striking implication: “It is only because immigrants and native workers differ from one another that immigration yields a net national gain.” If immigrants were exactly like natives, with the same skills and bringing along the same capital per worker, everything would simply scale up and no one already here would gain or lose.</p>
+</section>
+<section id="substitutes-and-complements" class="level3" data-number="14.2.2">
+<h3 data-number="14.2.2" class="anchored" data-anchor-id="substitutes-and-complements"><span class="header-section-number">14.2.2</span> Substitutes and complements</h3>
+<p>Workers who do the same jobs as immigrants are <strong>substitutes</strong> for them. The NRC’s homely example: red apples and green apples are near-perfect substitutes, so more red apples lower the price of green apples too. Workers whose jobs are made more productive by immigrants are <strong>complements</strong>. Think of supervisors and production workers: “for every 50 production workers, we need one supervisor. If we increase the number of production workers, we will need more supervisors and their wages will rise.” The rule: more immigrants lower the incomes of factors that compete with them and raise the incomes of factors that complement them.</p>
+</section>
+<section id="how-big-is-the-net-gain" class="level3 page-columns page-full" data-number="14.2.3">
+<h3 data-number="14.2.3" class="anchored" data-anchor-id="how-big-is-the-net-gain"><span class="header-section-number">14.2.3</span> How big is the net gain?</h3>
+<p>Suppose there are 10 natives for every migrant and the wage falls by <span class="math inline">\(\Delta w = w
+- w'\)</span>. Then the redistribution from native workers to capital is <span class="math inline">\(10 \times \Delta w\)</span> per migrant, while the net gain is a triangle of base 1 and height <span class="math inline">\(\Delta w\)</span>, or <span class="math inline">\(\frac{1}{2}\Delta w\)</span> per migrant. The ratio of net gain to redistribution is <span class="math inline">\(\frac{1}{2}/10 = 5\)</span> percent.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> NRC 1997, p.&nbsp;140.</p>
+</div></div><p>The NRC makes the same point in words: the redistribution rectangle is proportional to the number of domestic workers, while the gain triangle is proportional to the (much smaller) number of immigrants, and is a triangle to boot. “The potential size of this redistribution among the native-born compared with the size of the net national gain is one reason why our national political debate stirs such strong emotions.”</p>
+</section>
+<section id="what-the-simple-model-says" class="level3 page-columns page-full" data-number="14.2.4">
+<h3 data-number="14.2.4" class="anchored" data-anchor-id="what-the-simple-model-says"><span class="header-section-number">14.2.4</span> What the simple model says</h3>
+<p>If the simple model is right, immigration:</p>
+<ul>
+<li>creates a net gain for the native-born;</li>
+<li>but reduces the wages of workers who compete with immigrants;</li>
+<li>and sends the gain to capitalists, to complementary (skilled) workers, and to consumers, through lower prices produced by cheaper labor.</li>
+</ul>
+<p>It is good to be a complement and, at least from a wage perspective, not good to be a substitute. The size of the effect depends on how steep the demand curve for unskilled labor is and on how much immigration there is.</p>
+<p>A political-economy comment: if the simple model is right, the net gains are small compared with workers’ losses, and also small compared with capitalists’ gains. That may explain why the “net gains” story does not convince many people.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> NRC 1997, pp.&nbsp;231–235.</p>
+</div></div><p>The consumer gains are real but spread thin. The NRC traced the immigrant labor embedded in what American households buy. Immigrant labor accounted for about 4.9 percent of household consumption spending, a share that was “remarkably constant over most of the household income distribution.” It was highest in household services (18.2 percent of costs), services to dwellings (13.5 percent), and laundry and garment services (10.9 percent). Households that hire nannies, gardeners, and housecleaners benefit most.</p>
+</section>
+</section>
+<section id="the-empirical-evidence" class="level2 page-columns page-full" data-number="14.3">
+<h2 data-number="14.3" class="anchored" data-anchor-id="the-empirical-evidence"><span class="header-section-number">14.3</span> The empirical evidence</h2>
+<section id="how-to-study-the-question" class="level3 page-columns page-full" data-number="14.3.1">
+<h3 data-number="14.3.1" class="anchored" data-anchor-id="how-to-study-the-question"><span class="header-section-number">14.3.1</span> How to study the question</h3>
+<p>The model predicts that wages of competing workers fall. Do they? Studying this is harder than it looks:</p>
+<ul>
+<li><strong>Cross-sectional studies of small areas</strong> compare places with more and fewer immigrants. This is not a good design, because immigrants choose where to go, and they go to places with strong labor markets.</li>
+<li><strong>Natural experiments</strong> look for inflows of immigrants that happened for reasons unrelated to local labor markets: the Mariel boatlift and Miami wages, the influx of meat processors into Alabama, or enforcement actions and deportations.</li>
+</ul>
+<p>The broad finding is that the effects are <strong>small</strong>. The effect on natives is near zero for all kinds of labor. There is some evidence that the latest immigrants are hurt by the newest arrivals: Grossman finds that a 10 percent increase in immigrants reduces the wages of earlier immigrants by 2 percent, and Card finds the same increase reduces earlier immigrants’ wages by 4 percent in Miami.</p>
+<div class="cell">
+<div id="tbl-elasticities" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-elasticities-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;14.1: Estimated elasticities of native wages with respect to immigration (from lecture). An elasticity of −0.06 means that a 10 percent increase in immigrants reduces wages by only 0.1 × 0.06 = 0.6 percent.
+</figcaption>
+<div aria-describedby="tbl-elasticities-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Study</th>
+<th style="text-align: left;">Impact on</th>
+<th style="text-align: left;">Elasticity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Altonji and Card</td>
+<td style="text-align: left;">Less-skilled natives</td>
+<td style="text-align: left;">+0.01</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Bean et al.</td>
+<td style="text-align: left;">Black men</td>
+<td style="text-align: left;">≈ 0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Borjas</td>
+<td style="text-align: left;">White native men</td>
+<td style="text-align: left;">−0.01</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Black native men</td>
+<td style="text-align: left;">+0.02</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Grossman</td>
+<td style="text-align: left;">All natives</td>
+<td style="text-align: left;">−0.02</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">LaLonde and Topel</td>
+<td style="text-align: left;">Young black natives</td>
+<td style="text-align: left;">−0.06</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> NRC 1997, pp.&nbsp;228–236, and NRC 2016, highlights.</p>
+</div></div><p>The NRC’s 1997 panel reached the same conclusion: “immigration has only a small adverse impact on the wage and employment opportunities of competing native-born groups.” Over the two decades before the report, it estimated, immigration lowered the wages of high school dropouts by about 5 percent. That group, the panel noted, was shrinking: by 1995, high school dropouts were less than 10 percent of the American workforce. And “ironically, the one group that appears to suffer substantially from new waves of immigrants are immigrants from earlier waves.”</p>
+<p>The 2016 update by the National Academies came to similar conclusions: “When measured over a period of 10 years or more, the impact of immigration on the wages of native-born workers overall is very small. To the extent that negative impacts occur, they are most likely to be found for prior immigrants or native-born workers who have not completed high school.” It also found “little evidence that immigration significantly affects the overall employment levels of native-born workers.”</p>
+<p>Not every economist agrees on the magnitudes. As the readings note, George Borjas has argued that studies comparing cities miss effects that spread across the whole country, and that national-level analyses find larger wage losses for workers who compete directly with immigrants. Others, such as Ottaviano and Peri, find small or even positive effects using similar national data. The debate is mainly about how close substitutes immigrants and natives really are.</p>
+</section>
+<section id="the-mariel-boatlift" class="level3 page-columns page-full" data-number="14.3.2">
+<h3 data-number="14.3.2" class="anchored" data-anchor-id="the-mariel-boatlift"><span class="header-section-number">14.3.2</span> The Mariel boatlift</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Card 1990, pp.&nbsp;245–257. The numbers in this subsection are from the paper.</p>
+</div></div><p>The most famous natural experiment in the economics of migration was studied by Berkeley’s own David Card. On April 20, 1980, Fidel Castro declared that Cubans who wished to leave for the United States were free to go from the port of Mariel. From May to September 1980, about 125,000 Cubans arrived in Miami on a flotilla of privately chartered boats. About half settled permanently in Miami, raising Miami’s labor force by 7 percent and its number of Cuban workers by 20 percent. Most of the new arrivals had little education: 56.5 percent had not attended high school.</p>
+<p>The timing of this influx had nothing to do with Miami’s labor market. That is what made it a natural experiment. If immigration lowers the wages of competing workers, it should have shown up here, especially for less-skilled workers and for earlier Cuban immigrants.</p>
+<p>Card compared Miami with four cities chosen because their economies had grown much like Miami’s but which received few Mariel immigrants: Atlanta, Houston, Los Angeles, and Tampa–St.&nbsp;Petersburg. A comparison group is essential. Miami’s unemployment rate did rise, from 5.0 percent in April 1980 to 7.1 percent in July. But state and national unemployment rose at the same time, and a deep national recession followed in 1981–82.</p>
+<p><a href="#fig-mariel" class="quarto-xref">Figure&nbsp;<span>14.2</span></a> replicates Card’s comparison using the Current Population Survey data from the lab.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the R code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>groups <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">whites =</span> <span class="st">"Whites"</span>, <span class="at">blacks =</span> <span class="st">"Blacks"</span>, <span class="at">hispanics =</span> <span class="st">"Non-Cuban Hispanics"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> mariel<span class="sc">$</span>smsa <span class="sc">==</span> <span class="st">"Miami"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>ue_m <span class="ot">&lt;-</span> <span class="fu">tapply</span>(mariel<span class="sc">$</span>esr[m], <span class="fu">list</span>(mariel<span class="sc">$</span>ethrace[m], mariel<span class="sc">$</span>year[m]), ue_rate)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>ue_c <span class="ot">&lt;-</span> <span class="fu">tapply</span>(mariel<span class="sc">$</span>esr[<span class="sc">!</span>m], <span class="fu">list</span>(mariel<span class="sc">$</span>ethrace[<span class="sc">!</span>m], mariel<span class="sc">$</span>year[<span class="sc">!</span>m]), ue_rate)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>yrs <span class="ot">&lt;-</span> <span class="dv">1979</span><span class="sc">:</span><span class="dv">1985</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>op <span class="ot">&lt;-</span> <span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>), <span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="fl">0.6</span>), <span class="at">mgp =</span> <span class="fu">c</span>(<span class="fl">2.3</span>, <span class="fl">0.6</span>, <span class="dv">0</span>))</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (g <span class="cf">in</span> <span class="fu">names</span>(groups)) {</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(yrs, <span class="dv">100</span> <span class="sc">*</span> ue_m[g, ], <span class="at">type =</span> <span class="st">"o"</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">lwd =</span> <span class="dv">2</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">21</span>),</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">xlab =</span> <span class="st">"Year"</span>, <span class="at">ylab =</span> <span class="st">"Unemployment rate (%)"</span>, <span class="at">main =</span> groups[g],</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">font.main =</span> <span class="dv">1</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lines</span>(yrs, <span class="dv">100</span> <span class="sc">*</span> ue_c[g, ], <span class="at">type =</span> <span class="st">"o"</span>, <span class="at">pch =</span> <span class="dv">1</span>, <span class="at">lwd =</span> <span class="dv">2</span>, <span class="at">lty =</span> <span class="dv">2</span>, <span class="at">col =</span> col_grey)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">abline</span>(<span class="at">v =</span> <span class="dv">1980</span>, <span class="at">col =</span> <span class="st">"grey70"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (g <span class="sc">==</span> <span class="st">"whites"</span>) <span class="fu">legend</span>(<span class="st">"topleft"</span>, <span class="fu">c</span>(<span class="st">"Miami"</span>, <span class="st">"Comparison cities"</span>),</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>                            <span class="at">lty =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>), <span class="at">pch =</span> <span class="fu">c</span>(<span class="dv">19</span>, <span class="dv">1</span>), <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"black"</span>, col_grey),</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                            <span class="at">bty =</span> <span class="st">"n"</span>, <span class="at">cex =</span> <span class="fl">0.85</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(op)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-mariel" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mariel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="14-immigration_files/figure-html/fig-mariel-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mariel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14.2: Unemployment rates in Miami (solid) and four comparison cities (dashed), ages 16–61, 1979–85. The vertical line marks 1980, the year of the boatlift. Data: CPS outgoing rotation groups, as used in the lab (unweighted). Sample sizes for Miami are small (roughly 130–600 per group and year), so year-to-year jumps are partly sampling noise.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>There is no sign that the boatlift raised the unemployment of whites or non-Cuban Hispanics in Miami relative to the comparison cities. Black unemployment in Miami does spike in 1982–83, but the spike came two years after the boatlift, when the recession hit hardest, and Hispanics, who were presumably closer substitutes for the Cuban arrivals, show no such jump. Card concluded that the Mariel immigration “had essentially no effect on the wages or employment outcomes of non-Cuban workers in the Miami labor market,” and “perhaps even more surprising, … no strong effect on the wages of other Cubans.”</p>
+<p>How could a 7 percent increase in the labor force have so little effect? Card offered three explanations:</p>
+<ul>
+<li><strong>Displaced migration.</strong> Miami’s population growth slowed after the boatlift. Fewer people from elsewhere in the United States moved to Miami than would have otherwise, so the Mariel arrivals may have taken the place of migrants who never came.</li>
+<li><strong>Industry structure.</strong> Miami had absorbed waves of Cuban immigrants for two decades. Its economy had a large textile and apparel sector built on less-skilled immigrant labor, so new arrivals could take unskilled jobs as earlier immigrants moved up.</li>
+<li><strong>Language.</strong> In a city where so many people spoke Spanish, the Mariel arrivals’ lack of English mattered less.</li>
+</ul>
+<p>Card was careful to add that Miami “is far from typical of other local labor markets in the United States.”</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+In the lab
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In Lab 10 you replicate Card’s analysis yourself, then extend it by looking at workers with different levels of education. The lab closes with short questions on how immigrants might benefit native workers, how recent immigrants differ from earlier ones, and fiscal effects at different levels of government. Ask yourself as you work: Which group of natives should be most affected if the simple model is right? What would that look like in the data?</p>
+</div>
+</div>
+</section>
+<section id="albertville-alabama" class="level3 page-columns page-full" data-number="14.3.3">
+<h3 data-number="14.3.3" class="anchored" data-anchor-id="albertville-alabama"><span class="header-section-number">14.3.3</span> Albertville, Alabama</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> Details in this subsection are from <em>This American Life</em>, episode 632 (“Our Town, Part One”), and from Peri and Wiltshire’s report. Note: your 2025 calendar lists Part Two as episode 632; it is episode 633 (slide 17 has it right).</p>
+</div></div><p>A more recent natural experiment comes from a small poultry-processing town in northern Alabama. In 1990, Albertville, population about 15,000, was 98 percent white. Then a wave of thousands of migrants, mostly from Mexico, arrived to work in the chicken plants. They were pushed by recession in Mexico (the peso crashed in 1994) and pulled by booming U.S. demand for chicken. Within 20 years the town had about 6,000 newcomers and was more than a quarter Latino. The radio program <em>This American Life</em> spent eight months there in 2017. It went because Senator (later Attorney General) Jeff Sessions had pointed to towns like Albertville to argue that immigrants pull down American wages: “big greedy businesses who hire illegal workers … will pull down the wages of American citizens.”</p>
+<p>The program commissioned the economist Giovanni Peri to find out. With Justin Wiltshire, Peri compared the commuting zone containing Albertville with a “synthetic control”: an average of three other Alabama labor markets that, before 1990, looked like Albertville in immigrant share, wages, and employment of less-educated workers, but did not receive many immigrants afterward. The divergence after 1990 was dramatic. Among workers without a high school diploma, the immigrant share of employment rose from 0.4 percent to 28 percent in Albertville’s labor market, but only from 1 to 12 percent in the control.</p>
+<p>What happened to native workers?</p>
+<ul>
+<li><strong>Employment</strong> of native high school dropouts showed no marked difference from the control.</li>
+<li><strong>Wages</strong> of native dropouts grew about $23 a week less than in the control from 1990 to 2010, about 7 percent. But Albertville had already been on a slightly slower wage path before 1990, and “no clear change was seen after 1990.” Peri warned the radio program that $23 a week was “the very most” the immigrants might have cost, with a big margin of error.</li>
+<li><strong>Wages in the animal-slaughtering industry itself</strong>, where the poultry plants are, grew slightly <em>faster</em> than in the control, about $12 a week.</li>
+<li><strong>More-educated natives</strong> may have been slightly helped.</li>
+</ul>
+<p>Peri and Wiltshire concluded that “there does not seem to be very much evidence of negative wage or employment effects of immigrants on natives. Immigrants not only bring labor but also local demand, and often they work in jobs differentiated from those of natives.”</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> Peri and Wiltshire’s report is internally inconsistent: the immigrant share of the population rose “by a factor of six” in the text but “by a factor close to 10” in the conclusions.</p>
+</div></div><p>The radio program also showed why many longtime workers saw things differently. Pat, who had worked at her plant for 44 years, earned $11.95 an hour; had her starting wage kept up with inflation, she would have earned about twice as much. Workers watched the plants fill with Latino workers who lined up for job applications at 2 a.m., who were reluctant to join the union, and whom managers seemed to prefer. By the union’s records, membership at one plant fell from about 95 percent in 1991 (a figure the company disputes) to the mid-40s today. The jobs immigrants created around town, renting apartments, buying groceries and gas, were invisible from inside the plant. And as the program noted, the main forces behind stagnating wages for workers like Pat (automation, trade, a low minimum wage, and the decline of unions) were national, affecting places with few immigrants as well. Pat’s own verdict on the $23: “You cannot fault a person for wanting a job to feed their family.”</p>
+</section>
+</section>
+<section id="why-is-there-so-little-effect" class="level2 page-columns page-full" data-number="14.4">
+<h2 data-number="14.4" class="anchored" data-anchor-id="why-is-there-so-little-effect"><span class="header-section-number">14.4</span> Why is there so little effect?</h2>
+<p>The simple model predicts falling wages. The evidence mostly finds small effects. Why?</p>
+<ul>
+<li><strong>The demand curve may be almost flat</strong>, perhaps because there are many complementary sectors that expand as labor becomes available.</li>
+<li><strong>Labor markets are not local.</strong> People who are hurt may move away and not be observed. This is a potential problem of study design.</li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> NRC 1997, pp.&nbsp;228–230.</p>
+</div></div><p>The NRC found suggestive evidence of the second mechanism. Before 1970, the share of native-born Americans living in California rose rapidly, from 6.9 to 9.6 percent between 1950 and 1970. After immigration to California surged, the native share stopped rising; nearly all of California’s growth in the 1970s and 1980s came from immigrants. One interpretation is that immigration “encouraged natives to stop moving there, and this process effectively dispersed the labor market effects of immigration from California to the national economy.” The panel noted that estimated wage effects tend to get larger as the geographic area studied gets larger: smallest across cities, larger across states, larger still across regions.</p>
+<section id="advantages-and-problems-of-the-simple-model" class="level3" data-number="14.4.1">
+<h3 data-number="14.4.1" class="anchored" data-anchor-id="advantages-and-problems-of-the-simple-model"><span class="header-section-number">14.4.1</span> Advantages and problems of the simple model</h3>
+<p>The simple model has real strengths. It explains why, historically, workers have tended to oppose more immigration and capitalists to favor it. Its net gain, like the gains from comparative advantage in trade, explains why economists tend to favor open borders. And the size of the redistribution compared with the net gain helps explain the intensity of political conflict.</p>
+<p>But we don’t see much decline in wages. Either all the studies are wrong, or the simple model is wrong. Perhaps immigrant and native workers are complements rather than substitutes; perhaps immigrants increase local demand.</p>
+<p>Other considerations:</p>
+<ul>
+<li>Studies of rapid changes may not tell us much about the long-term steady state: a society with high versus low immigration.</li>
+<li>Immigrants bring innovation and entrepreneurship.</li>
+<li>They bring capital (Solow effects).</li>
+<li>There are global effects, on immigrants themselves and on the countries they leave.</li>
+</ul>
+<p>My conclusion, in lecture, is that the net effects of migration on native workers appear to be very small. Perhaps there is an asymmetry in perception between winners and losers: those who are worse off blame migration, while those who are better off have a more diffuse explanation. Or perhaps anti-immigration sentiment is driven largely by psychology and cultural issues, not economics.</p>
+</section>
+</section>
+<section id="does-immigration-raise-or-lower-taxes" class="level2 page-columns page-full" data-number="14.5">
+<h2 data-number="14.5" class="anchored" data-anchor-id="does-immigration-raise-or-lower-taxes"><span class="header-section-number">14.5</span> Does immigration raise or lower taxes?</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-reading">Added · from readings</span> This section is drawn from the readings for the guest lecture on fiscal effects (Dr.&nbsp;Gretchen Donehower), for which no slides were available: NRC 1997, ch.&nbsp;7; NRC 2016; <em>This American Life</em>, episode 633.</p>
+</div></div><p>The second big economic question about immigration is fiscal. Immigrants pay taxes and use government services. Do they pay their way?</p>
+<section id="snapshots-versus-lifetimes" class="level3" data-number="14.5.1">
+<h3 data-number="14.5.1" class="anchored" data-anchor-id="snapshots-versus-lifetimes"><span class="header-section-number">14.5.1</span> Snapshots versus lifetimes</h3>
+<p>The simplest approach is a <strong>snapshot</strong>: in a given year, add up the taxes paid and the benefits received by immigrants. The NRC’s 1997 panel did this for 1994 and found that the average immigrant paid about $1,800 more in taxes than they received in benefits, because immigrants are concentrated at working ages. But this counts immigrants’ U.S.-born young children as natives. Add those children, who are expensive to educate, and the immigrant household’s balance was about −$370 a year. Meanwhile the <em>adult</em> children of immigrants, who no longer live in immigrant-headed households, had a positive balance. So snapshot estimates for immigrant-headed households “are biased toward negative numbers.”</p>
+<p>The NRC panel argued that the right question is forward-looking: if one more immigrant arrives today, what is the <strong>present value</strong> of all the taxes they and their descendants will pay, minus all the costs they will impose, at every level of government, far into the future? That calculation rests on <strong>age profiles</strong> of taxes and benefits, and a striking pattern emerges: everyone is a net recipient in childhood (schools) and old age (Social Security and Medicare), and a net payer during the working years. The big difference between immigrants and natives, the panel found, “lies in taxes rather than in benefits”: benefits by age look quite similar, but immigrants, with less education on average, earn less and pay less tax at each age.</p>
+<div class="cell">
+<div id="tbl-npv" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-npv-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;14.2: Net present value of the fiscal impact of one additional immigrant, including descendants, by education and level of government (thousands of 1996 dollars; NRC 1997 baseline, Tables 7.5–7.6).
+</figcaption>
+<div aria-describedby="tbl-npv-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 22%">
+<col style="width: 12%">
+<col style="width: 22%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">Less than high school</th>
+<th style="text-align: right;">High school</th>
+<th style="text-align: right;">More than high school</th>
+<th style="text-align: right;">All immigrants</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Immigrant plus descendants</td>
+<td style="text-align: right;">−13</td>
+<td style="text-align: right;">+51</td>
+<td style="text-align: right;">+198</td>
+<td style="text-align: right;">+80</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Immigrant’s own lifetime</td>
+<td style="text-align: right;">−89</td>
+<td style="text-align: right;">−31</td>
+<td style="text-align: right;">+105</td>
+<td style="text-align: right;">−3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Descendants only</td>
+<td style="text-align: right;">+76</td>
+<td style="text-align: right;">+82</td>
+<td style="text-align: right;">+93</td>
+<td style="text-align: right;">+83</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>The average new immigrant, with descendants, had a positive fiscal impact of about +$80,000, but this average hides three important patterns:</p>
+<ul>
+<li><strong>Education matters enormously.</strong> Immigrants with more than a high school education were worth about +$198,000; those with less than high school, about −$13,000.</li>
+<li><strong>Descendants matter.</strong> Over their own lifetimes, immigrants with little education cost more than they paid. But their children, who on average get much more education than their parents, paid in far more, for every education group.</li>
+<li><strong>Federal and local levels pull in opposite directions.</strong> At the federal level the average immigrant was worth about +$105,000; at the state and local level, about −$25,000. State and local governments pay for schooling up front and recoup only part of the later tax payments, while the federal government collects taxes first and pays pensions and health care decades later. And “although the positive impact at the federal level is shared evenly by the U.S. population, the negative state and local impact is highly concentrated in a few states.”</li>
+</ul>
+<p>The panel was candid about uncertainty: “there are other sets of plausible assumptions … that are by no means implausible and would produce negative fiscal impacts of immigrants.” And it put the stakes in perspective. Adding 100,000 immigrants a year would change the average resident’s taxes by about $30 a year: a $40 gain at the federal level and a $10 cost at the state and local level.</p>
+<p>The 2016 National Academies report confirmed the broad picture: immigrants are more costly to state and local governments, “in large part due to the costs of educating their children,” while “the children of immigrants (the second generation) are among the strongest economic and fiscal contributors in the U.S. population.”</p>
+</section>
+<section id="albertvilles-accounts" class="level3" data-number="14.5.2">
+<h3 data-number="14.5.2" class="anchored" data-anchor-id="albertvilles-accounts"><span class="header-section-number">14.5.2</span> Albertville’s accounts</h3>
+<p><em>This American Life</em> asked what all this meant for one town. Undocumented workers in the poultry plants, the program found, pay sales and property taxes and, through payroll deductions, income and Social Security taxes, but mostly cannot collect benefits. The Social Security Administration estimated that in 2010 undocumented workers paid about $13 billion into the Social Security trust fund and received about $1 billion. Their biggest cost to government is schools. Economists at the Urban Institute estimated that non-Latino taxpayers in Albertville pay about $272 a year in local taxes for the extra children immigrant families enrolled. Food-stamp use in the county doubled, from 8 to 16 percent, but rose even faster, from 11 to 26 percent, in the rest of Alabama, where there were few immigrants. Dr.&nbsp;Donehower calculated for the program that an undocumented poultry worker without a high school diploma, with children and grandchildren, would cost federal, state, and local governments about $21,000 over 75 years. To put that number in context, a <em>native-born</em> American without a high school education costs “hundreds of thousands of dollars more.”</p>
+</section>
+</section>
+<section id="key-ideas" class="level2" data-number="14.6">
+<h2 data-number="14.6" class="anchored" data-anchor-id="key-ideas"><span class="header-section-number">14.6</span> Key ideas</h2>
+<ul>
+<li>In a simple one-sector model, immigration lowers the wages of competing workers, redistributes income to capital owners and complementary workers, and creates a small <strong>net gain</strong> for natives. The redistribution is large compared with the net gain.</li>
+<li>Immigrants who are <strong>substitutes</strong> for natives lower their wages; immigrants who are <strong>complements</strong> raise them. Gains arise only because immigrants differ from natives.</li>
+<li><strong>Natural experiments</strong> like the Mariel boatlift and Albertville find small effects on native wages and employment. The workers most affected are earlier immigrants and natives without a high school diploma.</li>
+<li>Possible reasons: flat demand curves, complementarity, immigrants’ own demand, and native workers moving elsewhere.</li>
+<li><strong>Fiscal effects</strong> depend on education, age at arrival, descendants, and level of government: positive on average at the federal level, negative at the state and local level.</li>
+</ul>
+</section>
+<section id="check-your-understanding" class="level2 page-columns page-full" data-number="14.7">
+<h2 data-number="14.7" class="anchored" data-anchor-id="check-your-understanding"><span class="header-section-number">14.7</span> Check your understanding</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="tag-new">Added · new</span> These questions are new. Q5 is the question your calendar poses for the radio episode. They avoid the lab’s graded education analysis, and (since the 2025 lab added a graded question on federal versus state fiscal effects) the former question on that topic was replaced.</p>
+</div></div><ol type="1">
+<li><p><strong>Redistribution versus gain.</strong> In the simple model, suppose there are 20 natives for every immigrant. What is the ratio of the net gain to natives to the redistribution among natives? What does this suggest about the politics of immigration?</p></li>
+<li><p><strong>No wage effect, no gain?</strong> The NRC argues that if immigration did not lower anyone’s wage, natives as a whole would not gain. Explain why, using <a href="#fig-labor-model" class="quarto-xref">Figure&nbsp;<span>14.1</span></a>.</p></li>
+<li><p><strong>Comparison groups.</strong> Miami’s unemployment rate rose after the Mariel boatlift. Why doesn’t this show that the boatlift raised unemployment? What makes a good comparison city?</p></li>
+<li><p><strong>Counting descendants.</strong> In the NRC’s estimates, immigrants with little education cost more than they paid in taxes over their own lifetimes, but their children paid in far more than they cost. Why? What does this imply about the time horizon you choose when judging the fiscal effects of immigration?</p></li>
+<li><p><strong>Social Security and the undocumented.</strong> Undocumented workers paid about $13 billion into Social Security in 2010 and received about $1 billion. What do you think of this as an argument about the fiscal effects of immigration? What is left out?</p></li>
+</ol>
+</section>
+<section id="further-reading" class="level2" data-number="14.8">
+<h2 data-number="14.8" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">14.8</span> Further reading</h2>
+<ul>
+<li>National Research Council. 1997. <em>The New Americans: Economic, Demographic, and Fiscal Effects of Immigration.</em> J. P. Smith and B. Edmonston, eds.&nbsp;National Academy Press. Pages 135–142 (“First Principles”), 228–239 (empirical evidence), and 297–354 (selected pages on future fiscal impacts). <em>As you read: Why does the panel insist that the national gain and some workers’ losses are two sides of the same coin?</em></li>
+<li>National Academies of Sciences, Engineering, and Medicine. 2016. “Report Highlights: The Economic and Fiscal Consequences of Immigration.” <em>A four-page summary of the update to</em> The New Americans.</li>
+<li><em>This American Life.</em> 2017. “Our Town,” Parts One (episode 632; labor market, 43:50–58:00) and Two (episode 633; fiscal costs). Transcripts online. <em>As you read: What do you think of the discussion of Social Security taxes and benefits for the undocumented?</em></li>
+<li>Peri, Giovanni, and Justin Wiltshire. 2017. “Analysis of Marshall-DeKalb Area, Relative to Similar Labor Markets in Alabama, 1980–2010.” Report for <em>This American Life</em>.</li>
+<li>Card, David. 1990. “The Impact of the Mariel Boatlift on the Miami Labor Market.” <em>Industrial and Labor Relations Review</em> 43(2): 245–257. <em>Linked in the lab; read at least pp.&nbsp;245–251 and 255–257.</em></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./13-marriage.html" class="pagination-link" aria-label="Marriage: Love, and What Else?">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Marriage: Love, and What Else?</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./15-migration-gains-enforcement.html" class="pagination-link" aria-label="Migrants' Gains and Immigration Enforcement">
+        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Migrants’ Gains and Immigration Enforcement</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

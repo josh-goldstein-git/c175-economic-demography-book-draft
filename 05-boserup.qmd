@@ -1,0 +1,564 @@
+# Boserup: Population Pushes Technology {#sec-boserup}
+
+```{r}
+#| label: setup-ch5
+#| include: false
+col_b <- "#1b9e3a"; col_d <- "#d62728"
+col_hg <- "#7b3294"; col_ag <- "#2ca7c0"; col_ind <- "#1b9e3a"
+```
+
+::: {.callout-warning appearance="simple"}
+## Draft: provenance notes (for review)
+Margin tags mark material that is **not in the course slides or lab**.
+[Added · from readings]{.tag-reading} comes from the assigned readings (Boserup, Malakoff).
+[Added · new]{.tag-new} is from outside the course materials (my framing, general knowledge, or my own analysis) and needs the closest check.
+Untagged material follows the 2025 slides (09 Boserup).
+:::
+
+::: {.callout-note appearance="minimal"}
+**In this chapter.** Malthus treated technology as something that happens *to*
+a population. Ester Boserup turned the arrow around: population growth itself
+drives technological change. We look at her theory of agricultural
+intensification, and at why a digging stick can be better than a plow.
+
+**Readings this chapter draws on.** Boserup (1976), "Environment, Population, and
+Technology in Primitive Societies"; Malakoff (2011), "Are More People Necessarily
+a Problem?"
+:::
+
+::: {.column-margin}
+[Added · new]{.tag-new} Bridge text written for the chapter split.
+:::
+
+Malthus (@sec-malthus) and Solow (@sec-solow) both treat technology as coming from
+outside the model. This chapter looks at the opposite view, in which a growing
+population creates the pressure, and the density, that lead to new ways of
+producing food. The next chapter, @sec-resources, carries the question into the
+present: with the fastest population growth in history behind us, are we running
+out of resources?
+
+## When is a digging stick better than a plow?
+
+Start with a question from lecture. As a pre-industrial human, which would you
+rather have: a plow, a digging stick, or a bow and arrow?
+
+The plow seems like the obvious answer. It is the more "advanced" technology. But
+the best answer is: *it depends on how many people live around you.* By the end
+of this chapter you should be able to explain why. The answer
+says something important about how population and technology are related.
+
+## Technology pull and population push
+
+### Malthus: technology pulls population along
+
+In the Malthusian model of @sec-malthus, technology is **exogenous**. It
+changes for reasons outside the model, and population follows. A new technology
+shifts the wage curve outward, wages rise for a while, and then population grows
+until the wage is back at its old equilibrium level. Population ends up larger,
+but no richer. Call this the **technology-pull** theory of population history.
+
+@fig-pull shows what this means over the long sweep of history. Each great
+technological regime (hunting and gathering, settled agriculture, industry)
+supports a larger equilibrium population at the same equilibrium wage.
+
+```{r}
+#| label: fig-pull
+#| fig-cap: "The technology-pull (Malthusian) view of population history, after a diagram by Ronald Lee. The birth and death curves (top) fix the equilibrium wage w*. Each technological regime has its own wage curve (bottom), so each supports a larger equilibrium population at the same wage."
+#| fig-height: 5.8
+#| echo: false
+w <- seq(0.5, 2, length.out = 200)
+b <- 0.030 + 0.010 * log(w); d <- 0.030 * w^(-0.6)
+op <- par(mfrow = c(2, 1), mar = c(2, 6, 1, 1), mgp = c(3.2, 0.4, 0),
+          oma = c(1.5, 0, 0, 0))
+plot(w, b, type = "n", ylim = c(0.018, 0.042), xlim = c(0.5, 2.5), xaxt = "n",
+     yaxt = "n", xlab = "", ylab = "Birth and\ndeath rates")
+lines(w, b, col = "#2166ac", lwd = 2.5); lines(w, d, col = col_d, lwd = 2.5)
+text(2, b[200], "b(w)", pos = 4, col = "#2166ac")
+text(2, d[200], "d(w)", pos = 4, col = col_d)
+segments(1, 0, 1, 0.03, lty = 3); axis(1, at = 1, labels = "w*")
+N_of_w <- function(w, A) (A / w)^2
+plot(w, N_of_w(w, 1), type = "n", ylim = c(0, 10), xlim = c(0.5, 2.5),
+     xaxt = "n", yaxt = "n", xlab = "", ylab = "Population\nsize (N)")
+A <- c(1, 1.8, 2.8); cols <- c(col_hg, col_ag, col_ind)
+labs <- c("hunter-gatherer", "settled agriculture", "industrial")
+lab_x <- c(2.03, 2.03, 2.03)
+lab_y <- c(0.1, 1.2, 2.3)
+for (i in 1:3) {
+  lines(w, N_of_w(w, A[i]), col = cols[i], lwd = 2.5)
+  text(lab_x[i], lab_y[i], labs[i], adj = 0, col = cols[i], cex = 0.85)
+  segments(0, A[i]^2, 1, A[i]^2, lty = 3, col = cols[i])
+}
+segments(1, 0, 1, 11, lty = 3)
+axis(2, at = A^2, labels = c(expression(N[HG]^"*"), expression(N[Ag]^"*"),
+                            expression(N[Ind]^"*")), las = 1)
+axis(1, at = 1, labels = "w*")
+mtext("Wage (w)", side = 1, outer = TRUE, line = 0.3)
+par(op)
+```
+
+Plotted against time, this gives the staircase you met in Chapter 1 (Livi-Bacci's
+version of Deevey's diagram): long plateaus of near-zero growth, broken by bursts
+of growth after each technological revolution, with perhaps another revolution to
+come.
+
+### Boserup: population pushes technology
+
+The Danish economist Ester Boserup (1910–1999) proposed the reverse. Not
+technological change → population growth, but **population growth →
+technological change**. In her view, population grows for its own reasons. It
+is a kind of natural tendency. Growing numbers then *force* people to change how
+they produce food, and much else. This is the **population-push** theory.
+
+::: {.column-margin}
+[Added · from readings]{.tag-reading} The quotations in this subsection are from
+Boserup (1976), pp. 21–23 (original *Population and Development Review*
+pagination): carrying capacity and the "two main weaknesses," p. 21; transport and
+administrative technology, p. 22; zero growth, p. 23.
+:::
+
+Boserup began her 1976 article by describing the classical theory she was
+attacking. It treats population as passive: it "assumes that a given environment
+has a certain carrying capacity for human populations, defined as the number of
+persons who can be accommodated in that region under the prevailing system of
+subsistence." Population stays at that limit until better food technology raises
+it. Boserup's objection:
+
+::: {.callout-tip appearance="simple"}
+## In her own words
+"This reasoning suffers from two main weaknesses: first, the theory focuses
+exclusively on the technology of food production, ignoring the effects of
+technological changes in other areas and the effects of the environment; secondly,
+the theory ignores the effects of demographic change on both environment and
+technology." (Boserup 1976, p. 21)
+:::
+
+Her first point is that many technologies besides food affect population. Better
+*transport* can raise mortality by spreading epidemics, or by making it easier for
+"a conqueror or an indigenous ruling class to move food away from the region where
+it is produced." Better *military* technology usually raises mortality. Walled
+towns reduced deaths in war but probably raised deaths from epidemics. And what
+she calls "administrative technology," the organization of society, can turn a
+local war or harvest failure into a demographic catastrophe if it breaks down.
+
+So Boserup doubted that pre-industrial populations sat at a food-determined
+ceiling. Hardship in history came from war, plague, and natural disaster, not
+mainly from overpopulation. In her words: "There seems to be little reason to
+assume that zero rates of population growth occurred more frequently in past
+history than other rates of growth, positive or negative." Some unlucky peoples
+shrank and disappeared, while luckier ones grew slowly for long periods.
+
+### A typology
+
+@tbl-typology places the models of this course in a simple grid, according to
+whether population and technology are explained *inside* the model (endogenous)
+or taken as given (exogenous).
+
+```{r}
+#| label: tbl-typology
+#| tbl-cap: "A typology of technology–population models (lecture)."
+#| echo: false
+knitr::kable(data.frame(
+  ` ` = c("Population exogenous", "Population endogenous"),
+  `Technology exogenous` = c("Solow", "Malthus"),
+  `Technology endogenous` = c("Boserup", "Endogenous growth (e.g., Kremer 1993; Galor and Weil 2000; Romer)"),
+  check.names = FALSE))
+```
+
+## Two kinds of technological change
+
+How does a larger population change technology? Boserup's answer has two parts,
+and the distinction matters.
+
+1. **Intensification: "no new ideas, just new applications."** Methods that were
+   already known, but not worth using at low density, become worth using as
+   density rises. Productivity per hour of work *falls*, so people must work harder
+   to get the same calories. Is a plow better than a digging stick? It depends on
+   density. In this sense intensification is dismal, and Malthusian.
+2. **Invention: "some sticks better than others, some plows better than
+   others."** Deeper technological change creates genuinely better tools and
+   cumulative infrastructure, such as roads and metal industries. This can set up
+   a virtuous circle: increasing density → better technology → bigger surplus →
+   increasing density → ...
+
+@fig-intens-invent shows the difference. Intensification is a movement *along* a
+production function. Invention *shifts* the production function up.
+
+```{r}
+#| label: fig-intens-invent
+#| fig-cap: "Intensification versus invention (lecture). Left: moving along a fixed production function, from hunting and gathering to multicropping, as more labor is applied per acre. Right: invention shifts the whole production function up."
+#| fig-height: 3.6
+#| echo: false
+L <- seq(0.02, 1, length.out = 200); f <- function(L) L^0.45
+op <- par(mfrow = c(1, 2), mar = c(3, 4, 2, 1), mgp = c(2, 0.4, 0))
+plot(L, f(L), type = "l", lwd = 2.5, xaxt = "n", yaxt = "n", ylim = c(0, 1.25),
+     xlim = c(0, 1.55), xlab = "Labor per acre (population)",
+     ylab = "Output per acre", main = "Intensification", font.main = 1)
+stages <- c(0.05, 0.22, 0.45, 0.7, 0.95)
+nm <- c("gathering", "forest fallow", "short fallow", "annual cropping",
+        "multicropping")
+points(stages, f(stages), pch = 19, cex = 0.8)
+text(stages, f(stages), nm, pos = 4, cex = 0.72, offset = 0.4)
+plot(L, f(L), type = "l", lwd = 2.5, xaxt = "n", yaxt = "n", ylim = c(0, 1.45),
+     xlim = c(0, 1.25), xlab = "Labor per acre (population)",
+     ylab = "Output per acre", main = "Invention", font.main = 1)
+lines(L, 1.3 * f(L), lwd = 2.5, lty = 2)
+arrows(c(0.35, 0.75), f(c(0.35, 0.75)) + 0.03, c(0.35, 0.75),
+       1.3 * f(c(0.35, 0.75)) - 0.03, length = 0.07, col = col_d, lwd = 1.5)
+text(1, 1.3 * f(1), "new", pos = 4, cex = 0.72, xpd = NA)
+text(1, f(1), "old", pos = 4, cex = 0.72, xpd = NA)
+par(op)
+```
+
+The curve in the left panel is smooth because farmers can combine systems, and
+because returns decline within each system.
+
+## Agricultural intensification
+
+### The fallow sequence
+
+The key to Boserup's theory is **fallow**: leaving land uncultivated so it can
+recover. @tbl-fallow lists the main systems of food production, from the most
+land-using to the most land-saving.
+
+```{r}
+#| label: tbl-fallow
+#| tbl-cap: "Systems of food production, from most land-using to most land-saving (lecture; Boserup 1976, p. 25). Typical tools are from Boserup."
+#| echo: false
+knitr::kable(data.frame(
+  System = c("Gathering", "Forest fallow", "Bush fallow", "Short fallow",
+             "Annual cropping", "Multicropping"),
+  `Cultivation and fallow` = c("Wild plants, roots, fruits, nuts; no cultivation",
+                    "1–2 crops, then 15–25 years of fallow",
+                    "2 or more crops, then 8–10 years of fallow",
+                    "1–2 crops, then 1–2 years of fallow",
+                    "1 crop a year, a few months of fallow",
+                    "2–3 crops a year, little or no fallow"),
+  `Typical tools` = c("Digging sticks, fire", "Digging sticks, fire",
+                      "Hoes, machetes", "Plow and draft animals",
+                      "Plow, draft animals; often irrigation",
+                      "Plow, draft animals, irrigation"),
+  check.names = FALSE))
+```
+
+Why fallow at all? Fallow regenerates soil nutrients. It lets farmers avoid
+weeding, since they simply let weeds and bushes grow and then move on. And burning
+the regrowth puts nutrients back into the soil. In lecture, photographs show the
+range: extensive gardening in the Brazilian forest, with easy access to hunting
+and gathering; slash-and-burn plots where a farmer plants tubers among felled logs
+he has not bothered to clear; experimental multicropping in Brazil; and the huge
+labor investment of terraced rice fields in the Philippines.
+
+::: {.column-margin}
+[Added · from readings]{.tag-reading} The history in this subsection is from
+Boserup (1976), pp. 24–26 and 29.
+:::
+
+Boserup used this sequence to reinterpret European history. The classical view
+held that primitive equipment kept most land uncultivated until better tools came
+along. Boserup pointed out that much of the "uncultivated" land was in fact being
+used, but lay fallow in most years under long-fallow systems. As early as 4500
+BCE, some populations in temperate Europe seem to have practiced forest fallow.
+Over many centuries, fallow periods grew shorter "in step with the gradual
+increase of the European population," until annual cropping spread in the
+eighteenth and nineteenth centuries. Regions that stayed sparsely populated kept
+long fallow for centuries longer.
+
+The environment and the tools changed along with the system. Forests thinned and
+disappeared, replaced by pastures and fields, and "the primitive digging sticks
+and stone axes used in the food-gathering and forest-fallow stages had to be
+replaced by other hand tools and later by ploughs." The same gradual path appears
+in ancient Mesopotamia, from food gathering on mountain slopes before 8000 BCE to
+irrigated plow agriculture in the southern plains four to five thousand years
+later. "The neolithic revolution," Boserup wrote, "is not a sweeping revolutionary
+change but a process of gradual evolution."
+
+### Diffusion, not invention
+
+Here is the heart of the digging-stick puzzle. Boserup argued that new systems
+rarely required anyone to *invent* anything. Tools and methods spread from denser
+populations to sparser ones when the sparser ones needed them.
+
+> "When we observe that even today some peoples use primitive land-using
+> subsistence systems … we should not ask why these peoples never invented the
+> plough and the wheel, but why the diffusion of these technologies seems to have
+> happened fairly rapidly in some cases and not at all in other cases." (Boserup
+> 1976, p. 27)
+
+### Why stick with the digging stick?
+
+::: {.column-margin}
+[Added · from readings]{.tag-reading} Boserup (1976), pp. 27–30 (output per unit
+of labor, p. 27; the Kalahari studies, p. 28; labor investments, p. 30). The
+figure is my illustration of her argument.
+:::
+
+Her answer is labor productivity. Land-using systems "have a higher output per
+unit of labor input than usually assumed." Studies of the Kalahari Bushmen found
+that the women who did the food gathering needed only two to three days a week to
+provide the necessary food. Land-saving systems produce much more food *per acre*,
+but they demand far more work: plowing, weeding, manuring, irrigating. They also
+require big up-front **labor investments**: clearing roots and stones, building
+wells, dams, terraces, and irrigation channels. For a growing group that can still
+move, splitting up and starting long-fallow farming somewhere new is the
+labor-saving choice. "The yields of the labor investments — if properly maintained
+— may last forever, but the planning horizon of peoples who subsist by food
+gathering or long-fallow agriculture is a few years at most."
+
+@fig-digging puts the argument in a picture. At low density, the land-using system
+gives more food per hour of work. As density rises, it runs into trouble: walks get
+longer, fallow gets shorter, and soils give out. Past some density, the
+labor-intensive system becomes the better choice, even though people work harder
+than their ancestors did.
+
+```{r}
+#| label: fig-digging
+#| fig-cap: "When is a digging stick better than a plow? An illustration of Boserup's argument. At low population density, a land-using system (long fallow, digging stick) yields more food per hour of work. At higher densities, a land-saving system (plow, annual cropping) does better, but at a lower level of output per hour than people enjoyed at low density."
+#| fig-height: 4
+#| echo: false
+dens <- seq(0, 10, length.out = 300)
+stick <- 10 * exp(-0.28 * dens)
+plow  <- 5.2 * exp(-0.06 * dens)
+cross <- dens[which.min(abs(stick - plow))]
+op <- par(mar = c(4, 4.5, 1, 1))
+plot(dens, stick, type = "n", ylim = c(0, 10.5), xaxt = "n", yaxt = "n",
+     xlab = "Population density", ylab = "Food produced per hour of work")
+lines(dens, stick, lwd = 2.5, col = col_hg)
+lines(dens, plow, lwd = 2.5, col = "#b35806")
+text(1.2, 8.2, "digging stick\n(long fallow)", col = col_hg, pos = 4, cex = 0.9)
+text(7.5, 4.6, "plow\n(annual cropping)", col = "#b35806", cex = 0.9)
+segments(cross, 0, cross, 5.2 * exp(-0.06 * cross), lty = 3)
+axis(1, at = cross, labels = "switch point")
+par(op)
+```
+
+### Does intensification mean more misery?
+
+Not in the Malthusian sense of higher mortality. But yes, in the sense of lower
+utility: people must work more hours to survive. Malthus himself described this
+response. In the oscillation passage of Chapter 2, he wrote that "the plenty of
+labourers, and the necessity of an increased industry amongst them, encourage
+cultivators to employ more labour upon their land; to turn up fresh soil, and to
+manure and improve more completely what is already in tillage."
+
+### A modern test: Machakos, Kenya
+
+::: {.column-margin}
+[Added · from readings]{.tag-reading} This subsection summarizes Malakoff (2011),
+pp. 544–546: the 1937 memo, Mortimore's "garden," and Siedenberg's warning, p. 544;
+*More People, Less Erosion* and Boserup's ideas, p. 545; the critics, the Malawi
+title, and Ellis, p. 546.
+:::
+
+Is Boserup's logic still relevant? David Malakoff's article in *Science* tells
+the story of Machakos, a hilly, drought-prone farming district 50 kilometers south
+of Nairobi. In 1937, a British colonial official warned that its inhabitants were "rapidly
+drifting to a state of hopeless and miserable poverty and their land to a
+parching desert of rocks, stones and sand." The population was
+then approaching 250,000. By 2011 more than 1.5 million people lived there, and
+Machakos had become a symbol of something else: "A landscape that was once declared
+good for nothing is now like a garden when the rain falls," in the words of the
+geographer Michael Mortimore.
+
+Mortimore, Mary Tiffen, and Francis Gichuki documented what happened between 1930
+and 1990, as the population roughly quadrupled, in a 1994 book with a deliberately
+provocative title: *More People, Less Erosion*. Farmers built terraces to control
+erosion, used more animal manure, and sold food in the growing Nairobi market.
+Nairobi also offered seasonal jobs, which brought income for further improvements.
+Families had fewer children and invested more in schooling. The study, Malakoff
+writes, "'controverted' Malthus and backed Boserup." Mortimore summarized the
+Boserupian idea simply: people "weren't just mouths to feed but also brains that
+could think and hands and legs that could work very hard." A farmer who could once
+justify weeding a field only once a season could, with more labor available, weed
+it three times.
+
+The critics are worth hearing too. A coffee boom in the 1970s may have given a
+one-time boost. Machakos still does not grow enough food to feed its own
+population. The poorest families may not have shared in the "miracle." And other
+studies found the opposite pattern elsewhere, with titles like "More people, more
+soil degradation: The Malawi experience." "Although local successes offer hope, it
+is dangerous to generalize," warns one critic, Jules Siedenberg. Boserupian
+responses are not "an automatic result" of population growth: farmers need markets,
+capital, and information. The geographer Erle Ellis, who studied land use in China,
+concludes that "Boserup was right," but adds that "people are working harder than
+ever," just as Boserup predicted.
+
+## Population and invention
+
+So far, intensification only explains how people cope. It doesn't explain
+*progress*. How might population drive genuine invention? Lecture offers three
+ideas.
+
+- **Necessity is the mother of invention.** More misery could inspire people to
+  invent. With higher population, perhaps we move not just along the curve but
+  upward as well. But this still doesn't explain *why*.
+- **More geniuses.** More people means more inventions. This assumes that an
+  additional person creates more solutions than problems.
+- **Density.** This is Boserup's own emphasis.
+
+### Boserup on density
+
+Higher density creates economies of scale. One kind is in **human capital**: an
+itinerant craftsman becomes a local specialist, and eventually universities become
+possible. Another is in **physical capital**: water or animal mills replace
+everyone grinding grain by hand at home. A third is **infrastructure** such as
+roads and canals.
+
+::: {.column-margin}
+[Added · from readings]{.tag-reading} Boserup (1976), pp. 30–32 (Adam Smith,
+p. 30; the trap, footpaths, and towns, p. 31; the food surplus, p. 32).
+:::
+
+Boserup's examples are vivid. "It is well known, since Adam Smith's famous
+dictum, that the division of labor is limited by the extent of the market."
+Full-time craftsmen could not exist in Amazonian villages of 50 to 150
+long-fallow farmers. Such villagers must stay jacks-of-all-trades, so their high
+productivity in food is offset by low productivity in everything else. They are,
+she says, caught in a trap:
+
+::: {.callout-tip appearance="simple"}
+## In her own words
+"Such communities are caught in a trap because the maximum density consistent with
+their subsistence system is below the minimum density needed for development in
+fields other than food supply. They are not likely to escape from the trap until
+population density in the region becomes so high (by natural growth or by
+immigration) that they are forced to adopt a land-saving system of subsistence."
+(Boserup 1976, p. 31)
+:::
+
+Transport works the same way. "Even a footpath through tropical forest can exist
+only if used regularly by a certain number of people (or animals)." Roads and
+canals need a large population to build and maintain. Before that, even rulers had
+to keep moving:
+
+> "When population density increases, and the land-using subsistence systems are
+> replaced by land-saving systems, both rulers and craftsmen can settle permanently
+> in towns with the additional advantages of still more specialization, better
+> organization, and more specialized equipment." (Boserup 1976, p. 31)
+
+Boserup also made a subtle point about cities. A town needs a large food surplus
+"in an absolute sense but not necessarily a large food surplus per agricultural
+producer." Many dense, hard-working farm families each selling a little can feed a
+city, provided the food can be transported to it.
+
+### Town and country
+
+Putting these together gives Boserup's picture of town and country. Population
+growth in rural areas drives migration to cities. Cities generate economies of
+scale and invention, and a demand for food. That demand, and the markets and
+technology that come with it, raise the returns to capital investment in
+agriculture, driving rural intensification and invention. It is a precarious
+system: in bad times, food prices are high *and* the countryside is short of labor.
+The Machakos story, with Nairobi as the city, follows exactly this pattern.
+
+## The big picture
+
+**Intensification is not necessarily "progress."** Hunter-gatherers work less and
+eat more meat, so the "invention of agriculture" around 8000 BCE may have been more
+a matter of necessity. Capital investments such as draft animals, plows, and
+harnesses only make sense if cropping is frequent. And there is no ratchet on
+intensive technology: Europeans used slash-and-burn agriculture in the New World,
+where land was abundant.
+
+**Invention does lead to progress**: better tools, more infrastructure (saved
+surpluses), rising standards of living, and know-how that is cumulative and not
+forgotten.
+
+**Is there an optimal rate of population growth?** If deeper technological
+progress depends on density, a population that grows too slowly may never reach
+the densities needed. One that grows too quickly may be under constant Malthusian
+pressure, with small surpluses and little capital (@fig-optgrowth). Lecture asks
+whether Africa might be an example of the first, China of the second, and whether
+Europe simply happened to be in the sweet spot.
+
+```{r}
+#| label: fig-optgrowth
+#| fig-cap: "An optimal population growth rate? (lecture). Grow too slowly and a population never reaches the density needed for deeper technological progress; grow too fast and it stays under constant Malthusian pressure."
+#| fig-height: 3.2
+#| echo: false
+g <- seq(0, 1, length.out = 200); tp <- g^0.8 * (1 - g)^1.3
+op <- par(mar = c(3.2, 4.5, 1, 1), mgp = c(2, 0.4, 0))
+plot(g, tp, type = "l", lwd = 2.5, col = col_b, xaxt = "n", yaxt = "n",
+     xlab = "Population growth rate", ylab = "Rate of technological\nprogress")
+axis(1, at = c(0.08, 0.92), labels = c("too slow", "too fast"), tick = FALSE)
+par(op)
+```
+
+**What determines density and growth?** Lecture lists three kinds of factors:
+
+- **Environment.** Climate and disease set the positive check.
+- **Culture.** Marriage patterns set the preventive check, as with the European
+  marriage pattern, but not in China.
+- **History.** War and slavery matter too.
+
+::: {.column-margin}
+[Added · from readings]{.tag-reading} The climate and disease argument is from
+Boserup (1976), p. 34.
+:::
+
+Boserup herself stressed disease. Most remaining "primitive" peoples live in the
+wet tropics, where abundant plant growth goes together with ideal conditions for
+the bacteria and parasites that decimate populations. Lower disease mortality in
+dry and temperate climates, she suggested, "may help to explain why it was the dry
+and temperate climates that gave rise to most of the early civilizations." On
+history, she argued that early urban civilizations captured labor from the
+surrounding peoples, keeping those peoples below the density needed for
+development:
+
+> "But if the urban civilizations skimmed off the population increase of the
+> surrounding barbarian peoples or even decimated their numbers, the remaining
+> barbarian population was prevented from reaching the minimum density for
+> urbanization. The barbarians continued their land-using subsistence systems,
+> caught in the trap of low population density described above. More recently, the
+> American slave raids in Africa seem to have had similar effects." (Boserup 1976, p. 34)
+
+Boserup's argument uses history and anthropology, not formal models. For an
+informal introduction to modern endogenous growth theory, which emphasizes the
+economics of "ideas," lecture recommends Paul Romer's 2018 Nobel lecture (about 30
+minutes), which is structured as a rebuttal to Malthus.
+
+## Key ideas
+
+- In the **technology-pull** (Malthusian) view, technology changes on its own and
+  population follows. In Boserup's **population-push** view, population growth drives
+  technological change.
+- **Intensification** (shorter fallow, more labor per acre) uses known methods,
+  raises output per acre, but usually *lowers* output per hour of work. A digging
+  stick is better than a plow at low density.
+- New farming systems mostly spread by **diffusion**, not invention, when growing
+  density makes them worthwhile.
+- **Density** enables specialization, infrastructure, and towns. Very sparse
+  populations can be caught in a **low-density trap**.
+
+## Check your understanding
+
+::: {.column-margin}
+[Added · new]{.tag-new} These questions are new.
+:::
+
+1. **Digging stick or plow?** Explain, in terms of output per hour and output per acre,
+   why a sparsely settled group might reject the plow even if it knew about it. What
+   would have to change for the group to adopt it?
+
+2. **Transport and mortality.** Boserup argues that better transport could *raise*
+   mortality. Give her two reasons.
+
+3. **Machakos and Boserup.** Use Boserup's town-and-country picture to explain the
+   role Nairobi played in the Machakos story. Why might a similarly crowded district
+   with no nearby city have fared worse?
+
+4. **Which kind of change?** Was the Green Revolution an example of intensification or
+   of invention, in Boserup's sense? Use @fig-intens-invent to explain.
+
+5. **Too slow or too fast?** Explain why, in Boserup's framework, a population could grow
+   *too slowly* for its own good.
+
+## Further reading
+
+- Boserup, Ester. 1976. "Environment, Population, and Technology in Primitive
+  Societies." *Population and Development Review* 2(1): 21–36. (Reprinted in D.
+  Worster, ed., *The Ends of the Earth*, Cambridge University Press, 1988.) *As you
+  read: Note how agricultural technology responds to population, and the effect of
+  population density on nonagricultural technology.*
+- Malakoff, David. 2011. "Are More People Necessarily a Problem?" *Science* 333:
+  544–546. *Applying Boserup's logic to the contemporary world. As you read: What did
+  Machakos have that other crowded regions might lack?*
